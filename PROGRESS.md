@@ -3,7 +3,7 @@
 
 | Work | Owner | Status | Evidence | Next step |
 |---|---|---|---|---|
-| Rename repository and add approved brand | Root | Renamed on GitHub; branded source ready to push | [Olivium Harness](https://github.com/oudaykhaled/olivium-harness); same repository ID, private, default main; approved H PNG exact | Push and read back both commits/logo bytes |
+| Rename repository and add approved brand | Root | Published and verified on both branches | [Olivium Harness](https://github.com/oudaykhaled/olivium-harness); same repository ID, private, default main; GitHub README and approved H PNG bytes read back exactly | Complete |
 
 
 ## GitHub publication — 7 November
