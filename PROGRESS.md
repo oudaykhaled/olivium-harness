@@ -1,4 +1,12 @@
 # Olivium Harness build board
+## Public landing-page migration — 7 November
+
+| Work | Owner | Status | Evidence | Next step |
+|---|---|---|---|---|
+| Separate public landing page | Root | Published and verified | https://github.com/oudaykhaled/olivium-harness-website; Pages run42390457677 build/deploy PASS; anonymous HTTP200 and all5webassets exact | Public GitHub Pages is live without ChatGPT login |
+| Private application cleanup | Root | Pushed on main | Website and failed Pages workflow removed; app stays private; repository homepages point to working public site | Complete |
+| harness.olivium.space | Root | External DNS/access pending | Cloudflare CNAME harness → oudaykhaled.github.io (DNS only). Env/launchctl tokens absent, Wrangler unauthenticated, local browser disabled; one request sent | Once DNS exists, set GitHub Pages custom domain and verify HTTPS before updating canonical links |
+
 ## GitHub Pages — 7 November
 
 | Work | Owner | Status | Evidence | Next step |
