@@ -1,7 +1,13 @@
-# HarnessForge
+# Olivium Harness
+
+<p align="center">
+  <img src="docs/assets/olivium-harness-logo.png" width="144" alt="Olivium Harness logo">
+</p>
+
+**Context in. Capability out.**
 
 Build an inspectable coding-agent harness from evidence your team has reviewed.
-HarnessForge is a local Elixir/OTP application with a Phoenix LiveView portal. It
+Olivium Harness is a local Elixir/OTP application with a Phoenix LiveView portal. It
 imports selected sources, keeps citations and immutable claim revisions, records
 human decisions, and compiles approved context into a deterministic native
 package for OpenCode, Codex CLI or Claude Code.
@@ -70,7 +76,7 @@ commands; each workspace permits one owning process. See the full
 - Provides selective content purge, resumable cleanup, consistent local backup
   and restoration with old approvals and model consent removed.
 
-Imported text and model output are untrusted. HarnessForge does not run generated
+Imported text and model output are untrusted. Olivium Harness does not run generated
 or repository code on the host. Optional execution uses a pinned Docker runtime
 with resource, filesystem and network restrictions; missing isolation or a model
 produces an unavailable/blocked result. It never substitutes a paid provider.
@@ -80,7 +86,7 @@ produces an unavailable/blocked result. It never substitutes a paid provider.
 - [Quickstart and configuration](docs/quickstart.md)
 - [Company catalogue, plans and harness building](docs/company-builder.md)
 - [Company builder verification and browser evidence](docs/company-builder-verification.md)
-- [Use HarnessForge's read-only MCP server](docs/mcp.md)
+- [Use Olivium Harness's read-only MCP server](docs/mcp.md)
 - [50-iteration enhancement program and evidence](docs/enhancement-program/PROGRAM.md)
 - [Architecture and trust boundaries](docs/architecture.md)
 - [Implemented behavior and qualification limits](docs/status.md)
