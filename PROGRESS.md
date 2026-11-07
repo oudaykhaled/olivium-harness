@@ -1,4 +1,10 @@
 # Olivium Harness build board
+## GitHub Pages — 7 November
+
+| Work | Owner | Status | Evidence | Next step |
+|---|---|---|---|---|
+| Repository website and deployment | Root | Implemented and locally validated; Pages activation blocked by GitHub plan | website/ and pinned Pages workflow; HTML17references,2JSsyntaxchecks,actionlint PASS. GitHubHTTP422: current plan does not support Pages for private repository | Push source/workflow; verify build; compatible plan or explicit visibility decision required |
+
 ## Repository branding — 7 November
 
 | Work | Owner | Status | Evidence | Next step |
