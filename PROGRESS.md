@@ -1,4 +1,10 @@
 # Olivium Harness build board
+## GitHub Pages — 7 November
+
+| Work | Owner | Status | Evidence | Next step |
+|---|---|---|---|---|
+| Repository website and deployment | Root | Pushed; GitHub build PASS; deployment blocked by account plan | [Website source](https://github.com/oudaykhaled/olivium-harness/tree/main/website); [workflow run](https://github.com/oudaykhaled/olivium-harness/actions/runs/42389492277); build validated and uploaded artifact, configure-Pages failed; repository stays private | Await one pending choice: compatible plan, public repository, or public website-only repository |
+
 ## Repository branding — 7 November
 
 | Work | Owner | Status | Evidence | Next step |
