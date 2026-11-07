@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+project_dir=$(CDPATH= cd -- "$script_dir/.." && pwd)
+cd "$project_dir"
+if [ "${1:-help}" = "serve" ]; then
+  shift
+  if [ "$#" -ne 0 ]; then
+    echo "serve uses PORT and HARNESSFORGE_WORKSPACE environment variables" >&2
+    exit 2
+  fi
+  export PHX_SERVER=true
+  if [ -x "$script_dir/harness_forge" ]; then
+    exec "$script_dir/harness_forge" start
+  fi
+  exec mix phx.server
+fi
+if [ "$#" -eq 0 ]; then set -- help; fi
+if [ -x "$script_dir/harness_forge" ]; then
+  exec "$script_dir/harness_forge" eval '{:ok, _} = Application.ensure_all_started(:harness_forge); HarnessForge.CLI.main(System.argv())' "$@"
+fi
+exec mix run -e 'HarnessForge.CLI.main(System.argv())' -- "$@"

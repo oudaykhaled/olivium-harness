@@ -1,0 +1,20 @@
+# A03-01 next bounded WEB slice
+
+Recommend **one scope-aware Company Home action before task forms**, reusing Guide’s existing selector. Planning only; A02-02/A04-01 remain recorded dependencies. Do not replan implemented artifact/proof handling or claim this slice completes A03-01.
+
+**Observed problem.** CompanyPanel1362–1404 renders an unconditional primary “Build from company evidence” above Guide. Guide327–367 then renders its own primary next action. These compete even when saved state calls for profile setup, exact review or recovery. Guide already precedes Catalog/Analysis/Plan forms (CompanyPanel1414–1486), so preserve that structure and remove the competing entry priority. Portal already defaults to Company (36); Audit, Privacy and Chat remain named tools (2127–2146).
+
+**Concrete cut.**
+
+- Make Guide the Home header: saved company/project, clearly labeled saved goals or “Choose a goal in corpus review,” then one primary `company-guide-next`, then existing readiness/recovery facts, active task and collapsed saved-step/help disclosures. Never infer a selected goal from several assigned goals.
+- Move the static corpus introduction/steps into “How this works”; retain corpus access as a secondary task link. Keep active errors, pending operations and dirty drafts visible. Open only the selected task on clean entry; do not collapse dirty work when records refresh.
+- Preserve `Guide.next_action/5` as the sole navigation selector. Consume its existing preflight/unavailable result and the same scope-checked readiness facts; any needed blocker handling belongs in that selector, not a second success-ranking function. Navigation opens existing controls; it never retrieves, synthesizes, approves, builds or exports automatically.
+- Keep unavailable/stale explanations adjacent to the primary recovery action. Existing `company_guide_open`, `company_navigate` and corpus dirty-draft guards remain authoritative. Corpus navigation currently redirects without project/goal pins (Portal737–746), so label that action “Select corpus and goal,” not “Resume this analysis.”
+
+**Owned files, maximum three authors including Root.** WEB author: `lib/harness_forge_web/components/company/guide.ex` only, target≤200 netLoC. Root: `lib/harness_forge_web/components/company_panel.ex` plus a label-only `lib/harness_forge_web/live/portal_live.ex` change to display Company as Home, target≤150. QA: new `test/harness_forge_web/company_home_next_action_test.exs`, target≤250; confirm path availability first. No CSS, router, domain authority or proof-module changes are needed. Preserve others’ edits and release current freeze05 ownership before dispatch.
+
+**Predecessor contracts.** Pin Root’s accepted post-repair source/check receipt; existing Guide scope/preflight/event-generation contracts; A02-02 six-fact projection and its limitations; A04-01’s durable selected-scope/task/version contract when delivered. `Company.Readiness.project` supplies `next_action:nil` (334–340), and ReadinessFacts is display-only: neither is a replacement selector. Full ticket dispatch/completion cannot assume A04-01 is done because this presentation cut is feasible.
+
+**Acceptance boundary.** Cover AC2 and the bounded AC1/AC5 states with empty, saved, blocked, stale and unavailable fixtures: exactly one primary continuation in the Home summary, before detail forms, visible recovery, no false success. Cover same-mount scope/task/back behavior and dirty/stale guards for AC3; Portal1444–1474 and CompanyPanel40–126 reset transient state, so refresh/authentication/two-tab durable resume remains A04-01 work. Verify AC4 discoverability and no duplicate primary navigation using actual desktop/narrow keyboard checks. Complete-scope maintenance, full Home/Review/Evidence navigation consolidation and cross-refresh resume remain open.
+
+Root’s current reliability regression and actual WEB verification must finish before acceptance. Focused render/navigation checks require zero dispatch and unchanged exact approval boundaries. No novice or full-ticket completion claim follows.

@@ -1,0 +1,42 @@
+# Product outcome and remaining priorities
+
+HarnessForge should analyse an organisation's authorised documents, plans and history, combine supported findings with explicit future goals, and help its owner review and generate a useful company-specific harness. This outcome drives the remaining enhancement rounds. Completed rounds remain foundations; their local correctness does not establish fulfilment of this purpose. The canonical board and state ledger carry the current verified count.
+
+The user restated this direction through the companion review session on 2 November 2026. Root acknowledged it before iteration 09 selected a scope. The blueprint is design input, not executable agent instructions. Root checked its evidence/future-plans sections and the current source: `Models.propose/2` processes one source revision; its validator restricts citations to that revision; company composition remains largely manual and has two fixed workflow presets.
+
+## Connected journey
+
+1. Select an authorised corpus of documents, plans and historical records. Show included scope, captured revisions, source links, freshness and missing coverage.
+2. Analyse across the selected sources. Propose supported practices, recurring problems, decisions, exceptions, changed guidance and conflicts. Distinguish discussion, observed behaviour, proposals and approved policy. Preserve uncertainty and exact provenance.
+3. Relate those findings to explicit future goals. Recommend appropriate rules, skills/workflows, checks and evaluation criteria, explaining the historical evidence, future intent or both behind each recommendation. Reduce the operator's need to perform the analysis manually.
+4. Let the operator inspect supporting and conflicting evidence, edit, reject and explicitly approve recommendations. Generate a coherent, versioned package for a supported target from eligible approved revisions.
+5. Exercise representative tasks against a baseline or explicit owner-reviewed rubric. Record correctness, obligation coverage, critical violations and recovery. Report time/cost improvement only when actually measured.
+
+## Current evidence and next vertical slice
+
+Iterations09–10 established a bounded synthetic cross-source analysis, exact human correction/approval and export journey. Iteration11's owner-assessment correction remains in verification; do not abandon or count it prematurely. Its owner reports do not independently establish observation truth or model usefulness. Isolated form recovery, copy changes, goal-admission checks or MCP administration alone do not deliver the company-harness outcome. Preserve useful dissent and follow-up needs.
+
+Use an explicit reproducible synthetic company corpus when authorised real data is unavailable. Demonstrate multiple historical/document sources plus future intent, traceable recommendations, uncertainty/conflict handling, an edited or rejected proposal excluded from export, and an approved recommendation reaching the target files. Bind the selected scope to concrete positive, negative and recovery checks. Do not claim that a controlled provider response establishes real semantic analysis quality.
+
+Existing provider/consent/budget controls should support the production analysis path. Root observed no selected application model and a refused connection at the existing default Ollama endpoint on 2 November. A synthetic provider can demonstrate protocol and workflow mechanics; real company/model validation remains separate. Do not silently substitute heuristics, install a model, spend on inference or fabricate citations to hide unavailability.
+
+## Next-phase priority: minimal internal retrieval connected to the harness
+
+On2November the user explicitly authorised this priority through the companion HarnessForge review chat: retrieve company evidence, analyse it together with future goals, deliberately review/edit/reject/approve, generate a company-specific harness, then evaluate the analysis and representative work. Internal RAG is the enabling foundation; a useful reviewed company harness remains the deliverable. Incorporate this priority into upcoming fresh scope selection while safely finishing in-flight work and retaining the alternating functionality/UI/UX rounds and all review/evidence requirements. UI rounds improve this same retrieval-to-analysis journey. This direction does not preselect an iteration before its required retrospective and planning inputs.
+
+Reuse revisioned evidence storage, SQLite/FTS5, Chat.Retrieval, the provider/consent/budget gateway and existing company-analysis, approval, build and export machinery. Move beyond the small manually selected document limit through bounded relevant passage retrieval across an explicitly authorised company corpus. Begin with a useful measured lexical/chunk baseline; compare semantic/hybrid matching or reranking against it before adding dependencies or storage. Do not spend successive rounds on a standalone search platform, custom vector database or embedding model. Keep orchestration within the existing local application.
+
+Filter workspace/project/access scope before retrieval and model dispatch. Preserve exact source/revision/hash/UTF-8-byte-range citations, actual historical dates, document/decision status and surrounding context; a chunk must not silently reverse its parent's meaning. Capture recency or similarity scores grant no policy authority. Deliberately seek relevant policy, architecture, historical failure/exception/conflict and future-plan evidence; top-k similarity alone cannot establish company-wide coverage. Expose missing coverage and allow abstention. Preserve source-scoped cloud consent, revocation, changed-source invalidation and purge of derived indexes/caches. Keep retrieval snapshots and source dependencies attributable through review, build and export.
+
+The first concrete retrieval milestone demonstrates a larger explicit corpus plus one saved future goal, relevant and contradictory retrieved evidence, a traceable recommendation, deliberate human correction/rejection and approval, and corrected guidance in actual exported target files. Benchmark the existing baseline and candidate on the same corpus/questions against owner-reviewed expected supporting and conflicting sources. Assess missed critical obligations, irrelevant/outdated evidence, citation correctness and model recommendation quality. Use a real selected model when available and authorised; scripted responses establish mechanics only. Record genuine external model/credential blockers once without repeating unchanged requests. No new private imports, paid inference, credential extraction, publishing or access expansion is authorised by this priority.
+
+## Continuing rounds
+
+Odd rounds improve this analysis-to-harness outcome. Even rounds make the same journey understandable and usable through progressive disclosure and deliberate review. HarnessForge's own MCP should expose consistent company-analysis context within its explicit authority boundaries. Keep the user's sixteen concurrent Sol planners, fresh Astra decisions, implementation specialists, independent validation, SSD evidence and five independent retrospectives per round.
+
+Preserve completed work, exact human approval, privacy/revocation, immutable provenance, deterministic generation and execution isolation. This direction grants no private-source imports, credential extraction, paid inference, access expansion, publication or generated-code execution on the host. Record genuine external blockers once and continue independent authorised work.
+
+
+## Company-scale source reuse steering — 2 November 2026
+
+The user explicitly requires removing the manual 2–4-document bottleneck for hundreds of thousands/millions of files and reusing existing graph/RAG source. Adopt pinned Graphiti v0.31.2 and its existing Jev/runtime components; retain Elixir authority and SQLite/FTS5 baseline. Next fresh UI planning must address corpus/goal selection, coverage and conflict review; the following functionality slice must connect bounded resumable corpus capture/membership/pagination and passage retrieval to review, actual corrected harness export and evaluation. Preserve the current iteration11 correction and all50-round gates. Detailed boundaries and exact research limits: [SCALABILITY_REUSE.md](SCALABILITY_REUSE.md). The offline51-test spike is research, not installed product or semantic/million-file qualification. No paid model pilot is authorised.

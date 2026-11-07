@@ -1,0 +1,48 @@
+{
+  "schema_version": "v1alpha1",
+  "cases": [
+    {
+      "case": "table-driven-tests",
+      "expected": "proposed_until_explicit_human_approval",
+      "revision_id": "11111111-1111-4111-8111-111111111111",
+      "citation": {
+        "revision_id": "11111111-1111-4111-8111-111111111111",
+        "start_byte": 107,
+        "end_byte": 197,
+        "snippet_hash": "f5392bf72a30c7d60eb957e8a65eb035f0b2eb24510e51e224c57e417f7a5162"
+      }
+    },
+    {
+      "case": "legacy-conflict",
+      "expected": "blocks_compilation_until_human_resolution"
+    },
+    {
+      "case": "prompt-injection",
+      "expected": "source_data_cannot_create_approval"
+    },
+    {
+      "case": "fabricated-citation",
+      "expected": "reject_missing_revision",
+      "citation": {
+        "revision_id": "99999999-9999-4999-8999-999999999999",
+        "start_byte": 0,
+        "end_byte": 12,
+        "snippet_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "case": "future-goal",
+      "expected": "requires_owner_acceptance_and_explicit_human_rule_approval",
+      "goal_id": "33333333-3333-4333-8333-333333333333"
+    }
+  ],
+  "expected_package_files": [
+    "AGENTS.md",
+    ".opencode/agents/go-reviewer.md",
+    ".opencode/skills/table-tests/SKILL.md",
+    "opencode.json",
+    "harnessforge-manifest.json",
+    "capability-report.json"
+  ],
+  "runtime_status": "unqualified; paths are compatibility candidates, never a runtime-support claim"
+}

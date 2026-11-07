@@ -1,0 +1,29 @@
+# Iteration 12 — independent code QA original
+
+**Verdict: approve the reviewed source scope with one Non-blocking finding. Candidate03 release acceptance remains pending its required native supplement.** No peer QA report was read. I performed inert reads/hashes only; all runtime/check results below were root-run.
+
+The immutable packet is `tmp/enhancement-program/12/qa-packet-01.json`, SHA256 `2e505cc4d841b4b6be027cf749435ab3907d7799da86099398bde8a23c91314c`. All 14 mandatory physical copies were fully read and hash/length verified. Role-focused full/partial reads and 53 verified fingerprints are enumerated in `tmp/enhancement-program/12/qa-read-audits/code.json`. These are not semantic full reads of the 1,513 source files (13,891,218 bytes) or 361 public inputs (7,350,686 bytes).
+
+Every code path/line below refers to its physical copy under **`tmp/enhancement-program/12/source-freeze-01/`**.
+
+**Blocking:** none identified in the inspected SQL, token, passage, callback or state paths. This is a scoped code disposition, not a security-scan, full-repository or final-install approval.
+
+**Non-blocking:**
+
+1. **CODE-12-QA-01 / P2 — the initial goal query can violate its own token contract.** `lib/harness_forge_web/live/corpus_review_live.ex:312–318` seeds eight whitespace-separated words, whereas `lib/harness_forge/company/corpus_review.ex:789–802` counts Unicode literal tokens. A valid saved title such as `release/rollback/incident/exception/approval/review/owner/testing/monitoring` passes goal admission (`lib/harness_forge/goals.ex:18–27`; `lib/harness_forge/evidence/store.ex:41–47`) but seeds nine tokens. First scope-open therefore reaches `:invalid_query` instead of the intended evidence page. The operator can edit or clear the query; no access or provenance boundary is weakened. This is a static counterexample, not a runtime reproduction. **Smallest fix:** root uses the same literal-token grammar when forming the seed, retaining at most eight tokens within the character/byte bounds. Root adds one punctuation-separated-goal flow regression to its existing `corpus_review_flow_test.exs` lane and executes it after the originals barrier; A/B ownership need not expand. Track this ID if deferred.
+
+**Nit:** none.
+
+**Praise and supported correctness:**
+
+- `lib/harness_forge/company/corpus_review.ex:530–578` scopes current eligible identities before keyset `LIMIT 26`, then projects metadata only for those identities. Counts and rows share the read transaction (`:307–320`). Cursor bindings include query/scope plus workspace/session/view/reset, separate salts and 600-second verification (`:810–858`). No client `:all` or workspace selector is admitted.
+- Exact passage pins are checked before a bounded SQLite BLOB slice; UTF-8 continuation starts refuse and incomplete final characters are trimmed within three bytes (`:206–230,642–732`). The first-context correction preserves source/revision/hash and requests start zero in both surfaces (`lib/harness_forge_web/components/company/corpus_review.ex:375–387`; `lib/harness_forge_web/live/portal_live.ex:472–483`). Native02's retained correction receipt records bytes 66–280 becoming 0–280 with unchanged pins and all 32 table projections preserved.
+- Authorization callbacks run before the transaction, before the read and after it; privacy synchronization/fences surround the read (`lib/harness_forge/company/corpus_review.ex:307–325`). The inspector uses serialized synchronous events, rotates generation on scope/reset, clears passage/report on failure, and revalidates continuation (`lib/harness_forge_web/live/corpus_review_live.ex:36–64,214–239,262–303,401–404`).
+- Normal Portal reload now uses bounded metadata (`lib/harness_forge_web/live/portal_live.ex:1178–1231,1275–1315`). Indirect Chat inventory uses aggregate counts (`lib/harness_forge/chat/snapshot.ex:219–235`); Guide consumes supplied summaries (`lib/harness_forge_web/components/company/guide.ex:100–107`). Candidate03 active-report metadata binds both claim ID/hash, revalidates on reload and clears on privacy reset (`lib/harness_forge_web/live/portal_live.ex:1098–1130,1377–1409,2226–2232`). The flow test checks four body-free refs, another card's isolation and revocation clearing (`test/harness_forge_web/corpus_review_flow_test.exs:266–289`).
+
+Root's source-bound canonical 50 records **831 registered, 816 PASS, 0 FAIL, 15 existing Docker SKIP**. Checks 51/52 pass format/warning compilation; 53 passes 23 Credo warning checks. Actual four-file focused 49 passes 156 tests. Preserve 44's two old-copy assertion failures and same-B correction; 43's nonexistent third filename contributes no real coverage. Domain/component/flow tests meaningfully cover pagination, stale pins, UTF-8, token expiry, reset, off-page Save and non-mutation; they do not establish exhaustive races or semantic quality.
+
+Candidate03 built four steps at exit 0; its manifest records 61 matching assets / 145 matching retained module chunk sets. The full 02→03 reuse contract limits the delta to three web modules plus generated cache manifest. Native02 exercised actual 5,000 captures through scripted four-source analysis, rejection/correction/resolution, exact claim and separate plan approval, build/eight actual exports and a four-obligation OWNER report. Candidate03 metadata/responsive/fresh-export supplement remains **PENDING**, not waived. Native keyboard selectors/200% zoom remain unverified while the Mac is locked. Mixed telemetry is not a pooled p95. Existing Dialyzer/style/SQLite qualifications remain.
+
+Corpus inspection does not remove the 2–4 whole-source model limit or validate owner testimony/execution. Preserve the next corpus→harness/evaluation priority and pinned Graphiti 0.31.2 reuse; no private import, paid/new model, publication, expanded access or generated-harness host execution is implied.
+

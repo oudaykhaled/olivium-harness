@@ -1,0 +1,15 @@
+# Candidate09 independent evidence review
+
+**Verdict:** The records support the bounded candidate09 WEB upgrade and three recorded Chrome regressions. No mismatched source, report or payload pin was found. This is evidence review, not an independent rerun or native-agent qualification.
+
+All437 frozen-copy and current-source hashes match source-freeze04 (`298f3002408b56d7823cb4a36012190b1e9f60bfb8eaa9ebd953eacf5f82c2ba`). Checks149–155 have identical before/after maps matching that freeze. This is byte-hash coverage, not semantic review of437 files. Check149 records1354 tests:1339 passed,15 skipped, zero failures with seed45559. Format150 and production inventory/compile/assets/release151 exit0. The retained migration warning and database-locked log are not evidence of a failure cause. Historical143 remains RED;149 GREEN does not explain it.
+
+Runtime15/check152 record installation of candidate09 on the owned synthetic workspace at8889, preserving67 existing table digests, artifact bytes, authentication files and two setup rows while adding three tables. The scoped upgrade script verifies the owned prior process, workspace and8889 listener before replacing it. Main8865/user8888 preservation is recorded by Root; I made no independent runtime/port probe.
+
+Reports153/154/155 each select one passing test and one attempt, with complete cleanup, no secondary errors and zero runner model tokens. All115 selected steps passed: Home56, artifact20, recovery39. The source/assertion correspondence supports Home keyboard/disclosure navigation, the existing eight-file artifact, and the UI-created setup surviving upgrade with normal lock/login. Recovery starts at version15, checks original exact notes and all saved choices, moves Back/Back/Continue/Continue to19, and leaves later capabilities visibly unavailable. The second setup remains version7 in Root's post-verification record. No new synthesis or company evaluation follows from these regressions.
+
+All eight downloaded entries equal complete bytes in both `artifact.json.files` and its payload directory, and equal the prior candidate08 payloads. Seven hashes/sizes match the manifest; its own file is deliberately excluded from self-hashing and matches the stored manifest bytes. No generated file was extracted or executed.
+
+**Known limitation:** The ZIP container is not deterministic: candidate09 SHA256 `0bf231d05b32ae5aad3b0c6bbccd86c7c826e4d0a759e6fbe01d4a2590b927e4` differs from08 because DOS and UT timestamp metadata differ despite identical payloads. The verification record's `HarnessDelivery.zip/1` attribution is a typo: the inspected method is `HarnessDelivery.download/1`, lines119–135, calling `:zip.create/3` without fixed timestamps. No ZIP fix was attempted.
+
+Source checks, packaging, recorded isolated installation and observed browser behavior are distinct evidence stages. No native commands, new provider dispatch, real-company/model/task benefit, full A04-01, scale, novice study or roadmap completion is qualified. Exact paths, hashes and inspected ranges are in `tmp/ticket-delivery/codex-runtime/browser09/qa-audit01.json`.

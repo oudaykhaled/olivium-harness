@@ -1,0 +1,25 @@
+# Iteration 12 UI/UX native addendum 03 — same reviewer
+
+**Verdict: qualified ACCEPT retained; newly observed selector and zoom-level cells supported.** UX-12-QA-02 is now partly resolved: native selection of all three saved choices and scope opening, explicit100/200% zoom observations, and four width/zoom geometry cells are evidenced. **P2 lower-pane full visual reflow coverage remains unverified.** No demonstrated blocking action/focus/reflow defect was found. UX-12-QA-03 remains P3; earlier originals/addendum02 are unchanged historical records.
+
+This binds native packet03 SHA256 `74472b7418d5ea93aa15665c63c80ccb5479395507657755ce2dbeb40f5d295b`. I verified all51 public copies/730,235B against their sizes/hashes, reread my two reports/audits and consumed the custody/native records identified in the new audit. Fingerprints do not imply all-file semantic review. Product/test/build/freeze02 are unchanged; “candidate05” filenames identify a new observation sequence on **native-candidate04**, not a new product. I performed no runtime, browser, HTTP, DB or test operation and read no peer report.
+
+**Native selector cell — supported for the recorded sequence.** Root records OS Tab/Space/Down/Return choosing captured corpus, saved project and assigned goal, then Tab/Return opening scope. AX02 still shows the project placeholder; AX03 still shows the unset goal and validation prompt despite its “completed” filename. Neither is a pass. AX04's subsequent separated Down/Return sequence produces inspection scope,5,000 captures, four distinct assignments,25 rows and results focus. The paired successful screenshot crops the result list, not the selectors; the AX record supplies completion. This closes the prior absence of native selector completion proof for these controls, without claiming a complete keyboard-only harness journey.
+
+**Zoom/reflow cells — observations, geometry and visual scope remain separate.** AX01 explicitly identifies Zoom100%; AX07 identifies Zoom200%. Four JSON/JPG pairs bind observed zoom to measured CSS width:
+
+| Native zoom / CSS width | Document width | Disposition |
+|---|---:|---|
+|100% /320 |305 | Upper scope visual and bounded horizontal geometry supported |
+|100% /390 |375 | Upper scope visual and bounded horizontal geometry supported |
+|200% /320 |312 | Upper scope visual and bounded horizontal geometry supported |
+|200% /390 |382 | Upper scope visual and bounded horizontal geometry supported |
+
+All four JSONs include the4,094-byte passage, original report and required controls inside horizontal bounds. I inspected every paired image: labels/actions and the inspection summary wrap in the upper viewport. Some320-width selected option text is clipped within its select, while the selected title and goal acceptance are repeated readably in the summary. No core action is visibly lost there. **The lower passage/report are not visible in these images.** Their DOM presence and bounds do not prove text readability, vertical overlap, focus visibility or visual completeness. I retain that P2 residual rather than convert the entire changed-UI matrix into a pass. It is nonblocking within the already accepted narrow qualification; revisit at the next supported visual capture or controls/CSS change. No full-WCAG or novice-understanding claim follows.
+
+**Passage controls/focus — supported for the observed Enter actions.** JSON10 records Next to bytes4114–8210 with passage focus. Its immediate Start/Close focus fields are blank and remain retained. Settled JSON11 separately observes passage absent/report retained with `corpus-results` focus; JSON12 observes start0–4096 with `corpus-passage` focus. These later states resolve the transient observations, without pretending immediate focus succeeded. Button activation used Chrome Enter and is distinct from the OS selector sequence.
+
+**Installed custody — supported by root execution receipts and inert metadata equality.** Standard candidate04 main PID60859/8865 has QA probe/MCP off and no schema change. Frozen before/after/backup/post-smoke metadata agree across32 tables and27 artifact entries; recorded backup modes are0600/0700. I did not open private databases/backups. Two saved asset URL/response hashes agree with the release. Main DOM/JPEG show Company and its corpus-review entry; their preserved origin is historical **IAB2/tab2**, not a saved native Chrome100/200% screenshot. JPEG MIME/bytes match the custody binding. After reset Chrome1/IAB3 replaced earlier IDs; retained stale-ID debugger errors do not by themselves prove a Chrome outage. Main175% was preserved; QA150%/viewport were restored, the owned QA tab closed and app/provider stopped.
+
+Retain496 Portal-mount queries, no fresh04 export, the exact03 export reuse,2–4-source analysis limit, unknown coverage and synthetic/model/owner-truth/scale limits. UX-12-QA-01 remains closed only within its earlier scope. This adds no source correction or iteration count. Following functionality still must connect company corpus retrieval through reviewed corrected actual exports and representative evaluation using the pinned Graphiti reuse direction.
+

@@ -1,0 +1,25 @@
+"Was this tool really helpfull and reliable to build a complete harness for a company? and what is missing to make it reliable?"
+
+**Helpful for controlled local construction; reliable for the demonstrated recovery contract; complete-company reliability remains unproven.** The company owner’s job is turning reviewed obligations into acceptable work. Measure owner-accepted representative tasks per attempted task, mandatory-obligation coverage and interrupted recovery. An accepted critical policy violation or omitted obligation falsifies readiness. Those outcome observations are missing.
+
+08 repairs wrong provider-import advice. The real native `Bad Name` refusal retained name/version/Codex/profile, focused the associated correction and allowed explicit retry producing one immutable package. Four builder calls across both phases produced one package and zero evaluations/model requests. [PackageBuild](../../../../../tmp/enhancement-program/08/common-inputs/lib/harness_forge_web/package_build.ex) bounds drafts and classifies exact typed diagnostics; domain approval remains authoritative. This is a useful recovery improvement, with unmeasured novice task success.
+
+[Verification](../../../../../tmp/enhancement-program/08/common-inputs/docs/enhancement-program/iterations/08/verification.md) records 569 canonical identities: 554 fresh passes plus 15 optional Docker skips. Historical Docker reuse is separate; 49 focused repeats and 22 synthetic JavaScript cases add no canonical passes. Dev Dialyzer retains two baseline diagnostics; wrong-test-environment nine remains a failed attempt. [Installation](../../../../../tmp/enhancement-program/08/common-inputs/docs/enhancement-program/iterations/08/post-install-verification.md) verifies standard main PID 46955/port 8865, MCP/probe off, 30 tables/27 artifact files preserved; no schema change. Implemented, reviewed, locally installed and verified are supported; progress remains 7/50 pending retrospectives/handoff and root closure.
+
+I verified all 489 copied sizes/hashes, 12,558,075 bytes, zero mismatches; full-read all required originals and independently viewed seven original-detail images. The six matrix JPEGs show contained correction/controls at CSS 320/390 and actual 100/200%; 200% uses overlapping ordinary upper/lower views. The reset image shows defaults/navigation focus. CSS 160 overflow remains outside that matrix. Two QA timeouts plus three additional main CUA failures remain tool failures. Deliberate same-PID/transport old-event delivery supports its bounded guard; it is not a natural race.
+
+Missing evidence includes representative real-company/model outcomes, obligation coherence, authenticated connectors, managed Codex/Claude, portable recipient authority, fresh 08 MCP SDK/live Linux, longitudinal/novice usability, full WCAG/speech and operating-log confidentiality. More fixture passes cannot close these gaps. Prior outcome-first, coherence-first, portable-authority, MCP-revocation and creation-versus-approval coverage dissent survives; proposal counts select nothing.
+
+**One bounded 09 functionality proposal: selected-goal coverage before plan approval.** For plan owners, extend [Company approval](../../../../../tmp/enhancement-program/08/common-inputs/lib/harness_forge/company.ex#L340) so every selected goal has a milestone with acceptance/evaluation text. Success: zero new approvals with uncovered selected goals; any counterexample falsifies it. Decision: gate approval, preserving incomplete drafts; consequence: additional authoring. Creation-time refusal offers a stronger draft invariant but rejects useful partial work. This checks declared accounting only.
+
+- Given two covered goals, When approving their exact revision, Then approval succeeds and binds that revision.
+- Given one uncovered goal, When approving, Then return bounded uncovered IDs and write no decision/artifact.
+- Given an approved historical plan, When proposing a successor, Then preserve the ancestor; require successor coverage only at approval, with zero-goal behavior unchanged.
+
+**One bounded 10 UI/UX proposal: saved-goal continuation to Evidence.** For rule authors, reuse [existing navigation/form](../../../../../tmp/enhancement-program/08/common-inputs/lib/harness_forge_web/live/portal_live.ex#L1616) with one explicit continuation action. Success: every supported keyboard activation reaches the form; a missed destination falsifies delivery. Automatic selection saves effort but weakens deliberate choice; human comprehension remains unmeasured.
+
+- Given saved goals, When activating continuation, Then focus the rule-form heading; next Tab reaches blank Saved goal.
+- Given navigation alone, When Evidence opens, Then create/select/approve no rule or goal.
+- Given reset or unavailable goals, When continuing, Then revive no draft; preserve usable focus at 320/390 and actual 200%.
+
+These are separate recommendations for later selection. No peer 08 retrospective, delegation or runtime work informed this assessment; [audit](../../../../../tmp/enhancement-program/08/retro-audit-01.json) records provenance.

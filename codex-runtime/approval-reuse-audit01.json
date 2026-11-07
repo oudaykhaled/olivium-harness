@@ -1,0 +1,1196 @@
+{
+  "task": "Native Codex WEB command approval reuse scout",
+  "frozen_at_utc": "2026-11-03T21:17:40.945Z",
+  "report": "docs/ticket-delivery/CODEX-approval-reuse-facts01.md",
+  "report_words": 371,
+  "report_sha256": "2fef927035d3ee5ab867b2526d2e26e256941372cd7436d1365bbbaf00926243",
+  "reads": [
+    {
+      "path": "lib/harness_forge/decisions.ex",
+      "sha256_at_freeze": "51aea4bf0a7dca4f2c4d467005b86864fea7a76411b4b4b1c9a5580601e35e91",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/decisions.ex",
+          "sha256": "51aea4bf0a7dca4f2c4d467005b86864fea7a76411b4b4b1c9a5580601e35e91",
+          "ranges": [
+            [
+              1,
+              150
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/evaluation/run.ex",
+      "sha256_at_freeze": "cbe0055cf94c01ae6aef04b0175fbd80fa6b23b16d2766c47619a6ddd6d107a7",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/evaluation/run.ex",
+          "sha256": "cbe0055cf94c01ae6aef04b0175fbd80fa6b23b16d2766c47619a6ddd6d107a7",
+          "ranges": [
+            [
+              1,
+              120
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/company/setup_sessions.ex",
+      "sha256_at_freeze": "15c4ced7ea7fbc93726f0951c2de0e64f5eeb9456da37db8c0e286a53206d8d8",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/company/setup_sessions.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "15c4ced7ea7fbc93726f0951c2de0e64f5eeb9456da37db8c0e286a53206d8d8"
+        },
+        {
+          "path": "lib/harness_forge/company/setup_sessions.ex",
+          "sha256": "15c4ced7ea7fbc93726f0951c2de0e64f5eeb9456da37db8c0e286a53206d8d8",
+          "ranges": [
+            [
+              102,
+              200
+            ],
+            [
+              280,
+              310
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/execution/relay.ex",
+      "sha256_at_freeze": "f765871d112fa4a244a6a83b2845dd849765c20273e9f52bb3d20fb3bc4ae44b",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/execution/relay.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "f765871d112fa4a244a6a83b2845dd849765c20273e9f52bb3d20fb3bc4ae44b"
+        },
+        {
+          "path": "lib/harness_forge/execution/relay.ex",
+          "sha256": "f765871d112fa4a244a6a83b2845dd849765c20273e9f52bb3d20fb3bc4ae44b",
+          "ranges": [
+            [
+              99,
+              147
+            ],
+            [
+              259,
+              289
+            ]
+          ]
+        },
+        {
+          "path": "lib/harness_forge/execution/relay.ex",
+          "sha256": "f765871d112fa4a244a6a83b2845dd849765c20273e9f52bb3d20fb3bc4ae44b",
+          "ranges": [
+            [
+              29,
+              72
+            ],
+            [
+              201,
+              217
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/execution/relay_plug.ex",
+      "sha256_at_freeze": "51edae006ea1500eae623465a9fbae6064c4d7725659a4b9876e772391e72e04",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/execution/relay_plug.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "51edae006ea1500eae623465a9fbae6064c4d7725659a4b9876e772391e72e04"
+        },
+        {
+          "path": "lib/harness_forge/execution/relay_plug.ex",
+          "sha256": "51edae006ea1500eae623465a9fbae6064c4d7725659a4b9876e772391e72e04",
+          "ranges": [
+            [
+              9,
+              48
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/execution/coding_session.ex",
+      "sha256_at_freeze": "9dde197dd9fd832f5515b5c4414213030c7d8d2762a03c6435f3b3b5b21137bc",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/execution/coding_session.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "9dde197dd9fd832f5515b5c4414213030c7d8d2762a03c6435f3b3b5b21137bc"
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/execution/codex.ex",
+      "sha256_at_freeze": "d9f511da6f8971caba3d7c25044adda00de7437c2108fa57e922818659c48b9a",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/execution/codex.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "d9f511da6f8971caba3d7c25044adda00de7437c2108fa57e922818659c48b9a"
+        },
+        {
+          "path": "lib/harness_forge/execution/codex.ex",
+          "sha256": "d9f511da6f8971caba3d7c25044adda00de7437c2108fa57e922818659c48b9a",
+          "ranges": [
+            [
+              150,
+              179
+            ],
+            [
+              236,
+              254
+            ],
+            [
+              436,
+              456
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/models/ledger.ex",
+      "sha256_at_freeze": "70dc98b9e53142de2558563d8f3fb5489aff6be645ad11c8a4cfa34a0442cd34",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/models/ledger.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "70dc98b9e53142de2558563d8f3fb5489aff6be645ad11c8a4cfa34a0442cd34"
+        },
+        {
+          "path": "lib/harness_forge/models/ledger.ex",
+          "sha256": "70dc98b9e53142de2558563d8f3fb5489aff6be645ad11c8a4cfa34a0442cd34",
+          "ranges": [
+            [
+              15,
+              35
+            ],
+            [
+              44,
+              127
+            ]
+          ]
+        },
+        {
+          "path": "lib/harness_forge/models/ledger.ex",
+          "sha256": "70dc98b9e53142de2558563d8f3fb5489aff6be645ad11c8a4cfa34a0442cd34",
+          "ranges": [
+            [
+              1,
+              14
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/evaluations.ex",
+      "sha256_at_freeze": "71cd09ee5c1d924eb471a3868f5198de00bf620375b6b0b23dcb3607d88e10ab",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/evaluations.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "71cd09ee5c1d924eb471a3868f5198de00bf620375b6b0b23dcb3607d88e10ab"
+        },
+        {
+          "path": "lib/harness_forge/evaluations.ex",
+          "sha256": "71cd09ee5c1d924eb471a3868f5198de00bf620375b6b0b23dcb3607d88e10ab",
+          "ranges": [
+            [
+              127,
+              138
+            ],
+            [
+              273,
+              315
+            ],
+            [
+              316,
+              353
+            ],
+            [
+              895,
+              906
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge_web/live/portal_live.ex",
+      "sha256_at_freeze": "265540a2b22a336ecfaa67bc2d37f892f7954367be84023c6910500727f64bad",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge_web/live/portal_live.ex",
+          "mode": "targeted signature/approval/lifecycle search, first130 matches",
+          "sha256": "265540a2b22a336ecfaa67bc2d37f892f7954367be84023c6910500727f64bad"
+        },
+        {
+          "path": "lib/harness_forge_web/live/portal_live.ex",
+          "sha256": "265540a2b22a336ecfaa67bc2d37f892f7954367be84023c6910500727f64bad",
+          "ranges": [
+            [
+              348,
+              375
+            ]
+          ]
+        },
+        {
+          "path": "lib/harness_forge_web/live/portal_live.ex",
+          "sha256": "265540a2b22a336ecfaa67bc2d37f892f7954367be84023c6910500727f64bad",
+          "ranges": [
+            [
+              3110,
+              3131
+            ],
+            [
+              3163,
+              3180
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/models/runtime.ex",
+      "sha256_at_freeze": "674b966d27e348a6fa603a525466c2768226a81e1a0e2b57618676ffda807ffc",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/models/runtime.ex",
+          "mode": "targeted signatures/currentness/limit symbol search",
+          "sha256": "674b966d27e348a6fa603a525466c2768226a81e1a0e2b57618676ffda807ffc"
+        },
+        {
+          "path": "lib/harness_forge/models/runtime.ex",
+          "sha256": "674b966d27e348a6fa603a525466c2768226a81e1a0e2b57618676ffda807ffc",
+          "ranges": [
+            [
+              258,
+              298
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge/execution/coding.ex",
+      "sha256_at_freeze": "0698e4d4bc732ef8ee6df99ce95554eaeb406d671841f3269a84a35a27e2634f",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge/execution/coding.ex",
+          "mode": "targeted signatures/currentness/limit symbol search",
+          "sha256": "0698e4d4bc732ef8ee6df99ce95554eaeb406d671841f3269a84a35a27e2634f"
+        },
+        {
+          "path": "lib/harness_forge/execution/coding.ex",
+          "sha256": "0698e4d4bc732ef8ee6df99ce95554eaeb406d671841f3269a84a35a27e2634f",
+          "ranges": [
+            [
+              293,
+              336
+            ],
+            [
+              1078,
+              1121
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "lib/harness_forge_web/plugs/operator_session.ex",
+      "sha256_at_freeze": "787d68068ed7acb82ac83c364f0a8253a999288cd158867e0895a5c36639ee64",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "lib/harness_forge_web/plugs/operator_session.ex",
+          "sha256": "787d68068ed7acb82ac83c364f0a8253a999288cd158867e0895a5c36639ee64",
+          "ranges": [
+            [
+              20,
+              58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "test/harness_forge/company_setup_sessions_test.exs",
+      "sha256_at_freeze": "2496604ac75e7fe19e68bbcdf21c18635210cca73d0c3dba61d7c0515ce565b3",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "test/harness_forge/company_setup_sessions_test.exs",
+          "mode": "test title discovery only",
+          "sha256": "2496604ac75e7fe19e68bbcdf21c18635210cca73d0c3dba61d7c0515ce565b3"
+        },
+        {
+          "path": "test/harness_forge/company_setup_sessions_test.exs",
+          "sha256": "2496604ac75e7fe19e68bbcdf21c18635210cca73d0c3dba61d7c0515ce565b3",
+          "ranges": [
+            [
+              126,
+              145
+            ],
+            [
+              448,
+              475
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "test/harness_forge/runtime_relay_test.exs",
+      "sha256_at_freeze": "d89b4491316c38b6296074dbd8c970748b68f9b1decd7fa54d54d6307cc32875",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "test/harness_forge/runtime_relay_test.exs",
+          "mode": "test title discovery only",
+          "sha256": "d89b4491316c38b6296074dbd8c970748b68f9b1decd7fa54d54d6307cc32875"
+        },
+        {
+          "path": "test/harness_forge/runtime_relay_test.exs",
+          "sha256": "d89b4491316c38b6296074dbd8c970748b68f9b1decd7fa54d54d6307cc32875",
+          "ranges": [
+            [
+              221,
+              235
+            ],
+            [
+              300,
+              332
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "test/harness_forge/codex_runtime_test.exs",
+      "sha256_at_freeze": "e479f219d4c65cb887597cfafc233d1e9e4d2bf3a30bcb292bc1a791e9aaad5b",
+      "stable_across_recorded_reads": true,
+      "observations": [
+        {
+          "path": "test/harness_forge/codex_runtime_test.exs",
+          "mode": "test title discovery only",
+          "sha256": "e479f219d4c65cb887597cfafc233d1e9e4d2bf3a30bcb292bc1a791e9aaad5b"
+        },
+        {
+          "path": "test/harness_forge/codex_runtime_test.exs",
+          "sha256": "e479f219d4c65cb887597cfafc233d1e9e4d2bf3a30bcb292bc1a791e9aaad5b",
+          "ranges": [
+            [
+              230,
+              248
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "discovery": {
+    "filename_roots": [
+      "lib",
+      "test"
+    ],
+    "excluded_content": [
+      "lib/harness_forge/evaluation/task_suite.ex",
+      "test fixtures (filenames only)",
+      "private workspaces",
+      "runtime receipt contents"
+    ],
+    "public_lib_symbol_search": {
+      "pattern": "command.?approval|accept.?once|pending.?approval|approval.?request|tool.?approval|optimistic_lock|expected_version|idempotency",
+      "files": [
+        {
+          "path": "lib/harness_forge/accounts/provider.ex",
+          "sha256": "c33315d6f5633e5c3bde6681539b05cd366101df45dfe0f96e2567dcb548a2f8"
+        },
+        {
+          "path": "lib/harness_forge/accounts.ex",
+          "sha256": "419ca9f44090ed9b6e7c66b959bad195754acba6102ba34b2d4e0d542cf44d67"
+        },
+        {
+          "path": "lib/harness_forge/adapters/claude_code.ex",
+          "sha256": "84de2cf591a24eefeca9484f4f302376cff1ad6213bc4f0cde80fcdec6a2ea75"
+        },
+        {
+          "path": "lib/harness_forge/adapters/codex.ex",
+          "sha256": "974c643200697f670de794c8963e1a1dd908859106e3260012ed498c11a29b57"
+        },
+        {
+          "path": "lib/harness_forge/adapters/opencode.ex",
+          "sha256": "708ce5ffc3cd928074c519ad5e6e4c6e66b4f929bc7753d08ebbd6c954068caf"
+        },
+        {
+          "path": "lib/harness_forge/adapters/registry.ex",
+          "sha256": "03911fd28caed1f65f007d630e66eab6dab707b8da2d51a8bf6dd0dd1fc62092"
+        },
+        {
+          "path": "lib/harness_forge/application.ex",
+          "sha256": "97dd54c23cf9d55b68fa4577664e21fefb33c52febbdaf0621f996fb1cec168a"
+        },
+        {
+          "path": "lib/harness_forge/artifacts.ex",
+          "sha256": "9badab4927194d403657c8642320d5440441da5c1526587a2bf2ae4aea050130"
+        },
+        {
+          "path": "lib/harness_forge/audit.ex",
+          "sha256": "7885e2d4a828b64ea693ee07af91ff43cd5e07c61f7ef688bae079e1cf1285e8"
+        },
+        {
+          "path": "lib/harness_forge/chat/intent.ex",
+          "sha256": "b0e84e0b549c4ee42cb514d9210ef437358f6a9b75605368814127af85618b53"
+        },
+        {
+          "path": "lib/harness_forge/chat/output.ex",
+          "sha256": "c6366d1c7e15df05207a7d052e315b0801665cc6cdd9e8fa493c11246d7445e0"
+        },
+        {
+          "path": "lib/harness_forge/chat/retrieval.ex",
+          "sha256": "dc652dc56b0a33acf2214193ae05092cc27801f572b6ebf408832065dfca7f42"
+        },
+        {
+          "path": "lib/harness_forge/chat/snapshot.ex",
+          "sha256": "1bca32bce9aec875088f270fab71d95e925cad992049f8264911102c014d7c87"
+        },
+        {
+          "path": "lib/harness_forge/chat.ex",
+          "sha256": "6c90c337ceeaaf70aadae8f9164157cb785cfb1974f5365fc163865dadb600e3"
+        },
+        {
+          "path": "lib/harness_forge/cli.ex",
+          "sha256": "0156e8a8b03a06b19318367402dc287e4d98e432079c4cb8f321c106cbeba8cd"
+        },
+        {
+          "path": "lib/harness_forge/company/analysis.ex",
+          "sha256": "0fde537085e51fc70197e0f4483ece6ad4c27c0fcb4ea910a25cb66d46faddaf"
+        },
+        {
+          "path": "lib/harness_forge/company/analysis_v2.ex",
+          "sha256": "2557ade95fefe9b787012324ec8965857ebb5ff8ff80297f3db10af0b15d54c8"
+        },
+        {
+          "path": "lib/harness_forge/company/assessment_attempts.ex",
+          "sha256": "d87c6abd7ebff02630edbcb559875b875ed78219bda03be65e1226fb98338f48"
+        },
+        {
+          "path": "lib/harness_forge/company/assessment_records.ex",
+          "sha256": "465a75a2c4c22257ebe046189519d042b8d13987cad9c6130052606dce0386c0"
+        },
+        {
+          "path": "lib/harness_forge/company/assessment_validation.ex",
+          "sha256": "c4ddef27ac249190956ced9e0a28735bbce1447ca323a16e12e86abaa664856b"
+        },
+        {
+          "path": "lib/harness_forge/company/assessments.ex",
+          "sha256": "55b5189a0f0bdcd7487e9b4fcf4362d2d397e1d31c67c1341163b712223f02aa"
+        },
+        {
+          "path": "lib/harness_forge/company/corpus_review.ex",
+          "sha256": "4ed5891bef065cb26e7cfb75cad831d1a3d5fffa249a245068cb69305638d8c9"
+        },
+        {
+          "path": "lib/harness_forge/company/readiness.ex",
+          "sha256": "c2a6ead18fe25b80cce41e7deea6d7aeeca1f67144aecd029b47f66eb302feb3"
+        },
+        {
+          "path": "lib/harness_forge/company/readiness_projection.ex",
+          "sha256": "a0372bb7d7669e14667c2347bfba72f2dca475af2fd4348ed221c985b481f32e"
+        },
+        {
+          "path": "lib/harness_forge/company/records.ex",
+          "sha256": "3cf7c5aff5b2a0177ac9c5d10c7fd7d3498f0e94569d4fdfecd566c5a2708c49"
+        },
+        {
+          "path": "lib/harness_forge/company/retrieval.ex",
+          "sha256": "5e3a97f1ef5230819ac46073aa4e2cc38e54865e761d24a3887058ed5ecd29cb"
+        },
+        {
+          "path": "lib/harness_forge/company/retrieval_records.ex",
+          "sha256": "e5a20b71c749e014601e4ff27a33ef7bd9e616567af6cdf0b72da307819b0de0"
+        },
+        {
+          "path": "lib/harness_forge/company/setup_session.ex",
+          "sha256": "7d7a10095367bb64bb861d6535e554938a522ec89a9c6b4ba442b26b7cc84f2b"
+        },
+        {
+          "path": "lib/harness_forge/company/setup_sessions.ex",
+          "sha256": "15c4ced7ea7fbc93726f0951c2de0e64f5eeb9456da37db8c0e286a53206d8d8"
+        },
+        {
+          "path": "lib/harness_forge/company/validation.ex",
+          "sha256": "f8c8ff2ef4579d5b7ff1ad12366cb4cd60610f8d6a21557e282525051a9fbd24"
+        },
+        {
+          "path": "lib/harness_forge/company.ex",
+          "sha256": "2d14f5935a119e10c0169119714047f2c00d8bcdb93e3f8768d2bf41238503d8"
+        },
+        {
+          "path": "lib/harness_forge/compiler.ex",
+          "sha256": "a1e273bd9e0e4e95fc180ededb37b8dc095f9231b7e4a40d1b617f1bf0e50aaa"
+        },
+        {
+          "path": "lib/harness_forge/connectors/README.md",
+          "sha256": "52e675b0ab3a913866e7d5ae99e6c910511c7da169d4732898d147f7bc5c47cb"
+        },
+        {
+          "path": "lib/harness_forge/connectors/common.ex",
+          "sha256": "5ba9179b76ac82b0f4b48a3ef5f7baf1aeb10c139270b96870dbe04cd0c5fecb"
+        },
+        {
+          "path": "lib/harness_forge/connectors/confluence.ex",
+          "sha256": "6572280031133716f1bf31725407f296c4a20bd05237daf78411a72c8d655654"
+        },
+        {
+          "path": "lib/harness_forge/connectors/github.ex",
+          "sha256": "f28bf5a0b10e3b457227dfa7c1ddfa704e912c5103a2e2c443b4b0899e184280"
+        },
+        {
+          "path": "lib/harness_forge/connectors/github_account.ex",
+          "sha256": "85ce8f4f49dbc3b02b7033dee8cc6b6126e9f14f7f2e5f91d9514a50fc37bc54"
+        },
+        {
+          "path": "lib/harness_forge/connectors/github_projects.ex",
+          "sha256": "f811d55c309df63b3b62d899cd32b0b6918552b87ec6a8837b29c80f5c291da3"
+        },
+        {
+          "path": "lib/harness_forge/connectors/jira.ex",
+          "sha256": "5406bf2254e1e1391df7bc519f809e9454436002222f27c1b4c831f7974667b0"
+        },
+        {
+          "path": "lib/harness_forge/connectors/registry.ex",
+          "sha256": "175885900441381adea01b5d3b469aeee84c42fb405dc4accdfa9f694005fddd"
+        },
+        {
+          "path": "lib/harness_forge/connectors/service_account.ex",
+          "sha256": "16922bddbb6b0384ad962dc664afdb07020f41e38e327b8b3e30d518b2e80b97"
+        },
+        {
+          "path": "lib/harness_forge/connectors/slack.ex",
+          "sha256": "e957be6189c476952f6904cd0c0febb9aae66b5d8bd1135fe29947c2e917c91b"
+        },
+        {
+          "path": "lib/harness_forge/contracts/connector.ex",
+          "sha256": "436156cba00ad7bec9aa708e5d15a7618e8a91d76d2e425648d50e9861a4c860"
+        },
+        {
+          "path": "lib/harness_forge/contracts/error.ex",
+          "sha256": "2d9ab41fd71346463d92d1eb74846268a9d4488d8527c2285dd531ae1ee52186"
+        },
+        {
+          "path": "lib/harness_forge/contracts/model_provider.ex",
+          "sha256": "a7755bbe9eaf14ffe61daed4e64ae393b0525f88211a196321a84a1cf8814816"
+        },
+        {
+          "path": "lib/harness_forge/contracts/runtime_adapter.ex",
+          "sha256": "495fe5ea45d413571d5b9e82d10f26b7a8d6b1ab0d30ed5199972e459750ee42"
+        },
+        {
+          "path": "lib/harness_forge/contracts.ex",
+          "sha256": "22e72aa8e7d624494aa8e870f97d15d18cfacbb2c3280101ab1ef2ffd1cb0535"
+        },
+        {
+          "path": "lib/harness_forge/decisions.ex",
+          "sha256": "51aea4bf0a7dca4f2c4d467005b86864fea7a76411b4b4b1c9a5580601e35e91"
+        },
+        {
+          "path": "lib/harness_forge/demo.ex",
+          "sha256": "8b6478b794e64409a0ffffc28e4ca9bc86d75933c0a00faf5e9b9b29e7ab470e"
+        },
+        {
+          "path": "lib/harness_forge/evaluation/run.ex",
+          "sha256": "cbe0055cf94c01ae6aef04b0175fbd80fa6b23b16d2766c47619a6ddd6d107a7"
+        },
+        {
+          "path": "lib/harness_forge/evaluations.ex",
+          "sha256": "71cd09ee5c1d924eb471a3868f5198de00bf620375b6b0b23dcb3607d88e10ab"
+        },
+        {
+          "path": "lib/harness_forge/evidence/capture/scanner.ex",
+          "sha256": "025fbad7f52375cd828a1653a0e20ee2d3f89b6bb911317700ffb713993e0479"
+        },
+        {
+          "path": "lib/harness_forge/evidence/capture/writer.ex",
+          "sha256": "4340340e3b43b849789ca729bcd634cd963d1ad18aca780610cc11f728697e3b"
+        },
+        {
+          "path": "lib/harness_forge/evidence/capture.ex",
+          "sha256": "02264a23d29631ef81eaf785807aba48ec27d88796e81e94d3cb4e928a5c09a6"
+        },
+        {
+          "path": "lib/harness_forge/evidence/capture_records.ex",
+          "sha256": "38f5865fa006f8ee4e126cf19fe9541bdc9aa7b272a367343d09f877c9cd7d62"
+        },
+        {
+          "path": "lib/harness_forge/evidence/corpora.ex",
+          "sha256": "5952c429ab8de6356545bbc89c8c9d047250e4313d74ef94422c508fbec0ec6e"
+        },
+        {
+          "path": "lib/harness_forge/evidence/corpus_records.ex",
+          "sha256": "1a0dc7359c57e973920e9e34d03d569e9ee51ae68a0f6707a8a20c8cb704ff73"
+        },
+        {
+          "path": "lib/harness_forge/evidence/graph_manifests.ex",
+          "sha256": "7502b76d0d0a9f491cacf3e9ada7d1bbc09f984c2c78609efe97d8be96c92229"
+        },
+        {
+          "path": "lib/harness_forge/evidence/graph_sources.ex",
+          "sha256": "7125e33ccfd82b8517e1fc0bae2d4fd8462ad2a0fda019978cddf4f07b122cb2"
+        },
+        {
+          "path": "lib/harness_forge/evidence/local_import.ex",
+          "sha256": "e45a46a7627b6b3d1b9ba57012373818803107850d654fefe4988e1aee4938f7"
+        },
+        {
+          "path": "lib/harness_forge/evidence/origin.ex",
+          "sha256": "6ff78bdb509feb4b727628c9fdc3a5b8c1567f2908b298af64486604f045127f"
+        },
+        {
+          "path": "lib/harness_forge/evidence/origin_v2.ex",
+          "sha256": "40a9486b26828a6fd02093a1f12943a453c073c7d8cab0e0a58c1ddeee7bad59"
+        },
+        {
+          "path": "lib/harness_forge/evidence/passage_records.ex",
+          "sha256": "3d27aabcffcdfb818dc92d841e99e10f86defd70dd78d55b52be6301625d641d"
+        },
+        {
+          "path": "lib/harness_forge/evidence/passages.ex",
+          "sha256": "14bcb688892fdce8d1d7867c5aad9ff67ddaafbb4031308245ebf02d8cf62068"
+        },
+        {
+          "path": "lib/harness_forge/evidence/records.ex",
+          "sha256": "121c962a04f42dfe4e618182f98157f472fd92cd3d5111481aa8146a716e3a04"
+        },
+        {
+          "path": "lib/harness_forge/evidence/requirements.ex",
+          "sha256": "f30444ab1aee962e1cd9c1e4d6a348af25d1362660ca9821617d72a4997d5d29"
+        },
+        {
+          "path": "lib/harness_forge/evidence/revision_use_holds.ex",
+          "sha256": "e43d39f9969eac07143f634813d3cad12d8c169fdee4218ea53ccdc82ce37eb4"
+        },
+        {
+          "path": "lib/harness_forge/evidence/store.ex",
+          "sha256": "93e9029d947444bf4f2141fe0964dbea70f0c374053ed766fe91800b3f768f07"
+        },
+        {
+          "path": "lib/harness_forge/evidence.ex",
+          "sha256": "a98807516f4ff74445f54cbf103d7cc796c335d5cbb572d072c6e6a70efe1430"
+        },
+        {
+          "path": "lib/harness_forge/execution/codex.ex",
+          "sha256": "d9f511da6f8971caba3d7c25044adda00de7437c2108fa57e922818659c48b9a"
+        },
+        {
+          "path": "lib/harness_forge/execution/coding.ex",
+          "sha256": "0698e4d4bc732ef8ee6df99ce95554eaeb406d671841f3269a84a35a27e2634f"
+        },
+        {
+          "path": "lib/harness_forge/execution/coding_session.ex",
+          "sha256": "9dde197dd9fd832f5515b5c4414213030c7d8d2762a03c6435f3b3b5b21137bc"
+        },
+        {
+          "path": "lib/harness_forge/execution/coding_transport.ex",
+          "sha256": "27b30a363b31418cc6322c1e1e2b5f52a9d27e88ccbef0ee07502dce32b2d152"
+        },
+        {
+          "path": "lib/harness_forge/execution/command.ex",
+          "sha256": "9ba1788c379cf838a4147dcbd4a77af4880dc82fed8c0f71d400fc0cc71b9077"
+        },
+        {
+          "path": "lib/harness_forge/execution/docker.ex",
+          "sha256": "097a93be55cf40ecd2d4f0c6c240a3b6ca0871d0fafedc925fae1cbe76a7ee47"
+        },
+        {
+          "path": "lib/harness_forge/execution/relay.ex",
+          "sha256": "f765871d112fa4a244a6a83b2845dd849765c20273e9f52bb3d20fb3bc4ae44b"
+        },
+        {
+          "path": "lib/harness_forge/execution/relay_plug.ex",
+          "sha256": "51edae006ea1500eae623465a9fbae6064c4d7725659a4b9876e772391e72e04"
+        },
+        {
+          "path": "lib/harness_forge/execution.ex",
+          "sha256": "09e2ba8bb3d40fc6bf0905139521d5a85cd87fb622985682d60a09de64489101"
+        },
+        {
+          "path": "lib/harness_forge/goals.ex",
+          "sha256": "7ffb7568c236c66e6ac7600eaacc549b35843362f4ba328cc0df41138f50131f"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/backend.ex",
+          "sha256": "8ac1103b5b2340328859a0bd5430512d4cf4b2944b4a775d0fc112c778bee852"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/backend_profile.ex",
+          "sha256": "05ea63188af02400e9df4f764ac5f0f783a52a4a4c61554072eddb71f4500346"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/bootstrap.ex",
+          "sha256": "8f0933f20c0c3823ff0bbb456c503247062201c08608b084daf2f79da8a0aa1d"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/completion.ex",
+          "sha256": "c2856d0bf758205cd95ad052e363bd85d13a2fabc8c3fa294d1c21ad23d246da"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/completion_commitment.ex",
+          "sha256": "7d671616eb40ec5be814925151f9db1e91dd4c3eb17d2b9ccfa7d8618b2a0a98"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/image.ex",
+          "sha256": "d0e71e9f13c2943f244fd6c8686b2cad1f32d64e120734b91db3e55e1e196eff"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/ingest_intent.ex",
+          "sha256": "99d0af1e3fd2854565fbb9ee3d3a1f78031af2d4b36e9e1ce5d2a8eb26360897"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/inventory.ex",
+          "sha256": "e4a5f6fba2f9c1e479ee0748c27ab5664e02fc9ce9baf16bbd6a63956bf6e2cd"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/launch_profile.ex",
+          "sha256": "5e361121dee84e0806a2a6e1790f69ba8c9bbd56b84f1648cb59808c49dd19a5"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/native_projection.ex",
+          "sha256": "ac6b7dabb7e6a00fc177c52e41a7bc68e89cbf94a0a6980e122467f9379634c0"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/observation_flow.ex",
+          "sha256": "6dbb291261921a28ea2eb81a8fcf272d470a9e6fb1f29f3aa231be29da5d7d8f"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/observation_ledger.ex",
+          "sha256": "550b129cedff7a51ed3b9be465f1db3112348531af672ff16cc6a502c795cac4"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/pipe.ex",
+          "sha256": "1ea14250fb867ff70f229dc0200b275f4f505ed39e6bb9e006d0d7a032b7a947"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/private.ex",
+          "sha256": "ed6b2c1bfdcd4c168f7675d88a787ddc80aa626838b0653c751821abb8ed0f3c"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/protocol.ex",
+          "sha256": "974027266bd66a0bbb44c1e8ca1e643d1368e3771fe45793d79f970e2f38c41c"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/reader_profile.ex",
+          "sha256": "49d3f1eea930798154534f04e7f07f67e5d0c04640cc03013682c727edeb0700"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/replay_transcript.ex",
+          "sha256": "1affc830074b1d7231437bd1d9306fbe09f7afebce1c0e4d8ef74dd2ddd9ffe5"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/response_proof.ex",
+          "sha256": "7b5e17773b6dbc815e7e31e6a95d7e060d4e533d0f83d87e58941ad53a7aa465"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/root_observer.ex",
+          "sha256": "6a0da947a1ae5880234d775ec700cd9f6692a2817f60eac8d5fd362651438eb3"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/runtime.ex",
+          "sha256": "9bdf3c4e2ff90705e092987b1805d972e9b11ab1af337d1da93d7611fbefcd9d"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/schema_policy.ex",
+          "sha256": "28bf0c1cc5c8776103b344ba3de85c0832da3edfdc0e4b0a91fd13783aae4c90"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/search_completion.ex",
+          "sha256": "ff2c4657980587406f4cdf5ce66809507b64b6e729ff174d917f4d3dfcf2b3f9"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/search_intent.ex",
+          "sha256": "d99a37db775c8eaab73fe3f51821314c085cf77614b0c03eac47cb2beb3f28e5"
+        },
+        {
+          "path": "lib/harness_forge/graphiti/worker.ex",
+          "sha256": "53f94e7832fc88ee84ae87f5bab2758992e12c0c4ff9f322d26469a46ddbd823"
+        },
+        {
+          "path": "lib/harness_forge/graphiti.ex",
+          "sha256": "8be761229a4cfcefc2f7ca9131e004d1162f9a9a94cc811a52552b1332706d29"
+        },
+        {
+          "path": "lib/harness_forge/harnesses/artifact_binding.ex",
+          "sha256": "119289af246dadd86601d3b3475bc3a75888631a341b924e30e283c63629edbf"
+        },
+        {
+          "path": "lib/harness_forge/harnesses/templates.ex",
+          "sha256": "a63abbebf37a8a4d1dcfac6b3a356548c3cde93cdd4a8c3ffe508af705b5b9e2"
+        },
+        {
+          "path": "lib/harness_forge/harnesses.ex",
+          "sha256": "c0ca3ba6b3c804af2b0ad144fc96f5ae75fc8ac5858bd851da1fb96133c1f006"
+        },
+        {
+          "path": "lib/harness_forge/jobs/capture.ex",
+          "sha256": "6f3fdb9503e8ece5a346fe3591d3c6d20564427d5330129edb4b2138765cda87"
+        },
+        {
+          "path": "lib/harness_forge/jobs/operation.ex",
+          "sha256": "0e4a95d8a6ae84924a89eb9ca195296c78717482b83c7e3bf1f3a946ee36bcb2"
+        },
+        {
+          "path": "lib/harness_forge/jobs/passage_index.ex",
+          "sha256": "b34995fba2751ba5fa490dacf8e7c10671ce224f58b521c6e914b0eb3e779fa6"
+        },
+        {
+          "path": "lib/harness_forge/jobs/sync.ex",
+          "sha256": "5bb4de9cf09ce44116619a030b8091474ca3806157c60cf0dfd698293c0a734f"
+        },
+        {
+          "path": "lib/harness_forge/mcp/auth.ex",
+          "sha256": "533a10e8d6646ee1b9771372c55a7d43e13ac74a00ef4f73b12fa58cbce3f5ac"
+        },
+        {
+          "path": "lib/harness_forge/mcp/protocol.ex",
+          "sha256": "08e90d8a2fb2ba43e75c2d7728b70d3db66268844c26947a20ecad3d5086d212"
+        },
+        {
+          "path": "lib/harness_forge/mcp/tools.ex",
+          "sha256": "261a6017f20434be3ff376fb100a656183574d0e6ca0526cf055c91b914de369"
+        },
+        {
+          "path": "lib/harness_forge/models/anthropic.ex",
+          "sha256": "a4c4673c840e4f9c938ae343aa5dc989b1f19c2e7ffe7d2eaadef0b3f4601ca1"
+        },
+        {
+          "path": "lib/harness_forge/models/attempt_gateway.ex",
+          "sha256": "93018f90b828a9eeed9c4e5d28d61bd808ef68d5a6c46fcf156833a7b9c55244"
+        },
+        {
+          "path": "lib/harness_forge/models/codex_protocol.ex",
+          "sha256": "76499c2b39a07c630798a6461905b98d1c3decba6bbd5ad703bdf957c01c5c5e"
+        },
+        {
+          "path": "lib/harness_forge/models/company_analysis.ex",
+          "sha256": "f3209a486d5daa1b59640a8c785d7363187745a8e57b3bd011094a270f2f6723"
+        },
+        {
+          "path": "lib/harness_forge/models/configuration.ex",
+          "sha256": "887f570a58317bc71b9cc8a4a42abe62ae5a73e42797d106395c0bf3e5399389"
+        },
+        {
+          "path": "lib/harness_forge/models/graph_consent.ex",
+          "sha256": "545cb4765e3f2f49c77bd6caa3496e5f715a892bed4ebd84a1b0710a37027cf6"
+        },
+        {
+          "path": "lib/harness_forge/models/ledger.ex",
+          "sha256": "70dc98b9e53142de2558563d8f3fb5489aff6be645ad11c8a4cfa34a0442cd34"
+        },
+        {
+          "path": "lib/harness_forge/models/local_model_identity.ex",
+          "sha256": "9f33c87e3f02cfde7fbf8825f7ce2eed0fe619e99d5afd4acaadb1d0eaa5ea2f"
+        },
+        {
+          "path": "lib/harness_forge/models/openai_responses.ex",
+          "sha256": "17992dfd866e99009cc3ec014a1911743ab3f0e969137933c2e510b9b0b047a8"
+        },
+        {
+          "path": "lib/harness_forge/models/profile.ex",
+          "sha256": "415608e6b0205550f0f70fd386108dfbf4d8f4fd2b66a9516e9ab877d0ff48a0"
+        },
+        {
+          "path": "lib/harness_forge/models/proposal.ex",
+          "sha256": "60e36d5751b1f8c6250666b5ffdc2b0c4dd530c6ef346712070dc1401570b7b8"
+        },
+        {
+          "path": "lib/harness_forge/models/provider.ex",
+          "sha256": "dec5d03956c6a6bc5931e779e9566c93c20788f11f1031500884cc0b77f0d1e2"
+        },
+        {
+          "path": "lib/harness_forge/models/records.ex",
+          "sha256": "347e1c2faedc8b18964003845b1766da9a4d7b1e17a54045e74cc2fd3c60189d"
+        },
+        {
+          "path": "lib/harness_forge/models/runtime.ex",
+          "sha256": "674b966d27e348a6fa603a525466c2768226a81e1a0e2b57618676ffda807ffc"
+        },
+        {
+          "path": "lib/harness_forge/models/runtime_protocol.ex",
+          "sha256": "e4ea7a7739a457d0089b9fc2cfc2b80bb908dc249f5ff902af28b8fe2a737797"
+        },
+        {
+          "path": "lib/harness_forge/models/stage_authority.ex",
+          "sha256": "1be06457dcba3e5699b4e1526b36a9a54a2d509ebd5282176166025d0575cf25"
+        },
+        {
+          "path": "lib/harness_forge/models/stage_control.ex",
+          "sha256": "5f5bf8894ff10523d7e3f8526beb09c77271114d533e20fea800882b1f0a4276"
+        },
+        {
+          "path": "lib/harness_forge/models/stage_records.ex",
+          "sha256": "b66d1cf2672061d6e1fea013cde8f3d47b26913988ae07701400ac6c919741b7"
+        },
+        {
+          "path": "lib/harness_forge/models/stages.ex",
+          "sha256": "d3b3cf459b3df014af9c7fb00609fa57341db13633f274a1a126bbf146a4c20c"
+        },
+        {
+          "path": "lib/harness_forge/models.ex",
+          "sha256": "8cb1a4b341a19caa486285a5dfe34ebba58d12a6dccd2b979ab118394304a6b5"
+        },
+        {
+          "path": "lib/harness_forge/privacy/company.ex",
+          "sha256": "55ba5e0535862a4692866652af3a63fba33d1d2e3d37d71e829f191cb28c499f"
+        },
+        {
+          "path": "lib/harness_forge/privacy/files.ex",
+          "sha256": "e14a19c6924e5e08d4df14f4314b6d3bb37a2a5f76a1a43f9d516f2e645925df"
+        },
+        {
+          "path": "lib/harness_forge/privacy/purge.ex",
+          "sha256": "8fa351c8bc8b09d2b2e48b6ca3c1f0dc251013636dc656edf03770e3716592b9"
+        },
+        {
+          "path": "lib/harness_forge/privacy/snapshot.ex",
+          "sha256": "d7b8a47c5d63ddb18e9aa9f8ddc6e4632e63d4fdc3612f88e18e49263e7fba4e"
+        },
+        {
+          "path": "lib/harness_forge/privacy.ex",
+          "sha256": "513e1cf1fd4a4d564cd9c1614624da094b7b2310bb72e04e47d95dafda0b9e31"
+        },
+        {
+          "path": "lib/harness_forge/readiness.ex",
+          "sha256": "45c689be12450f71b7588e0790f82507206e418ee2d4660481a6a4efebfe2097"
+        },
+        {
+          "path": "lib/harness_forge/releases/records.ex",
+          "sha256": "b8c216cec868c067aa11d506f8bc401b833670ded1518de9ca5245cb63332e21"
+        },
+        {
+          "path": "lib/harness_forge/releases/validation.ex",
+          "sha256": "646633dadae63a5f1e9c0590302ef4cf01d196e9810a0664b08a79356502e58e"
+        },
+        {
+          "path": "lib/harness_forge/releases.ex",
+          "sha256": "459e9f18d16324fbd89b0c24968c0c88739d5488839a1ad930f60f7f9fe75820"
+        },
+        {
+          "path": "lib/harness_forge/repo.ex",
+          "sha256": "4573a63432d8737e27c3da12b54811f69412157e36990c5e6a20cc60cf6e0767"
+        },
+        {
+          "path": "lib/harness_forge/startup_gate.ex",
+          "sha256": "a7627ee284867cfafbe1592e9df6ec1c93b563ff280ed2274cb069a0f2b7d7a6"
+        },
+        {
+          "path": "lib/harness_forge/workspaces.ex",
+          "sha256": "6342cd74c02d2a09d3ff13bcf96e181dc11b1530d2dcc8efa8043ff0177dd0cc"
+        },
+        {
+          "path": "lib/harness_forge.ex",
+          "sha256": "ce48d72012623246991de37e15193da21294757f284303f79f55bed24e480229"
+        },
+        {
+          "path": "lib/harness_forge_web/company_assessment_state.ex",
+          "sha256": "932debadcd96027514a20b354987d0a81639cb956bb5a4e150a107742b1a9a01"
+        },
+        {
+          "path": "lib/harness_forge_web/components/account_panel.ex",
+          "sha256": "2662393636e3344ec8193a15fd7bf7f9df342757480bb251ed1aeb3579318cbb"
+        },
+        {
+          "path": "lib/harness_forge_web/components/chat_panel.ex",
+          "sha256": "ac284ba81260c42dd2eaf56f0afa0458bbaefa023f910a21df7b2109713c21ee"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/analysis.ex",
+          "sha256": "57a5b3d86a57adf298acb30981a3c2f5aadd5e457307ec63147d6d2325d7ce3a"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/assessment.ex",
+          "sha256": "d527cf5062d0069634ebc35efe5e957753d9a9fc672695c678c555ba387f510f"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/catalog.ex",
+          "sha256": "226afcd0a24c9177d210b5c9dae5cf948dca4809cb9f002fec2966bd688d268f"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/corpus_review.ex",
+          "sha256": "9e6fde1e9f2ae3121bfa29d18be91080166965e5fafd3e1c2b2cfaa79dd7d07d"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/guide.ex",
+          "sha256": "20262332c286b7d5292e8ec085a7d1f0f6c8380a39ffbee7819e039249dde6f5"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/plan.ex",
+          "sha256": "03530553ba21f1cf6768b14ca7020bb7916b0c60464c0fe3a47800818fc8015c"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/readiness_facts.ex",
+          "sha256": "0139d18923926bfc08bb4dfeebe65424f801f03dcfea328308c43e0442371915"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company/requirements.ex",
+          "sha256": "d9d769fa84e51e81741f4908c44f7780785842535ef9127402d27c68744a75ad"
+        },
+        {
+          "path": "lib/harness_forge_web/components/company_panel.ex",
+          "sha256": "027a9028c1fb120649720e7e6d0514252cf66976813b4b2b9289f3c33bb94246"
+        },
+        {
+          "path": "lib/harness_forge_web/components/core_components.ex",
+          "sha256": "5ebeeab0b8776c3a2a04a84ac515d1c219c396d0dcb56dc0e20e883b635c5bc2"
+        },
+        {
+          "path": "lib/harness_forge_web/components/layouts/root.html.heex",
+          "sha256": "593c84e023053ac6b71d3166202aaf33d90c877afe1b221cf72c8dfd524e742c"
+        },
+        {
+          "path": "lib/harness_forge_web/components/layouts.ex",
+          "sha256": "ef89d4b009a6689b25d3d7b1839bab258a2151ffc006845ce483fc8fca61960e"
+        },
+        {
+          "path": "lib/harness_forge_web/components/package_readiness.ex",
+          "sha256": "04aed278f54626067e6f9d9f572d0c29922f0d72e285ffe6e3dcc1f9970cd5ba"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/error_html.ex",
+          "sha256": "8e7acc48999a2768c5767ddee86bf5434980f82520e889fe138bfc6017acc504"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/error_json.ex",
+          "sha256": "3e2b313a6aa95ee98658a8984af6a2ff4761df86f4527a4446561a0618b5e979"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/harness_download_controller.ex",
+          "sha256": "e30a6b949b068abb69ca95bd8a48025dbe21c9e04e3cfc5e2a3286bb96c1eb57"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/page_controller.ex",
+          "sha256": "6a55f56d6e03bce43029cda8c1daaca562dec71d34efc43ffe29ec6313a45fb0"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/page_html/home.html.heex",
+          "sha256": "c570aada5253aa7eaa49f26420ab3b573017169d367ced7516f23af34c758f0f"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/page_html.ex",
+          "sha256": "fcae6376a36380b33ab4eade7141946734ee917d67ef8173bdd42e292652be4c"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/session_controller.ex",
+          "sha256": "b6e6fbacfcd78ebb6923106e8143672c348d0c82a69f1257fdbf1b781e04400e"
+        },
+        {
+          "path": "lib/harness_forge_web/controllers/session_html.ex",
+          "sha256": "93aace6fd96680bfcbd932ba40fe2fa75ee0d3dbb9740fa34438d22fc2a0a159"
+        },
+        {
+          "path": "lib/harness_forge_web/endpoint.ex",
+          "sha256": "c419342d388c015e150ad1bd34a120feaa3950a3bf254cede449e8dfbf478def"
+        },
+        {
+          "path": "lib/harness_forge_web/evaluation_reason.ex",
+          "sha256": "3918455de77cfc80c798b3eaa4b74c84e3115b20907aec78c8e25287201e0da8"
+        },
+        {
+          "path": "lib/harness_forge_web/harness_delivery.ex",
+          "sha256": "3589c15362d39a49026da6ea3a59d3fb64b5f6036f4a4a871696825994952838"
+        },
+        {
+          "path": "lib/harness_forge_web/live/corpus_review_live.ex",
+          "sha256": "30fcac50d4f3ff0c0afb290e9639865b234f4a4e6458f30fff95690ab1361dd0"
+        },
+        {
+          "path": "lib/harness_forge_web/live/harness_live.ex",
+          "sha256": "0059820f57f5bce425881109d8496cc7680cc0fb6f5c728ad9d72149f09ef315"
+        },
+        {
+          "path": "lib/harness_forge_web/live/portal_live.ex",
+          "sha256": "265540a2b22a336ecfaa67bc2d37f892f7954367be84023c6910500727f64bad"
+        },
+        {
+          "path": "lib/harness_forge_web/live/setup_live.ex",
+          "sha256": "aa295dc7044dc33d28173dfaddc195d3a9af2ff1843490ed573c4d2d41d171c3"
+        },
+        {
+          "path": "lib/harness_forge_web/package_build.ex",
+          "sha256": "acc5976c3ff75d042134c2e8e8f7f166f02e8f05ba70e77a7b0e9dfc4d953a73"
+        },
+        {
+          "path": "lib/harness_forge_web/package_export.ex",
+          "sha256": "22fb35361d75b9c57a59754f9763f9d32992c770df715b6dd9078b5f7ba9a0fb"
+        },
+        {
+          "path": "lib/harness_forge_web/plugs/local_origin.ex",
+          "sha256": "4bb488a5ce1d10bac2d51029b23a9ab1698a7170c545e9ba917be50fbc9cc535"
+        },
+        {
+          "path": "lib/harness_forge_web/plugs/mcp.ex",
+          "sha256": "2b141c6f82253cf5156c935264c46f086231a41540828b08a0fbd7bbf9073efe"
+        },
+        {
+          "path": "lib/harness_forge_web/plugs/operator_session.ex",
+          "sha256": "787d68068ed7acb82ac83c364f0a8253a999288cd158867e0895a5c36639ee64"
+        },
+        {
+          "path": "lib/harness_forge_web/router.ex",
+          "sha256": "016447890d3a9ebc3df6e0744465d792ed568b57bca44c8cbc07469de60b87f1"
+        },
+        {
+          "path": "lib/harness_forge_web/telemetry.ex",
+          "sha256": "2533a36d6e867ae3694031374c36baf6799e0539be6e0e643102a2efac2d5a2f"
+        },
+        {
+          "path": "lib/harness_forge_web.ex",
+          "sha256": "b5bca2585bf467cd8a26ae88232f1233a7cf913578886f86cd9841c8000b8be1"
+        }
+      ]
+    },
+    "notes": [
+      "Public implementation files searched as text, no execution of product code. Full Evaluations body was not displayed; only targeted symbols and bounded lifecycle ranges.",
+      "Coding source owned by another lane was only read at listed lifecycle ranges.",
+      "Source pin reflects actual bytes; stable flag identifies any concurrent change.",
+      "Test assertions inspected, not executed. No test completeness or installed-runtime qualification claimed."
+    ]
+  },
+  "tools_used": [
+    "tool metadata discovery",
+    "node filesystem reads/hash/writes to two owned outputs"
+  ],
+  "shell_commands_executed": 0,
+  "product_tests_config_board_changes": false,
+  "external_calls_or_browser_or_model_invocations": false,
+  "outputs": [
+    "docs/ticket-delivery/CODEX-approval-reuse-facts01.md",
+    "codex-runtime/approval-reuse-audit01.json"
+  ]
+}

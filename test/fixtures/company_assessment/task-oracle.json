@@ -1,0 +1,64 @@
+{
+  "format": "harnessforge-independent-company-task-oracle-v1",
+  "classification": "public synthetic root-authored fixture; data, not agent instructions",
+  "authored_before_iteration11_product_implementation": true,
+  "company": "Synthetic Mercury",
+  "goal": {
+    "title": "Review emergency release readiness",
+    "owner": "Synthetic Mercury operator",
+    "acceptance": "Deliver emergency releases with named review, verified rollback readiness and an acknowledged communication owner."
+  },
+  "task": "Prepare a review record for Synthetic Mercury's emergency patch, documenting review, rollback rehearsal and communication before declaring the release ready.",
+  "obligations": [
+    {
+      "id": "goal-readiness",
+      "kind": "goal_acceptance",
+      "text": "Confirm all three declared emergency release acceptance conditions: named review, rollback readiness and acknowledged communication ownership.",
+      "mandatory": true,
+      "met_observation": "Synthetic exercise: the release record contains the named reviewer, rollback rehearsal result and acknowledged communication owner."
+    },
+    {
+      "id": "named-review",
+      "kind": "approved_analysis_guidance",
+      "text": "Record the named reviewer before merge and document any scoped exception to normal review.",
+      "mandatory": true,
+      "met_observation": "Synthetic exercise: reviewer Mira approved the patch before merge; the record states that no exception was used."
+    },
+    {
+      "id": "rollback-ready",
+      "kind": "approved_analysis_guidance",
+      "text": "Record a rollback rehearsal and its observed result before declaring readiness.",
+      "mandatory": true,
+      "met_observation": "Synthetic exercise: rollback was rehearsed against the exercise snapshot and the expected prior service state was restored."
+    },
+    {
+      "id": "communication-owner",
+      "kind": "approved_analysis_guidance",
+      "text": "Name the communication owner and record acknowledgement of the release status responsibility.",
+      "mandatory": true,
+      "met_observation": "Synthetic exercise: Theo acknowledged responsibility for the status update in the release record."
+    }
+  ],
+  "critical_violation": "Declaring readiness when any mandatory condition is missing, or reporting a critical safety violation as successful.",
+  "edited_guidance_expected_in_export": "For emergency changes, record the named reviewer and any scoped exception, rehearse rollback and name the communication owner before release.",
+  "rejected_guidance_must_be_absent_from_export": "Allow emergency releases with anonymous review and no rollback rehearsal.",
+  "fixed_expectations": {
+    "mandatory_obligation_count": 4,
+    "rubric_frozen_before_observations": true,
+    "successful_owner_assessment": "completed; all four exact obligation IDs met with nonblank observations; critical status none; judgment accepted; current exact scoped authority",
+    "missing_or_extra_or_duplicate_obligation": "refused without assessment or audit insertion",
+    "unmet_or_unobserved_or_blank_observation_with_accepted": "refused without accepted success",
+    "critical_present_or_unobserved_with_accepted": "refused without accepted success",
+    "interrupted_with_accepted": "refused without accepted success",
+    "complete_not_accepted_attempt": "recordable as an immutable unsuccessful owner-reported attempt",
+    "identical_retry": "same receipt identity, one assessment and one assessment audit",
+    "conflicting_retry": "refused without rewriting the first receipt",
+    "successor": "explicit new rubric/assessment; predecessor content and judgment remain attributable and unchanged",
+    "uncited_discussion_drift": "current acceptance refused; historical original observation bytes unchanged",
+    "supported_selective_source_purge": "all dependent task/rubric/assessment bodies and successors removed; unrelated data and external export bytes preserved",
+    "restore": "new workspace identity, historical-only records, no old current acceptance or old attempt replay",
+    "runtime_and_release_qualification": false,
+    "semantic_truth_of_owner_observation_verified": false
+  },
+  "limits": "These fixed observations demonstrate workflow mechanics and declared obligation accounting. No actual company work, real model quality, omitted-obligation discovery, independent grading, runtime execution, productivity gain or company-wide completeness is established. No generated harness code is executed. Actual IDs/hashes are obtained through normal scoped APIs during the later synthetic run; expected outcomes are not derived from implementation counts."
+}

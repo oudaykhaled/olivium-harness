@@ -1,0 +1,18 @@
+# Proposal 08 — Public cases for obligation-preserving retrieval
+
+**Scope.** Build a public synthetic development corpus and questions to choose a bounded correction at `Company.Retrieval.query_plan/2` and `packing_plan/1`. No strategy is selected. Keep SQLite FTS5 as baseline, checked `Passages`, versioned origins, `AnalysisV2`, consent/budget authority, separate exact claim/plan decisions, compiler/export, evaluations, and pinned Graphiti 0.31.2 native Jev integration. The browser is the product surface.
+
+**Case pack, authored without protected inputs.** Give documents distinct source/revision and status/effective date; label expected *source obligations*.
+
+| Case | Public synthetic source facts | Question and expected evidence |
+|---|---|---|
+| A: middle term | `release-policy`: routine releases require a signed rollback rehearsal. `outage-exception`: active outage permits postponing rehearsal, with a signed follow-up within one day. `incident-log`: a prior delayed follow-up caused an audit finding. | Ask a long nine-plus-content-term question with **rehearsal** in the middle; repeat with it first/last and paraphrase “practice rollback.” Retrieve policy, exception and failure together. |
+| B: changed guidance | `retention-2024` marked superseded says retain logs 30 days; current `retention-2026` says 90 days; a future goal seeks lower storage cost. | Ask which retention rule applies and how the goal fits. Surface both dated versions; the goal cannot rewrite current policy. |
+| C: distractor pressure | A dozen active meeting notes repeat “release” and “rehearsal” but state no requirement; one current policy and one contrary incident do. | Reorder and expand the question. Measure whether the bounded selected passages keep the decisive documents while recording irrelevant inclusions and omissions. |
+| D: no answer | Active sources discuss deploy windows but say nothing about encryption-key rotation. | Ask for a rotation interval. Expect explicit insufficiency, with no invented interval; this does not excuse abstention on A–C. |
+
+**Comparison.** Run the same public corpus/questions through the current first-four/last-four baseline, bounded full-query terms, bounded query decomposition, and revised packing as candidates. Hold corpus revisions, access scope, retrieval mode, hardware, and declared ceilings fixed; report per-case critical/contrary source recall, irrelevant selection, byte/candidate/search caps, latency p95, and abstention. No candidate passes merely by always abstaining or by surfacing every distractor. Preserve the iteration-14 long-question failure as historical evidence, not as a tuning case.
+
+**Connected acceptance.** In A–C, the selected evidence exposes the applicable rule, exception or supersession, uncertainty and exact provenance within caps. A reviewer can correct/reject a proposal, approve one immutable claim and separately approve the exact plan; actual exported bytes reflect the corrected applicable rule and exclude rejected guidance. Evaluation records static integrity separately from representative-task performance. If no authorised configured model exists, task evaluation remains `BLOCKED` with no dispatch or benefit claim. Scope revocation, changed revision, incomplete capture, context loss and cancellation continue to deny stale use.
+
+**Decision trade-off.** Full-query terms are simple but may dilute FTS ranking; decomposition increases query count and fusion complexity; packing changes cannot recover an absent candidate. Choose only after the public comparison. No new graph/RAG engine, model, private data, paid call, or production change is implied.

@@ -1,0 +1,15 @@
+{
+  "provider": "jira",
+  "project": "SYN",
+  "issues": [
+    {
+      "id": "10001",
+      "key": "SYN-1",
+      "updated_at": "2026-10-01T12:00:00Z",
+      "summary": "Adopt boundary-value tests",
+      "description": "Future goal: both public Go fixture tasks pass protected checks.",
+      "status": "To Do",
+      "owner": "synthetic-platform-team"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Iteration 04 proposal: explain absent and invalid evaluation evidence
+
+**User benefit.** An operator inspecting a package can tell whether they have not selected a run, the selected run cannot be found, or its recorded metadata is invalid, then take the appropriate next step. This avoids reading an empty identity panel or a “blocked” badge as evidence that a task was evaluated.
+
+**Source evidence.** `Readiness.inspect_evaluation/2` already distinguishes `no_evaluation_selected`, `evaluation_unavailable`, and `invalid_evaluation_record`; unknown kind or outcome also blocks the evaluation (`lib/harness_forge/readiness.ex`). `PackageReadiness` currently renders the same seven-stage list and generic identity empty text for these cases. Its no-selection copy says “Choose a persisted evaluation explicitly,” but invalid metadata says only that it is incomplete or unknown (`lib/harness_forge_web/components/package_readiness.ex`). Iteration 03 native evidence verified a no-run state; it did not demonstrate this recovery wording for missing or malformed records (`iterations/03/review/ux-validation.md`).
+
+**Bounded change.** In the inspector result, add one concise, reason-specific evidence note adjacent to the summary: “No run selected — choose a saved evaluation”; “Selected run unavailable in this workspace — choose another saved evaluation”; or “Selected run metadata cannot be verified — review the evaluation record.” Keep the seven stage statuses, exact package/run references, existing actions, and historical/current identity labels visible. Unknown kind/outcome must never display a pass or a fabricated identity. Do not convert OpenCode task **Not assessed** into a refusal or a positive preflight.
+
+**Acceptance.** Component/LiveView checks cover each genuine reason and unknown kind/outcome, including no inferred newest run and no reassuring completion text. Keyboard review confirms the note follows the summary and precedes the stages at 320 CSS pixels and 200% zoom. Switching package/run, auth loss, reset and remount clear the note with the report; privacy and release gates remain unchanged.
+
+**Alternative and risk.** Static `not_started` cleanup explanation has stronger observed confusion in iteration 03; export recovery has a concrete filesystem remedy. Either may offer more immediate value. This proposal is smaller, but careless copy could imply a missing run is corrupt or turn malformed evidence into a repairable success. Preserve the existing reason codes and conservative refusal.
+
+**Files/effort.** `lib/harness_forge_web/components/package_readiness.ex` and focused `test/harness_forge_web/package_readiness_test.exs`; about 0.5–1 day including native verification.

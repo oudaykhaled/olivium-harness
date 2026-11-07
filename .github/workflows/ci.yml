@@ -1,0 +1,107 @@
+name: Elixir checks and native package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  MIX_ENV: test
+  HARNESSFORGE_WORKSPACE: ${{ github.workspace }}/tmp/ci-workspace
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: erlef/setup-beam@54075bcc5e249e4758d363f27d099f55d843f124 # v1
+        with:
+          version-file: .tool-versions
+          version-type: strict
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: |
+            deps
+            _build/test
+          key: test-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.tool-versions', 'mix.lock') }}
+      - run: mix deps.get --check-locked
+      - run: mix format --check-formatted
+      - run: mix format --check-formatted packaging/inventory.exs
+      - run: mix compile --warnings-as-errors
+      - run: mix test
+      - run: mix assets.setup
+      - run: mix assets.build
+      - run: elixir packaging/inventory.exs tmp/ci-dependencies
+
+  credo:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: erlef/setup-beam@54075bcc5e249e4758d363f27d099f55d843f124 # v1
+        with:
+          version-file: .tool-versions
+          version-type: strict
+      - run: mix deps.get --check-locked
+      - run: mix credo --strict --only warning
+
+  dialyzer:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: erlef/setup-beam@54075bcc5e249e4758d363f27d099f55d843f124 # v1
+        with:
+          version-file: .tool-versions
+          version-type: strict
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: |
+            deps
+            _build/test
+            priv/plts
+          key: dialyzer-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.tool-versions', 'mix.lock') }}
+      - run: mix deps.get --check-locked
+      - run: mix dialyzer
+
+  package:
+    needs: [checks, credo]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      MIX_ENV: prod
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: erlef/setup-beam@54075bcc5e249e4758d363f27d099f55d843f124 # v1
+        with:
+          version-file: .tool-versions
+          version-type: strict
+      # Inventory includes declared development dependencies, not private data.
+      - run: mix deps.get --check-locked
+        env:
+          MIX_ENV: dev
+      - run: packaging/build.sh
+      - run: packaging/smoke.sh _build/prod/rel/harness_forge
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: harnessforge-linux-${{ runner.arch }}-candidate
+          path: tmp/packages/*
+          if-no-files-found: error
+          retention-days: 7

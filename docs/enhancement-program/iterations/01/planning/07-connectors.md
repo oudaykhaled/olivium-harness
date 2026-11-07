@@ -1,0 +1,23 @@
+# Planner 07 — connector readiness that matches usable access
+
+**Priority: P1, functional.** Give a company builder an accurate, actionable answer to “Can I read this service now, and what can I use?” for GitHub, GitHub Projects, Slack, Jira and Confluence. Scope this iteration to local readiness and the existing bounded live reads; do not make credential setup, remote import, or an MCP server appear complete without a real check.
+
+## Evidence and gap
+
+- `lib/harness_forge/accounts.ex:14-25` registers the five services and finite listing operations. `Accounts.connect/2` verifies against the provider before persistence (`:29-54`); `Accounts.query/3` returns scoped live metadata (`:100-126`). `lib/harness_forge/accounts/provider.ex:44-61,101-154` bounds listings and reports coverage. These are useful existing paths.
+- `Accounts.catalog/0` calls a service “configured” when **any** active account still has environment values, while `active_account/1` always chooses the newest active account (`accounts.ex:69-95,168-184`). If two saved accounts exist and the newer credential disappears, the UI can say configured while live queries fail, despite an older usable account. A present token is also only a local precondition: `network_checked: false` rightly prevents treating it as current remote authorization.
+- The source side is distinct: `lib/harness_forge/connectors/registry.ex:5-11` contains compiled, selected-source adapters; `lib/harness_forge/chat/snapshot.ex:219-241` reports captured source counts. `lib/harness_forge_web/components/chat_panel.ex:139-167` places account text beside those counts, but does not identify which saved account the live assistant will use. Captured excerpts need a prior explicit sync; live listing is metadata only (`lib/harness_forge/chat.ex:23-62,120-139`).
+- Missing environment values already return `credential_unavailable` (`lib/harness_forge/connectors/common.ex:27-41`), and denied API requests return `source_access_denied` (`:166-178`). Tests cover missing/denied connect and reply invalidation (`test/harness_forge/accounts_test.exs:112-169`), but not multiple accounts with divergent readiness.
+
+## Minimal proposed change
+
+Use one deterministic account selection function for both `catalog/0` and `query/3`. Prefer the newest active account whose required environment references are present; if none qualifies, report `credential_missing` and reject the live query before network access. Add `selected_connection_id` and a safe local reason to each catalog service row; expose that selected identity, last verification time, and “last verified at connection; not checked now” in the account/chat panels. Never return environment reference names or values in these rows. Keep selected-source sync and live account states separately labeled. Keep the existing five fixed operations, limits, and provider error mapping. The result is a usable live assistant when an older verified account remains available, plus an honest explanation when no account can currently be read.
+
+## Acceptance and checks
+
+1. **Positive:** Save two verified accounts for a service; remove the newer account’s environment value. Catalog selects the older usable account and the live query uses its identity. Cover GitHub and at least one of Slack/Jira/Confluence with synthetic `Req.Test` responses.
+2. **Negative:** Remove all credentials. Catalog says `credential_missing`, chat names the setup action, no provider request is made, and no empty “success” result or captured-evidence answer replaces the failure. Revoked accounts are never selected.
+3. **Negative:** A present but revoked/insufficient-scope token still fails the real API request and does not become “freshly verified” from catalog inspection. Preserve 401/403, Slack `missing_scope`, Projects GraphQL errors, 429, malformed response and redirect failures; assert no raw body or secret appears in UI/errors. Existing source excerpts remain subject to active snapshot and consent checks.
+4. Run focused account/chat LiveView tests and `mix test`; save exact commands and results as implementation evidence. Fixture success establishes local contract behavior, not live compatibility.
+
+**External blockers:** Real credentials, provider permissions, reachable Atlassian sites and remote ACL state are unavailable in the program baseline (`docs/enhancement-program/PROGRAM.md:27-30`). A live provider check requires operator supplied credentials and can later expire. HarnessForge’s own read-only MCP server is an explicit program goal but has no server implementation in `lib/`; plan it separately after defining its resource scope and authorization contract. Neither item should be counted as delivered by this iteration.

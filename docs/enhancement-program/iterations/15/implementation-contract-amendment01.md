@@ -1,0 +1,9 @@
+# Bounded correction after the measured resource failure
+
+Root fully accepts critical Astra decision 03, SHA256 `c4439121bbd5fe001a71ec5c0eede6c1890df66dded966f8939f4889b5e969e3`. The original contract and prior RED records remain unchanged. Stage 2 is still pending.
+
+Release the fixed `query-plan-terms-v1` / `five-lane-lexical-v1` stored representation to the SAME A-owned Retrieval file and codec unit-test file. Keep the exact expanded runtime plan/queries unchanged. Store original question, exact question terms, already-selected goal terms, limits and explicit encoding/recipe versions. Before publication require lossless reconstruction equal to the actual executed plan. One pure internal decoder is allowed for inspection; no HTTP/MCP or authority surface is added. Pin literal recipe semantics, reject unknown/mixed encodings, preserve raw historical digests and plain v2/v3 records, and never renormalize stored terms.
+
+The SAME B may adapt only mechanical inspection/compatibility checks to decode the stored representation separately; frozen public source documents, questions and expected obligations remain unchanged. Root owns execution, the dense resource probe, minimal web integration and shared assertions. Exactly three product/test authors remain Root+A+B.
+
+No term, query, candidate, selected-evidence, packing, access, model, fallback or cap change is released. The measured failure is a 20,742-byte attempted envelope with 24 selected identities; the inert 16,078-byte proposal is not an implementation PASS. Root must rerun the actual probe and public/historical/authority regressions, check maximal-byte input, then obtain bounded source review before accepting Stage 2. Remaining input/goal combinations must not receive an unmeasured universal-fit claim. Actual provider-prompt size is measured separately during the connected web proof.

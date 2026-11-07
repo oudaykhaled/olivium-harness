@@ -1,0 +1,13 @@
+# 05 — Cross-source obligation recommendation
+
+**User/job.** A company owner needs operating history turned into a harness obligation linked to a future goal. `Models.propose/2` extracts from one revision (`lib/harness_forge/models.ex:150-179`); citation validation accepts that source only (`lib/harness_forge/models/proposal.ex:100-124`). Plans select goals and approved claims (`lib/harness_forge/company.ex:234-261`). The compiler carries goal IDs and evidence (`lib/harness_forge/harnesses.ex:211-232`), but goal-backed claims require zero citations (`lib/harness_forge/evidence.ex:378-400`). A duty across policy, decision log and incident history cannot follow that path. This identifies a code gap, not an observed omission.
+
+**One vertical slice.** For one selected future goal and 2–3 consented source revisions, propose **one** obligation. Display rule, source rationale, conflicts or outdated guidance, and uncertainty. Require exact UTF-8 citation ranges from at least two revisions, with pinned revision IDs and goal content hash. The owner edits or rejects the proposal, or approves its exact revision in the portal. Allow a goal-linked claim to retain source citations; existing Company plan approval and build/export carry its rule, goal and evidence into the company-specific artifact. No automatic approval or selection.
+
+**Acceptance:**
+
+- Given synthetic policy and incident revisions supporting a duty and a selected goal, when analysis succeeds, then one editable proposal shows both citations, rationale and uncertainty; after owner approval and plan approval, export contains its goal ID and evidence.
+- Given conflicting guidance, when analysis returns, then conflict is visible. Given a rejected or edited proposal, when exporting, then rejected or superseded wording is absent; only the explicitly approved revision enters target files.
+- Given a source changes or is withdrawn after proposal, when approval or build is attempted, then stale eligibility refuses it; historical decisions remain immutable.
+
+**Decision/trade-off.** Prefer this to selected-goal milestone accounting: it supplies cross-source content before plan selection, with greater inference, validation and portal cost. Bound output to one recommendation; reuse configured inference, consent and budgets. Unavailable inference stays unavailable. Three lanes: inference/validation, portal review, Company/export integration/tests; root owns shared files. **Metric:** one synthetic export with verified two-source provenance and owner intervention. Missing provenance, goal link or review falsifies delivery. Synthetic provider success proves workflow only; owner-reviewed real-company omissions or policy violations would falsify readiness.

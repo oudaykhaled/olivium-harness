@@ -1,0 +1,17 @@
+# Codex runtime addendum: Responses and locally built immutable images
+
+**Status:** Proposed implementation contract; supersedes decision01's Chat fallback. Root reports official [configuration](https://learn.chatgpt.com/docs/config-file/config-reference) permits only `wire_api="responses"`; [gateway compatibility](https://learn.chatgpt.com/docs/enterprise/gateway-compatibility) requires Responses SSE and function-call/result continuation. Implement that bounded protocol through existing Relay/Runtime/Ledger. Exact 0.156.0 container preflight still gates supported config, tools and events; documentation alone cannot qualify it.
+
+## Fixed image authority
+
+Use a dedicated minimal Codex recipe, reusing the existing parser Dockerfile's digest-pinned Node base and Codex 0.156.0 dependency. Exclude Claude, exports and parser entrypoint. Commit a complete npm lock with integrity for Codex and platform packages; use `npm ci --ignore-scripts`, then verify the expected binary exists. Never silently enable installation scripts to repair a missing binary. Pin supported platform/base manifest and trusted driver bytes. Network is confined to dependency acquisition during the explicit build, never task startup.
+
+The compiled descriptor owns recipe/lock/driver hashes, platform allowlist, CLI version and protocol/profile version. It accepts no image parameter. A trusted local build command uses only that checked source context and fixed build arguments, obtains Docker's resulting immutable image ID, and writes an atomic receipt outside task-writable paths. Receipt binds descriptor fingerprint, input hashes, platform, base digest, image ID, verified CLI version and original daemon identity. Publish the active receipt only after isolated preflight; failed builds preserve the prior receipt. Image labels alone are not provenance.
+
+Admission rechecks current descriptor hashes, trusted receipt location/ownership, daemon/platform, image ID and actual binary version. Create containers by `sha256:…`, with `--pull never`; inspect their image identity against the receipt. A convenience tag may locate build output but never authorizes execution. Persist the selected ID and descriptor fingerprint with each run; rebuilding to a different ID invalidates prior applicability. Other OSS users build the same fixed inputs and obtain their own verified receipt—no registry publication or machine-specific ID in source. Do not claim byte-reproducible builds without evidence. Local daemon/operator remains trusted; receipts cannot defend against that authority's compromise.
+
+## Prerequisite and qualification gates
+
+Docker Desktop metadata became available in observation02. Preflight01 could not reach local Ollama; local-services-start01 found neither app nor CLI. Root may install this authorized local dependency, first bounding disk/RAM, model-download size and task limits. Select only a verified local tool-capable model; record actual service/version/model-content identity before inference. Unknown inventory is not availability, and no model is auto-pulled during admission.
+
+Missing/mismatched receipt, platform, binary, Responses capability or local model remains an explicit blocker. Test tampered receipt/tag drift, failed rebuild, image substitution and cross-daemon restore. Then follow decision01's real isolated task, protected tests, verified cleanup and matched baseline; none implies release approval.

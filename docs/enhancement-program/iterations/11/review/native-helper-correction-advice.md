@@ -1,0 +1,9 @@
+# Native helper correction advice
+
+All three original findings are resolved in the inspected corrected source. No additional concrete finding in these three seams; this is source disposition, not runtime verification or a new permission gate.
+
+- **Provider context pins — resolved.** `synthetic_provider_01.py:76–94` constructs the complete expected five-key snapshot, including goal ID/hash, project ID, exact profile/project ID+hash pins, four current source refs and recomputed context digest. Whole-map equality rejects the prior profile-hash/goal-ID substitutions and extra snapshot keys. Sorted compact JSON matches the existing canonical encoding for this fixed ASCII pin object; no general canonical-JSON claim is needed.
+- **Uncited-source identity — resolved.** `native_probe_01.exs:27–39` requires exactly one04-discussion.md fixture source, matching uncited_source ID/external ID, checks loaded ID/external ID/workspace/connection before import, and verifies the returned identity before emitting its revision ref. The prior same-connection policy-ID counterexample now refuses before mutation.
+- **Independent cleanup — resolved.** `start_native_qa_01.py:56–98` retains graceful app EOF, adds bounded TERM/KILL waits, catches close/wait errors and uses nested finally for independent provider cleanup and final reporting. Actual child polls determine stopped versus cleanup_incomplete; the previous app-wait exception no longer skips provider cleanup or falsely declares stopped.
+
+The three current helper byte bindings match native-helper-correction-01/after.json (SHA256182eed58a7c21227fa0d2e7c23684ee217bf7c4623bb2a03a2ef719f1b4112e1); retained original files match before.json. Original advice/audit remain intact. No helper was imported/executed; no bootstrap result, private database, credential, process or service was inspected. Root retains sole execution responsibility.
