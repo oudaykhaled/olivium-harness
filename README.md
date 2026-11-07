@@ -6,7 +6,7 @@
 
 **Context in. Capability out.**
 
-[Current preview](https://olivium-harness.oudaykhaled.chatgpt.site) · [Website source and deployment](website/README.md)
+[Public website](https://oudaykhaled.github.io/olivium-harness-website/) · [Landing-page repository](https://github.com/oudaykhaled/olivium-harness-website)
 
 Build an inspectable coding-agent harness from evidence your team has reviewed.
 Olivium Harness is a local Elixir/OTP application with a Phoenix LiveView portal. It

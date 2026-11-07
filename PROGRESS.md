@@ -1,4 +1,12 @@
 # Olivium Harness build board
+## Public landing-page migration — 7 November
+
+| Work | Owner | Status | Evidence | Next step |
+|---|---|---|---|---|
+| Separate public website | Root | Deployed and anonymously verified | https://github.com/oudaykhaled/olivium-harness-website; Pages run42390457677 build/deploy PASS; index/CSS/2JS/logo HTTP200 and exactbytes; no login | Public GitHub Pages available; custom DNS pending |
+| Remove private Pages workflow | Root | Retired and moved | Old Pages workflow disabled; website/ and workflow removed from private application repository | Public website repo owns future deployments |
+| harness.olivium.space | Root | Pending Cloudflare access/DNS | CNAME harness → oudaykhaled.github.io, DNS only; API env absent, Wrangler signed out, local browser disabled | One DNS/access request sent; continue deployment independently |
+
 ## GitHub Pages — 7 November
 
 | Work | Owner | Status | Evidence | Next step |
