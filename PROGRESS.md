@@ -3,7 +3,7 @@
 
 | Work | Owner | Status | Evidence | Next step |
 |---|---|---|---|---|
-| Repository website and deployment | Root | Implemented and locally validated; Pages activation blocked by GitHub plan | website/ and pinned Pages workflow; HTML17references,2JSsyntaxchecks,actionlint PASS. GitHubHTTP422: current plan does not support Pages for private repository | Push source/workflow; verify build; compatible plan or explicit visibility decision required |
+| Repository website and deployment | Root | Pushed; GitHub build PASS; deployment blocked by account plan | [Website source](https://github.com/oudaykhaled/olivium-harness/tree/main/website); [workflow run](https://github.com/oudaykhaled/olivium-harness/actions/runs/42389492277); build validated and uploaded artifact, configure-Pages failed; repository stays private | Await one pending choice: compatible plan, public repository, or public website-only repository |
 
 ## Repository branding — 7 November
 
