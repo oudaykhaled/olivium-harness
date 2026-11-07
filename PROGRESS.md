@@ -1,4 +1,12 @@
 # Olivium Harness build board
+## Website source privacy — current
+
+| Work | Owner | Status | Evidence | Next step |
+|---|---|---|---|---|
+| Website source repository | Root | Private, verified | oudaykhaled/olivium-harness-website changed to PRIVATE on user instruction | Keep source private |
+| Website licensing | Root | Proprietary source notice pushed | Website Apache license replaced with All rights reserved; website source CTAs removed; application license unchanged | Complete |
+| Landing-page hosting | Root | GitHub Pages unavailable on current plan | Private-source Pages API and anonymous site return404; compatible plan or another explicitly selected host required | Keep privacy; no public source mirror |
+
 ## Public landing-page migration — 7 November
 
 | Work | Owner | Status | Evidence | Next step |
