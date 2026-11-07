@@ -4,7 +4,7 @@
 
 | Work | Owner | Status | Evidence / blocker | Next step |
 |---|---|---|---|---|
-| Publish source repository | Root | Preparing private oudaykhaled/harnessforge | Local repository had no commits/remote;555WEB30pins exact; unfinished local R01 preserved separately | Scan source, push verified main and local-development branches, verify remote commit IDs |
+| Publish source repository | Root | Published and remote verified | [Private GitHub repo](https://github.com/oudaykhaled/harnessforge); main3d081b3=WEB30source, local-development989aaa8=unfinishedlocalwork;540nonmediapins exact; secret findings reviewed as testkey/checksums | main is default; original worktree tracks local-development; GitHub CI running, no new green-CI claim |
 
 ## Active goal — finish all desktop showcase phases
 
