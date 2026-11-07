@@ -1,10 +1,16 @@
-# HarnessForge build board
+# Olivium Harness build board
+## Repository branding — 7 November
+
+| Work | Owner | Status | Evidence | Next step |
+|---|---|---|---|---|
+| Rename repository and add approved brand | Root | Renamed on GitHub; branded source ready to push | [Olivium Harness](https://github.com/oudaykhaled/olivium-harness); same repository ID, private, default main; approved H PNG exact | Push and read back both commits/logo bytes |
+
 
 ## GitHub publication — 7 November
 
 | Work | Owner | Status | Evidence / blocker | Next step |
 |---|---|---|---|---|
-| Publish source repository | Root | Published and remote verified | [Private GitHub repo](https://github.com/oudaykhaled/harnessforge); main3d081b3=WEB30source, local-development989aaa8=unfinishedlocalwork;540nonmediapins exact; secret findings reviewed as testkey/checksums | main is default; original worktree tracks local-development; GitHub CI running, no new green-CI claim |
+| Publish source repository | Root | Published and remote verified | [Private GitHub repo](https://github.com/oudaykhaled/olivium-harness); main3d081b3=WEB30source, local-development989aaa8=unfinishedlocalwork;540nonmediapins exact; secret findings reviewed as testkey/checksums | main is default; original worktree tracks local-development; GitHub CI running, no new green-CI claim |
 
 ## Active goal — finish all desktop showcase phases
 
