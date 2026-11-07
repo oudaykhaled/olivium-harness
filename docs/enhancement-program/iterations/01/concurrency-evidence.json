@@ -1,0 +1,134 @@
+{
+  "iteration": "01",
+  "captured_at_utc": "2026-11-01 11:31:31 UTC",
+  "capture_source": "collaboration.list_agents(path_prefix=/root), immediately preceding clock sample",
+  "phase": "concurrent final-planning review barrier",
+  "decision_maker": {
+    "task_name": "/root/i01_decision_astra",
+    "model": "gpt-6-astra",
+    "model_source": "root dispatch roster declaration",
+    "observed_status": "running"
+  },
+  "planners": [
+    {
+      "task_name": "/root/i01_plan01",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan02",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan03",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan04",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan05",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan06",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan07",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan08",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan09",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan10",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan11",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan12",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan13",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan14",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan15",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    },
+    {
+      "task_name": "/root/i01_plan16",
+      "model": "gpt-6-sol",
+      "model_source": "root dispatch roster declaration",
+      "observed_status": "running",
+      "ready_message_received": true
+    }
+  ],
+  "concurrent_planners_observed": 16,
+  "all_ready_messages_received": true,
+  "limitations": [
+    "Snapshot proves all 16 planner tasks were running together at the review barrier, not continuous simultaneous execution of their entire investigations.",
+    "Planners 12–16 were reactivated by root after initial completion; planner 04 was separately reactivated before this snapshot.",
+    "Model names come from root's explicit dispatch declaration; list_agents reports status, not model identifiers.",
+    "Task and turn IDs beyond canonical task names remain in root's authoritative roster."
+  ]
+}

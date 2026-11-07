@@ -1,0 +1,26 @@
+{
+  "files": {
+    "authoring.json": "04d722d5e2bca4cc47b6fac8bb57f1d5f4519db304d19c67bc8331d647e1a2d8",
+    "candidate/go.mod": "dd7c6626cb6757018b92c82d590be6b079e629959f74e9c252a4305a6a82b2ea",
+    "candidate/utility.go": "acc6c364e618cd31cf9f75c4898383ff12d54d2156fc0fb4c3560e7431f17484",
+    "controls/alternate.go": "98c3857704fa0c9d55e0944b9d573cfa6b29b5ccf22533ced546eac36662e5f8",
+    "controls/compile_failure.go": "59ea96c91970438a3fccc8be9e8c49de16880aabeeceb65ebdea5fbf7bbc9eeb",
+    "controls/extra_entrypoint.go": "2a7a23a3338b44c1dcaf0e84acbc1b6d42bf95ffd703ab8f46276adf02420798",
+    "controls/forbidden_effect.go": "5239f57ece98341a7796d2e2401edda8b18bc21726ff3700c8d2bdd0c99becf7",
+    "controls/output_spoof.go": "02292d6740e48885a920ae03d26d517b0c1c6145b3ddcbd5126e5a5f55ead901",
+    "controls/protected_access.go": "8aeadcbf469db43b5510d0a67eabde548235516d337f962bbafd3713bdc1e457",
+    "controls/reference.go": "22bfe600ebc28487dfd5b7e4dcdfa92c33047617f150f8a6db8c47f6671950dc",
+    "expected.json": "ce85030281f77e3e891cca9666e9ddbb8aa7a57b7f2183adeac44994b3cdea0a",
+    "grade.sh": "f5a88c60565edbaa603e2e0784257bbca16ae1c60b05ad961930865e881425e7",
+    "protected/ast_guard.go": "068ffe4c01388a1670419cec9fd9c0521b2edfb71d8d3b4ea2d1820abb766fe0",
+    "protected/base_utility.go": "acc6c364e618cd31cf9f75c4898383ff12d54d2156fc0fb4c3560e7431f17484",
+    "protected/go.mod": "dd7c6626cb6757018b92c82d590be6b079e629959f74e9c252a4305a6a82b2ea",
+    "protected/main.go": "9102cf7bf23ff635ebd653618975a03dc55dc9153342a989131e96627db31e5c",
+    "protected/utility_test.go": "3cb7f18601909a200d20bb9ecdb800f84cc2c46710c8720e18ed3ac5368420fb",
+    "protected/verify_events.go": "e602c58ba4d661b9064529617db230a7e3bad0df3a2137c1cf743050fa5b6738",
+    "task.md": "d66bad1b2990ed1be5b8e3f273fe7a0701ccc951dc3d3f4a495adee43e49eaf9"
+  },
+  "revision": 1,
+  "schema_version": 1,
+  "suite_id": "holdout-go-family-02-v1"
+}

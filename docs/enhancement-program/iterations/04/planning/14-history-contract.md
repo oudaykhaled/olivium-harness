@@ -1,0 +1,11 @@
+# Proposal 14 — connect the selected run to the next action
+
+**Benefit.** An operator reviewing persisted evaluations can identify which historical run the inspector explains and why its next action follows, without mistaking a static pass or comparison for release authority.
+
+**Source evidence.** `Evaluations.list_runs/0` returns workspace records newest first; the inspector filters package-matching runs and requires explicit selection (`evaluations.ex:45–55`, `package_readiness.ex:299–326`). Its picker shows kind, outcome and full ID, but the summary and action appear before that context (`package_readiness.ex:62–150`). The Evaluations tab separately shows comparisons and run cards (`portal_live.ex:1818–1862`). `Readiness.next_action/1` prioritizes integrity, eligibility, unsupported runtime, evaluation, cleanup, then applicability/admission (`readiness.ex:302–325`). Iteration03's handoff identifies reading burden and prohibits inferring a newest/best run.
+
+**Decision, UI only.** Before the summary, show “Selected historical evaluation: [kind] · [outcome] · [full ID].” Pair the action with the *decisive stage's existing reason*, using the stage-list's safe label allowlist. For no run, say “No evaluation selected”; for an invalid/foreign run, omit untrusted kind/outcome. Keep the summary, seven stages and action destination. Label comparisons as separate.
+
+**Acceptance.** For static pass, task failure, task cleanup failure, no run and cross-artifact ID, the line matches validated records or omits untrusted metadata; the explanation names the reason driving the action. Switching package/run or resetting clears stale context. Keyboard order, 320 CSS px and 200% zoom remain usable. Refusal/abstention, authentication, privacy and no-overwrite remain unchanged; OpenCode current task identity, applicability and admission remain **Not assessed**.
+
+**Alternatives and cost.** Static-cleanup wording targets a specific misconception with less code; export recovery fixes a failed workflow but touches broader form state. Risk is duplicating action precedence; reuse its selector or add a diagnostic reason to the report without changing admission. Expected effort: 0.5–1 engineer day in `readiness.ex`, `package_readiness.ex`, focused web tests and browser verification.

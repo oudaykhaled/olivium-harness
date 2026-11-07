@@ -1,0 +1,29 @@
+---
+status: proposed
+date: 2026-11-03
+decision-makers: [Root]
+---
+
+# R01 decision 01: Persist an Evidence-owned content-use hold
+
+**Context/drivers.** R01 needs denial before cleanup, replay safety and unchanged grant boundaries. Choose a deny-only prerequisite; reject broad grants and metadata-as-permission. This is partial R01, not full SourceRevision.v2, history, ACL, retention enforcement or general outbox acceptance.
+
+**Ownership/reuse.** Extend Evidence/Store/Corpora; Models retains dispatch authority; Harnesses retains compilation/publication authority; WEB/MCP project their decisions. Evidence owns the predicate, not each adapter. Evidence identity and immutable imports already exist (`evidence.ex:524–585`); bounded invalidation exists (`corpora.ex:125–180`). Retain pinned Graphiti 0.31.2 and all exact approvals, consent, budgets and cancellation.
+
+**Purpose vocabulary.** Existing manifest purpose is only `retrieval` (`origin_v2.ex:174`). Models stages are `extraction, summary, node_dedupe, edge_dedupe, embedder, reranker, synthesis` (`stages.ex:6`), not permissions. Introduce explicit Evidence boundary purposes `inspection, retrieval, analysis, compile`: inspection means body windows (`corpus_review.ex:210`); analysis covers source-bearing Models stages; compile covers Harnesses. First operation denies **all four**, with no selective grants. Persistent storage/erasure is separate: availability, historical eligibility and storage permission remain `unknown`; this hold authorizes none. A known retention prohibition requires existing Purge, not this hold. Do not advertise AC4 as implemented.
+
+**API/schema.** `Evidence.restrict_revision(attrs, caller)` accepts only `{version:1, source_id, revision_id, body_hash, expected_generation:0, command_id, reason_code:"operator_restriction"}`; IDs are UUIDs, hash is SHA256. Resolve workspace, connection/provider/external identity and operator/session server-side using existing authorization. Reject stale/foreign/mismatched refs and unknown fields. Return `{version:1, event_id, source_id, revision_id, body_hash, policy_generation:1, denied_purposes:[…], cleanup_state:"pending"}`. No body, provider authority assertion or writable permission metadata.
+
+Add immutable `revision_use_holds` with workspace/revision uniqueness, full resolved identity, command/event IDs, canonical request digest, generation=1, fixed denied set, actor and timestamp; unique `(workspace,command_id)`. Add mutable `revision_use_cleanup(event_id,workspace_id,state,cursor,lock_version)`; pending is durable. These rows are authoritative restriction/event plus checkpoint, not another outbox framework. Migration defaults are **no hold/generation 0**, preserving existing checks; absence means no additional denial, never positive permission. Leave immutable bodies and existing digests untouched.
+
+Expose `assert_use(source_id,revision_id,hash,purpose)` and a parameterized SQL predicate from the same Evidence owner. Unknown purposes/malformed rows fail closed. Use CHECK constraints, immutable triggers and scoped foreign keys; browser/import payloads cannot write hold tables directly.
+
+**Atomicity/currentness.** Acquire `Purge.synchronize` before SQL, reject caller-owned outer transactions; authorize/recheck writability and Purge readiness inside. Commit hold and pending checkpoint together. Identical command+digest replay returns its original event; conflicting reuse, reordered/stale CAS fails. Authorization still applies on replay. Live predicates query holds independently of checkpoint and corpus generation; database errors deny. Add an indexed held-member check to corpus currentness, covering cached retrieval and graph certificates before cleanup. Scope predicates to workspace/source/revision/hash. Block same-source recapture/upsert while held; import metadata cannot clear it. No restore endpoint: completing cleanup never restores access.
+
+Resume at most 100 corpora per step using existing invalidation pages; commit effects and CAS checkpoint together, advancing authorization with `scope_changed`. No synchronous worker waits under SQL/privacy locks; existing Runtime forget is asynchronous. Purge must remove new rows in safe order and retain its existing revocation/recovery fence; no orphaned checkpoint may resurrect content.
+
+Recheck at the existing final HTTP guard and result-publication boundary; restriction cannot recall bytes already dispatched. Concurrency tests must identify that admission boundary explicitly rather than claiming retroactive cancellation.
+
+**Consumer hooks/file ownership.** Root owns migration, `evidence.ex`, new Evidence hold module, `corpora.ex`, Purge integration. One engineer owns `company/{corpus_review,retrieval}.ex`, `evidence/{passages,origin_v2,graph_manifests}.ex`, Models current/admission/HTTP-dispatch checks and Harnesses build/eligible hooks. Include legacy citation/claim paths. A second owns existing CorpusReviewLive/component, MCP projections and focused tests. Enforce before bytes, candidate selection, dispatch, publication and every later eligibility/read; cached manifests are insufficient. Root alone integrates/executes and owns boards.
+
+**Confirmation.** Tests: cross-workspace identical bytes; malformed refs; forged grants; legacy continuity; rollback; duplicate/conflicting command; restart; checkpoint replay; recapture/restore bypass; purge. Hold cleanup pending while real persisted passages/run/claim/artifact exist: WEB inspection/retrieval deny, dispatch spy observes zero sends, compile/eligibility deny, MCP redacts. Actual synthetic WEB: select exact revision, explicit “Block use”, show denied purposes and “Cleanup pending; stored bytes may remain”, refresh/reconnect and recheck; explicit “Resume cleanup” reaches completion without restoring access. Record real browser receipts separately from tests; no paid calls or target execution.

@@ -1,0 +1,11 @@
+# A04-02 source-purge retirement decision
+
+**Approve existing Audit reuse, with one additional required fence.** Source purge may conservatively remove all setup derivatives, but must retain their deny provenance. No new table or authority engine is needed.
+
+Inside the existing Purge→SQL transaction, before any setup deletion, append distinct workspace-owned events: `setup_budget_retired` for every authorization’s **budget_id**, `setup_pin_retired` for every preparation’s **stage_ref.id**, and `setup_operation_retired` for every registered **operation_id**. Each details object is exactly `{"run_id": retired_identifier, "status":"retired"}`; the action disambiguates identifier type. Include unpublished preparations and every setup row being removed, including unrelated sources. Require successful append; failure rolls back deletion. Repeated events are harmless; scoped existence checks can avoid duplicates.
+
+Models must consult durable markers alongside live rows in legacy admission, pin classification/generic consent, and budget creation/reservation. **Also fence `budget_for_operation/2` before its unregistered-ID fallback:** `reserve_stage_attempt/3` calls private `reserve_checked`, bypassing `legacy_budget_allowed/1`. A retired budget ID supplied as operation ID must fail too. Retirement overrides any remaining live match; query errors deny. Check authoritative SQL by workspace/action/status/exact ID, never the 200-event display API. Markers only deny; they never grant or replenish.
+
+Snapshot preserves budgets/requests when their `run_id` matches either a live authorization’s budget_id or a budget-retirement marker, including when the authorization table is absent. Match before workspace remap; preserve/remap audit workspace and usage together. Restore retains unknown reservations and restores no authority. Source purge retains markers; full workspace purge may delete markers and usage together under existing policy.
+
+Root owns Purge/SetupHistory/Snapshot; Models owns existing fences. Test unrelated surviving pin/grant, fresh-ID consent bypass, retired-operation and retired-budget fallback, append failure rollback, replay, and source-purge→backup→restore with unknown usage. Static decision only; no execution or implementation acceptance.

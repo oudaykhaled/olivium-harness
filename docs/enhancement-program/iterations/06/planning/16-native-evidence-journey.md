@@ -1,0 +1,15 @@
+# Native evidence journey: Packages export recovery
+
+**Recommend one UI/UX benefit:** make each export attempt's outcome unambiguous and recoverable in Packages. This addresses an observed contradiction, not an inferred comprehension result. Iteration05's [native manifest](../../../../../tmp/enhancement-program/05/browser/browser-manifest.json) retains a prior direct-build error beside a successful export, plus cropped and inconclusive captures. [PortalLive:432](../../../../../lib/harness_forge_web/live/portal_live.ex#L432) writes a generic success flash and a path-only `export_path` without clearing the old error; [PortalLive:1974](../../../../../lib/harness_forge_web/live/portal_live.ex#L1974) renders one global result after multiple package forms. [PortalLive:1123](../../../../../lib/harness_forge_web/live/portal_live.ex#L1123) already gives an occupied-directory remedy. Export admission and fresh, no-overwrite filesystem behavior stay in Harnesses.
+
+**Why this over Goals-to-Evidence now:** the missing reverse action after goal save is real ([Goals panel:1856](../../../../../lib/harness_forge_web/live/portal_live.ex#L1856)); [goal web test:28](../../../../../test/harness_forge_web/goal_claims_test.exs#L28) currently returns via navigation. That is a distinct handoff improvement. Export feedback has a captured native misleading outcome and a narrowly owned correction. Neither path proves novice comprehension, qualified model behavior, or company fitness.
+
+**Owner:** one PortalLive/web-test author; root owns any shared focus JavaScript and native browser evidence. No domain/export contract edit.
+
+**Acceptance, using ordinary authenticated Chrome and synthetic local packages:**
+
+1. Build two eligible immutable packages A/B. Export A to an occupied contained directory: show an actionable error tied to A, retain A's entered target, focus its correction control via keyboard, and verify existing directory bytes unchanged. Unsafe/unwritable targets retain their actual distinct reason; no overwrite or silent retry.
+2. Correct A to a fresh directory and submit: show A's digest/name and exact destination in one current status; superseded A error disappears, while unrelated actionable errors retain their own context. Compare all exported files byte-for-byte with A's immutable payload.
+3. Attempt B, switch back to A, then perform a permitted privacy cache reset/remount: no A outcome appears as B's, and no stale target/result/private draft reappears after reset. Preserve approval, purge/quarantine and fresh-export boundaries.
+
+Verify actual Tab order/focus and complete controls at 320/390 CSS px and real Chrome 200% zoom; record native screenshots, widths, DOM status, and independent file/record hashes. Preserve failed and inconclusive attempts. A role/status check can establish DOM semantics, not screen-reader speech or WCAG certification. The accepted [03 abstention](../../03/decision-amendment.md) remains command-free; no runtime probe belongs in this journey.

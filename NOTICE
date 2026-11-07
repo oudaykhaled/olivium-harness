@@ -1,0 +1,10 @@
+HarnessForge
+Copyright 2026 HarnessForge contributors
+
+This product includes software developed by the Elixir, Erlang/OTP, Phoenix,
+Ecto, Oban and other open source communities. Dependency-specific licenses and
+notices are listed in THIRD_PARTY_NOTICES.md and packaged dependency notices.
+
+The project license does not cover separately installed OpenCode/Docker images,
+model weights, provider services or imported evidence. Their owners retain
+their rights. Naming these projects does not imply endorsement.

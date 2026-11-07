@@ -1,0 +1,22 @@
+{
+  "authored_at": "2026-11-04T21:27:53.121714+00:00",
+  "base_fixture_digest": "6bcc4699c66191432ec80e2ff060131b2e4da55c9c9628d4d300cce0ffc41304",
+  "controls_digest": "a75d1a3a12a7a6624c5e13dba4809ceb5c7212ec91d87c3cfc6d1c0b44367550",
+  "exposure_attestation": {
+    "development_traces_opened": false,
+    "frozen_guidance_opened": false,
+    "shared_fix_with_excluded_families": false,
+    "task_patch_test_answer_summary_shared_with_harness_authoring": false
+  },
+  "family_key": "curator-sealed-independent-01",
+  "family_slot": "H01",
+  "fixture_revision": 1,
+  "origin": "fresh_synthetic_authored_after_protocol_freeze",
+  "protected_grader_digest": "53f23a215b4726c0009c69cc47f1b23206485c84803b44bb8b5792143e9858a1",
+  "protocol_freeze_receipt_sha256": "64d15bdff0b756112cc420de8aa309c61dc1ef95d46b72d55b332430dbab3488",
+  "schema_version": 1,
+  "slot_binding_sha256": "e9b26321bdf75efb8c05f16da07dbed589f8bfea6a4352fbdb563f5b88e4b24f",
+  "solver_package_digest": "fbd1f65d697db89fbcbb7db36548f19cef420e23c4a1c773da71e0a5be6a2664",
+  "suite_id": "holdout-go-family-01-v1",
+  "task_requirements_digest": "7cf450c65b559315d8a6cf580f18ff64c007575e99618b35253c88d291e0451f"
+}

@@ -1,0 +1,25 @@
+{
+  "received_at_utc": "2026-11-03T11:24:13.784043+00:00",
+  "source": "User steering delivered from companion thread01a19bf1-dc45-7213-9969-5d93bc1c689b",
+  "mode": "ticket_driven_WEB_completion",
+  "supersedes": "fixed50roundschedule, repeated16planner/5retrofanouts and alternation as scheduling requirement",
+  "preserve": [
+    "completedwork/verification",
+    "currentboundedCompanywebchange/testownership",
+    "Rootsolelocalandremoteprogressboardwriter",
+    "max3product/testauthorsinclRoot",
+    "meaningfulcriticalreview/tests/actualWEBverification",
+    "exactclaim+separateplanapproval,revocation/access,deterministicexport,sandbox",
+    "no paidprovider/privateimports/publicationoutsideexistingauthorization"
+  ],
+  "board": "https://github.com/users/oudaykhaled/projects/4",
+  "roadmap": "../harnessforge-plan/github-roadmap-2026-11-02",
+  "next": [
+    "Finishcurrentboundedwebpatchandverification",
+    "A10-01acceptance-basedbaseline reconciliation",
+    "UpdateexistingProjectV2draftsandlocalcanonicalboardwithoutduplicates",
+    "Dispatchshortticketownedtasks;closedoneonlyonfullacceptanceevidence"
+  ],
+  "goal_controller": "Legacy50objective remainsblocked; no supportedretarget/cancelAPIexposed; not falselymarkedcomplete/resumed",
+  "remote_board_writer": "/root; companionexplicitlywillnotmutateconcurrently"
+}

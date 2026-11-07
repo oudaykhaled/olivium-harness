@@ -1,0 +1,134 @@
+[
+  {
+    "id": "company-generation",
+    "title": "Generate a Company harness",
+    "recorded_release": "WEB23 · dedicated test workspace",
+    "duration": "167.6 s",
+    "result": "Real model · separate approvals · 8-file ZIP",
+    "sha256": "ea7e8a24bedf8fc912c1990575fc96aeded1e880d91c53d19a83811765349994",
+    "bytes": 12510879,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "source-change-recovery",
+    "title": "Recover changed sources",
+    "recorded_release": "WEB25 · synthetic agent QA",
+    "duration": "82.7 s",
+    "result": "Stale files denied · fresh review · 8-file ZIP",
+    "sha256": "33fa0d0cc3fc0a15e4f854d247adcfec16ee8298df2b0c14aede047013e2efac",
+    "bytes": 6138968,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "github-sync",
+    "title": "Capture GitHub history",
+    "recorded_release": "WEB22 · dedicated test workspace",
+    "duration": "85.0 s",
+    "result": "21 records · unchanged resync",
+    "sha256": "1e9c9e253107903cfff446352d7166714aad1f08879c2da5aa8748a7b8587995",
+    "bytes": 6182498,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "mcp-access",
+    "title": "Connect an assistant",
+    "recorded_release": "WEB22 · dedicated test workspace",
+    "duration": "38.9 s",
+    "result": "Grant issued · revocation verified",
+    "sha256": "c1b32a4c84f122cb3ae95956898c78770b533031b6465d59de29ee6ec392f048",
+    "bytes": 1740015,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "task04-partial",
+    "title": "A partial task result",
+    "recorded_release": "WEB23 · dedicated test workspace",
+    "duration": "218.4 s",
+    "result": "Clamp passed · ReverseWords failed",
+    "sha256": "00a91fa0a15a620b1ef8b55ccf35a336cd018f6bf3e3c9d1301b11354b179610",
+    "bytes": 8375800,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "task05-code-rejected",
+    "title": "Inspect rejected generated code",
+    "recorded_release": "WEB23 · dedicated test workspace",
+    "duration": "153.6 s",
+    "result": "Invalid Go rejected · task failed",
+    "sha256": "1048c6e6e8dca1aa9dc91638c476f31a428a0913cbab4df460eebe3ddea311a2",
+    "bytes": 7623979,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "real-harness",
+    "title": "Real model → eight files",
+    "recorded_release": "WEB20 · dedicated test workspace",
+    "duration": "19.4 s",
+    "result": "Download verified · task failed",
+    "sha256": "09b8c6a296824d31111b014dc41ae75c54cb1f59dc33b0f723a5fd3adf0ac94b",
+    "bytes": 958627,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "task-diagnostics",
+    "title": "Inspect a failed task",
+    "recorded_release": "WEB22 · dedicated test workspace",
+    "duration": "282.0 s",
+    "result": "Edit mismatch · code unchanged",
+    "sha256": "d1d91cc995e4a044a2fa3f14f2e2622aa1c7d79b9dc673f9be3d5427018eb8a9",
+    "bytes": 14132324,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "analysis-rejected",
+    "title": "Reject invalid guidance",
+    "recorded_release": "WEB22 · dedicated test workspace",
+    "duration": "58.9 s",
+    "result": "No recommendation admitted",
+    "sha256": "4b2296cabfa88498bfc91a1c3ccfea8d098e14bf13a1a4a38b25c9d3b662cd53",
+    "bytes": 6263330,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "saved-harness",
+    "title": "Open and download",
+    "recorded_release": "WEB20 · manual synthetic rule",
+    "duration": "47.9 s",
+    "result": "Eight exact files",
+    "sha256": "042471840778e177db7061bb3abf74c6612038ff9999376c1ee6370d93561d30",
+    "bytes": 2704735,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "task-context",
+    "title": "Check this harness",
+    "recorded_release": "WEB21 · manual synthetic rule",
+    "duration": "13.4 s",
+    "result": "Selection survives reload",
+    "sha256": "5d1aa4fccbaf72de6416bef2a034dc9e96b94803f31cd0b9b673d8294415528b",
+    "bytes": 1036194,
+    "human_only": true,
+    "model_visual_review": false
+  },
+  {
+    "id": "stale-recovery",
+    "title": "Changed evidence",
+    "recorded_release": "WEB20 · manual synthetic rule",
+    "duration": "16.8 s",
+    "result": "Old files denied · current review opens",
+    "sha256": "f01bbe4c0d8daf1b2f5769b138069bc84ec2eed12422f26c87a731945bb9742e",
+    "bytes": 892955,
+    "human_only": true,
+    "model_visual_review": false
+  }
+]

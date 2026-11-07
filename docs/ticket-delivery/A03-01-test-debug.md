@@ -1,0 +1,21 @@
+# A03-01 Home test-helper debugging
+
+This is a separate bounded sequential debugging task after the accepted privacy repair. The debugger owns only the new Home test and this report/evidence directory; Root remains the only check runner, board writer and runtime operator. No product source or dependencies changed.
+
+Root check 34 retained 44 tests with five failures, all `UndefinedFunctionError` at the new helper's unavailable `Floki.parse_document!/1`. No Home assertion failure or production fault was demonstrated by those errors. The unchanged source-06 test and its frozen copy both hash to `df483d5376586dfaee0fa1d2621f1f8a6b37f291dd0ab2542707d3d5c631aaa9`. RED receipts and source-06 copies remain intact; a separate before-copy is retained in `tmp/ticket-delivery/A03-01/test-debug/iteration00-company_home_next_action_test.exs`.
+
+The selected hypothesis is a test-only parser mismatch. `mix.exs:51` already includes LazyHTML for tests, and `mix.lock` pins 0.1.13. Existing component and metadata tests parse rendered fragments with `LazyHTML.from_fragment/1`, select nodes with `LazyHTML.query/2` and extract content with `LazyHTML.text/1`. Installed source `deps/lazy_html/lib/lazy_html.ex:265` shows that query returns a LazyHTML selection, while its Enumerable implementation at line 693 exposes the actual selected nodes. Its documented text default concatenates content without an added separator.
+
+Implementation attempt 1 changes only `query/2` and `text/2`: query uses the existing parser and converts the selected nodes to a list, preserving every current `length`, `== []` and `!= []` assertion; text concatenates each selected node's parsed text and retains `String.trim/1`. All selectors, expected values, primary-action counts, folded help and ordering checks, selected scope and explicit-goal assertions, blocked/stale/unavailable recovery checks and dispatch-count invariants remain unchanged. No raw-regex parser or additional dependency was introduced. The existing byte-position assertion is unchanged.
+
+Only the owned test was formatted, with exit code 0. Root check 35 passed all 44 tests with zero failures and stable source hashes on corrected test hash `73b608c38ff02bd0119e7c2266603cc82aa87fa27aaaa4316d592cae78e42ce3`; the scoped Astra07 review accepted it. The debugger has run no tests or runtime actions.
+
+## Iteration 2: legacy technical-count location
+
+Root's next full canonical check 37 retained 1143 registered tests, one failure and 15 existing skips. Its sole failure was the pre-existing manifest-backed claim flow assertion at `corpus_review_flow_test.exs:678`: it still looked for `1 eligible approved claims` inside `#company-guide-scope`. The approved Home component now keeps that concise node for the selected project and renders the exact eligible count in `#company-guide-details` (`guide.ex:443–460`). This is an expected layout assertion update; it does not establish a product count or authorization defect.
+
+Root extended ownership to that one assertion. Attempt 2 changes only its selector from `#company-guide-scope` to `#company-guide-details`, retaining the exact expected count text, source-membership assertions, separate-plan behavior and subsequent revocation checks. A before-copy, full RED receipt hashes and exact one-line diff remain in `tmp/ticket-delivery/A03-01/test-debug/iteration02-*`. Formatting touched only that owned test file and made no additional changes. Frozen corrected hash: `c34127ead225103bb0c760bf173f4540b6f0ba7d430e0f04d20531432a6ee2ec`.
+
+Root check 39 on exact freeze 08 passed all 16 corpus-flow tests with zero failures in 4.4 seconds and stable source hashes. This retains the exact eligible-count coverage in its new DOM location and the manifest claim → separate plan → revocation behavior. Root's full current check 40 and format check 41 remain pending at this checkpoint, as does the runtime upgrade. The pending product package matches unchanged production source 07; these two fixes only repair test helpers and a legacy selector.
+
+No product source, new tests, runtime or board changed in iteration 2. Three implementation attempts remain if another failure appears. The debugger releases ownership of both test files and remains available only for a newly reported failure; Root owns the remaining verification and integration.

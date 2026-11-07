@@ -1,0 +1,22 @@
+{
+  "format": "harnessforge-holdout-go-probe-v1",
+  "package": "example.invalid/holdout/h02",
+  "tests_run": [
+    "TestH02Cases",
+    "TestH02Invariant"
+  ],
+  "values": [
+    4,
+    2,
+    3,
+    1,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    4,
+    0
+  ]
+}

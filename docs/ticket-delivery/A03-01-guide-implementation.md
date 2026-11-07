@@ -1,0 +1,13 @@
+# A03-01 bounded Home Guide implementation
+
+Status: implemented and formatted; Root verification and actual browser checks remain pending. This presentation cut does not complete A03-01 or its A04-01 durable-resume dependency.
+
+`Guide.next_action/5` remains the only continuation selector. Its unavailable, scope, exact-plan and preflight precedence is unchanged. The corpus action is labeled “Select corpus and goal,” because the existing redirect does not carry project/goal pins. No action retrieves, synthesizes, approves, builds, exports or evaluates automatically.
+
+The Home header now shows the saved company and actual guide project, or an explicit missing/unavailable scope state. Assigned saved goals come from already-loaded goal metadata matching the existing company/project assignment IDs. They are labeled assignments; the header explicitly states that Home has not selected an analysis goal. Missing goal details are reported rather than silently treating a partial list as complete. No draft values or readiness ranking select an action.
+
+The single existing `company-guide-next` continuation and its visible `company-guide-next-message` explanation precede the guide project selector and task forms. The selector remains outside disclosures so existing guarded navigation can focus it. Unavailable records, selected exact-plan status, blocked preflight explanations and the existing six readiness facts remain visible. Workspace queue counts, saved-step descriptions and technical plan identities use existing/native disclosures. The stale reference to a “journey above” is removed.
+
+Stable IDs coordinated with QA: existing `company-guide`, `company-guide-next`, `company-guide-project-form`, `company-guide-project`, `company-guide-scope`, `company-guide-unavailable`, `company-guide-selected-plan` and `company-guide-details`; new `company-guide-next-message`, `company-guide-assigned-goals`, `company-guide-analysis-goal-note` and `company-guide-selected-plan-identities`. Event names, event-generation envelopes, targets, focus targets and section controls are retained.
+
+The worker edited only `lib/harness_forge_web/components/company/guide.ex`, this document and its own UI evidence. Root owns CompanyPanel/Portal integration; QA owns `company_home_next_action_test.exs`. `mix format lib/harness_forge_web/components/company/guide.ex` exited zero. No tests, builds, app startup, browser checks, board changes, remote actions or generated execution were performed by this worker. The exact source hash and predecessor evidence pins are recorded in `tmp/ticket-delivery/A03-01/ui/guide-implementation-receipt01.json`.

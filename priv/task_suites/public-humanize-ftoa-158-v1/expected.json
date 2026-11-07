@@ -1,0 +1,6 @@
+{
+  "format": "harnessforge-humanize-ftoa-probe-v1",
+  "int_bits": 64,
+  "values": ["1.25", "1.25", "-1.25", "-1.25", "1234.25", "1234.25", "1.25", "1.25", "1", "1.2", "1.25", "-1", "-1.2", "0", "200", "1", "1.02", "1.234568"],
+  "tests_run": ["TestFtoa", "TestFtoaWithDigits", "TestFtoaWithDigitsLargeLimit", "TestPilotFixedBoundaries"]
+}

@@ -1,0 +1,1 @@
+{"model":"jev-1.14.0","state":"<ENTITIES>[{\"id\":0,\"name\":\"Synthetic\"}]</ENTITIES>","questions":{"e0":{"type":"choice","instructions":"Synthetic A","criteria":{"none":"none"}},"e1":{"type":"choice","instructions":"Synthetic B","criteria":{"none":"none"}}}}

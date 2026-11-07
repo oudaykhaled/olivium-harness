@@ -1,0 +1,26 @@
+# A02-02 actual producer seams
+
+The smallest connected cut is one shared six-fact projection rendered in **CorpusReviewLive from its explicit selection**, and in CompanyPanel from exact selected plan/artifact records. Durable synthesis outcomes and optional-source coverage are missing producers; do not claim all four ACs complete.
+
+## What exists
+
+**Capture:** `Capture.capture_status(id,%{},caller)` authorizes through `Corpora.guard`, workspace-scopes the exact CaptureRun and returns run ID, lock revision, state, checkpoint, per-state counts, completeness, FTS counts and graph unavailable (76–91,513–544). Its paged rows contain relative paths/metadata, not document bodies. `complete/2` records scan_complete, scan_verified and incomplete (383–419); failure persists paused/incomplete/error_code (468–480). This is a local-directory producer, not general connector qualification.
+
+Important limitation: status combines **that run’s historical scan outcome** with **current corpus index counts**. It exposes neither corpus/connection identity nor completed-generation binding. Root’s minimal body-free summary should include exact stored corpus/connection IDs and capture revision, validate them against the selected context, and separately pin observed current generations. Label recorded scan completion honestly; observing a new generation does not retroactively qualify an old scan.
+
+**Retrieval:** CorpusReviewLive holds `large.run.run_id/digest`, not a guessed latest run. Existing `validate_current` and `checked_run` verify digest, current semantic/access generations, scope pins and graph certificate. Root’s previously proposed guarded metadata summary can expose checked result/scope pins without read_run’s snippets. However, retrieval coverage697–748 selects the **latest capture for the corpus**, storing only scan_complete/checkpoint. It cannot identify the explicitly selected capture; never use it as that capture’s receipt. `omitted` means packed candidates, not omitted connectors; `semantic_coverage` is unknown.
+
+**Analysis:** AnalysisV28–41 creates an operation/request identity and publishes a validated result. Proposed guidance persists a claim with run/request IDs and immutable origin (175–231). Abstention creates no claim: it calls StageAuthority.publish_result, then StageControl.complete. The latter persists only completed state and result_digest, returning the result without storing its status/uncertainty (232–262). Therefore persisted completion cannot reconstruct an abstained outcome. Failures return errors; StageAttempt completion/uncertainty/error metadata describes sends/accounting, not successful understanding. Reconciliation marks active operations uncertain, not failed analysis.
+
+CorpusReviewLive631–650 turns abstention/failure/exit into display strings. No structured outcome survives reload. Its existing Company handoff228–245 passes only exact claim ID/revision; capture/run/abstention are not transferred.
+
+**Required/optional coverage:** none exists in these inspected producers. Capture counts physical file outcomes; retrieval counts index/packing coverage. Neither identifies optional connections or required-evidence sufficiency. An optional graph capability is not an optional connector. Do not infer classification from excluded/failed files, absent connections or rank.
+
+## Implementable connected cut
+
+1. Root assembles selected capture/run metadata inside CorpusReviewLive, reusing `caller/1`, `revalidate_large/1` and existing privacy/reset fences. Share the pure six-fact DTO with Guide. No global lookup, provider call, implicit latest selection or new authority engine.
+2. At synthesis dispatch, retain a body-free observation binding: workspace/project/goal/corpus, capture ID/revision, retrieval ID/digest, semantic/access generations, manifest ID/digest, server operation/request IDs and status/reason. AnalysisV2 already accepts explicit operation/request IDs. Record `running`, `proposed`, `abstained`, `failed`, or `unknown` from the actual callback, preserving the original binding. Async exit is unknown. Do not parse notice text.
+3. Validate bindings again after `revalidate_large`; if it cleared the run, ignore the result. The existing callback checks view generation but can continue after revalidation clears stale state. Clear observations on scope/query replacement, privacy reset and remount; label them **current-session observations**, not durable history.
+4. CompanyPanel uses exact current plan/claim/artifact and existing Readiness observation. Without an explicit cross-screen receipt, capture/understanding remain unknown there. No new router/session workflow is necessary for this cut.
+
+**Acceptance:** AC1 is testable on the real selected-corpus screen: recorded scoped capture stays distinct from failed/abstained synthesis. AC2 uses the existing exact artifact/plan read: built/static pass cannot mean released. AC4 tests generation change, unavailable records, late callbacks and reload-to-unknown. AC3 stays open until a real declared required/optional scope and omission producer exists. Durability likewise remains open; a projection fixture cannot close either gap. FTS may remain usable while graph is unavailable. Root runs source/tests/WEB verification; this report runs none.

@@ -1,0 +1,19 @@
+{
+  "provider": "github",
+  "repository": "acme-synthetic/go-example",
+  "pull_requests": [
+    {
+      "id": "pr-42",
+      "number": 42,
+      "updated_at": "2026-10-01T12:00:00Z",
+      "title": "Boundary tests for Go utility functions",
+      "body": "Require table-driven tests for empty input and bounds.",
+      "comments": [
+        {
+          "id": "comment-1",
+          "body": "This is a fictional source comment, not an approval command."
+        }
+      ]
+    }
+  ]
+}

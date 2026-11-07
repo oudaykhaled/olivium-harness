@@ -1,0 +1,22 @@
+{
+  "format": "harnessforge-holdout-go-probe-v1",
+  "package": "example.invalid/holdout/h01",
+  "tests_run": [
+    "TestH01Cases",
+    "TestH01Invariant"
+  ],
+  "values": [
+    false,
+    true,
+    true,
+    false,
+    false,
+    true,
+    false,
+    true,
+    true,
+    true,
+    false,
+    true
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "role": "same original Guardrail Agent",
+  "scope": "implemented native button transport correction",
+  "inputs": [
+    {
+      "path": "lib/harness_forge_web/company_assessment_state.ex",
+      "bytes": 23195,
+      "sha256": "932debadcd96027514a20b354987d0a81639cb956bb5a4e150a107742b1a9a01",
+      "read_mode": "changed seams semantic diff plus current envelope/dispatch/shape handlers"
+    },
+    {
+      "path": "tmp/enhancement-program/11/native-transport-correction-01/before/lib/harness_forge_web/company_assessment_state.ex",
+      "bytes": 22003,
+      "sha256": "890e48ef376541f9da8b4191565454e5c69a9952a03cdab8ac70af3b5bda5657",
+      "read_mode": "retained before seam compared by unified diff; remainder hash only"
+    },
+    {
+      "path": "lib/harness_forge_web/live/portal_live.ex",
+      "bytes": 114109,
+      "sha256": "55c1e1fcd262f7dc546c0a553810166afa15f725a415f786e2608a94dcf2359d",
+      "read_mode": "changed seams semantic diff plus scoped Portal ingress/departure/dirty dispatch"
+    },
+    {
+      "path": "tmp/enhancement-program/11/native-transport-correction-01/before/lib/harness_forge_web/live/portal_live.ex",
+      "bytes": 114102,
+      "sha256": "46a7e50919982e5731a9b8cf315a459702116f6890f805eb9bf8ebc682fd1db5",
+      "read_mode": "retained before seam compared by unified diff; remainder hash only"
+    },
+    {
+      "path": "test/harness_forge_web/company_assessment_flow_test.exs",
+      "bytes": 20715,
+      "sha256": "5a4ba6a73844937705f84e160cb35ded4e0047fdf22c8a0da75cf48fdea3fe8d",
+      "read_mode": "complete change diff; new negative test and existing click contexts"
+    },
+    {
+      "path": "tmp/enhancement-program/11/native-transport-correction-01/before/test/harness_forge_web/company_assessment_flow_test.exs",
+      "bytes": 18696,
+      "sha256": "14c8241b95a01224df5fe9235570196465a33943384b396031b8e5e845d3964b",
+      "read_mode": "retained before seam compared by unified diff; remainder hash only"
+    }
+  ],
+  "current_equals_retained_after": true,
+  "report": {
+    "path": "docs/enhancement-program/iterations/11/review/native-transport-advice.md",
+    "bytes": 2038,
+    "sha256": "2464fdbff0db0d332fcc5ab365adb3e1e0036cee117caf434bc6027a16b1530f"
+  },
+  "verdict": "no critical unresolved source finding in scoped correction",
+  "root_reported_only": {
+    "red": "browser-click-red-01 reproduced missing goal UI",
+    "focused_green": "browser-click-green-01 12 PASS",
+    "canonical02": "running at dispatch; not assessed"
+  },
+  "tests_executed": false,
+  "runtime_access": false,
+  "private_reads": false,
+  "product_edits": false,
+  "additional_agents": false
+}

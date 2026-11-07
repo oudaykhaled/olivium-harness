@@ -1,0 +1,9 @@
+# A03-01 Home responsive correction09
+
+Implemented the bounded correction from responsive decision09 and guardrail09. Root's prior Chrome samples placed the primary button bottom at document y=1068.67 at390px and y=1274.05 at320px against an844px viewport. Those samples were scrolled; they are not fresh-entry visibility evidence.
+
+The original Portal hero now lives in one shared `workspace_hero/1` component. Other tabs retain its original markup and behavior. Home renders it once in closed native details after the Company component: `company-home-about`, with summary `company-home-about-toggle`, “About this workspace and demo.” The shared component retains the sole `load-demo` button definition, handler and loading behavior. Expanding the disclosure dispatches nothing. The Home main region is labeled “Company home,” and the existing visible Guide heading remains. Flash messages, errors and unavailable-data explanations stay outside the optional content.
+
+Guide's redundant general introduction and repository count move into its existing saved-step details. Actual saved company, guide project and assigned goal names, the no-analysis-selection note, primary continuation and blocking/recovery explanations remain visible. `Guide.next_action/5`, event envelopes, focus targets and domain behavior are unchanged. No CSS, router, dispatch or capability change is included.
+
+Only PortalLive and Guide product files were edited. Before-source copies, exact line deltas, source hashes and formatter receipt are recorded under `tmp/ticket-delivery/A03-01/ui/`. Owned-file formatting passed; no tests, builds, runtime, browser, board, remote or generated execution were performed. Root must test the integrated candidate and measure the entire primary rectangle from a fresh scroll-zero entry at320,390 and desktop widths. This source change alone does not establish that the responsive acceptance criterion passes.
