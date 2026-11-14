@@ -5,14 +5,14 @@ This checkout does not represent a published public release, hosted service or
 completed private pilot.
 
 Official enhancement progress is **5/50**. The
-[accepted iteration05](enhancement-program/iterations/05/verification.md) adds
+[accepted iteration05](archive/enhancement-program/iterations/05/verification.md) adds
 explicit goal-origin claims through separate exact claim and company-plan decisions.
 Independent review, native Chrome acceptance, local installation and five independent
 retrospectives are complete. Candidate01 has493 distinct executed passing tests;
 the CSS-only candidate02 reuses scoped backend evidence and has fresh native checks.
 Two unsuppressed baseline Dialyzer findings remain. Complete-company reliability,
 real-model qualification and independent operator comprehension remain unproven.
-The [iteration06 UI/UX candidate](enhancement-program/iterations/06/decision.md) adds package-owned export feedback, safe destination remedies and reset-bound form controls. Author checks pass; independent review and native acceptance remain pending. The official count remains five.
+The [iteration06 UI/UX candidate](archive/enhancement-program/iterations/06/decision.md) adds package-owned export feedback, safe destination remedies and reset-bound form controls. Author checks pass; independent review and native acceptance remain pending. The official count remains five.
 Existing observations below retain their historical scope.
 
 | Area | Implemented | Evidence / practical limit |
@@ -98,4 +98,4 @@ ordinary evidence questions use current captured snapshots. Optional model answe
 use the existing shared ledger and explicit chat consent. No mode silently imports
 content or refreshes an incomplete evidence scan. Live GitHub metadata has passed
 the actual native browser flow; the other four accounts remain unverified due to credentials or
-permissions. See the [current correction evidence](live-chat-verification.md).
+permissions. See the [current correction evidence](archive/live-chat-verification.md).

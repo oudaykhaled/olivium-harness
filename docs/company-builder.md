@@ -5,7 +5,7 @@ scope, reviewed guidance and future plans. One workspace holds one company.
 Use a separate workspace for another company.
 
 The workflow supports source-based guidance, manually written goal-based rules,
-and a bounded company-context analysis. See the [enhancement ledger](enhancement-program/state.json)
+and a bounded company-context analysis. See the [enhancement ledger](archive/enhancement-program/state.json)
 for the current verification status.
 
 ## Guided workflow
@@ -131,5 +131,5 @@ Plans are separate from the legacy `build NAME VERSION` command. That command
 retains its workspace-wide source-only behavior and refuses when the current
 approved claim set includes a goal-based rule; it neither silently drops that rule
 nor approves a plan. Use Company to select the exact rule and goal and separately
-approve their scoped plan. See [coordination and acceptance](company-builder-coordination.md)
+approve their scoped plan. See [coordination and acceptance](archive/company-builder-coordination.md)
 for the session handoffs and [current status](status.md) for qualification limits.

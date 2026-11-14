@@ -8,3 +8,10 @@ notices are listed in THIRD_PARTY_NOTICES.md and packaged dependency notices.
 The project license does not cover separately installed OpenCode/Docker images,
 model weights, provider services or imported evidence. Their owners retain
 their rights. Naming these projects does not imply endorsement.
+
+The Olivium Harness name and logo identify the project. The logo image files
+(priv/static/images/olivium-harness.png, priv/static/images/olivium-harness-512.png,
+priv/static/apple-touch-icon.png, priv/static/favicon-32.png,
+priv/static/favicon.ico and docs/assets/olivium-harness-logo.png) are not
+licensed under the Apache License 2.0 and may be used only to refer to the
+project.

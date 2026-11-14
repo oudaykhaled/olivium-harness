@@ -21,6 +21,8 @@ The exact included OTP applications are recorded separately.
 | SQLite | Exqlite's bundled SQLite source | Public domain; Exqlite itself is MIT |
 | Tailwind CSS / esbuild binaries | Versions in `config/config.exs` | MIT; build tools downloaded by wrappers, not installed-runtime prerequisites |
 | Playwright | Optional `test/browser` package lock | Apache-2.0; downloaded browser binaries have their own notices; not bundled |
+| Space Grotesk | `@fontsource/space-grotesk` 5.3.0 (npm packaging of the font); latin subset, normal style, self-hosted as `priv/static/fonts/space-grotesk-500.woff2`, `space-grotesk-600.woff2`, `space-grotesk-700.woff2` | SIL OFL 1.1, Florian Karsten (The Space Grotesk Project Authors); license text in `priv/static/fonts/OFL-space-grotesk.txt` |
+| IBM Plex Mono | `@fontsource/ibm-plex-mono` 5.3.0 (npm packaging of the font); latin subset, normal style, self-hosted as `priv/static/fonts/ibm-plex-mono-400.woff2`, `ibm-plex-mono-500.woff2`, `ibm-plex-mono-600.woff2` | SIL OFL 1.1, IBM Corp.; license text in `priv/static/fonts/OFL-ibm-plex-mono.txt` |
 
 Available original notices are copied without altering their contents. Some Hex
 packages put copyright/license statements in README rather than a separate

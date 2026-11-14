@@ -68,3 +68,9 @@ npm-debug.log
 # Authenticated local showcase recordings are distributed separately.
 /priv/showcase/*.webm
 /priv/showcase/*.mp4
+
+# The website source lives in the oudaykhaled/olivium-harness-site repository.
+/website/
+
+# Benchmark export scratch folders (default E2E_EXPORT_ROOT).
+/docs/benchmarks/*/tmp-exports/

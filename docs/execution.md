@@ -77,7 +77,7 @@ Unknown/future signatures and rootless, forwarded/VM or containerized native
 setups remain unavailable. This is a support assumption for a trusted local host,
 not attestation against socket forwarding or hostile socket replacement. The native
 Linux route has not been qualified on this macOS host; policy fixtures cannot
-establish that compatibility. See the exact [transport contract](enhancement-program/iterations/07/review/guardrail-brief.md).
+establish that compatibility. See the exact [transport contract](archive/enhancement-program/iterations/07/review/guardrail-brief.md).
 
 Each task checks actual nonroot UID, zero effective capabilities,
 no-new-privileges, resource limits, denied root/artifact writes, absence of the

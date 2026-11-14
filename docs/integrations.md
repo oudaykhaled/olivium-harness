@@ -90,7 +90,7 @@ Slack, Jira and Confluence imports have not been qualified: API credentials and
 individual live resource selections were not supplied. Browser sessions work
 for GitHub/Projects/Slack; the selected Jira/Confluence tenant currently displays
 “Page unavailable”. No private live content was imported. The exact final test
-counts and package/browser observations are recorded in [verification.md](verification.md).
+counts and package/browser observations are recorded in [verification.md](archive/verification.md).
 
 Official API references checked 31 October 2026:
 
