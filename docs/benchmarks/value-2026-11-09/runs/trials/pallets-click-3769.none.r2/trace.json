@@ -1,0 +1,35 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 1,
+  "files_read_list": [
+    "src/click/_termui_impl.py"
+  ],
+  "first_gold_edit": {
+    "path": "src/click/_termui_impl.py",
+    "tool": "Edit",
+    "tool_calls_before": 2,
+    "turns_before": 2
+  },
+  "init_model": "claude-sonnet-5-5",
+  "malformed_lines": 0,
+  "permission_mode": "bypassPermissions",
+  "result": {
+    "duration_ms": 13704,
+    "is_error": false,
+    "num_turns": 5,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.0306084
+  },
+  "tool_calls": {
+    "Bash": 2,
+    "Edit": 1,
+    "Read": 1
+  },
+  "tool_calls_before_first_gold_edit": 2,
+  "tool_calls_total": 4,
+  "turns": 4,
+  "turns_before_first_gold_edit": 2,
+  "wasted_reads": 0,
+  "wasted_reads_list": []
+}

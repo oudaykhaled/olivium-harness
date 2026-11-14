@@ -1,0 +1,92 @@
+### token leak check (values never printed)
+workspace portal-ws: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+workspace e2e-ws: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+workspace e2e-cli-ws: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+workspace bench-ws: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+workspace e2e-ws-rep2: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+workspace e2e-ws-rep3: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+workspace bench-ws-cli: token file present, length 43 chars
+  files containing this token under docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md: 0
+  files containing this token under scratchpad/runsh-verify (not published): 0
+token files read: 7; published hits: 0
+### other workspaces present in scratchpad
+bench-corpus/
+bench-export/
+bench-ws-cli/
+bench-ws/
+dialyzer/
+e2e-cli-ws/
+e2e-exports-browser/
+e2e-exports-cli/
+e2e-exports-rep2/
+e2e-exports-rep3/
+e2e-ws-rep2/
+e2e-ws-rep3/
+e2e-ws/
+portal-export-1794133437460/
+portal-ws-fresh1/
+portal-ws-fresh2/
+portal-ws-fresh3/
+portal-ws-run1-aborted/
+portal-ws/
+runsh-tmp/
+runsh-verify/
+smoke-ws/
+testfailed/
+testrun/
+tmpdir/
+verify/
+### scan for any 'access-token' or 'access_code' mentions with values in evidence (patterns only)
+docs/benchmarks/2026-11-08/portal/results.json:119:        "workspace_access_token_created_epoch": 1794094564,
+docs/benchmarks/2026-11-08/portal/server.log:40:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/portal/run1-aborted/server.log:95:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/portal/run1-aborted/server.log:371:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/verification/token-leak-check.log:51:### scan for any 'access-token' or 'access_code' mentions with values in evidence (patterns only)
+docs/benchmarks/2026-11-08/e2e/e2e.log:2:2026-11-08T13:32:19.704Z +    410ms [B01] start: Unlock the workspace with the access code and reach the home screen
+docs/benchmarks/2026-11-08/e2e/e2e.log:5:2026-11-08T13:32:20.781Z +   1487ms [B02] start: A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly
+docs/benchmarks/2026-11-08/e2e/e2e.log:7:2026-11-08T13:32:21.318Z +   2024ms [screenshot] B02.png 1280x800 73813 bytes — Fresh browser context after submitting a dummy access code: "The access code is incorrect." alert, still on /login (screenshot taken before the real code is typed).
+docs/benchmarks/2026-11-08/e2e/e2e.log:49:2026-11-08T13:32:26.116Z +   6822ms [table] B01  PASS      1077   0 Unlock the workspace with the access code and reach the home screen                                                                
+docs/benchmarks/2026-11-08/e2e/e2e.log:50:2026-11-08T13:32:26.117Z +   6823ms [table] B02  PASS       760   1 A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly                              
+docs/benchmarks/2026-11-08/e2e/browser-results.json:22:      "title": "Unlock the workspace with the access code and reach the home screen",
+docs/benchmarks/2026-11-08/e2e/browser-results.json:36:      "title": "A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly",
+docs/benchmarks/2026-11-08/e2e/browser-results.json:51:        "login_error": "The access code is incorrect.",
+docs/benchmarks/2026-11-08/e2e/browser-results.json:319:      "caption": "Fresh browser context after submitting a dummy access code: \"The access code is incorrect.\" alert, still on /login (screenshot taken before the real code is typed).",
+docs/benchmarks/2026-11-08/e2e/results.json:148:        "title": "Unlock the workspace with the access code and reach the home screen",
+docs/benchmarks/2026-11-08/e2e/results.json:162:        "title": "A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly",
+docs/benchmarks/2026-11-08/e2e/results.json:177:          "login_error": "The access code is incorrect.",
+docs/benchmarks/2026-11-08/e2e/results.json:445:        "caption": "Fresh browser context after submitting a dummy access code: \"The access code is incorrect.\" alert, still on /login (screenshot taken before the real code is typed).",
+docs/benchmarks/2026-11-08/e2e/results.json:575:          "title": "Unlock the workspace with the access code and reach the home screen",
+docs/benchmarks/2026-11-08/e2e/results.json:594:          "title": "A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly",
+docs/benchmarks/2026-11-08/e2e/screenshots/index.json:11:      "caption": "Fresh browser context after submitting a dummy access code: \"The access code is incorrect.\" alert, still on /login (screenshot taken before the real code is typed).",
+docs/benchmarks/2026-11-08/e2e/server.log:26:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/server.log:52:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/server.log:68:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/server.log:271:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/repeat3/e2e.log:2:2026-11-08T13:33:18.225Z +    347ms [B01] start: Unlock the workspace with the access code and reach the home screen
+docs/benchmarks/2026-11-08/e2e/repeat3/e2e.log:5:2026-11-08T13:33:19.098Z +   1220ms [B02] start: A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly
+docs/benchmarks/2026-11-08/e2e/repeat3/e2e.log:7:2026-11-08T13:33:19.721Z +   1843ms [screenshot] B02.png 1280x800 73905 bytes — Fresh browser context after submitting a dummy access code: "The access code is incorrect." alert, still on /login (screenshot taken before the real code is typed).
+docs/benchmarks/2026-11-08/e2e/repeat3/e2e.log:49:2026-11-08T13:33:25.186Z +   7308ms [table] B01  PASS       872   0 Unlock the workspace with the access code and reach the home screen                                                                
+docs/benchmarks/2026-11-08/e2e/repeat3/e2e.log:50:2026-11-08T13:33:25.186Z +   7308ms [table] B02  PASS       934   1 A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly                              
+docs/benchmarks/2026-11-08/e2e/repeat3/server.log:25:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/repeat3/server.log:52:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/repeat3/server.log:68:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/repeat3/server.log:271:  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+docs/benchmarks/2026-11-08/e2e/repeat3/stdout.log:2:2026-11-08T13:33:18.225Z +    347ms [B01] start: Unlock the workspace with the access code and reach the home screen
+docs/benchmarks/2026-11-08/e2e/repeat3/stdout.log:5:2026-11-08T13:33:19.098Z +   1220ms [B02] start: A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly
+docs/benchmarks/2026-11-08/e2e/repeat3/stdout.log:7:2026-11-08T13:33:19.721Z +   1843ms [screenshot] B02.png 1280x800 73905 bytes — Fresh browser context after submitting a dummy access code: "The access code is incorrect." alert, still on /login (screenshot taken before the real code is typed).
+docs/benchmarks/2026-11-08/e2e/repeat3/stdout.log:49:2026-11-08T13:33:25.186Z +   7308ms [table] B01  PASS       872   0 Unlock the workspace with the access code and reach the home screen                                                                
+docs/benchmarks/2026-11-08/e2e/repeat3/stdout.log:50:2026-11-08T13:33:25.186Z +   7308ms [table] B02  PASS       934   1 A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly                              
+docs/benchmarks/2026-11-08/e2e/repeat3/results.json:22:      "title": "Unlock the workspace with the access code and reach the home screen",
+(end pattern scan)

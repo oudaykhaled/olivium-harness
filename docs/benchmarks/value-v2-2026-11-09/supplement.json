@@ -1,0 +1,1529 @@
+{
+ "canaries": [
+  {
+   "app_lib_sha256": "669ad231860e571fe89cd8327b29e91a9eb23a2d0b64512326db4cf0ea7990e4",
+   "app_priv_blueprints_sha256": "226c267838af58a8a8a7e6bd7a5d62902832583c54eda806fad2b0027114a35a",
+   "decision": "Decision: stopped before any scored run. All 5 refusals came from the generator's own exported settings on ordinary reads and the project's toolchain (43 Read deny rules; bare python3 not allowed; uv run --no-sync not matching Bash(uv run pytest:*)). That was a product defect. The generator was fixed (refuse-only guard hook, no Read deny rules, allow list widened by detected toolchain) and every olivium arm was rebuilt; see PROTOCOL-v2.md, change log, 2026-11-10. This canary is the reason for that fix and is not scored.",
+   "dir": "<bench-out>/value-v2-2026-11-09-canary",
+   "generic_init_cost_usd": 0.0974153,
+   "label": "First canary, 2026-11-09 (generator before the fix)",
+   "meter": {
+    "modes": [
+     "live"
+    ],
+    "rows": 36,
+    "setup_usd": 0.0974153,
+    "statuses": {
+     "ok": 36
+    },
+    "total_usd": 0.3979005,
+    "trials_usd": 0.3004852,
+    "web_or_server_tool_rows": 0
+   },
+   "olivium_arm_sha256": "de56af958dd709ab4868a26e2e75034b9812f1faea5b08d9db5e08b60e2f8d64",
+   "olivium_harness_bytes": 24736,
+   "runs": [
+    {
+     "arm": "none",
+     "cost_usd": 0.0625892,
+     "f2p": "1/1",
+     "hook_approvals": 0,
+     "hook_responses": {},
+     "lint_ok": true,
+     "p2p_regressions": 0,
+     "patch_lines": 46,
+     "permission_denials": 0,
+     "refusals": [],
+     "requests": 5,
+     "run_id": "pallets-click-3858.none.r1",
+     "solved": true,
+     "status": "completed",
+     "stop_blocks_exit2": 0,
+     "turns": 5,
+     "wall_seconds": 31.0
+    },
+    {
+     "arm": "olivium",
+     "cost_usd": 0.1452501,
+     "f2p": "1/1",
+     "hook_approvals": 0,
+     "hook_responses": {
+      "PostToolUse": 9,
+      "Stop": 1
+     },
+     "lint_ok": true,
+     "p2p_regressions": 0,
+     "patch_lines": 55,
+     "permission_denials": 5,
+     "refusals": [
+      {
+       "class": "ask: relative-path read after a cd (asked while Read deny rules exist)",
+       "command_lead": "cd /work/repo/src/click && grep -n ...",
+       "docs": "old generator; cause in PROTOCOL-v2.md change log, 2026-11-10",
+       "file_tool": false,
+       "part_lead": "",
+       "refused_by": "asks",
+       "tool": "Bash"
+      },
+      {
+       "class": "ask: compound, part outside the allow list (python3)",
+       "command_lead": "python3 - ...",
+       "docs": "old generator; cause in PROTOCOL-v2.md change log, 2026-11-10",
+       "file_tool": false,
+       "part_lead": "python3 - ...",
+       "refused_by": "asks",
+       "tool": "Bash"
+      },
+      {
+       "class": "ask: outside the allow list (python3)",
+       "command_lead": "python3 -I /tmp/edit_path.py",
+       "docs": "old generator; cause in PROTOCOL-v2.md change log, 2026-11-10",
+       "file_tool": false,
+       "part_lead": "",
+       "refused_by": "asks",
+       "tool": "Bash"
+      },
+      {
+       "class": "ask: compound, part outside the allow list (uv run)",
+       "command_lead": "uv run --no-sync pytest -q 2>&1 | tail -3; which mypy pyright ruff",
+       "docs": "old generator; cause in PROTOCOL-v2.md change log, 2026-11-10",
+       "file_tool": false,
+       "part_lead": "uv run --no-sync pytest -q 2>&1",
+       "refused_by": "asks",
+       "tool": "Bash"
+      },
+      {
+       "class": "ask: outside the allow list (uv run)",
+       "command_lead": "uv run --no-sync pytest -q tests/test_types.py",
+       "docs": "old generator; cause in PROTOCOL-v2.md change log, 2026-11-10",
+       "file_tool": false,
+       "part_lead": "",
+       "refused_by": "asks",
+       "tool": "Bash"
+      }
+     ],
+     "requests": 13,
+     "run_id": "pallets-click-3858.olivium.r1",
+     "solved": true,
+     "status": "completed",
+     "stop_blocks_exit2": 0,
+     "turns": 13,
+     "wall_seconds": 64.0
+    },
+    {
+     "arm": "generic",
+     "cost_usd": 0.0926459,
+     "f2p": "1/1",
+     "hook_approvals": 0,
+     "hook_responses": {},
+     "lint_ok": true,
+     "p2p_regressions": 0,
+     "patch_lines": 56,
+     "permission_denials": 0,
+     "refusals": [],
+     "requests": 11,
+     "run_id": "pallets-click-3858.generic.r1",
+     "solved": true,
+     "status": "completed",
+     "stop_blocks_exit2": 0,
+     "turns": 11,
+     "wall_seconds": 56.0
+    }
+   ],
+   "scored": false,
+   "task_id": "pallets-click-3858"
+  },
+  {
+   "app_lib_sha256": "ccc8a19c4753cff2e932ce23f141c136b22c1def8bcbf465d3dcf784f7d47f07",
+   "app_priv_blueprints_sha256": "82e96fc7b4f3f6d50dd066ff91660272867a9290a882659c936f28ab39d244ed",
+   "decision": "Decision: no stop condition of the amended rule (PROTOCOL-v2.md, change log, 2026-11-10) held. Mechanical conditions 2 to 5: none. Condition 1: each olivium refusal is of a class the docs list (docs/claude-code-connector.md at SHA-256 b4849bf5...: a /tmp path refused by the guard; twice a cd followed by a write, under What still asks). The scored run started after this canary.",
+   "dir": "<bench-out>/value-v2-2026-11-09-canary2",
+   "generic_init_cost_usd": 0.1008289,
+   "label": "Second canary, 2026-11-10 (fixed generator, the arms this run used)",
+   "meter": {
+    "modes": [
+     "live"
+    ],
+    "rows": 36,
+    "setup_usd": 0.1008289,
+    "statuses": {
+     "ok": 36
+    },
+    "total_usd": 0.4172819,
+    "trials_usd": 0.316453,
+    "web_or_server_tool_rows": 0
+   },
+   "olivium_arm_sha256": "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f",
+   "olivium_harness_bytes": 68376,
+   "runs": [
+    {
+     "arm": "none",
+     "cost_usd": 0.0621136,
+     "f2p": "1/1",
+     "hook_approvals": 0,
+     "hook_responses": {},
+     "lint_ok": true,
+     "p2p_regressions": 0,
+     "patch_lines": 51,
+     "permission_denials": 0,
+     "refusals": [],
+     "requests": 5,
+     "run_id": "pallets-click-3858.none.r1",
+     "solved": true,
+     "status": "completed",
+     "stop_blocks_exit2": 0,
+     "turns": 5,
+     "wall_seconds": 31.0
+    },
+    {
+     "arm": "generic",
+     "cost_usd": 0.0827556,
+     "f2p": "1/1",
+     "hook_approvals": 0,
+     "hook_responses": {},
+     "lint_ok": true,
+     "p2p_regressions": 0,
+     "patch_lines": 60,
+     "permission_denials": 0,
+     "refusals": [],
+     "requests": 8,
+     "run_id": "pallets-click-3858.generic.r1",
+     "solved": true,
+     "status": "completed",
+     "stop_blocks_exit2": 0,
+     "turns": 8,
+     "wall_seconds": 51.0
+    },
+    {
+     "arm": "olivium",
+     "cost_usd": 0.1715838,
+     "f2p": "1/1",
+     "hook_approvals": 0,
+     "hook_responses": {
+      "PostToolUse": 9,
+      "PreToolUse": 19,
+      "Stop": 1
+     },
+     "lint_ok": true,
+     "p2p_regressions": 0,
+     "patch_lines": 55,
+     "permission_denials": 3,
+     "refusals": [
+      {
+       "class": "guard: this call names a path outside the project",
+       "command_lead": "cd /work/repo/src/click; python - ...",
+       "docs": "The guard hook",
+       "file_tool": false,
+       "part_lead": "",
+       "refused_by": "refused_guard",
+       "tool": "Bash"
+      },
+      {
+       "class": "ask: cd followed by a write",
+       "command_lead": "cd /work/repo/src/click; python - ...",
+       "docs": "What still asks (a cd followed by a write)",
+       "file_tool": false,
+       "part_lead": "",
+       "refused_by": "asks",
+       "tool": "Bash"
+      },
+      {
+       "class": "ask: cd followed by a write",
+       "command_lead": "cd /work/repo && uv run mypy mre_tmp.py 2>&1 | tail -8; rm mre_tmp.py; uv run my ...",
+       "docs": "What still asks (a cd followed by a write)",
+       "file_tool": false,
+       "part_lead": "",
+       "refused_by": "asks",
+       "tool": "Bash"
+      }
+     ],
+     "requests": 14,
+     "run_id": "pallets-click-3858.olivium.r1",
+     "solved": true,
+     "status": "completed",
+     "stop_blocks_exit2": 0,
+     "turns": 14,
+     "wall_seconds": 99.0
+    }
+   ],
+   "scored": false,
+   "task_id": "pallets-click-3858"
+  }
+ ],
+ "full_run": {
+  "dir": "<bench-out>/value-v2-2026-11-09",
+  "integrity": {
+   "grade_not_ok": [],
+   "harness_check_failed": [],
+   "meter_vs_claude_code_mismatch": [],
+   "settings_not_export": [],
+   "web": []
+  },
+  "meter": {
+   "modes": [
+    "live"
+   ],
+   "rows": 501,
+   "setup_usd": 0.4557194,
+   "statuses": {
+    "ok": 501
+   },
+   "total_usd": 4.7893034,
+   "trials_usd": 4.333584,
+   "web_or_server_tool_rows": 0
+  },
+  "olivium_runs_by_refusal": {
+   "with_a_refusal": {
+    "mean_cost_usd": 0.0777692,
+    "mean_turns": 9.5,
+    "runs": 14,
+    "solved": 11,
+    "tasks": [
+     "expressjs-express-7366",
+     "pallets-click-3769",
+     "pallets-click-3858",
+     "pallets-flask-6096",
+     "pallets-werkzeug-3266",
+     "python-attrs-attrs-1593"
+    ]
+   },
+   "without": {
+    "mean_cost_usd": 0.062951,
+    "mean_turns": 5.6,
+    "runs": 10,
+    "solved": 4,
+    "tasks": [
+     "expressjs-express-7366",
+     "pallets-click-3769",
+     "pallets-werkzeug-3266",
+     "pallets-werkzeug-3273",
+     "pallets-werkzeug-3298"
+    ]
+   }
+  },
+  "per_arm": {
+   "generic": {
+    "guard_failed_warnings": 0,
+    "guard_missing_or_changed_warnings": 0,
+    "guard_refusals_in_hook_output": 0,
+    "hook_approvals": 0,
+    "hook_responses": {},
+    "infra_error": 0,
+    "permission_denials": 0,
+    "pretooluse_nonzero_exits": 0,
+    "refused_by": {
+     "asks": 0,
+     "refused_guard": 0,
+     "refused_rule": 0
+    },
+    "refused_file_tool_calls": 0,
+    "runs_recorded": 24,
+    "runs_with_a_denial": 0,
+    "runs_with_a_stop_block": 0,
+    "scored_runs": 24,
+    "stop_blocks_exit2": 0,
+    "tool_calls": 117
+   },
+   "none": {
+    "guard_failed_warnings": 0,
+    "guard_missing_or_changed_warnings": 0,
+    "guard_refusals_in_hook_output": 0,
+    "hook_approvals": 0,
+    "hook_responses": {},
+    "infra_error": 0,
+    "permission_denials": 0,
+    "pretooluse_nonzero_exits": 0,
+    "refused_by": {
+     "asks": 0,
+     "refused_guard": 0,
+     "refused_rule": 0
+    },
+    "refused_file_tool_calls": 0,
+    "runs_recorded": 24,
+    "runs_with_a_denial": 0,
+    "runs_with_a_stop_block": 0,
+    "scored_runs": 24,
+    "stop_blocks_exit2": 0,
+    "tool_calls": 119
+   },
+   "olivium": {
+    "guard_failed_warnings": 0,
+    "guard_missing_or_changed_warnings": 0,
+    "guard_refusals_in_hook_output": 9,
+    "hook_approvals": 0,
+    "hook_responses": {
+     "PostToolUse": 19,
+     "PreToolUse": 198,
+     "Stop": 24
+    },
+    "infra_error": 0,
+    "permission_denials": 35,
+    "pretooluse_nonzero_exits": 0,
+    "refused_by": {
+     "asks": 26,
+     "refused_guard": 9,
+     "refused_rule": 0
+    },
+    "refused_file_tool_calls": 0,
+    "runs_recorded": 24,
+    "runs_with_a_denial": 14,
+    "runs_with_a_stop_block": 0,
+    "scored_runs": 24,
+    "stop_blocks_exit2": 0,
+    "tool_calls": 199
+   }
+  },
+  "per_run": [
+   {
+    "arm": "generic",
+    "cost_usd": 0.0449021,
+    "refusals": 0,
+    "run_id": "pallets-flask-6096.generic.r2",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 5
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0564604,
+    "refusals": 3,
+    "run_id": "pallets-click-3769.olivium.r2",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 8
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0496246,
+    "refusals": 0,
+    "run_id": "pallets-flask-6096.none.r1",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 8
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0667521,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.generic.r2",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 5
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0641058,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 7
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0752079,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.none.r2",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 7
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0379302,
+    "refusals": 1,
+    "run_id": "expressjs-express-7366.olivium.r1",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 6
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.1550858,
+    "refusals": 5,
+    "run_id": "pallets-click-3858.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 15
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0753478,
+    "refusals": 0,
+    "run_id": "pallets-click-3858.generic.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0473966,
+    "refusals": 0,
+    "run_id": "pallets-flask-6096.generic.r3",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 7
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0747224,
+    "refusals": 1,
+    "run_id": "pallets-werkzeug-3266.olivium.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 6
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0301654,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.olivium.r2",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 6
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0599915,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.olivium.r2",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0406105,
+    "refusals": 0,
+    "run_id": "python-attrs-attrs-1593.none.r1",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0396615,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.generic.r3",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0300829,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.none.r2",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 4
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0668957,
+    "refusals": 2,
+    "run_id": "pallets-flask-6096.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 9
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0672859,
+    "refusals": 0,
+    "run_id": "pallets-click-3858.generic.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 7
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.1071499,
+    "refusals": 3,
+    "run_id": "pallets-click-3858.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 13
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.073553,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.generic.r1",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0366851,
+    "refusals": 0,
+    "run_id": "python-attrs-attrs-1593.generic.r2",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 4
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0731799,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.generic.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 8
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0764388,
+    "refusals": 4,
+    "run_id": "python-attrs-attrs-1593.olivium.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 10
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0679285,
+    "refusals": 3,
+    "run_id": "python-attrs-attrs-1593.olivium.r1",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 11
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0653508,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0386948,
+    "refusals": 0,
+    "run_id": "python-attrs-attrs-1593.none.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0638716,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.none.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 5
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0654806,
+    "refusals": 2,
+    "run_id": "pallets-flask-6096.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 9
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0667731,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.generic.r1",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0556372,
+    "refusals": 0,
+    "run_id": "pallets-click-3858.none.r3",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 5
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.040219,
+    "refusals": 1,
+    "run_id": "expressjs-express-7366.olivium.r3",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 6
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0575603,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 4
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0824704,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.olivium.r1",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 7
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0751869,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.generic.r1",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 9
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0723707,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.olivium.r2",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 5
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0442982,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.generic.r1",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0265552,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.generic.r2",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0603036,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.none.r2",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0418666,
+    "refusals": 0,
+    "run_id": "pallets-flask-6096.none.r3",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0397803,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.generic.r2",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0483057,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.none.r1",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0702814,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.none.r2",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 5
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0545889,
+    "refusals": 0,
+    "run_id": "pallets-flask-6096.generic.r1",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 7
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0366927,
+    "refusals": 0,
+    "run_id": "python-attrs-attrs-1593.generic.r1",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 4
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0319892,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.none.r1",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 4
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0624578,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.none.r3",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 7
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0808405,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.generic.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0391783,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.none.r1",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0694638,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.generic.r2",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 6
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0845248,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.olivium.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 6
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0583798,
+    "refusals": 1,
+    "run_id": "pallets-flask-6096.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 8
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0697905,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.none.r1",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.021562,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.none.r3",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 5
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0723244,
+    "refusals": 0,
+    "run_id": "pallets-click-3858.generic.r3",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0572695,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.generic.r3",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 4
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0406857,
+    "refusals": 1,
+    "run_id": "pallets-click-3769.olivium.r1",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 5
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0960574,
+    "refusals": 3,
+    "run_id": "python-attrs-attrs-1593.olivium.r2",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 13
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0397872,
+    "refusals": 0,
+    "run_id": "python-attrs-attrs-1593.none.r2",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 6
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0512862,
+    "refusals": 0,
+    "run_id": "python-attrs-attrs-1593.generic.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "turns": 7
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0717204,
+    "refusals": 0,
+    "run_id": "pallets-click-3858.none.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 7
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.1453343,
+    "refusals": 5,
+    "run_id": "pallets-click-3858.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 14
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0248926,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.olivium.r3",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 4
+   },
+   {
+    "arm": "olivium",
+    "cost_usd": 0.0880777,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.olivium.r1",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0395844,
+    "refusals": 0,
+    "run_id": "pallets-flask-6096.none.r2",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.06341,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3266.none.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "turns": 5
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0779462,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.none.r1",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0730731,
+    "refusals": 0,
+    "run_id": "pallets-click-3858.none.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "turns": 6
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.029817,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.none.r3",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 4
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0535198,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3298.generic.r2",
+    "solved": true,
+    "task_id": "pallets-werkzeug-3298",
+    "turns": 4
+   },
+   {
+    "arm": "none",
+    "cost_usd": 0.0454636,
+    "refusals": 0,
+    "run_id": "expressjs-express-7366.none.r2",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "turns": 8
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0406723,
+    "refusals": 0,
+    "run_id": "pallets-click-3769.generic.r3",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "turns": 5
+   },
+   {
+    "arm": "generic",
+    "cost_usd": 0.0810232,
+    "refusals": 0,
+    "run_id": "pallets-werkzeug-3273.generic.r1",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3273",
+    "turns": 6
+   }
+  ],
+  "refusal_classes": {
+   "generic": {},
+   "none": {},
+   "olivium": {
+    "ask: $( ... ) nested command || What still asks ($( ... ))": 1,
+    "ask: '..' path after a cd (resolved outside the working directory) || What still asks (a .. path after a cd)": 2,
+    "ask: backslash-escaped whitespace || What still asks (backslash-escaped whitespace)": 6,
+    "ask: cd before a git command || not listed": 3,
+    "ask: cd followed by a write || What still asks (a cd followed by a write)": 4,
+    "ask: compound, '..' after a cd || What still asks (a .. path after a cd)": 3,
+    "ask: compound, a cd followed by a write || What still asks (a cd followed by a write)": 1,
+    "ask: compound, part outside the allow list (rmdir scratch_tmp) || What still asks (a command outside the allow list)": 1,
+    "ask: compound, part outside the allow list (uv python) || What still asks (a command outside the allow list)": 1,
+    "ask: outside the allow list (uv python) || What still asks (a command outside the allow list)": 1,
+    "ask: read-only git with -C || not listed (docs: read-only git runs by itself)": 1,
+    "ask: shell Claude Code could not parse || What still asks (shell Claude Code cannot check statically; this form not named)": 2,
+    "guard: this call names a path outside the project || The guard hook": 8,
+    "guard: this call runs a denied command || The guard hook": 1
+   }
+  },
+  "refusal_docs_sections": {
+   "generic": {},
+   "none": {},
+   "olivium": {
+    "The guard hook": 9,
+    "What still asks ($( ... ))": 1,
+    "What still asks (a .. path after a cd)": 5,
+    "What still asks (a cd followed by a write)": 5,
+    "What still asks (a command outside the allow list)": 3,
+    "What still asks (backslash-escaped whitespace)": 6,
+    "What still asks (shell Claude Code cannot check statically; this form not named)": 2,
+    "not listed": 3,
+    "not listed (docs: read-only git runs by itself)": 1
+   }
+  },
+  "refusals": [
+   {
+    "arm": "olivium",
+    "class": "ask: '..' path after a cd (resolved outside the working directory)",
+    "command_lead": "cd /work/repo/src/click && grep -n ...",
+    "docs": "What still asks (a .. path after a cd)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3769.olivium.r2",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "cd /work/repo && python - ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "pallets-click-3769.olivium.r2",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd before a git command",
+    "command_lead": "cd /work/repo && python - ...",
+    "docs": "not listed",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3769.olivium.r2",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: backslash-escaped whitespace",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (backslash-escaped whitespace)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "expressjs-express-7366.olivium.r1",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: compound, '..' after a cd",
+    "command_lead": "cd /work/repo/src/click; grep -n ...",
+    "docs": "What still asks (a .. path after a cd)",
+    "file_tool": false,
+    "part_lead": "head -40; head -20 ../../CHANGES.md",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: compound, '..' after a cd",
+    "command_lead": "cd /work/repo/src/click; grep -n ...",
+    "docs": "What still asks (a .. path after a cd)",
+    "file_tool": false,
+    "part_lead": "grep ...",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "cd /work/repo/src/click; python - ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "pallets-click-3858.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd followed by a write",
+    "command_lead": "cd /work/repo/src/click; python - ...",
+    "docs": "What still asks (a cd followed by a write)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: read-only git with -C",
+    "command_lead": "git -C /work/repo status --short",
+    "docs": "not listed (docs: read-only git runs by itself)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd followed by a write",
+    "command_lead": "cd /work/repo; sed -i ...",
+    "docs": "What still asks (a cd followed by a write)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-werkzeug-3266.olivium.r3",
+    "solved": false,
+    "task_id": "pallets-werkzeug-3266",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: backslash-escaped whitespace",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (backslash-escaped whitespace)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-flask-6096.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: backslash-escaped whitespace",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (backslash-escaped whitespace)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-flask-6096.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: compound, '..' after a cd",
+    "command_lead": "cd /work/repo/src/click && grep -n ...",
+    "docs": "What still asks (a .. path after a cd)",
+    "file_tool": false,
+    "part_lead": "sed -n 1,200p; grep -n ...",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "python - ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "pallets-click-3858.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd before a git command",
+    "command_lead": "cd /work/repo && git diff --stat; grep -n ...",
+    "docs": "not listed",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "python - ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "python-attrs-attrs-1593.olivium.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: shell Claude Code could not parse",
+    "command_lead": "mkdir -p scratch_tmp && cat > scratch_tmp/t.py ...",
+    "docs": "What still asks (shell Claude Code cannot check statically; this form not named)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "python-attrs-attrs-1593.olivium.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call runs a denied command",
+    "command_lead": "mkdir -p scratch_tmp && uv run python -c ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "python-attrs-attrs-1593.olivium.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: compound, part outside the allow list (rmdir scratch_tmp)",
+    "command_lead": "uv run python -c ...",
+    "docs": "What still asks (a command outside the allow list)",
+    "file_tool": false,
+    "part_lead": "rmdir scratch_tmp",
+    "refused_by": "asks",
+    "run_id": "python-attrs-attrs-1593.olivium.r3",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "ls changelog.d | head; git log -3 --format=%s | head -3; cat > /tmp/t.py ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "python-attrs-attrs-1593.olivium.r1",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: compound, part outside the allow list (uv python)",
+    "command_lead": "uv run --python 3.14 python -V 2>&1; uv python list --only-installed 2>&1 | head",
+    "docs": "What still asks (a command outside the allow list)",
+    "file_tool": false,
+    "part_lead": "uv run --python 3.14 python -V 2>&1; uv python list --only-installed 2>&1",
+    "refused_by": "asks",
+    "run_id": "python-attrs-attrs-1593.olivium.r1",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: outside the allow list (uv python)",
+    "command_lead": "uv python list --only-installed",
+    "docs": "What still asks (a command outside the allow list)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "python-attrs-attrs-1593.olivium.r1",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: backslash-escaped whitespace",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (backslash-escaped whitespace)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-flask-6096.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: backslash-escaped whitespace",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (backslash-escaped whitespace)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-flask-6096.olivium.r3",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: backslash-escaped whitespace",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (backslash-escaped whitespace)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "expressjs-express-7366.olivium.r3",
+    "solved": true,
+    "task_id": "expressjs-express-7366",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: $( ... ) nested command",
+    "command_lead": "python - ...",
+    "docs": "What still asks ($( ... ))",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-flask-6096.olivium.r2",
+    "solved": true,
+    "task_id": "pallets-flask-6096",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: '..' path after a cd (resolved outside the working directory)",
+    "command_lead": "cd /work/repo/src/click && grep -n ...",
+    "docs": "What still asks (a .. path after a cd)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3769.olivium.r1",
+    "solved": false,
+    "task_id": "pallets-click-3769",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "cd /work/repo; (uv run --python 3.14 python -c ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "python-attrs-attrs-1593.olivium.r2",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "cd /work/repo; ls changelog.d | head; cat > /tmp/fr.py ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "python-attrs-attrs-1593.olivium.r2",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd followed by a write",
+    "command_lead": "cd /work/repo; echo ...",
+    "docs": "What still asks (a cd followed by a write)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "python-attrs-attrs-1593.olivium.r2",
+    "solved": true,
+    "task_id": "python-attrs-attrs-1593",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "guard: this call names a path outside the project",
+    "command_lead": "python - ...",
+    "docs": "The guard hook",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "refused_guard",
+    "run_id": "pallets-click-3858.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd before a git command",
+    "command_lead": "cd /work/repo && git status --short && python - ...",
+    "docs": "not listed",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: shell Claude Code could not parse",
+    "command_lead": "cd /work/repo && sed -i ...",
+    "docs": "What still asks (shell Claude Code cannot check statically; this form not named)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: compound, a cd followed by a write",
+    "command_lead": "sed -i ...",
+    "docs": "What still asks (a cd followed by a write)",
+    "file_tool": false,
+    "part_lead": "sed -i ...",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   },
+   {
+    "arm": "olivium",
+    "class": "ask: cd followed by a write",
+    "command_lead": "cd /work/repo && uv run mypy 2>&1 | tail -15; uv run mypy mre_tmp.py | tail -5; ...",
+    "docs": "What still asks (a cd followed by a write)",
+    "file_tool": false,
+    "part_lead": "",
+    "refused_by": "asks",
+    "run_id": "pallets-click-3858.olivium.r1",
+    "solved": true,
+    "task_id": "pallets-click-3858",
+    "tool": "Bash"
+   }
+  ],
+  "trial_rows": 72
+ },
+ "spend": {
+  "before_v2": 3.4818,
+  "canary1": 0.3979005,
+  "canary2": 0.4172819,
+  "full_run_setup_init": 0.4557194,
+  "full_run_total": 4.7893034,
+  "full_run_trials": 4.333584,
+  "programme_total": 9.0862858
+ }
+}

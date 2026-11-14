@@ -1,0 +1,64 @@
+2026-11-08T13:33:18.138Z +    260ms [browser] chromium 156.0.8078.4 via playwright 1.64.1; origin http://127.0.0.1:8868; workspace <scratch>/e2e-ws-rep3; export root <scratch>/e2e-exports-rep3
+2026-11-08T13:33:18.225Z +    347ms [B01] start: Unlock the workspace with the access code and reach the home screen
+2026-11-08T13:33:18.490Z +    612ms [screenshot] B01.png 1280x800 73905 bytes — Login page before anything is typed: empty "Workspace access code" field and Unlock workspace button (redirected from /).
+2026-11-08T13:33:19.097Z +   1220ms [B01] PASS in 872 ms
+2026-11-08T13:33:19.098Z +   1220ms [B02] start: A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly
+2026-11-08T13:33:19.516Z +   1638ms [console.error] B02-fresh-context: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+2026-11-08T13:33:19.721Z +   1843ms [screenshot] B02.png 1280x800 73905 bytes — Fresh browser context after submitting a dummy access code: "The access code is incorrect." alert, still on /login (screenshot taken before the real code is typed).
+2026-11-08T13:33:20.032Z +   2154ms [B02] PASS in 934 ms (console errors: 1)
+2026-11-08T13:33:20.032Z +   2154ms [B03] start: Load the synthetic demo and assert the expected sources and claim cards appear (incl. the hostile claim)
+2026-11-08T13:33:20.644Z +   2766ms [screenshot] B03.png 1280x800 96230 bytes — Load the synthetic demo and assert the expected sources and claim cards appear (incl. the hostile claim) — pass
+2026-11-08T13:33:20.644Z +   2766ms [B03] PASS in 557 ms
+2026-11-08T13:33:20.644Z +   2766ms [B04] start: Reject the hostile claim and approve the two ordinary claims; assert the card states change
+2026-11-08T13:33:21.029Z +   3151ms [screenshot] B04.png 1280x800 92449 bytes — Reject the hostile claim and approve the two ordinary claims; assert the card states change — pass
+2026-11-08T13:33:21.029Z +   3151ms [B04] PASS in 340 ms
+2026-11-08T13:33:21.029Z +   3151ms [B05] start: Build a package named e2e-claude for the Claude Code runtime and assert an artifact row with a digest appears
+2026-11-08T13:33:21.314Z +   3436ms [screenshot] B05.png 1280x800 107726 bytes — Build a package named e2e-claude for the Claude Code runtime and assert an artifact row with a digest appears — pass
+2026-11-08T13:33:21.315Z +   3437ms [B05] PASS in 231 ms
+2026-11-08T13:33:21.315Z +   3437ms [B06] start: Build again with identical inputs and assert the digest shown in the DOM is identical (determinism)
+2026-11-08T13:33:21.533Z +   3655ms [screenshot] B06.png 1280x800 107760 bytes — Build again with identical inputs and assert the digest shown in the DOM is identical (determinism) — pass
+2026-11-08T13:33:21.533Z +   3655ms [B06] PASS in 169 ms
+2026-11-08T13:33:21.533Z +   3655ms [B07] start: Open the artifact detail page: file list has the guidance file, settings, an agents entry, a skills entry; verification flags shown
+2026-11-08T13:33:21.767Z +   3889ms [screenshot] B07.png 1280x800 56925 bytes — Open the artifact detail page: file list has the guidance file, settings, an agents entry, a skills entry; verification flags shown — pass
+2026-11-08T13:33:21.767Z +   3889ms [B07] PASS in 190 ms
+2026-11-08T13:33:21.767Z +   3889ms [B08] start: Export the package to a fresh directory and verify guidance content and the manifest on disk
+2026-11-08T13:33:22.232Z +   4354ms [screenshot] B08.png 1280x800 127333 bytes — Export the package to a fresh directory and verify guidance content and the manifest on disk — pass
+2026-11-08T13:33:22.232Z +   4354ms [B08] PASS in 410 ms
+2026-11-08T13:33:22.232Z +   4354ms [B09] start: Run a static_integrity evaluation; assert it reaches passed and the UI states runtime qualification false
+2026-11-08T13:33:22.593Z +   4715ms [screenshot] B09.png 1280x800 92760 bytes — Run a static_integrity evaluation; assert it reaches passed and the UI states runtime qualification false — pass
+2026-11-08T13:33:22.593Z +   4715ms [B09] PASS in 293 ms
+2026-11-08T13:33:22.593Z +   4715ms [B10] start: Run a task evaluation and assert it is reported blocked (no isolated runtime), not faked
+2026-11-08T13:33:23.139Z +   5261ms [screenshot] B10.png 1280x800 80045 bytes — Run a task evaluation and assert it is reported blocked (no isolated runtime), not faked — pass
+2026-11-08T13:33:23.139Z +   5261ms [B10] PASS in 494 ms
+2026-11-08T13:33:23.139Z +   5261ms [B11] start: Attempt a release approval with the static_integrity evaluation and assert it is refused (#error)
+2026-11-08T13:33:23.405Z +   5527ms [screenshot] B11.png 1280x800 96495 bytes — Attempt a release approval with the static_integrity evaluation and assert it is refused (#error) — pass
+2026-11-08T13:33:23.406Z +   5528ms [B11] PASS in 221 ms
+2026-11-08T13:33:23.406Z +   5528ms [B12] start: Create a workspace backup into a fresh directory via the Privacy tab and verify the directory on disk
+2026-11-08T13:33:23.781Z +   5903ms [screenshot] B12.png 1280x800 106114 bytes — Create a workspace backup into a fresh directory via the Privacy tab and verify the directory on disk — pass
+2026-11-08T13:33:23.781Z +   5903ms [B12] PASS in 301 ms
+2026-11-08T13:33:23.782Z +   5904ms [B13] start: Mobile viewport 390x844 on the Evidence tab: the shell renders without horizontal overflow
+2026-11-08T13:33:24.036Z +   6158ms [screenshot] B13.png 390x844 56958 bytes — Evidence tab at a 390x844 phone viewport after the decisions: workspace shell renders, no horizontal overflow.
+2026-11-08T13:33:24.042Z +   6164ms [B13] PASS in 260 ms
+2026-11-08T13:33:24.042Z +   6164ms [B14] start: Lock the workspace (logout) and assert a protected page redirects to the login form
+2026-11-08T13:33:24.539Z +   6661ms [screenshot] B14.png 1280x800 73905 bytes — Lock the workspace (logout) and assert a protected page redirects to the login form — pass
+2026-11-08T13:33:24.539Z +   6661ms [B14] PASS in 451 ms
+2026-11-08T13:33:24.539Z +   6661ms [B15] start: Chat tab: ask one question in evidence mode; an answer with citations or an explicit unavailable message renders, no page errors
+2026-11-08T13:33:25.137Z +   7259ms [screenshot] B15.png 1280x800 121130 bytes — Chat tab: ask one question in evidence mode; an answer with citations or an explicit unavailable message renders, no page errors — pass
+2026-11-08T13:33:25.137Z +   7259ms [B15] PASS in 534 ms
+2026-11-08T13:33:25.185Z +   7307ms [table] ID   RESULT      MS ERR TITLE
+2026-11-08T13:33:25.186Z +   7308ms [table] B01  PASS       872   0 Unlock the workspace with the access code and reach the home screen                                                                
+2026-11-08T13:33:25.186Z +   7308ms [table] B02  PASS       934   1 A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly                              
+2026-11-08T13:33:25.186Z +   7308ms [table] B03  PASS       557   0 Load the synthetic demo and assert the expected sources and claim cards appear (incl. the hostile claim)                           
+2026-11-08T13:33:25.186Z +   7308ms [table] B04  PASS       340   0 Reject the hostile claim and approve the two ordinary claims; assert the card states change                                        
+2026-11-08T13:33:25.186Z +   7308ms [table] B05  PASS       231   0 Build a package named e2e-claude for the Claude Code runtime and assert an artifact row with a digest appears                      
+2026-11-08T13:33:25.186Z +   7308ms [table] B06  PASS       169   0 Build again with identical inputs and assert the digest shown in the DOM is identical (determinism)                                
+2026-11-08T13:33:25.186Z +   7308ms [table] B07  PASS       190   0 Open the artifact detail page: file list has the guidance file, settings, an agents entry, a skills entry; verification flags shown
+2026-11-08T13:33:25.186Z +   7308ms [table] B08  PASS       410   0 Export the package to a fresh directory and verify guidance content and the manifest on disk                                       
+2026-11-08T13:33:25.186Z +   7308ms [table] B09  PASS       293   0 Run a static_integrity evaluation; assert it reaches passed and the UI states runtime qualification false                          
+2026-11-08T13:33:25.187Z +   7309ms [table] B10  PASS       494   0 Run a task evaluation and assert it is reported blocked (no isolated runtime), not faked                                           
+2026-11-08T13:33:25.187Z +   7309ms [table] B11  PASS       221   0 Attempt a release approval with the static_integrity evaluation and assert it is refused (#error)                                  
+2026-11-08T13:33:25.187Z +   7309ms [table] B12  PASS       301   0 Create a workspace backup into a fresh directory via the Privacy tab and verify the directory on disk                              
+2026-11-08T13:33:25.187Z +   7309ms [table] B13  PASS       260   0 Mobile viewport 390x844 on the Evidence tab: the shell renders without horizontal overflow                                         
+2026-11-08T13:33:25.187Z +   7309ms [table] B14  PASS       451   0 Lock the workspace (logout) and assert a protected page redirects to the login form                                                
+2026-11-08T13:33:25.187Z +   7309ms [table] B15  PASS       534   0 Chat tab: ask one question in evidence mode; an answer with citations or an explicit unavailable message renders, no page errors   
+2026-11-08T13:33:25.187Z +   7309ms [table] passed 15/15, failed 0, total 7307 ms, console errors 1, page errors 0

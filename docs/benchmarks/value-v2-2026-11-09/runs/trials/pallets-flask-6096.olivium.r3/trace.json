@@ -1,0 +1,73 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 4,
+  "files_read_list": [
+    "CHANGES.rst",
+    "src/flask/app.py",
+    "src/flask/testing.py",
+    "tests/test_testing.py"
+  ],
+  "first_gold_edit": {
+    "path": "src/flask/app.py",
+    "tool": "Bash",
+    "tool_calls_before": 3,
+    "turns_before": 3
+  },
+  "hook_blocks": 0,
+  "hook_events": {
+    "hook_response": 12,
+    "hook_started": 12
+  },
+  "init_model": "claude-sonnet-5-5",
+  "init_tools": [
+    "Bash",
+    "CronCreate",
+    "CronDelete",
+    "CronList",
+    "Edit",
+    "EnterWorktree",
+    "ExitWorktree",
+    "ListAgents",
+    "Monitor",
+    "NotebookEdit",
+    "Read",
+    "ReportFindings",
+    "ScheduleWakeup",
+    "SendMessage",
+    "Skill",
+    "Task",
+    "TaskStop",
+    "ToolSearch",
+    "Workflow",
+    "Write"
+  ],
+  "init_web_tools": [],
+  "malformed_lines": 0,
+  "permission_denials": 2,
+  "permission_denied_tools": [
+    "Bash"
+  ],
+  "permission_mode": "default",
+  "result": {
+    "duration_ms": 36241,
+    "is_error": false,
+    "num_turns": 11,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.0654806
+  },
+  "tool_calls": {
+    "Bash": 9,
+    "Edit": 1
+  },
+  "tool_calls_before_first_gold_edit": 3,
+  "tool_calls_total": 10,
+  "turns": 9,
+  "turns_before_first_gold_edit": 3,
+  "wasted_reads": 2,
+  "wasted_reads_list": [
+    "CHANGES.rst",
+    "tests/test_testing.py"
+  ],
+  "web_tool_uses": 0
+}

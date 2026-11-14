@@ -1,0 +1,52 @@
+### README section after edits (line range)
+23 to 48, lines: 26
+### E2E policy grep on README section
+no unit-test/coverage/mix test references in README section
+### evidence README: static-check mentions by line
+327:## Supplementary static checks (not part of the benchmark)
+329:`supplementary/static-checks/` holds logs from an earlier attempt that are not part of this benchmark and are not te
+330:That unit-test run (`test-run1-default-tmpdir.log`, `test-failed-rerun.log`, `coverage-run1-default-tmpdir.txt`) fai
+### links/images in README section
+OK   docs/benchmarks/2026-11-08/README.md
+OK   docs/benchmarks/2026-11-08/e2e/screenshots/B04.png
+OK   docs/benchmarks/2026-11-08/e2e/screenshots/B06.png
+OK   docs/benchmarks/2026-11-08/e2e/screenshots/B08.png
+OK   docs/benchmarks/2026-11-08/portal/screenshots/07-evaluations.png
+### links/images in evidence README
+(all other link targets exist; count: 50)
+### backticked evidence paths
+(backticked path check done)
+### table column consistency
+(table check done)
+### size
+8996	docs/benchmarks/2026-11-08
+PNG bytes total: 7369637
+verification dir: 428 KB
+### ports / beam
+port 8865: []
+port 8866: []
+port 8867: []
+port 8868: []
+port 8869: []
+beam: []
+### git status scope (non-rename entries)
+ M AGENTS.md
+ M CHANGELOG.md
+ M README.md
+ M docs/claude-code-connector.md
+ M docs/company-builder.md
+ M docs/execution.md
+ M docs/integrations.md
+ M docs/status.md
+ M packaging/VERIFICATION.md
+ M packaging/build.sh
+?? bench/
+?? docs/archive/README.md
+?? docs/benchmarks/
+?? docs/plans/
+### forbidden paths
+(end forbidden)
+### cover/ present?
+no cover/ in repository
+### wording re-scan of edited files
+README section: no hits

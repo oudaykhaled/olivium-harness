@@ -1,0 +1,7 @@
+{
+  "config_sha256": "90480eee9e2baa5e09c8afc7847f2b8b84a39b5dfc9b29afa3fedacbfda25b6f",
+  "lib_sha256": "7dd5e0e9b2d266c5525bf01c42b468ebf0d1ee2ca046c406ff8cb5efd2aa7892",
+  "mix_lock_sha256": "07b56ec946f046cba4df2aeba0db9cb461230078ed5ac3bc16111382ce02e805",
+  "note": "Snapshot of this repository's pipeline, taken at prepare and re-taken when lib/, config/ or mix.lock change.",
+  "snapshot_lib_sha256": "7dd5e0e9b2d266c5525bf01c42b468ebf0d1ee2ca046c406ff8cb5efd2aa7892"
+}

@@ -1,0 +1,56 @@
+{
+  "arm_sha256": [
+    "b4b8a65b138b69f8231f10b3187de2bc9fdaa13bd9d67e6fa5cd003c3b3072b6"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.0248926,
+  "exit_code": 0,
+  "exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+  "grade": {
+    "f2p_passed": 3,
+    "f2p_total": 6,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 1963,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [],
+    "solved": false,
+    "status": "ok",
+    "test_exit": "1",
+    "test_patch_applied": true,
+    "tests_seen": 1994
+  },
+  "harness_check": {
+    "changed": [],
+    "files_expected": 10,
+    "files_observed": 10,
+    "missing": [],
+    "ok": true,
+    "settings_match": true,
+    "settings_sha256_expected": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+    "settings_sha256_in_container": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+    "unexpected": []
+  },
+  "hook_events": {
+    "hook_response": 4,
+    "hook_started": 4
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-pallets-click-3769:v1",
+  "image_id": "sha256:974b3edf4d5de0ba794fe3202c48cd63cb6d84b7ab94c18f5b8544fecca44d79",
+  "init_web_tools": [],
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "meter_server_tools": [],
+  "permission_denied_tools": [],
+  "permission_mode": "default",
+  "permission_mode_observed": "default",
+  "prompt_sha256": "2c233648fc9985daa14b2c3d6e8d1b646115ea41b6f1169460b1e46904d601e1",
+  "settings_equal_exported": true,
+  "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+  "web_tool_uses": 0
+}

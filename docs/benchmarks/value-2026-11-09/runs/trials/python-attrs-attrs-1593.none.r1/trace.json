@@ -1,0 +1,30 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 1,
+  "files_read_list": [
+    "src/attr/_make.py"
+  ],
+  "first_gold_edit": null,
+  "init_model": "claude-sonnet-5-5",
+  "malformed_lines": 0,
+  "permission_mode": "bypassPermissions",
+  "result": {
+    "duration_ms": 33989,
+    "is_error": false,
+    "num_turns": 10,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.0547301
+  },
+  "tool_calls": {
+    "Bash": 6,
+    "Read": 2,
+    "Write": 1
+  },
+  "tool_calls_before_first_gold_edit": null,
+  "tool_calls_total": 9,
+  "turns": 9,
+  "turns_before_first_gold_edit": null,
+  "wasted_reads": 0,
+  "wasted_reads_list": []
+}

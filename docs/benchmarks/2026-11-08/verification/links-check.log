@@ -1,0 +1,60 @@
+### README section links/images (relative to repo root)
+OK   docs/benchmarks/2026-11-08/README.md
+OK   docs/benchmarks/2026-11-08/e2e/screenshots/B04.png
+OK   docs/benchmarks/2026-11-08/e2e/screenshots/B06.png
+OK   docs/benchmarks/2026-11-08/e2e/screenshots/B08.png
+OK   docs/benchmarks/2026-11-08/portal/screenshots/07-evaluations.png
+### README Documentation bullet link
+OK   docs/benchmarks/2026-11-08/README.md
+### evidence README links/images (relative to docs/benchmarks/2026-11-08)
+OK   e2e/screenshots/B01.png
+OK   e2e/screenshots/B02.png
+OK   e2e/screenshots/B03.png
+OK   e2e/screenshots/B04.png
+OK   e2e/screenshots/B05.png
+OK   e2e/screenshots/B06.png
+OK   e2e/screenshots/B07.png
+OK   e2e/screenshots/B08.png
+OK   e2e/screenshots/B09.png
+OK   e2e/screenshots/B10.png
+OK   e2e/screenshots/B11.png
+OK   e2e/screenshots/B12.png
+OK   e2e/screenshots/B13.png
+OK   e2e/screenshots/B14.png
+OK   e2e/screenshots/B15.png
+OK   portal/screenshots/01-login.png
+OK   portal/screenshots/02-home.png
+OK   portal/screenshots/03-evidence-demo.png
+OK   portal/screenshots/04-evidence-decided.png
+OK   portal/screenshots/05-package-built.png
+OK   portal/screenshots/06-harness-detail.png
+OK   portal/screenshots/07-evaluations.png
+OK   portal/screenshots/08-privacy.png
+OK   portal/screenshots/09-setup.png
+OK   portal/screenshots/10-mobile-evidence.png
+### evidence README: backticked file references (sanity, relative to evidence dir)
+OK   e2e/browser-results.json
+OK   e2e/cli-results.json
+OK   e2e/repeat2/results.json
+OK   e2e/repeat2/screenshots/
+OK   e2e/repeat3/results.json
+OK   e2e/repeat3/screenshots/
+OK   e2e/results.json
+OK   e2e/run1-partial/
+OK   e2e/run1-partial/screenshots/
+OK   e2e/screenshots/index.json
+OK   e2e/server-stop.txt
+OK   pipeline/console.log
+OK   pipeline/results.json
+OK   portal/browser-results.json
+OK   portal/curl.log
+OK   portal/results.json
+OK   portal/run1-aborted/
+OK   portal/screenshots/index.json
+OK   portal/server-restart-timing.txt
+OK   supplementary/run-sh-verification/
+OK   supplementary/static-checks/
+### bench/README.md links (relative to bench/)
+OK   ../docs/benchmarks/2026-11-08/README.md
+### table column consistency (evidence README)
+(end table check)

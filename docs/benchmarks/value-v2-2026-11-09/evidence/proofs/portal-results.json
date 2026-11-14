@@ -1,0 +1,782 @@
+{
+  "what": "DOM facts read from the portal (/generate) during the walkthrough video and the published screenshot pass (pass 2), plus the digests of an earlier full pass (pass 1) whose screenshots were superseded only because its CLAUDE.md capture was 568 px wide. Paths are scratch paths.",
+  "video_run": {
+    "repo": "<scratch>/real/v3/pallets-werkzeug-3298/werkzeug",
+    "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+    "export_path": "<scratch>/value-v2/record3/exports/portal-video-werkzeug-3298",
+    "export_files": 10,
+    "file_list": [
+      ".claude/hooks/olivium-before-stop.sh",
+      ".claude/hooks/olivium-format.sh",
+      ".claude/hooks/olivium-guard.sh",
+      ".claude/settings.json",
+      ".olivium/capabilities.json",
+      ".olivium/guidance-provenance.json",
+      ".olivium/manifest.json",
+      ".olivium/provenance.json",
+      ".olivium/spec.json",
+      "CLAUDE.md"
+    ],
+    "marks": [
+      {
+        "t_s": 0.93,
+        "label": "login page"
+      },
+      {
+        "t_s": 3.94,
+        "label": "signed in, portal home"
+      },
+      {
+        "t_s": 6.99,
+        "label": "reached /generate through the sidebar link"
+      },
+      {
+        "t_s": 10.62,
+        "label": "path entered"
+      },
+      {
+        "t_s": 11.85,
+        "label": "generate clicked"
+      },
+      {
+        "t_s": 12.83,
+        "label": "pipeline finished: ready"
+      },
+      {
+        "t_s": 16.24,
+        "label": "tiles, commands, meters"
+      },
+      {
+        "t_s": 20.15,
+        "label": "CLAUDE.md preview"
+      },
+      {
+        "t_s": 23.53,
+        "label": "preview scrolled"
+      },
+      {
+        "t_s": 25.45,
+        "label": "file list (10): .claude/hooks/olivium-before-stop.sh, .claude/hooks/olivium-format.sh, .claude/hooks/olivium-guard.sh, .claude/settings.json"
+      },
+      {
+        "t_s": 32.06,
+        "label": "export target entered"
+      },
+      {
+        "t_s": 34.09,
+        "label": "export confirmation"
+      }
+    ],
+    "console_errors": []
+  },
+  "screenshot_pass_2": {
+    "results": [
+      {
+        "task": "pallets-werkzeug-3298",
+        "repo": "<scratch>/real/v3/pallets-werkzeug-3298/werkzeug",
+        "state": "ready",
+        "elapsed_ms_click_to_ready": 1918,
+        "running_capture": {
+          "kept": true,
+          "saw_running": true,
+          "state_after_capture": "running",
+          "stages_before_capture": [
+            "detect:running",
+            "analyze:idle",
+            "generate:idle",
+            "export:idle"
+          ],
+          "stages_after_capture": [
+            "detect:running",
+            "analyze:idle",
+            "generate:idle",
+            "export:idle"
+          ]
+        },
+        "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+        "tiles": {
+          "commands": "7",
+          "conventions": "2",
+          "cochange": "1"
+        },
+        "commands": [
+          [
+            "test",
+            "uv run pytest"
+          ],
+          [
+            "test_single",
+            "uv run pytest -k"
+          ],
+          [
+            "lint",
+            "uv run ruff check"
+          ],
+          [
+            "format",
+            "uv run ruff format"
+          ],
+          [
+            "typecheck",
+            "uv run mypy"
+          ],
+          [
+            "build",
+            "uv build"
+          ],
+          [
+            "install",
+            "uv sync"
+          ]
+        ],
+        "meters": [
+          [
+            "commands",
+            7,
+            8
+          ],
+          [
+            "layout",
+            1,
+            5
+          ],
+          [
+            "conventions",
+            1,
+            3
+          ],
+          [
+            "rules",
+            2,
+            5
+          ],
+          [
+            "hooks",
+            3,
+            3
+          ],
+          [
+            "permissions",
+            2,
+            3
+          ]
+        ],
+        "notices": [
+          "runtime_unqualified",
+          "unsupported_control",
+          "workspace_trust_required",
+          "allowed_programs_unrestricted"
+        ],
+        "files": [
+          {
+            "path": ".claude/hooks/olivium-before-stop.sh",
+            "bytes": 1628
+          },
+          {
+            "path": ".claude/hooks/olivium-format.sh",
+            "bytes": 432
+          },
+          {
+            "path": ".claude/hooks/olivium-guard.sh",
+            "bytes": 34257
+          },
+          {
+            "path": ".claude/settings.json",
+            "bytes": 4343
+          },
+          {
+            "path": ".olivium/capabilities.json",
+            "bytes": 8939
+          },
+          {
+            "path": ".olivium/guidance-provenance.json",
+            "bytes": 72
+          },
+          {
+            "path": ".olivium/manifest.json",
+            "bytes": 2148
+          },
+          {
+            "path": ".olivium/provenance.json",
+            "bytes": 713
+          },
+          {
+            "path": ".olivium/spec.json",
+            "bytes": 15391
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 541
+          }
+        ],
+        "stages": [
+          [
+            "detect",
+            "done"
+          ],
+          [
+            "analyze",
+            "done"
+          ],
+          [
+            "generate",
+            "done"
+          ],
+          [
+            "export",
+            "idle"
+          ]
+        ],
+        "default_export_target": "<scratch>/real/v3/pallets-werkzeug-3298/werkzeug-harness-d280b1e4",
+        "preview_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+        "repeat_digest_same_session": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+        "export_path": "<scratch>/value-v2/record3/exports/shots2/portal-pallets-werkzeug-3298",
+        "export_files_shown": 10,
+        "export_stage": "done",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true
+      },
+      {
+        "task": "pallets-werkzeug-3273",
+        "repo": "<scratch>/real/v3/pallets-werkzeug-3273/werkzeug",
+        "state": "ready",
+        "elapsed_ms_click_to_ready": 1323,
+        "running_capture": {
+          "kept": true,
+          "saw_running": true,
+          "state_after_capture": "running",
+          "stages_before_capture": [
+            "detect:running",
+            "analyze:idle",
+            "generate:idle",
+            "export:idle"
+          ],
+          "stages_after_capture": [
+            "detect:done",
+            "analyze:running",
+            "generate:idle",
+            "export:idle"
+          ]
+        },
+        "digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+        "tiles": {
+          "commands": "7",
+          "conventions": "2",
+          "cochange": "0"
+        },
+        "commands": [
+          [
+            "test",
+            "uv run pytest"
+          ],
+          [
+            "test_single",
+            "uv run pytest -k"
+          ],
+          [
+            "lint",
+            "uv run ruff check"
+          ],
+          [
+            "format",
+            "uv run ruff format"
+          ],
+          [
+            "typecheck",
+            "uv run mypy"
+          ],
+          [
+            "build",
+            "uv build"
+          ],
+          [
+            "install",
+            "uv sync"
+          ]
+        ],
+        "meters": [
+          [
+            "commands",
+            7,
+            8
+          ],
+          [
+            "layout",
+            1,
+            5
+          ],
+          [
+            "conventions",
+            1,
+            3
+          ],
+          [
+            "rules",
+            1,
+            5
+          ],
+          [
+            "hooks",
+            3,
+            3
+          ],
+          [
+            "permissions",
+            2,
+            3
+          ]
+        ],
+        "notices": [
+          "runtime_unqualified",
+          "unsupported_control",
+          "workspace_trust_required",
+          "allowed_programs_unrestricted"
+        ],
+        "files": [
+          {
+            "path": ".claude/hooks/olivium-before-stop.sh",
+            "bytes": 1628
+          },
+          {
+            "path": ".claude/hooks/olivium-format.sh",
+            "bytes": 432
+          },
+          {
+            "path": ".claude/hooks/olivium-guard.sh",
+            "bytes": 34257
+          },
+          {
+            "path": ".claude/settings.json",
+            "bytes": 4343
+          },
+          {
+            "path": ".olivium/capabilities.json",
+            "bytes": 8939
+          },
+          {
+            "path": ".olivium/guidance-provenance.json",
+            "bytes": 72
+          },
+          {
+            "path": ".olivium/manifest.json",
+            "bytes": 2148
+          },
+          {
+            "path": ".olivium/provenance.json",
+            "bytes": 437
+          },
+          {
+            "path": ".olivium/spec.json",
+            "bytes": 15003
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 421
+          }
+        ],
+        "stages": [
+          [
+            "detect",
+            "done"
+          ],
+          [
+            "analyze",
+            "done"
+          ],
+          [
+            "generate",
+            "done"
+          ],
+          [
+            "export",
+            "idle"
+          ]
+        ],
+        "default_export_target": "<scratch>/real/v3/pallets-werkzeug-3273/werkzeug-harness-252bc894",
+        "preview_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+        "repeat_digest_same_session": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+        "export_path": "<scratch>/value-v2/record3/exports/shots2/portal-pallets-werkzeug-3273",
+        "export_files_shown": 10,
+        "export_stage": "done",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true
+      },
+      {
+        "task": "pallets-werkzeug-3266",
+        "repo": "<scratch>/real/v3/pallets-werkzeug-3266/werkzeug",
+        "state": "ready",
+        "elapsed_ms_click_to_ready": 1093,
+        "running_capture": {
+          "kept": true,
+          "saw_running": true,
+          "state_after_capture": "running",
+          "stages_before_capture": [
+            "detect:running",
+            "analyze:idle",
+            "generate:idle",
+            "export:idle"
+          ],
+          "stages_after_capture": [
+            "detect:done",
+            "analyze:running",
+            "generate:idle",
+            "export:idle"
+          ]
+        },
+        "digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+        "tiles": {
+          "commands": "7",
+          "conventions": "2",
+          "cochange": "0"
+        },
+        "commands": [
+          [
+            "test",
+            "uv run pytest"
+          ],
+          [
+            "test_single",
+            "uv run pytest -k"
+          ],
+          [
+            "lint",
+            "uv run ruff check"
+          ],
+          [
+            "format",
+            "uv run ruff format"
+          ],
+          [
+            "typecheck",
+            "uv run mypy"
+          ],
+          [
+            "build",
+            "uv build"
+          ],
+          [
+            "install",
+            "uv sync"
+          ]
+        ],
+        "meters": [
+          [
+            "commands",
+            7,
+            8
+          ],
+          [
+            "layout",
+            1,
+            5
+          ],
+          [
+            "conventions",
+            1,
+            3
+          ],
+          [
+            "rules",
+            1,
+            5
+          ],
+          [
+            "hooks",
+            3,
+            3
+          ],
+          [
+            "permissions",
+            2,
+            3
+          ]
+        ],
+        "notices": [
+          "runtime_unqualified",
+          "unsupported_control",
+          "workspace_trust_required",
+          "allowed_programs_unrestricted"
+        ],
+        "files": [
+          {
+            "path": ".claude/hooks/olivium-before-stop.sh",
+            "bytes": 1628
+          },
+          {
+            "path": ".claude/hooks/olivium-format.sh",
+            "bytes": 432
+          },
+          {
+            "path": ".claude/hooks/olivium-guard.sh",
+            "bytes": 34257
+          },
+          {
+            "path": ".claude/settings.json",
+            "bytes": 4343
+          },
+          {
+            "path": ".olivium/capabilities.json",
+            "bytes": 8939
+          },
+          {
+            "path": ".olivium/guidance-provenance.json",
+            "bytes": 72
+          },
+          {
+            "path": ".olivium/manifest.json",
+            "bytes": 2148
+          },
+          {
+            "path": ".olivium/provenance.json",
+            "bytes": 437
+          },
+          {
+            "path": ".olivium/spec.json",
+            "bytes": 15003
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 421
+          }
+        ],
+        "stages": [
+          [
+            "detect",
+            "done"
+          ],
+          [
+            "analyze",
+            "done"
+          ],
+          [
+            "generate",
+            "done"
+          ],
+          [
+            "export",
+            "idle"
+          ]
+        ],
+        "default_export_target": "<scratch>/real/v3/pallets-werkzeug-3266/werkzeug-harness-ff716a63",
+        "preview_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+        "repeat_digest_same_session": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+        "export_path": "<scratch>/value-v2/record3/exports/shots2/portal-pallets-werkzeug-3266",
+        "export_files_shown": 10,
+        "export_stage": "done",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true
+      },
+      {
+        "task": "pallets-click-3858",
+        "repo": "<scratch>/real/v3/pallets-click-3858/click",
+        "state": "ready",
+        "elapsed_ms_click_to_ready": 1530,
+        "running_capture": {
+          "kept": true,
+          "saw_running": true,
+          "state_after_capture": "running",
+          "stages_before_capture": [
+            "detect:running",
+            "analyze:idle",
+            "generate:idle",
+            "export:idle"
+          ],
+          "stages_after_capture": [
+            "detect:done",
+            "analyze:running",
+            "generate:idle",
+            "export:idle"
+          ]
+        },
+        "digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+        "tiles": {
+          "commands": "7",
+          "conventions": "2",
+          "cochange": "0"
+        },
+        "commands": [
+          [
+            "test",
+            "uv run pytest"
+          ],
+          [
+            "test_single",
+            "uv run pytest -k"
+          ],
+          [
+            "lint",
+            "uv run ruff check"
+          ],
+          [
+            "format",
+            "uv run ruff format"
+          ],
+          [
+            "typecheck",
+            "uv run mypy"
+          ],
+          [
+            "build",
+            "uv build"
+          ],
+          [
+            "install",
+            "uv sync --all-extras"
+          ]
+        ],
+        "meters": [
+          [
+            "commands",
+            7,
+            8
+          ],
+          [
+            "layout",
+            1,
+            5
+          ],
+          [
+            "conventions",
+            1,
+            3
+          ],
+          [
+            "rules",
+            2,
+            5
+          ],
+          [
+            "hooks",
+            3,
+            3
+          ],
+          [
+            "permissions",
+            2,
+            3
+          ]
+        ],
+        "notices": [
+          "runtime_unqualified",
+          "unsupported_control",
+          "workspace_trust_required",
+          "allowed_programs_unrestricted"
+        ],
+        "files": [
+          {
+            "path": ".claude/hooks/olivium-before-stop.sh",
+            "bytes": 1628
+          },
+          {
+            "path": ".claude/hooks/olivium-format.sh",
+            "bytes": 432
+          },
+          {
+            "path": ".claude/hooks/olivium-guard.sh",
+            "bytes": 34270
+          },
+          {
+            "path": ".claude/settings.json",
+            "bytes": 4356
+          },
+          {
+            "path": ".olivium/capabilities.json",
+            "bytes": 8939
+          },
+          {
+            "path": ".olivium/guidance-provenance.json",
+            "bytes": 72
+          },
+          {
+            "path": ".olivium/manifest.json",
+            "bytes": 2148
+          },
+          {
+            "path": ".olivium/provenance.json",
+            "bytes": 699
+          },
+          {
+            "path": ".olivium/spec.json",
+            "bytes": 15346
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 486
+          }
+        ],
+        "stages": [
+          [
+            "detect",
+            "done"
+          ],
+          [
+            "analyze",
+            "done"
+          ],
+          [
+            "generate",
+            "done"
+          ],
+          [
+            "export",
+            "idle"
+          ]
+        ],
+        "default_export_target": "<scratch>/real/v3/pallets-click-3858/click-harness-7f1290ab",
+        "preview_sha256": "4360c7d7a9a08e450535a5e54e67d0105beda3f7723f70aa2cede68d0f6904bb",
+        "repeat_digest_same_session": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+        "export_path": "<scratch>/value-v2/record3/exports/shots2/portal-pallets-click-3858",
+        "export_files_shown": 10,
+        "export_stage": "done",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true
+      }
+    ],
+    "console_errors": []
+  },
+  "superseded_pass_1": {
+    "console_errors": [],
+    "results": [
+      {
+        "task": "pallets-werkzeug-3298",
+        "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+        "repeat_digest_same_session": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true,
+        "export_path": "<scratch>/value-v2/record3/exports/shots1/portal-pallets-werkzeug-3298"
+      },
+      {
+        "task": "pallets-werkzeug-3273",
+        "digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+        "repeat_digest_same_session": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true,
+        "export_path": "<scratch>/value-v2/record3/exports/shots1/portal-pallets-werkzeug-3273"
+      },
+      {
+        "task": "pallets-werkzeug-3266",
+        "digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+        "repeat_digest_same_session": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true,
+        "export_path": "<scratch>/value-v2/record3/exports/shots1/portal-pallets-werkzeug-3266"
+      },
+      {
+        "task": "pallets-click-3858",
+        "digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+        "repeat_digest_same_session": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+        "preview_equals_exported_claude_md": true,
+        "portal_file_list_equals_disk": true,
+        "portal_file_sizes_equal_disk": true,
+        "export_path": "<scratch>/value-v2/record3/exports/shots1/portal-pallets-click-3858"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "f2p_passed": 3,
+  "f2p_total": 6,
+  "lint_exit": "0",
+  "lint_ok": true,
+  "p2p_missing": 0,
+  "p2p_regressions": 0,
+  "p2p_total": 1963,
+  "patch_applied": true,
+  "protected": true,
+  "removed_paths": [],
+  "restored_paths": [
+    "tests/test_termui.py"
+  ],
+  "solved": false,
+  "status": "ok",
+  "test_exit": "1",
+  "test_patch_applied": true,
+  "tests_seen": 1994
+}

@@ -1,0 +1,75 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 4,
+  "files_read_list": [
+    ".github/AI_POLICY.md",
+    "changelog.d/1564.change.md",
+    "src/attr/_make.py",
+    "tests/test_make.py"
+  ],
+  "first_gold_edit": {
+    "path": "src/attr/_make.py",
+    "tool": "Edit",
+    "tool_calls_before": 4,
+    "turns_before": 3
+  },
+  "hook_blocks": 0,
+  "hook_events": {
+    "hook_response": 13,
+    "hook_started": 13
+  },
+  "init_model": "claude-sonnet-5-5",
+  "init_tools": [
+    "Bash",
+    "CronCreate",
+    "CronDelete",
+    "CronList",
+    "Edit",
+    "EnterWorktree",
+    "ExitWorktree",
+    "ListAgents",
+    "Monitor",
+    "NotebookEdit",
+    "Read",
+    "ReportFindings",
+    "ScheduleWakeup",
+    "SendMessage",
+    "Skill",
+    "Task",
+    "TaskStop",
+    "ToolSearch",
+    "Workflow",
+    "Write"
+  ],
+  "init_web_tools": [],
+  "malformed_lines": 0,
+  "permission_denials": 1,
+  "permission_denied_tools": [
+    "Bash"
+  ],
+  "permission_mode": "default",
+  "result": {
+    "duration_ms": 74509,
+    "is_error": false,
+    "num_turns": 12,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.11292750000000001
+  },
+  "tool_calls": {
+    "Bash": 8,
+    "Edit": 1,
+    "Read": 2
+  },
+  "tool_calls_before_first_gold_edit": 4,
+  "tool_calls_total": 11,
+  "turns": 10,
+  "turns_before_first_gold_edit": 3,
+  "wasted_reads": 3,
+  "wasted_reads_list": [
+    ".github/AI_POLICY.md",
+    "changelog.d/1564.change.md",
+    "tests/test_make.py"
+  ],
+  "web_tool_uses": 0
+}

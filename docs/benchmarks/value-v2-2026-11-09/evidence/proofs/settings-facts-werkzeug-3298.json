@@ -1,0 +1,55 @@
+{
+  "export": "<scratch>/value-v2/record3/exports/shots2/portal-pallets-werkzeug-3298",
+  "label": "werkzeug 3298 (25663ddc)",
+  "settings": {
+    "bytes": 4343,
+    "sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+    "manifest_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+    "top_level_keys": [
+      "$schema",
+      "disableSkillShellExecution",
+      "hooks",
+      "permissions"
+    ],
+    "permissions": {
+      "allow": 47,
+      "ask": 0,
+      "defaultMode": "default",
+      "deny": 104
+    },
+    "allow_bash": 41,
+    "deny_bash": 61,
+    "deny_read": 0,
+    "deny_edit": 43,
+    "hooks": {
+      "PostToolUse": [
+        {
+          "matcher": "Edit|Write",
+          "timeout": 30
+        }
+      ],
+      "PreToolUse": [
+        {
+          "matcher": "Bash|Read|Edit|Write|MultiEdit|NotebookEdit|Grep|Glob",
+          "timeout": 10
+        }
+      ],
+      "Stop": [
+        {
+          "matcher": null,
+          "timeout": 420
+        }
+      ]
+    }
+  },
+  "guard": {
+    "bytes": 34257,
+    "lines": 583,
+    "sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+    "manifest_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+    "sha256_as_hook_command_hashes_it": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+    "sha256_pinned_in_settings": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+    "pinned_equals_file": true,
+    "header_lines": 12
+  }
+}

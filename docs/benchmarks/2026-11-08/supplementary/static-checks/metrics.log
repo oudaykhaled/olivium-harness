@@ -1,0 +1,285 @@
+# metrics.log generated_at=2026-11-08T13:14:46Z cwd=<repo>
+# every number in metrics.json comes from the command printed above it
+
+=== lib_elixir_lines_ex_and_heex
+$ find lib -type f \( -name '*.ex' -o -name '*.heex' \) -print0 | xargs -0 cat | wc -l | tr -d ' '
+[exit 0]
+72014
+
+
+=== lib_ex_lines
+$ find lib -type f -name '*.ex' -print0 | xargs -0 cat | wc -l | tr -d ' '
+[exit 0]
+71799
+
+
+=== lib_heex_lines
+$ find lib -type f -name '*.heex' -print0 | xargs -0 cat | wc -l | tr -d ' '
+[exit 0]
+215
+
+
+=== lib_ex_files
+$ find lib -type f -name '*.ex' | wc -l | tr -d ' '
+[exit 0]
+207
+
+
+=== lib_heex_files
+$ find lib -type f -name '*.heex' | wc -l | tr -d ' '
+[exit 0]
+2
+
+
+=== lib_total_files
+$ find lib -type f | wc -l | tr -d ' '
+[exit 0]
+210
+
+
+=== test_exs_lines
+$ find test -type f -name '*.exs' -not -path '*/node_modules/*' -print0 | xargs -0 cat | wc -l | tr -d ' '
+[exit 0]
+60229
+
+
+=== test_exs_lines_including_node_modules
+$ find test -type f -name '*.exs' -print0 | xargs -0 cat | wc -l | tr -d ' '
+[exit 0]
+60229
+
+
+=== test_support_ex_lines
+$ find test/support -type f -name '*.ex' -print0 | xargs -0 cat | wc -l | tr -d ' '
+[exit 0]
+1638
+
+
+=== modules_grep_rc_sum
+$ grep -rc "^defmodule" lib | awk -F: '{s+=$NF} END {print s}'
+[exit 0]
+243
+
+
+=== modules_including_indented
+$ grep -rhoE '^[[:space:]]*defmodule ' lib | wc -l | tr -d ' '
+[exit 0]
+244
+
+
+=== test_files
+$ find test -type f -name '*_test.exs' -not -path '*/node_modules/*' | wc -l | tr -d ' '
+[exit 0]
+163
+
+
+=== test_exs_files_all
+$ find test -type f -name '*.exs' -not -path '*/node_modules/*' | wc -l | tr -d ' '
+[exit 0]
+164
+
+
+=== test_cases_task_command_raw
+$ grep -rhoE "^\s*(test|property|describe) " test | sort | uniq -c
+[exit 0]
+   3                 property 
+   1             test 
+   2         test 
+  27     test 
+1359   test 
+   2 test 
+
+
+=== test_cases_task_command_total
+$ grep -rhoE "^\s*(test|property|describe) " test | wc -l | tr -d ' '
+[exit 0]
+1394
+
+
+=== test_cases_exs_only_raw
+$ grep -rhoE '^[[:space:]]*(test|property|describe) ' test --include='*.exs' | sed 's/^[[:space:]]*//' | sort | uniq -c
+[exit 0]
+1381 test 
+
+
+=== test_cases_exs_only_total
+$ grep -rhoE '^[[:space:]]*(test|property|describe) ' test --include='*.exs' | wc -l | tr -d ' '
+[exit 0]
+1381
+
+
+=== test_macro_calls_exs
+$ grep -rhoE '^[[:space:]]*test "' test --include='*.exs' | wc -l | tr -d ' '
+[exit 0]
+1381
+
+
+=== describe_blocks_exs
+$ grep -rhoE '^[[:space:]]*describe "' test --include='*.exs' | wc -l | tr -d ' '
+[exit 0]
+0
+
+
+=== property_tests_exs
+$ grep -rhoE '^[[:space:]]*property "' test --include='*.exs' | wc -l | tr -d ' '
+[exit 0]
+0
+
+
+=== doctest_calls_exs
+$ grep -rhoE '^[[:space:]]*doctest ' test --include='*.exs' | wc -l | tr -d ' '
+[exit 0]
+0
+
+
+=== for_comprehension_lines_in_test_files
+$ grep -rhoE '^[[:space:]]*for .* do$' test --include='*_test.exs' | wc -l | tr -d ' '
+[exit 0]
+347
+
+
+=== migrations
+$ ls priv/repo/migrations/*.exs | wc -l | tr -d ' '
+[exit 0]
+18
+
+
+=== mix_lock_dependencies
+$ grep -cE '^  "' mix.lock
+[exit 0]
+44
+
+
+=== mix_exs_direct_deps
+$ awk '/defp deps do/,/^  end/' mix.exs | grep -cE '^\s*\{:'
+[exit 0]
+20
+
+
+=== docs_live_pages
+$ find docs -type f -name '*.md' -not -path 'docs/archive/*' -not -path 'docs/plans/*' | wc -l | tr -d ' '
+[exit 0]
+21
+
+
+=== docs_live_pages_excluding_benchmarks
+$ find docs -type f -name '*.md' -not -path 'docs/archive/*' -not -path 'docs/plans/*' -not -path 'docs/benchmarks/*' | wc -l | tr -d ' '
+[exit 0]
+21
+
+
+=== docs_live_pages_list
+$ find docs -type f -name '*.md' -not -path 'docs/archive/*' -not -path 'docs/plans/*' | sort
+[exit 0]
+docs/architecture.md
+docs/branding.md
+docs/chat.md
+docs/claude-code-connector.md
+docs/cloud-model-connectors.md
+docs/codex-connector.md
+docs/company-builder-contract.md
+docs/company-builder.md
+docs/compatibility.md
+docs/confluence-connector.md
+docs/contracts.md
+docs/execution.md
+docs/github-account.md
+docs/github-projects-connector.md
+docs/github-repository-pagination.md
+docs/integrations.md
+docs/mcp.md
+docs/privacy.md
+docs/quickstart.md
+docs/service-accounts.md
+docs/status.md
+
+
+=== docs_archive_pages
+$ find docs/archive -type f -name '*.md' | wc -l | tr -d ' '
+[exit 0]
+759
+
+
+=== docs_plans_pages
+$ find docs/plans -type f -name '*.md' | wc -l | tr -d ' '
+[exit 0]
+2
+
+
+=== json_schemas
+$ ls priv/schemas/*.json | wc -l | tr -d ' '
+[exit 0]
+2
+
+
+=== json_schemas_list
+$ ls priv/schemas/*.json
+[exit 0]
+priv/schemas/harness-v1alpha1.json
+priv/schemas/records-v1alpha1.json
+
+
+=== archive_size_human
+$ du -sh docs/archive | cut -f1
+[exit 0]
+6.2M
+
+
+=== archive_size_kib
+$ du -sk docs/archive | cut -f1
+[exit 0]
+6328
+
+
+=== archive_file_count
+$ find docs/archive -type f | wc -l | tr -d ' '
+[exit 0]
+763
+
+
+=== elixir_version_output
+$ elixir --version 2>&1
+[exit 0]
+Erlang/OTP 28 [erts-16.2] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [dtrace]
+
+Elixir 1.19.5 (compiled with Erlang/OTP 28)
+
+
+=== otp_version_file
+$ cat "$(erl -noshell -eval 'io:format("~s", [code:root_dir()]), halt().')"/releases/*/OTP_VERSION
+[exit 0]
+28.3.1
+
+
+=== git_head_short
+$ git rev-parse --short HEAD
+[exit 0]
+628676e
+
+
+=== git_head_full
+$ git rev-parse HEAD
+[exit 0]
+628676e7c48d7f3e02cca7785e5c476393cfca91
+
+
+=== git_porcelain_entries
+$ git status --porcelain | wc -l | tr -d ' '
+[exit 0]
+775
+
+
+=== git_protected_paths_changed
+$ git status --porcelain -- lib test config mix.exs mix.lock priv assets | wc -l | tr -d ' '
+[exit 0]
+0
+
+
+=== git_non_docs_changes_list
+$ git status --porcelain | grep -vE '^.. +(docs/|README\.md|AGENTS\.md|PROGRESS\.md)' | sed 's/[[:space:]]*$//'
+[exit 0]
+ M packaging/VERIFICATION.md
+ M packaging/build.sh
+?? bench/
+
+

@@ -1,0 +1,2 @@
+stopping server pids: 55424 at 2026-11-08T13:35:01Z
+port 8867 free: yes after ~000 ms at 2026-11-08T13:35:01Z; lsof -ti :8867 -> ''

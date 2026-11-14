@@ -1,0 +1,191 @@
+{
+  "benchmark": "value (bench/value), protocol 2 (PROTOCOL-v2.md)",
+  "date_utc": "2026-11-10",
+  "model": "claude-sonnet-5-5",
+  "claude_code_version": "2.1.311",
+  "protocol": {
+    "file": "bench/value/PROTOCOL-v2.md",
+    "sha256": "90bbbacc9ce55995355457c7c8e70a17ac743a8ce886282a4d454b59ec1e6c44",
+    "note": "Equal to the last line of bench/value/PROTOCOL-v2.sha256 (2026-11-10T09:56:42Z), checked before the second canary; not changed afterwards."
+  },
+  "manifest": {
+    "file": "bench/value/corpus/manifest-v2.json",
+    "checksum": "c8bde114ef966b873cc0a13cb15e153474e5e96c3643f3ec9f3034e6104061d3",
+    "file_sha256": "ca63f474f6c63c3597b5a157585471b708c1942f17d7e929a7cb4a9ede0b01a8",
+    "rejected_v2_sha256": "5aa8881fe9ce2ac182e895e7b9db9b4aa7d2af81cc5135dbdf371f9dbb5a0dcb",
+    "validation_v2_sha256": "7a88dcf988753f9d6a8d4cabaa37b70d1678752fe1ae57e0a0f85157b98ea452"
+  },
+  "connector_docs": {
+    "file": "docs/claude-code-connector.md",
+    "sha256": "b4849bf58e9ba3b5556024fca06ec2f8880b9cdc14b2b3780d8c30d82c418651",
+    "note": "The version the amended canary stop rule pins; used to classify refusals."
+  },
+  "benchmark_code": {
+    "run.py": "5219dc441c41ff2f2f8d4c7975b45545b361635a24873d80f8cff47c50bdf523",
+    "analyze.py": "f8ba3f8970fb9408d5e058e09ef6f079087d88fce614a729edcd25a267cba3c8",
+    "note": "Every bench/value file other than PROTOCOL-v2.md and PROTOCOL-v2.sha256 is byte-identical to the record taken before the first paid canary (44 files)."
+  },
+  "application_snapshot": {
+    "bin_harnessforge_sha256": "c97c5c227b9b3a7669314f1b8f126bc3c99538a89612e6e1b54daba28e15144b",
+    "config_sha256": "90480eee9e2baa5e09c8afc7847f2b8b84a39b5dfc9b29afa3fedacbfda25b6f",
+    "lib_sha256": "ccc8a19c4753cff2e932ce23f141c136b22c1def8bcbf465d3dcf784f7d47f07",
+    "mix_lock_sha256": "07b56ec946f046cba4df2aeba0db9cb461230078ed5ac3bc16111382ce02e805",
+    "note": "Snapshot of the application used by the generator. See PROTOCOL-v2.md.",
+    "priv_blueprints_sha256": "82e96fc7b4f3f6d50dd066ff91660272867a9290a882659c936f28ab39d244ed"
+  },
+  "arms": {
+    "expressjs-express-7366": {
+      "olivium_arm_sha256": "cd753869d0ead0b838c677c6dbe41058d238cef6edc935319a94fc3a30aaeb8d",
+      "olivium_exported_settings_sha256": "aaa004439223dbeb0f82b97c907059098b51e93d6390307a89245b218ba95678",
+      "olivium_harness_bytes": 65159,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "ad57101689f6b461bdfc7b637d4c110401670ab222d85798ffd903bacae77d09",
+      "generic_init_cost_usd": 0.0458666
+    },
+    "pallets-click-3769": {
+      "olivium_arm_sha256": "b4b8a65b138b69f8231f10b3187de2bc9fdaa13bd9d67e6fa5cd003c3b3072b6",
+      "olivium_exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "olivium_harness_bytes": 68310,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "de43f8ec744149c504c8ce3b2eec0ed9642f89bdba3183e30b04623a57b5eee5",
+      "generic_init_cost_usd": 0.0571991
+    },
+    "pallets-click-3858": {
+      "olivium_arm_sha256": "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f",
+      "olivium_exported_settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+      "olivium_harness_bytes": 68376,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "d270b64d49fd92209a56895c18b6aae8ba608794c0fffaa2f69b651601fba335",
+      "generic_init_cost_usd": 0.0471621
+    },
+    "pallets-flask-6096": {
+      "olivium_arm_sha256": "3653af3d4a5add5c174be2a84d5aee17fba9703a0c7fa861fe548be3c3366dbc",
+      "olivium_exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "olivium_harness_bytes": 67442,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "91b4678523fbb113aab8b8e55f5f3fa58bbf951b50bc13d99dc322dde0c19a3d",
+      "generic_init_cost_usd": 0.0535981
+    },
+    "pallets-werkzeug-3266": {
+      "olivium_arm_sha256": "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798",
+      "olivium_exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "olivium_harness_bytes": 67680,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "12abbbac21210ccfa6be1d4e360fbfcdfa604628c5f7e65112d6f83188144e86",
+      "generic_init_cost_usd": 0.0541837
+    },
+    "pallets-werkzeug-3273": {
+      "olivium_arm_sha256": "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e",
+      "olivium_exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "olivium_harness_bytes": 67680,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "a3375f5e26fe9bd52612cdd69da73c73fa575902e5dea0119e859d52ba5c912a",
+      "generic_init_cost_usd": 0.0659374
+    },
+    "pallets-werkzeug-3298": {
+      "olivium_arm_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda",
+      "olivium_exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "olivium_harness_bytes": 68464,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "8dae34d6950f5597bb5766a54986e951497472e1ee5d1626b25c36f17c4c4119",
+      "generic_init_cost_usd": 0.0543681
+    },
+    "python-attrs-attrs-1593": {
+      "olivium_arm_sha256": "634a3485544977a93e1395a704b39caa90198c4da621ed5194b5e7a29e95a71f",
+      "olivium_exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "olivium_harness_bytes": 73592,
+      "olivium_post_base_check_failures": [],
+      "generic_arm_sha256": "c5ae0d4c6d8d63f3e944a29a77fb5e43a7a678adfb14c0599bde79cda2eedee7",
+      "generic_init_cost_usd": 0.0774043
+    }
+  },
+  "runs": {
+    "scheduled": 72,
+    "recorded": 72,
+    "completed": 72,
+    "timeout": 0,
+    "turn_limit": 0,
+    "budget_exhausted": 0,
+    "infra_error": 0,
+    "solved": 45,
+    "attempts": 72,
+    "retries": 0,
+    "first_trial_started_utc": "2026-11-10T10:07:30Z",
+    "last_trial_finished_utc": "2026-11-10T10:54:07Z",
+    "seed": 20261108,
+    "repeats": 3,
+    "concurrency": 2,
+    "limits": {
+      "turns": 60,
+      "seconds": 1200,
+      "run_cap_usd": 3
+    }
+  },
+  "caps": {
+    "canary2": {
+      "cap_usd": 5,
+      "run_cap_usd": 3
+    },
+    "full_run": {
+      "cap_usd": 25,
+      "run_cap_usd": 3
+    },
+    "note": "PROTOCOL-v2.md names --cap-usd 30 for a paid run; the operator split it into 5 for the second canary and 25 for the scored run (5 + 25 = 30). No cap was reached: 0 budget_exhausted runs."
+  },
+  "commands": [
+    "python3 bench/value/corpus/materialize.py --manifest bench/value/corpus/manifest-v2.json --out <bench-out>/value-v2-2026-11-09-canary2/material --tasks pallets-click-3858",
+    "caffeinate -ims python3 bench/value/run.py prepare --protocol 2 --paid --cap-usd 5 --run-cap-usd 3 --key-file <key-file> --tasks pallets-click-3858 --out <bench-out>/value-v2-2026-11-09-canary2",
+    "caffeinate -ims python3 bench/value/run.py run --protocol 2 --paid --cap-usd 5 --run-cap-usd 3 --key-file <key-file> --tasks pallets-click-3858 --repeats 1 --out <bench-out>/value-v2-2026-11-09-canary2",
+    "caffeinate -ims python3 bench/value/run.py prepare --protocol 2 --paid --cap-usd 25 --run-cap-usd 3 --key-file <key-file> --out <bench-out>/value-v2-2026-11-09",
+    "caffeinate -ims python3 bench/value/run.py run --protocol 2 --paid --cap-usd 25 --run-cap-usd 3 --key-file <key-file> --out <bench-out>/value-v2-2026-11-09",
+    "python3 bench/value/analyze.py --in <bench-out>/value-v2-2026-11-09 --out <bench-out>/value-v2-2026-11-09/report --manifest bench/value/corpus/manifest-v2.json --pilot-results docs/benchmarks/value-2026-11-09/results.json",
+    "python3 -I supplement.py --full <bench-out>/value-v2-2026-11-09 --canary1 <bench-out>/value-v2-2026-11-09-canary --canary2 <bench-out>/value-v2-2026-11-09-canary2 --before-v2-spend 3.4818 ..."
+  ],
+  "spend_usd": {
+    "before_v2": 3.4818,
+    "canary1": 0.3979005,
+    "canary2": 0.4172819,
+    "full_run_setup_init": 0.4557194,
+    "full_run_total": 4.7893034,
+    "full_run_trials": 4.333584,
+    "programme_total": 9.0862858,
+    "ceiling": 60.0,
+    "sources": "meter/requests.jsonl of each output directory (API-reported usage priced by the meter); before_v2 is grand_total_upper_bound in docs/benchmarks/value-2026-11-09/provenance.json"
+  },
+  "canaries": {
+    "canary1-2026-11-09": {
+      "dir": "<bench-out>/value-v2-2026-11-09-canary",
+      "scored": false,
+      "published_traces": "canaries/canary1-2026-11-09",
+      "outcome": "stopped: product defect in the generator's exported settings (5 refusals); the reason for the generator fix"
+    },
+    "canary2-2026-11-10": {
+      "dir": "<bench-out>/value-v2-2026-11-09-canary2",
+      "scored": false,
+      "published_traces": "canaries/canary2-2026-11-10",
+      "outcome": "passed the amended stop rule; scored run started"
+    }
+  },
+  "report": {
+    "report.md": "analyze.py report.md (sha256 374ec0e002b1391c7909c32bf03075e4568ca99aad895783645bc24b760a51d8) followed by supplement.md (sha256 c4211eb62c38234a1c7d586413ab407f2e49744a45483b633dfd5ebecfc28746), joined by one blank line",
+    "supplement_script_sha256": "7c03ebcfa9538afd78dd2cc58d50284ff295074acbb25ba62dac75a5c14492d9",
+    "results.json": "analyze.py output, unchanged"
+  },
+  "excluded_from_this_directory": [
+    "third-party source",
+    "issue text (prompt.txt)",
+    "test patches",
+    "agent patches",
+    "transcripts",
+    "test and lint logs",
+    "results.xml",
+    "generated arm files (CLAUDE.md, settings, hooks, .olivium/*)",
+    "checker outputs that quote command text (replaced by supplement.json, which cuts commands to program words and paths)",
+    "evidence/ is owned by another task and was not written by this one"
+  ],
+  "file_sha256": {
+    "results.json": "1b4872c12e4e04dca96707d894d913424ced538670e1538a33854da2895c0b65",
+    "report.md": "c5924c87fc2b3aaea468babcc39a8a29fbe3abd1717c347f7c1af5ac20b7ca65",
+    "supplement.json": "b05f06ba59f46115a6abdadf1286903d0e71897ecb3154ea2647ef406f7ed121"
+  }
+}

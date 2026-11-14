@@ -1,0 +1,37 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 3,
+  "files_read_list": [
+    "CHANGES.md",
+    "src/click/types.py",
+    "tests/typing/typing_prompt.py"
+  ],
+  "first_gold_edit": {
+    "path": "src/click/types.py",
+    "tool": "Bash",
+    "tool_calls_before": 3,
+    "turns_before": 3
+  },
+  "init_model": "claude-sonnet-5-5",
+  "malformed_lines": 0,
+  "permission_mode": "bypassPermissions",
+  "result": {
+    "duration_ms": 60947,
+    "is_error": false,
+    "num_turns": 7,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.08541610000000001
+  },
+  "tool_calls": {
+    "Bash": 6
+  },
+  "tool_calls_before_first_gold_edit": 3,
+  "tool_calls_total": 6,
+  "turns": 7,
+  "turns_before_first_gold_edit": 3,
+  "wasted_reads": 1,
+  "wasted_reads_list": [
+    "tests/typing/typing_prompt.py"
+  ]
+}

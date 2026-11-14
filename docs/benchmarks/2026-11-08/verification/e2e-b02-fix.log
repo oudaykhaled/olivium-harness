@@ -1,0 +1,35 @@
+started_at=2026-11-08T14:15:31Z
+node --check bench/e2e.cjs: ok
+port 8869 before: []
+priv/static before: a792a77d74ecb7a22a7252fa3fbfca6a 74f59fd99fc1d608ac22d17e002febd0
+server ready: first http code 302 after 4.802 s (0.1 s poll)
+node bench/e2e.cjs exit=0
+port 8869 after stop: []
+beam.smp processes after stop: [62852 ]
+priv/static after:  a792a77d74ecb7a22a7252fa3fbfca6a 74f59fd99fc1d608ac22d17e002febd0
+results: passed=15 failed=0 total_duration_ms=7301 console_errors_total=1 pageerrors_total=0
+  B01 pass 940 ms
+  B02 pass 709 ms
+  B03 pass 183 ms
+  B04 pass 310 ms
+  B05 pass 228 ms
+  B06 pass 165 ms
+  B07 pass 186 ms
+  B08 pass 379 ms
+  B09 pass 363 ms
+  B10 pass 222 ms
+  B11 pass 219 ms
+  B12 pass 298 ms
+  B13 pass 396 ms
+  B14 pass 759 ms
+  B15 pass 567 ms
+  B02 details: {"wrong_code_http_status": 401, "login_error": "The access code is incorrect.", "unlocked_after_correct_code": true}
+md5 B01/B02/B14 of this run:
+MD5 (<scratch>/verify/e2e-b02-out/screenshots/B01.png) = 7eb57e35b4ac27e260f9aa3abce2b827
+MD5 (<scratch>/verify/e2e-b02-out/screenshots/B02.png) = 1b4ec38ee52c79df704d40f5355b4f7a
+MD5 (<scratch>/verify/e2e-b02-out/screenshots/B14.png) = 7eb57e35b4ac27e260f9aa3abce2b827
+5:2026-11-08T14:15:38.750Z +   1634ms [B02] start: A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly
+7:2026-11-08T14:15:39.157Z +   2042ms [screenshot] B02.png 1280x800 76345 bytes — Fresh browser context right after submitting a dummy access code: "The access code is incorrect." alert visible, still on /login (the real code has not been t
+8:2026-11-08T14:15:39.459Z +   2343ms [B02] PASS in 709 ms (console errors: 1)
+token value occurrences in this run's output files: 0
+ended_at=2026-11-08T14:15:45Z

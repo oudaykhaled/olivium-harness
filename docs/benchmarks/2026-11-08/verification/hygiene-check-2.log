@@ -1,0 +1,61 @@
+### timezone
+Sun Nov  8 15:12:34 CET 2026
+Sun Nov  8 14:12:34 UTC 2026
+### cover/ provenance
+drwxr-xr-x@ 258 <user>  staff  8256 Nov  8 12:34 cover
+file count: 256
+oldest/newest mtimes:
+1794137697 2026-11-08 12:34:57 cover/Elixir.HarnessForge.Accounts.Provider.html
+1794137697 2026-11-08 12:34:57 cover/Elixir.Inspect.HarnessForge.Execution.Relay.Handle.html
+files older than 2026-11-08: 0
+.gitignore:5:/cover/	cover
+### tmp/ contents
+tmp
+tmp/workspaces
+tmp/revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e
+tmp/workspaces/test-46992
+tmp/workspaces/test-50128
+tmp/workspaces/test-49810
+tmp/workspaces/test-51321
+tmp/workspaces/test-50176
+tmp/revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e/synthetic-company-documents
+tmp/revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e/artifacts
+tmp/revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e/tmp
+tmp/revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e/runs
+tmp/workspaces/test-46992/artifacts
+tmp/workspaces/test-46992/workspace.json
+tmp/workspaces/test-46992/.ownership.sqlite3
+tmp/workspaces/test-46992/data.sqlite3
+tmp/workspaces/test-46992/session-secret
+tmp/workspaces/test-46992/access-token
+tmp/workspaces/test-46992/data.sqlite3-wal
+tmp/workspaces/test-46992/data.sqlite3-shm
+tmp/workspaces/test-46992/.ownership.sqlite3-journal
+tmp/workspaces/test-46992/tmp
+tmp/workspaces/test-46992/runs
+tmp/workspaces/test-50128/artifacts
+tmp/workspaces/test-50128/workspace.json
+tmp/workspaces/test-50128/.ownership.sqlite3
+tmp/workspaces/test-50128/data.sqlite3
+tmp/workspaces/test-50128/session-secret
+tmp/workspaces/test-50128/access-token
+tmp/workspaces/test-50128/data.sqlite3-wal
+tmp file count: 241
+2026-11-08 12:26:54 tmp/workspaces/test-46992/.ownership.sqlite3
+2026-11-08 14:17:37 tmp/workspaces/test-51321/data.sqlite3
+### who writes tmp/workspaces or revision-use-consumers? (grep in test/ and lib/ for the names, read-only)
+test/harness_forge/revision_use_holds_consumers_test.exs:47:    root = Path.join([File.cwd!(), "tmp", "revision-use-consumers-" <> id])
+config/runtime.exs:6:      Path.join(File.cwd!(), "tmp/workspaces/test-#{System.pid()}")
+### priv/static files modified today
+priv/static/assets/css/app.css
+priv/static/assets/js/app.js
+count: 2
+### lib/test/config/mix files modified today (tracked, excluding node_modules)
+(end)
+### B13 / 10-mobile byte records in logs
+40:2026-11-08T13:32:24.949Z +   5655ms [screenshot] B13.png 390x844 56958 bytes — Evidence tab at a 390x844 phone viewport after the decisions: workspace shell renders, no horizontal overflow.
+50:2026-11-08T10:23:59.239Z +   6837ms [screenshot] 10-mobile-evidence.png 390x844 56958 bytes — Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow c
+### e2e.cjs around B13 and the portal mobile shot
+bench/portal.cjs:522:    await shot(page, '10-mobile-evidence.png', 'Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow check recorded).');
+bench/e2e.cjs:527:    id: 'B13', title: 'Mobile viewport 390x844 on the Evidence tab: the shell renders without horizontal overflow',
+bench/e2e.cjs:540:        await ctx.shot(page, 'B13', 'Evidence tab at a 390x844 phone viewport after the decisions: workspace shell renders, no horizontal overflow.');

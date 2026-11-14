@@ -1,0 +1,1 @@
+pid=43919 comm=/usr/local/Cellar/erlang/28.3.1/lib/erlang/erts-16.2/bin/beam.smp rss_kb=112668 measured_at=2026-11-08T10:24:46Z note=after_full_browser_flow

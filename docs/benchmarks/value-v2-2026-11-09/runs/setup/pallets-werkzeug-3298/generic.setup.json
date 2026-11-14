@@ -1,0 +1,28 @@
+{
+  "arm": "generic",
+  "arm_sha256": "8dae34d6950f5597bb5766a54986e951497472e1ee5d1626b25c36f17c4c4119",
+  "claude_code_version": "2.1.311",
+  "cost_usd": 0.0543681,
+  "harness_bytes": 3638,
+  "harness_files": [
+    "CLAUDE.md"
+  ],
+  "image_id": "sha256:30eba79ddc841377d689a4dccc27b657e57e62d429a2c37889afde169d8b626f",
+  "init_web_tools": [],
+  "mode": "paid",
+  "model": "claude-sonnet-5-5",
+  "rehearsal_fixture": false,
+  "requests": 4,
+  "run_id": "setup-generic.pallets-werkzeug-3298",
+  "status": "ok",
+  "task_id": "pallets-werkzeug-3298",
+  "tokens": {
+    "cache_creation": 10556,
+    "cache_read": 69421,
+    "input": 8,
+    "output": 2102
+  },
+  "turns": 4,
+  "wall_seconds": 18.0,
+  "web_tool_uses": 0
+}

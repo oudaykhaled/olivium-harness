@@ -1,0 +1,907 @@
+{
+  "schema": "harnessforge-portal-evidence/1",
+  "title": "HarnessForge portal evidence: screenshots and timings via headless Chromium",
+  "started_at": "2026-11-07T23:36:01Z",
+  "fresh_run_started_at": "2026-11-08T10:23:22Z",
+  "ended_at": "2026-11-08T10:27:47.128Z",
+  "date_of_run": "2026-11-08",
+  "commit": {
+    "sha": "628676e7c48d7f3e02cca7785e5c476393cfca91",
+    "short": "628676e",
+    "working_tree": "uncommitted changes present (775 entries in git status --porcelain: documentation reorganisation plus this benchmark's files)"
+  },
+  "machine": {
+    "cpu": "Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz",
+    "logical_cores": 16,
+    "memory_bytes": 34359738368,
+    "memory_gib": 32,
+    "os": "macOS 26.6 build=25G72",
+    "kernel": "25.6.0",
+    "load_average_1_5_15_at_10_24_46Z": "10.51 8.85 9.29",
+    "elixir": "Elixir 1.19.5 (compiled with Erlang/OTP 28)",
+    "erlang_otp_release": "28",
+    "erlang_erts_binary": "/usr/local/Cellar/erlang/28.3.1/lib/erlang/erts-16.2/bin/beam.smp",
+    "node": "v24.10.0",
+    "playwright": "1.64.1",
+    "chromium": "156.0.8078.4",
+    "docker": "installed, unused"
+  },
+  "environment": {
+    "server_command": "PORT=8866 HARNESSFORGE_WORKSPACE=<workspace> PHX_SERVER=true mix phx.server  (MIX_ENV=dev: code reloader, debug logging and esbuild/tailwind watchers active; not a release build)",
+    "workspace": "<scratch>/portal-ws",
+    "port": 8866,
+    "origin": "http://127.0.0.1:8866",
+    "concurrent_load": "another agent ran the CLI pipeline benchmark in its own workspace at the same time; 1 other beam.smp process was present; load average 10.51/8.85/9.29 on 16 logical cores when recorded"
+  },
+  "commands": [
+    {
+      "name": "server start (background)",
+      "command": "cd <repo> && perl -MTime::HiRes=time -e 'printf(\"%.3f\\n\", time)' > <repo>/docs/benchmarks/2026-11-08/portal/server-start-epoch.txt && date -u +%Y-%m-%dT%H:%M:%SZ > <repo>/docs/benchmarks/2026-11-08/portal/server-start-iso.txt && PORT=8866 HARNESSFORGE_WORKSPACE=<scratch>/portal-ws PHX_SERVER=true mix phx.server > <repo>/docs/benchmarks/2026-11-08/portal/server.log 2>&1"
+    },
+    {
+      "name": "readiness poll",
+      "command": "every 0.1 s: curl -s -o /dev/null -w '%{http_code}' --max-time 1 http://127.0.0.1:8866/  until the code is not 000; ready time = perl Time::HiRes time at that moment"
+    },
+    {
+      "name": "server RSS",
+      "command": "pid=$(lsof -ti :8866 | head -1); ps -o comm= -p $pid; ps -o rss= -p $pid   (rss in KiB)"
+    },
+    {
+      "name": "browser flow",
+      "command": "cd <repo> && HARNESSFORGE_URL=http://127.0.0.1:8866 HARNESSFORGE_WORKSPACE=<scratch>/portal-ws BENCH_OUT=<repo>/docs/benchmarks/2026-11-08/portal node bench/portal.cjs"
+    },
+    {
+      "name": "curl probes",
+      "command": "curl -s -o /dev/null -w '%{http_code} %{size_download} %{time_starttransfer}' http://127.0.0.1:8866/   and   .../login   (5 each per instance)"
+    },
+    {
+      "name": "server stop",
+      "command": "kill $(lsof -ti :8866); poll every 0.1 s until kill -0 fails and lsof -ti :8866 is empty"
+    },
+    {
+      "name": "timed restarts",
+      "command": "in one shell: start stamp; PORT=8866 HARNESSFORGE_WORKSPACE=<ws> PHX_SERVER=true mix phx.server > server-restart-<label>.log 2>&1 &; readiness poll as above; ps rss of the beam pid; kill; wait until gone. 3 cycles on the existing workspace (warm1-3) and 3 on new empty workspaces (fresh1-3)"
+    },
+    {
+      "name": "machine facts",
+      "command": "git rev-parse HEAD; git status --porcelain | wc -l; sysctl -n machdep.cpu.brand_string hw.logicalcpu hw.memsize vm.loadavg; sw_vers; uname -r; node --version; elixir --version; erl -noshell -eval erlang:system_info(otp_release)"
+    }
+  ],
+  "server": {
+    "start_to_ready": {
+      "definition": "seconds from immediately before `mix phx.server` is launched until the first HTTP answer on http://127.0.0.1:8866/ (a 302 to /login); poll interval 0.1 s, so each value carries up to +0.1 s of poll latency",
+      "measured_fresh_workspace_boot_before_browser_flow": {
+        "start_to_ready_s_upper_bound": 6.964,
+        "first_http_code": 302,
+        "note": "the poll ran in a separate tool call that began after the server was already answering (its first probe succeeded), so this is an upper bound, not an exact figure"
+      },
+      "timed_restarts_existing_workspace_s": {
+        "values": [
+          3.302,
+          2.899,
+          3.067
+        ],
+        "median": 3.067,
+        "min": 2.899,
+        "max": 3.302,
+        "n": 3,
+        "rss_kib_at_ready": [
+          104148,
+          105992,
+          100616
+        ]
+      },
+      "timed_restarts_new_empty_workspace_s": {
+        "values": [
+          3.399,
+          3.682,
+          3.433
+        ],
+        "median": 3.433,
+        "min": 3.399,
+        "max": 3.682,
+        "n": 3,
+        "rss_kib_at_ready": [
+          112504,
+          109604,
+          116052
+        ]
+      },
+      "all_timed_starts_s": {
+        "median": 3.351,
+        "min": 2.899,
+        "max": 3.682,
+        "n": 6
+      },
+      "first_ever_boot_run1_aborted": {
+        "launched_at": "2026-11-07T23:36:01Z",
+        "launch_epoch": 1794094561.829,
+        "workspace_access_token_created_epoch": 1794094564,
+        "note": "start stamp vs. birth time of <workspace>/access-token (1 s resolution): the workspace was initialised about 2 s after launch; the exact first-HTTP time of that boot was not captured because the host slept before the next command ran"
+      }
+    },
+    "shutdown_sigterm_to_process_gone_s": {
+      "values": [
+        1.349,
+        1.316,
+        1.436,
+        1.322,
+        1.451,
+        1.313,
+        1.325
+      ],
+      "median": 1.325,
+      "min": 1.313,
+      "max": 1.451,
+      "n": 7
+    },
+    "memory": {
+      "method": "ps -o rss= on the beam.smp pid found with lsof -ti :8866 (KiB); MiB = KiB/1024, MB = KiB*1024/1e6",
+      "after_ready_fresh_workspace": {
+        "rss_kib": 113188,
+        "rss_mib": 110.5,
+        "rss_mb": 115.9,
+        "pid": 43919,
+        "measured_at": "2026-11-08T10:23:29Z",
+        "seconds_after_ready": 0.2
+      },
+      "after_full_browser_flow": {
+        "rss_kib": 112668,
+        "rss_mib": 110,
+        "rss_mb": 115.4,
+        "pid": 43919,
+        "measured_at": "2026-11-08T10:24:46Z"
+      },
+      "delta_flow_minus_ready_kib": -520,
+      "run1_instance_after_10h_idle_including_host_sleep": {
+        "rss_kib": 100604,
+        "rss_mib": 98.2,
+        "rss_mb": 103,
+        "pid": 41621
+      }
+    },
+    "curl": {
+      "command": "curl -s -o /dev/null -w '%{http_code} %{size_download} %{time_starttransfer}' http://127.0.0.1:8866<path>  (unauthenticated, 5 samples per path per server instance)",
+      "instances": [
+        {
+          "header": "2026-11-08T10:19:12Z curl -s -o /dev/null -w '%{http_code} %{size_download} %{time_starttransfer}' (5 samples each, unauthenticated)",
+          "samples": [
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.035212
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.035617
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.032071
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.034167
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.03523
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.06922
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.027782
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.027386
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.033434
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.028991
+            }
+          ]
+        },
+        {
+          "header": "2026-11-08T10:24:46Z second server instance (fresh workspace run), 5 samples each, unauthenticated",
+          "samples": [
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.034639
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.026979
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.031429
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.04721
+            },
+            {
+              "path": "/",
+              "http_code": 302,
+              "size_download_bytes": 72,
+              "time_starttransfer_s": 0.032031
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.030807
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.027487
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.026056
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.026464
+            },
+            {
+              "path": "/login",
+              "http_code": 200,
+              "size_download_bytes": 4060,
+              "time_starttransfer_s": 0.026027
+            }
+          ]
+        }
+      ],
+      "by_path": {
+        "/": {
+          "http_code": [
+            302
+          ],
+          "size_download_bytes": [
+            72
+          ],
+          "time_starttransfer_s": {
+            "median": 0.034403,
+            "min": 0.026979,
+            "max": 0.04721,
+            "n": 10
+          },
+          "time_starttransfer_ms": {
+            "median": 34.4,
+            "min": 27,
+            "max": 47.2,
+            "n": 10
+          }
+        },
+        "/login": {
+          "http_code": [
+            200
+          ],
+          "size_download_bytes": [
+            4060
+          ],
+          "time_starttransfer_s": {
+            "median": 0.027634,
+            "min": 0.026027,
+            "max": 0.06922,
+            "n": 10
+          },
+          "time_starttransfer_ms": {
+            "median": 27.6,
+            "min": 26,
+            "max": 69.2,
+            "n": 10
+          }
+        }
+      }
+    }
+  },
+  "browser": {
+    "script": "bench/portal.cjs",
+    "run": {
+      "started_at": "2026-11-08T10:23:52.402Z",
+      "ended_at": "2026-11-08T10:23:59.300Z",
+      "total_ms": 6898,
+      "ok": true,
+      "errors": [],
+      "steps": [
+        {
+          "step": "nav-login",
+          "ok": true,
+          "ms": 639
+        },
+        {
+          "step": "screenshot-01-login",
+          "ok": true,
+          "ms": 99
+        },
+        {
+          "step": "login",
+          "ok": true,
+          "ms": 896
+        },
+        {
+          "step": "screenshot-02-home",
+          "ok": true,
+          "ms": 64
+        },
+        {
+          "step": "nav-home",
+          "ok": true,
+          "ms": 784
+        },
+        {
+          "step": "nav-evidence",
+          "ok": true,
+          "ms": 821
+        },
+        {
+          "step": "tab-switch-evidence",
+          "ok": true,
+          "ms": 268
+        },
+        {
+          "step": "load-demo",
+          "ok": true,
+          "ms": 116
+        },
+        {
+          "step": "screenshot-03-evidence-demo",
+          "ok": true,
+          "ms": 72
+        },
+        {
+          "step": "decide-claims",
+          "ok": true,
+          "ms": 254
+        },
+        {
+          "step": "screenshot-04-evidence-decided",
+          "ok": true,
+          "ms": 73
+        },
+        {
+          "step": "build-package",
+          "ok": true,
+          "ms": 219
+        },
+        {
+          "step": "screenshot-05-package-built",
+          "ok": true,
+          "ms": 68
+        },
+        {
+          "step": "export-package",
+          "ok": true,
+          "ms": 174
+        },
+        {
+          "step": "evaluate-static-integrity",
+          "ok": true,
+          "ms": 529
+        },
+        {
+          "step": "screenshot-07-evaluations",
+          "ok": true,
+          "ms": 60
+        },
+        {
+          "step": "screenshot-08-privacy",
+          "ok": true,
+          "ms": 156
+        },
+        {
+          "step": "screenshot-06-harness-detail",
+          "ok": true,
+          "ms": 299
+        },
+        {
+          "step": "screenshot-09-setup",
+          "ok": true,
+          "ms": 157
+        },
+        {
+          "step": "screenshot-10-mobile-evidence",
+          "ok": true,
+          "ms": 433
+        },
+        {
+          "step": "close",
+          "ok": true,
+          "ms": 59
+        }
+      ]
+    },
+    "methods": {
+      "navigation_timing": "page.goto(url, {waitUntil: \"load\"}); values from performance.getEntriesByType(\"navigation\")[0] in ms relative to navigation start; live_connected_ms = performance.now() captured by a MutationObserver installed via addInitScript when the first .phx-connected element appears (null when the page has no LiveView).",
+      "action_latency": "In-page: a capture-phase click listener on document records performance.now() at the real click; a MutationObserver records performance.now() when the target selector (optionally with text) first matches. latency_ms = done - click. No CDP round-trip in the measured interval.",
+      "step_ms": "Node-side wall time (Date.now()) of the whole step including Playwright round trips; coarser than the in-page numbers.",
+      "summary": "p50 = median of the samples (mean of the two middle values for an even count)."
+    },
+    "navigation_timing_ms": {
+      "login": {
+        "url": "/login",
+        "live_view": false,
+        "summary": {
+          "ttfb_ms": {
+            "p50": 76.5,
+            "min": 42.3,
+            "max": 91.6,
+            "n": 5
+          },
+          "dom_content_loaded_ms": {
+            "p50": 85,
+            "min": 60.2,
+            "max": 160.6,
+            "n": 5
+          },
+          "load_event_end_ms": {
+            "p50": 85.8,
+            "min": 60.3,
+            "max": 160.6,
+            "n": 5
+          }
+        },
+        "samples": [
+          {
+            "http_status": 200,
+            "final_path": "/login",
+            "ttfb_ms": 88.7,
+            "dom_content_loaded_ms": 160.6,
+            "load_event_end_ms": 160.6,
+            "live_connected_ms": null,
+            "transfer_size_bytes": 1934,
+            "encoded_body_bytes": 1634,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/login",
+            "ttfb_ms": 42.3,
+            "dom_content_loaded_ms": 60.2,
+            "load_event_end_ms": 60.3,
+            "live_connected_ms": null,
+            "transfer_size_bytes": 1932,
+            "encoded_body_bytes": 1632,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/login",
+            "ttfb_ms": 76.5,
+            "dom_content_loaded_ms": 85,
+            "load_event_end_ms": 85.8,
+            "live_connected_ms": null,
+            "transfer_size_bytes": 1930,
+            "encoded_body_bytes": 1630,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/login",
+            "ttfb_ms": 65.5,
+            "dom_content_loaded_ms": 74.2,
+            "load_event_end_ms": 74.9,
+            "live_connected_ms": null,
+            "transfer_size_bytes": 1930,
+            "encoded_body_bytes": 1630,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/login",
+            "ttfb_ms": 91.6,
+            "dom_content_loaded_ms": 102.1,
+            "load_event_end_ms": 102.9,
+            "live_connected_ms": null,
+            "transfer_size_bytes": 1934,
+            "encoded_body_bytes": 1634,
+            "redirect_count": 0
+          }
+        ]
+      },
+      "home": {
+        "url": "/",
+        "live_view": true,
+        "summary": {
+          "ttfb_ms": {
+            "p50": 38,
+            "min": 36.8,
+            "max": 117.5,
+            "n": 5
+          },
+          "dom_content_loaded_ms": {
+            "p50": 52.1,
+            "min": 50.1,
+            "max": 135,
+            "n": 5
+          },
+          "load_event_end_ms": {
+            "p50": 53.7,
+            "min": 51.6,
+            "max": 137.2,
+            "n": 5
+          },
+          "live_connected_ms": {
+            "p50": 117.2,
+            "min": 111.6,
+            "max": 281.2,
+            "n": 5
+          }
+        },
+        "samples": [
+          {
+            "http_status": 200,
+            "final_path": "/",
+            "ttfb_ms": 117.5,
+            "dom_content_loaded_ms": 135,
+            "load_event_end_ms": 137.2,
+            "live_connected_ms": 281.2,
+            "transfer_size_bytes": 12551,
+            "encoded_body_bytes": 12251,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/",
+            "ttfb_ms": 37.2,
+            "dom_content_loaded_ms": 51.5,
+            "load_event_end_ms": 53.1,
+            "live_connected_ms": 117.2,
+            "transfer_size_bytes": 12546,
+            "encoded_body_bytes": 12246,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/",
+            "ttfb_ms": 43.3,
+            "dom_content_loaded_ms": 56.8,
+            "load_event_end_ms": 58.4,
+            "live_connected_ms": 120.4,
+            "transfer_size_bytes": 12544,
+            "encoded_body_bytes": 12244,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/",
+            "ttfb_ms": 36.8,
+            "dom_content_loaded_ms": 50.1,
+            "load_event_end_ms": 51.6,
+            "live_connected_ms": 111.6,
+            "transfer_size_bytes": 12541,
+            "encoded_body_bytes": 12241,
+            "redirect_count": 0
+          },
+          {
+            "http_status": 200,
+            "final_path": "/",
+            "ttfb_ms": 38,
+            "dom_content_loaded_ms": 52.1,
+            "load_event_end_ms": 53.7,
+            "live_connected_ms": 111.8,
+            "transfer_size_bytes": 12547,
+            "encoded_body_bytes": 12247,
+            "redirect_count": 0
+          }
+        ]
+      },
+      "evidence": {
+        "url": "/?view=evidence",
+        "live_view": true,
+        "summary": {
+          "ttfb_ms": {
+            "p50": 46.5,
+            "min": 39.5,
+            "max": 53.4,
+            "n": 5
+          },
+          "dom_content_loaded_ms": {
+            "p50": 62.2,
+            "min": 55.3,
+            "max": 66.9,
+            "n": 5
+          },
+          "load_event_end_ms": {
+            "p50": 63.6,
+            "min": 56.7,
+            "max": 68.3,
+            "n": 5
+          },
+          "live_connected_ms": {
+            "p50": 134.7,
+            "min": 117.7,
+            "max": 170.7,
+            "n": 5
+          }
+        },
+        "samples": [
+          {
+            "http_status": 200,
+            "final_path": "/?view=evidence",
+            "ttfb_ms": 48.8,
+            "dom_content_loaded_ms": 63.1,
+            "load_event_end_ms": 64.8,
+            "live_connected_ms": 170.7,
+            "transfer_size_bytes": 13633,
+            "encoded_body_bytes": 13333,
+            "redirect_count": 0,
+            "evidence_panel_present": true
+          },
+          {
+            "http_status": 200,
+            "final_path": "/?view=evidence",
+            "ttfb_ms": 53.4,
+            "dom_content_loaded_ms": 66.9,
+            "load_event_end_ms": 68.3,
+            "live_connected_ms": 134.7,
+            "transfer_size_bytes": 13630,
+            "encoded_body_bytes": 13330,
+            "redirect_count": 0,
+            "evidence_panel_present": true
+          },
+          {
+            "http_status": 200,
+            "final_path": "/?view=evidence",
+            "ttfb_ms": 40.1,
+            "dom_content_loaded_ms": 55.3,
+            "load_event_end_ms": 56.7,
+            "live_connected_ms": 117.7,
+            "transfer_size_bytes": 13628,
+            "encoded_body_bytes": 13328,
+            "redirect_count": 0,
+            "evidence_panel_present": true
+          },
+          {
+            "http_status": 200,
+            "final_path": "/?view=evidence",
+            "ttfb_ms": 39.5,
+            "dom_content_loaded_ms": 57.5,
+            "load_event_end_ms": 59.3,
+            "live_connected_ms": 132.3,
+            "transfer_size_bytes": 13623,
+            "encoded_body_bytes": 13323,
+            "redirect_count": 0,
+            "evidence_panel_present": true
+          },
+          {
+            "http_status": 200,
+            "final_path": "/?view=evidence",
+            "ttfb_ms": 46.5,
+            "dom_content_loaded_ms": 62.2,
+            "load_event_end_ms": 63.6,
+            "live_connected_ms": 138.4,
+            "transfer_size_bytes": 13635,
+            "encoded_body_bytes": 13335,
+            "redirect_count": 0,
+            "evidence_panel_present": true
+          }
+        ]
+      }
+    },
+    "action_latency_ms": {
+      "tab_switch_click_to_evidence_panel": {
+        "latency_ms": 31.3,
+        "node_side_ms": 70,
+        "signal_already_present_before_click": false,
+        "signal": "#evidence-panel"
+      },
+      "load_demo_to_first_claim_card": {
+        "latency_ms": 67.1,
+        "node_side_ms": 89,
+        "signal_already_present_before_click": false,
+        "signal": ".claim-card"
+      },
+      "approve_click_to_card_approved": {
+        "latency_ms": 43.8,
+        "node_side_ms": 66,
+        "signal_already_present_before_click": false,
+        "signal": "#claim-af729343-c9f3-4604-9971-5e2222778557 .pill.approved"
+      },
+      "build_click_to_artifact_row": {
+        "latency_ms": 97,
+        "node_side_ms": 140,
+        "signal_already_present_before_click": false,
+        "signal": "#package-panel .artifact-row[data-export-digest] containing \"bench-portal\""
+      },
+      "export_click_to_status": {
+        "latency_ms": 95.8,
+        "node_side_ms": 136,
+        "signal_already_present_before_click": false,
+        "signal": "[id^=\"package-export-result-\"][role=\"status\"]"
+      },
+      "evaluation_submit_to_passed": {
+        "latency_ms": 318.1,
+        "node_side_ms": 352,
+        "signal_already_present_before_click": false,
+        "signal": "[id^=\"run-\"][data-outcome=\"passed\"]"
+      }
+    },
+    "checks": {
+      "login_submit_to_live_shell_ms": 728,
+      "home_path_after_login": "/",
+      "home_active_tab": "▦Home",
+      "claim_cards_before_demo": 0,
+      "claim_cards_after_demo": 3,
+      "hostile_claim_present": true,
+      "claims_approved": 2,
+      "claims_rejected": 1,
+      "claims_proposed_remaining": 0,
+      "package_form_defaults": {
+        "version": "0.1.0",
+        "runtime": "opencode",
+        "runtime_version": "unqualified"
+      },
+      "artifact_digest": "23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d",
+      "artifact_rows": 1,
+      "export_target": "<scratch>/portal-export-1794133437460",
+      "export_agents_md_exists": true,
+      "export_includes_approved_rule": true,
+      "export_excludes_rejected_claim": true,
+      "export_file_count": 12,
+      "evaluation_run_id": "25bec53b-b189-44eb-95db-d151f0da190e",
+      "evaluation_text_includes_passed": true,
+      "evaluation_text_includes_static": false,
+      "evaluation_runtime_qualified_false_text": "Recorded runtime qualification: false",
+      "harness_detail_load_ms": 131,
+      "harness_detail_title": "Your harness · HarnessForge",
+      "harness_detail_path": "/harnesses/23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d",
+      "setup_http_status": 200,
+      "setup_final_path": "/setup",
+      "setup_title": "Saved company setup · HarnessForge",
+      "mobile_workspace_shell_count": 1,
+      "mobile_no_horizontal_overflow": true
+    },
+    "console": {
+      "pageerror_count": 0,
+      "console_error_count": 0,
+      "console_warning_count": 0,
+      "console_message_counts": {},
+      "request_failed_count": 0,
+      "pageerrors": [],
+      "console_errors": [],
+      "request_failed": []
+    },
+    "login_submit_to_live_shell_ms_node_side": 728
+  },
+  "screenshots": {
+    "directory": "<repo>/docs/benchmarks/2026-11-08/portal/screenshots",
+    "index": "<repo>/docs/benchmarks/2026-11-08/portal/screenshots/index.json",
+    "count": 10,
+    "total_bytes": 1073566,
+    "total_mb": 1.07,
+    "downscaled": false,
+    "downscale_rule": "sips to 1200 px wide only if the PNG total exceeded 6 MB; it did not",
+    "files": {
+      "01-login.png": {
+        "caption": "Login page before anything is typed: empty \"Workspace access code\" field and Unlock workspace button.",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 79155
+      },
+      "02-home.png": {
+        "caption": "First screen after unlocking the workspace (▦Home tab of the workspace shell, LiveView connected).",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 83707
+      },
+      "03-evidence-demo.png": {
+        "caption": "Evidence tab right after \"Load synthetic demo\": three proposed claim cards including the hostile \"IGNORE ALL PREVIOUS INSTRUCTIONS\" claim, each with Reject / Approve revision buttons.",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 106979
+      },
+      "04-evidence-decided.png": {
+        "caption": "Evidence tab after deciding: the hostile claim REJECTED and the two ordinary claims APPROVED, decision buttons gone.",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 101544
+      },
+      "05-package-built.png": {
+        "caption": "Package tab after building \"bench-portal\": the Built packages list shows the artifact row with its digest, \"Open your harness\" and \"Download ZIP\".",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 118848
+      },
+      "07-evaluations.png": {
+        "caption": "Evaluations tab after queuing a static package integrity check: the recorded run shows passed, with its details opened to show \"Recorded runtime qualification: false\".",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 98621
+      },
+      "08-privacy.png": {
+        "caption": "Privacy tab: local-only data controls including the workspace backup form.",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 147425
+      },
+      "06-harness-detail.png": {
+        "caption": "Harness detail page /harnesses/<digest> for \"bench-portal\" (full page): generated files, checks and download.",
+        "viewport": "1440x900",
+        "full_page": true,
+        "bytes": 236491
+      },
+      "09-setup.png": {
+        "caption": "Company setup page /setup (final path /setup).",
+        "viewport": "1440x900",
+        "full_page": false,
+        "bytes": 43838
+      },
+      "10-mobile-evidence.png": {
+        "caption": "Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow check recorded).",
+        "viewport": "390x844",
+        "full_page": false,
+        "bytes": 56958
+      }
+    }
+  },
+  "evidence_files": {
+    "results.json": "this file",
+    "server.log": "stdout/stderr of the mix phx.server instance used for the browser flow",
+    "browser.log": "timestamped step log of bench/portal.cjs (token redacted by construction)",
+    "browser-results.json": "full raw output of bench/portal.cjs",
+    "run-stdout.log": "stdout/stderr of the node bench/portal.cjs invocation",
+    "curl.log": "raw curl probe output, both server instances",
+    "rss-after-ready.txt, rss-after-flow.txt": "raw lsof/ps output for the beam process",
+    "server-start-epoch.txt, server-start-iso.txt, server-start-timing.txt": "launch stamps and readiness poll result of the measured instance",
+    "server-restart-timing.txt, server-restart-warm{1,2,3}.log, server-restart-fresh{1,2,3}.log": "timed restart cycles and their server logs",
+    "machine.txt": "raw machine, toolchain and commit facts",
+    "screenshots/": "10 PNG files plus index.json",
+    "run1-aborted/": "logs and screenshots of the first attempt, aborted after two script bugs (see caveats); kept as raw output, not used for any number above except the first-boot note and the 10 h idle RSS"
+  },
+  "caveats": [
+    "Concurrent load: another agent ran the CLI pipeline benchmark on the same machine during this run (load average 10.51 on 16 logical cores when recorded); timings are from a shared, moderately loaded laptop.",
+    "Dev-mode server: numbers reflect `mix phx.server` with MIX_ENV=dev (code reloader, debug logging, esbuild/tailwind watchers), not a production release.",
+    "The host slept for about 10.6 h between the first server launch (2026-11-07T23:36:01Z) and the next command; the first attempt was discarded anyway (see next item) and every reported number comes from the fresh run on 2026-11-08 between 10:23Z and 10:26Z.",
+    "First attempt (run1-aborted/) hit two script bugs: `.artifact-row` also matches the Company-home harness list, so the package locators had to be scoped to #package-panel, and #nav-privacy sits inside the collapsed #workspace-tools <details>. Both were fixed in bench/portal.cjs and the whole flow was rerun on a brand-new workspace.",
+    "Start-to-ready of the measured fresh-workspace boot is an upper bound (6.964 s) because the readiness poll started after the server already answered; the same-shell timed restarts (3 warm, 3 fresh workspaces) are the precise figures.",
+    "The evaluation card renders the qualification text as \"Recorded runtime qualification: false\" (inside a collapsed <details>, opened for the screenshot); the literal string \"Runtime qualified: false\" from test/browser/smoke.cjs does not occur in the current markup.",
+    "Evidence-tab navigation samples use the real route /?view=evidence; the tab switch from Home was measured separately as an in-page click latency.",
+    "Action latencies are DOM-signal based (click event to first matching DOM mutation), measured inside the page; node-side wall times are reported alongside and are 20-50 ms higher.",
+    "The run-1 beam process RSS (100604 KiB) was read after about 10 h of idling including host sleep; it is listed only for completeness.",
+    "ps rss is reported in KiB; MB values are derived (KiB*1024/1e6)."
+  ]
+}

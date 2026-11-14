@@ -1,0 +1,8 @@
+{
+  "bin_harnessforge_sha256": "c97c5c227b9b3a7669314f1b8f126bc3c99538a89612e6e1b54daba28e15144b",
+  "config_sha256": "90480eee9e2baa5e09c8afc7847f2b8b84a39b5dfc9b29afa3fedacbfda25b6f",
+  "lib_sha256": "669ad231860e571fe89cd8327b29e91a9eb23a2d0b64512326db4cf0ea7990e4",
+  "mix_lock_sha256": "07b56ec946f046cba4df2aeba0db9cb461230078ed5ac3bc16111382ce02e805",
+  "note": "Snapshot of the application used by the generator. See PROTOCOL-v2.md.",
+  "priv_blueprints_sha256": "226c267838af58a8a8a7e6bd7a5d62902832583c54eda806fad2b0027114a35a"
+}

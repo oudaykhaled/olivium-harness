@@ -1,0 +1,57 @@
+=== [credo-run-1] started_at=2026-11-08T13:12:18Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix credo --strict --only warning
+=== load_before: 14.40 11.88 11.21
+Checking 380 source files (this might take a while) ...
+
+Please report incorrect results: https://github.com/rrrene/credo/issues
+
+Analysis took 2.6 seconds (0.5s to load, 2.0s running 23 checks on 380 files)
+6740 mods/funs, found no issues.
+
+Use `mix credo explain` to explain issues, `mix credo --help` for options.
+real 3.48
+user 21.64
+sys 3.04
+=== exit_status=0
+=== wall_seconds=3.507
+=== load_after: 15.56 12.16 11.32
+=== ended_at=2026-11-08T13:12:21Z
+
+=== [credo-run-2] started_at=2026-11-08T13:12:21Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix credo --strict --only warning
+=== load_before: 15.56 12.16 11.32
+Checking 380 source files (this might take a while) ...
+
+Please report incorrect results: https://github.com/rrrene/credo/issues
+
+Analysis took 1.8 seconds (0.4s to load, 1.4s running 23 checks on 380 files)
+6740 mods/funs, found no issues.
+
+Use `mix credo explain` to explain issues, `mix credo --help` for options.
+real 2.73
+user 22.56
+sys 2.98
+=== exit_status=0
+=== wall_seconds=2.757
+=== load_after: 15.56 12.16 11.32
+=== ended_at=2026-11-08T13:12:24Z
+
+=== [credo-run-3] started_at=2026-11-08T13:12:24Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix credo --strict --only warning
+=== load_before: 15.56 12.16 11.32
+Checking 380 source files (this might take a while) ...
+
+Please report incorrect results: https://github.com/rrrene/credo/issues
+
+Analysis took 1.8 seconds (0.4s to load, 1.4s running 23 checks on 380 files)
+6740 mods/funs, found no issues.
+
+Use `mix credo explain` to explain issues, `mix credo --help` for options.
+real 2.70
+user 22.74
+sys 3.06
+=== exit_status=0
+=== wall_seconds=2.726
+=== load_after: 14.72 12.04 11.28
+=== ended_at=2026-11-08T13:12:27Z
+

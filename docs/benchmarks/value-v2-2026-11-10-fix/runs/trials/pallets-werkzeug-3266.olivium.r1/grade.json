@@ -1,0 +1,23 @@
+{
+  "f2p_passed": 0,
+  "f2p_total": 30,
+  "lint_exit": "0",
+  "lint_ok": true,
+  "p2p_missing": 0,
+  "p2p_regressions": 2,
+  "p2p_total": 1014,
+  "patch_applied": true,
+  "protected": true,
+  "removed_paths": [],
+  "restored_paths": [
+    "tests/middleware/test_proxy_fix.py",
+    "tests/test_test.py",
+    "tests/test_utils.py",
+    "tests/test_wrappers.py"
+  ],
+  "solved": false,
+  "status": "ok",
+  "test_exit": "1",
+  "test_patch_applied": true,
+  "tests_seen": 1044
+}

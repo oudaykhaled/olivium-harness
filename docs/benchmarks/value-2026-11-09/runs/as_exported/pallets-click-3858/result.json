@@ -1,0 +1,76 @@
+{
+  "as_exported": true,
+  "details": {
+    "arm_sha256": [
+      "9275f62644b74c81bb720eddc666f798c11f9b41df44c6d760d4670a8001dba1",
+      "2e3312319831760bb739550870d7a2c832ba7d3fe92f428e31eeadb83b7795f3"
+    ],
+    "classified_status": "completed",
+    "claude_code_total_cost_usd": 0.026491100000000004,
+    "exit_code": 0,
+    "grade": {
+      "f2p_passed": 0,
+      "f2p_total": 1,
+      "lint_exit": "0",
+      "lint_ok": true,
+      "p2p_missing": 0,
+      "p2p_regressions": 0,
+      "p2p_total": 2059,
+      "patch_applied": true,
+      "protected": true,
+      "removed_paths": [
+        "tests/typing/typing_path.py"
+      ],
+      "restored_paths": [],
+      "solved": false,
+      "status": "ok",
+      "test_exit": "1",
+      "test_patch_applied": true,
+      "tests_seen": 2085
+    },
+    "host_timeout": false,
+    "image": "olivium-bench-agent-pallets-click-3858:v1",
+    "image_id": "sha256:98972e8d9f81035dbb80f9195f72f5ca106d178b966095d4bddd927541c4a359",
+    "limit_seconds": 1200,
+    "limit_turns": 60,
+    "permission_mode": "default",
+    "prompt_sha256": "3efbc511cd592e05c1bfe8b751052ad0409eb41aea83b5b8018c38d39cf1cfee",
+    "settings_sha256": null
+  },
+  "note": "Not part of the analysis (PROTOCOL.md, Arms).",
+  "row": {
+    "arm": "olivium",
+    "claude_code_version": "2.1.311",
+    "cost_usd": 0.0264911,
+    "f2p_passed": 0,
+    "f2p_total": 1,
+    "files_read": 0,
+    "harness_bytes": 2950,
+    "lint_ok": true,
+    "model": "claude-sonnet-5-5",
+    "p2p_regressions": 0,
+    "patch_lines": 0,
+    "repeat": 1,
+    "requests": 3,
+    "run_id": "as-exported.pallets-click-3858",
+    "solved": false,
+    "status": "completed",
+    "task_id": "pallets-click-3858",
+    "tokens": {
+      "cache_creation": 5811,
+      "cache_read": 48916,
+      "input": 6,
+      "output": 706
+    },
+    "tool_calls": {
+      "Bash": 1,
+      "Grep": 1,
+      "Read": 1
+    },
+    "tool_calls_before_first_gold_edit": null,
+    "turns": 3,
+    "turns_before_first_gold_edit": null,
+    "wall_seconds": 9.0,
+    "wasted_reads": 0
+  }
+}

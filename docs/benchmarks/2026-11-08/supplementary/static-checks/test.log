@@ -1,0 +1,117 @@
+=== [test-run2-fixed-tmpdir] started_at=2026-11-08T13:13:39Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix test --cover
+=== load_before: 15.21 12.72 11.59
+Cover compiling modules ...
+Running ExUnit with seed: 531098, max_cases: 32
+
+...............................................................................................................................................................................................................................................................................................................................................................................................................................................*****....EvidenceBundle public-question compatibility: 14 admitted, max envelope 8672 bytes, unchanged cap 16384, exact overhead 180
+..............................................**...................................................READINESS_TRACE {HarnessForge.Execution.Command, :docker, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :local_endpoint, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :resolve_context, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :invoke, 4} matches=1
+READINESS_TRACE {Port, :open, 2} matches=1
+READINESS_TRACE {:erlang, :open_port, 2} matches=1
+READINESS_TRACE {System, :cmd, 2} matches=1
+READINESS_TRACE {System, :cmd, 3} matches=1
+READINESS_TRACE {HarnessForge.Models, :status, 0} matches=1
+READINESS_TRACE {HarnessForge.Evaluations, :capabilities, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution, :probe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :availability, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile_digest, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :admit, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :run, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :stop_session, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :cleanup, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :observe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :verify, 1} matches=1
+READINESS_TRACE {HarnessForge.Readiness, :for_artifact, 2} matches=1
+READINESS_TRACE {HarnessForge.MCP.Tools, :call, 2} matches=1
+READINESS_TRACE {HarnessForge.ReadinessTest, :trace_marker, 0} matches=1
+......READINESS_TRACE {HarnessForge.Execution.Command, :docker, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :local_endpoint, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :resolve_context, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :invoke, 4} matches=1
+READINESS_TRACE {Port, :open, 2} matches=1
+READINESS_TRACE {:erlang, :open_port, 2} matches=1
+READINESS_TRACE {System, :cmd, 2} matches=1
+READINESS_TRACE {System, :cmd, 3} matches=1
+READINESS_TRACE {HarnessForge.Models, :status, 0} matches=1
+READINESS_TRACE {HarnessForge.Evaluations, :capabilities, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution, :probe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :availability, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile_digest, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :admit, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :run, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :stop_session, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :cleanup, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :observe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :verify, 1} matches=1
+READINESS_TRACE {HarnessForge.Readiness, :for_artifact, 2} matches=1
+READINESS_TRACE {HarnessForge.MCP.Tools, :call, 2} matches=1
+READINESS_TRACE {HarnessForge.ReadinessTest, :trace_marker, 0} matches=1
+......READINESS_TRACE {HarnessForge.Execution.Command, :docker, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :local_endpoint, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :resolve_context, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :invoke, 4} matches=1
+READINESS_TRACE {Port, :open, 2} matches=1
+READINESS_TRACE {:erlang, :open_port, 2} matches=1
+READINESS_TRACE {System, :cmd, 2} matches=1
+READINESS_TRACE {System, :cmd, 3} matches=1
+READINESS_TRACE {HarnessForge.Models, :status, 0} matches=1
+READINESS_TRACE {HarnessForge.Evaluations, :capabilities, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution, :probe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :availability, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile_digest, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :admit, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :run, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :stop_session, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :cleanup, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :observe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :verify, 1} matches=1
+READINESS_TRACE {HarnessForge.Readiness, :for_artifact, 2} matches=1
+READINESS_TRACE {HarnessForge.MCP.Tools, :call, 2} matches=1
+READINESS_TRACE {HarnessForge.ReadinessTest, :trace_marker, 0} matches=1
+...........................................................
+
+  1) test recorded results distinguish browser proof, missing images and unproved task benefit (HarnessForgeWeb.VerificationTest)
+     test/harness_forge_web/verification_test.exs:16
+     Assertion with == failed
+     code:  assert response.status == 200
+     left:  404
+     right: 200
+     stacktrace:
+       test/harness_forge_web/verification_test.exs:95: anonymous fn/3 in HarnessForgeWeb.VerificationTest."test recorded results distinguish browser proof, missing images and unproved task benefit"/1
+       (elixir 1.19.5) lib/enum.ex:2520: Enum."-reduce/3-lists^foldl/2-0-"/3
+       test/harness_forge_web/verification_test.exs:93: (test)
+
+..........*********........................................................................................................................................................................................................................14:17:26.826 [warning] You are running migration 20261102000100 but an older migration with version 20261104000200 has already run.
+
+This can be an issue if you have already ran 20261104000200 in production because a new deployment may migrate 20261102000100 but a rollback command would revert 20261104000200 instead of 20261102000100.
+
+If this can be an issue, we recommend to rollback 20261102000100 and change it to a version later than 20261104000200.
+
+.......................................

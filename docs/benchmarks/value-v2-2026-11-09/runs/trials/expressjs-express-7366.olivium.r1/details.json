@@ -1,0 +1,60 @@
+{
+  "arm_sha256": [
+    "cd753869d0ead0b838c677c6dbe41058d238cef6edc935319a94fc3a30aaeb8d"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.03793020000000001,
+  "exit_code": 0,
+  "exported_settings_sha256": "aaa004439223dbeb0f82b97c907059098b51e93d6390307a89245b218ba95678",
+  "grade": {
+    "f2p_passed": 1,
+    "f2p_total": 1,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 1251,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [
+      "test/req.fresh.js"
+    ],
+    "solved": true,
+    "status": "ok",
+    "test_exit": "0",
+    "test_patch_applied": true,
+    "tests_seen": 1252
+  },
+  "harness_check": {
+    "changed": [],
+    "files_expected": 9,
+    "files_observed": 9,
+    "missing": [],
+    "ok": true,
+    "settings_match": true,
+    "settings_sha256_expected": "aaa004439223dbeb0f82b97c907059098b51e93d6390307a89245b218ba95678",
+    "settings_sha256_in_container": "aaa004439223dbeb0f82b97c907059098b51e93d6390307a89245b218ba95678",
+    "unexpected": []
+  },
+  "hook_events": {
+    "hook_response": 7,
+    "hook_started": 7
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-expressjs-express-7366:v1",
+  "image_id": "sha256:2f685f77fefe8820a228f0d8828c10eb78b8154b23272dd7792e7a066ca26211",
+  "init_web_tools": [],
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "meter_server_tools": [],
+  "permission_denied_tools": [
+    "Bash"
+  ],
+  "permission_mode": "default",
+  "permission_mode_observed": "default",
+  "prompt_sha256": "f3638f3030a365b3b29bd9b2c77bd7698813af19b2692d379dceac53d893eeb3",
+  "settings_equal_exported": true,
+  "settings_sha256": "aaa004439223dbeb0f82b97c907059098b51e93d6390307a89245b218ba95678",
+  "web_tool_uses": 0
+}

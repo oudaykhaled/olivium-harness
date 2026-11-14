@@ -1,0 +1,30 @@
+2026-11-08T13:54:19Z olivium harness benchmark run
+2026-11-08T13:54:19Z project=<repo>
+2026-11-08T13:54:19Z evidence_root=<scratch>/runsh-verify
+2026-11-08T13:54:19Z scratch_root=<scratch>/runsh-tmp
+2026-11-08T13:54:19Z stages=e2e-browser,e2e-cli,pipeline,portal
+2026-11-08T13:54:19Z === stage e2e-browser: start
+2026-11-08T13:54:20Z start: PORT=63981 HARNESSFORGE_WORKSPACE=<scratch>/runsh-tmp/e2e-ws PHX_SERVER=true mix phx.server > <scratch>/runsh-verify/e2e/server.log
+2026-11-08T13:54:24Z portal ready on 127.0.0.1:63981 after 4109 ms (HTTP 302)
+2026-11-08T13:54:24Z run: env HARNESSFORGE_URL=http://127.0.0.1:63981 HARNESSFORGE_WORKSPACE=<scratch>/runsh-tmp/e2e-ws BENCH_OUT=<scratch>/runsh-verify/e2e E2E_EXPORT_ROOT=<scratch>/runsh-tmp/e2e-exports-browser node bench/e2e.cjs
+2026-11-08T13:54:34Z stopped portal pid 57625 on port 63981 after 1412 ms; lsof -ti :63981 -> ''
+2026-11-08T13:54:34Z === stage e2e-browser: exit=0 wall_ms=14334
+2026-11-08T13:54:34Z === stage e2e-cli: start
+2026-11-08T13:54:34Z run: env HARNESSFORGE_WORKSPACE=<scratch>/runsh-tmp/e2e-cli-ws BENCH_OUT=<scratch>/runsh-verify/e2e E2E_EXPORT_ROOT=<scratch>/runsh-tmp/e2e-exports-cli bash bench/e2e-cli.sh
+2026-11-08T13:55:37Z === stage e2e-cli: exit=0 wall_ms=62767
+2026-11-08T13:55:37Z === stage pipeline: start
+2026-11-08T13:55:37Z run: env BENCH_OUT=<scratch>/runsh-verify/pipeline HARNESSFORGE_WORKSPACE=<scratch>/runsh-tmp/pipeline-ws mix run bench/pipeline.exs
+2026-11-08T13:56:15Z === stage pipeline: exit=0 wall_ms=38509
+2026-11-08T13:56:15Z === stage portal: start
+2026-11-08T13:56:16Z start: PORT=64270 HARNESSFORGE_WORKSPACE=<scratch>/runsh-tmp/portal-ws PHX_SERVER=true mix phx.server > <scratch>/runsh-verify/portal/server.log
+2026-11-08T13:56:19Z portal ready on 127.0.0.1:64270 after 3257 ms (HTTP 302)
+2026-11-08T13:56:19Z run: env HARNESSFORGE_URL=http://127.0.0.1:64270 HARNESSFORGE_WORKSPACE=<scratch>/runsh-tmp/portal-ws BENCH_OUT=<scratch>/runsh-verify/portal BENCH_SCRATCH=<scratch>/runsh-tmp node bench/portal.cjs
+2026-11-08T13:56:28Z stopped portal pid 59956 on port 64270 after 1437 ms; lsof -ti :64270 -> ''
+2026-11-08T13:56:28Z === stage portal: exit=0 wall_ms=12691
+2026-11-08T13:56:28Z summary:
+2026-11-08T13:56:28Z   e2e-browser 0 14334 mix phx.server (fresh workspace, free port) + node bench/e2e.cjs
+2026-11-08T13:56:28Z   e2e-cli 0 62767 bash bench/e2e-cli.sh (fresh workspace)
+2026-11-08T13:56:28Z   pipeline 0 38509 mix run bench/pipeline.exs (fresh workspace)
+2026-11-08T13:56:28Z   portal 0 12691 mix phx.server (fresh workspace, free port) + node bench/portal.cjs + curl probes
+2026-11-08T13:56:28Z evidence written under <scratch>/runsh-verify (run.log, run-summary.json, machine.txt, e2e/, pipeline/, portal/)
+2026-11-08T13:56:28Z caller-supplied scratch root kept: <scratch>/runsh-tmp

@@ -1,0 +1,11 @@
+{
+  "arm": "olivium",
+  "attempt": 1,
+  "finished_at": "2026-11-09T15:53:32Z",
+  "repeat": 1,
+  "run_id": "python-attrs-attrs-1593.olivium.r1",
+  "stage": "done",
+  "started_at": "2026-11-09T15:52:32Z",
+  "status": "completed",
+  "task_id": "python-attrs-attrs-1593"
+}

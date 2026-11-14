@@ -1,0 +1,11 @@
+{
+  "arm": "generic",
+  "attempt": 1,
+  "finished_at": "2026-11-10T10:33:18Z",
+  "repeat": 1,
+  "run_id": "expressjs-express-7366.generic.r1",
+  "stage": "done",
+  "started_at": "2026-11-10T10:20:46Z",
+  "status": "completed",
+  "task_id": "expressjs-express-7366"
+}

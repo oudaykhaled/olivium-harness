@@ -1,0 +1,79 @@
+# Olivium Harness CLI on pallets/werkzeug at the pre-registered base commit of held-out task pallets-werkzeug-3298.
+# Recorded 2026-11-10T09:34:13Z on macOS 26.6, x86_64. Output is verbatim; [exit, s] lines are added by the recorder.
+# The checkout holds only the base commit and its ancestors (branch main, no remote, no tags), built with bench/value/arms/olivium_v2.py build_truncated_repo.
+# No model is called. The workspace is fresh and is not the default one.
+
+$ export MIX_ENV=dev MIX_BUILD_ROOT=<scratch>/build/record3 HARNESSFORGE_WORKSPACE=<scratch>/value-v2/record3/ws/cli-demo
+
+$ git -C <scratch>/real/v3/pallets-werkzeug-3298/werkzeug rev-parse HEAD; git -C <scratch>/real/v3/pallets-werkzeug-3298/werkzeug rev-list --count HEAD; git -C <scratch>/real/v3/pallets-werkzeug-3298/werkzeug for-each-ref --format='%(refname)'; git -C <scratch>/real/v3/pallets-werkzeug-3298/werkzeug remote | wc -l | tr -d ' '
+25663ddc295879d362a206b4c33f16ea2e694392
+6065
+refs/heads/main
+0
+[exit 0, 0.2 s]
+
+$ bin/harnessforge analyze <scratch>/real/v3/pallets-werkzeug-3298/werkzeug
+repository  werkzeug
+head        25663ddc295879d362a206b4c33f16ea2e694392
+languages   python, javascript
+commands    7
+  build       uv build
+  format      uv run ruff format
+  install     uv sync
+  lint        uv run ruff check
+  test        uv run pytest
+  test_single uv run pytest -k
+  typecheck   uv run mypy
+conventions 1
+rules       2 auto, 5 held back
+[exit 0, 4.2 s]
+
+$ bin/harnessforge generate <scratch>/real/v3/pallets-werkzeug-3298/werkzeug --runtime claude_code --export <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298
+digest      d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206
+exported    <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298
+files       9
+rules       2
+hooks       3
+commands    41 allowed, 61 denied
+[exit 0, 3.7 s]
+
+$ cd <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298 && find . -type f | sort | xargs ls -l | awk '{print $1, $5, $9}'
+-rw-------@ 1628 ./.claude/hooks/olivium-before-stop.sh
+-rw-------@ 432 ./.claude/hooks/olivium-format.sh
+-rw-------@ 34257 ./.claude/hooks/olivium-guard.sh
+-rw-------@ 4343 ./.claude/settings.json
+-rw-------@ 8939 ./.olivium/capabilities.json
+-rw-------@ 72 ./.olivium/guidance-provenance.json
+-rw-------@ 2148 ./.olivium/manifest.json
+-rw-------@ 713 ./.olivium/provenance.json
+-rw-------@ 15391 ./.olivium/spec.json
+-rw-------@ 541 ./CLAUDE.md
+[exit 0, 0.1 s]
+
+$ cd <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298 && find . -type f | sort | xargs shasum -a 256
+cc9cebae7f528174a9cefd3f998e9ed611e44f8681d23de81056df76edb1be40  ./.claude/hooks/olivium-before-stop.sh
+70ee33976ccfd08dc02d377bc60e08cf3dbb3c11235114ef2ba802622935573f  ./.claude/hooks/olivium-format.sh
+7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b  ./.claude/hooks/olivium-guard.sh
+e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544  ./.claude/settings.json
+c76e299a049b60db21adf20d9cc08bccb8084776adb647bb55641b38532bff64  ./.olivium/capabilities.json
+be90757004aea5e5d1c02bcec39b23586e71b160d51c85b94b4a644417c09320  ./.olivium/guidance-provenance.json
+f31741d161bff8a4c2efced01b7a31da777b632fba5abe6bbc4b76656d19bffc  ./.olivium/manifest.json
+68dd100abc13c60c5f84291f1c08ec7ec3c8b8ca07cb460fb2365f70a7ccac8e  ./.olivium/provenance.json
+9df9619cc501863a6ef9389ad33aa1828d1c0aa3dc3d30135ee467773f5d72ca  ./.olivium/spec.json
+2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f  ./CLAUDE.md
+[exit 0, 0.1 s]
+
+$ cd <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298 && find . | sort | xargs ls -ld | awk '{print $1, $5, $6, $7, $8, $9}' | shasum -a 256; find . -type f | sort | xargs shasum -a 256 | shasum -a 256
+a7192b6d654029c1bcd96c95fe3508473d827bc8eea220ce99718cbf18cf19f8  -
+8c18bc99512edea9fdcf262f320c915fdbd710045c03b07add0ec45aec8cf73e  -
+[exit 0, 0.1 s]
+
+$ bin/harnessforge generate <scratch>/real/v3/pallets-werkzeug-3298/werkzeug --runtime claude_code --export <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298
+error: export_conflict: Destination already exists; choose a fresh directory
+[exit 1, 3.9 s]
+
+$ cd <scratch>/value-v2/record3/exports/cli-demo-werkzeug-3298 && find . | sort | xargs ls -ld | awk '{print $1, $5, $6, $7, $8, $9}' | shasum -a 256; find . -type f | sort | xargs shasum -a 256 | shasum -a 256
+a7192b6d654029c1bcd96c95fe3508473d827bc8eea220ce99718cbf18cf19f8  -
+8c18bc99512edea9fdcf262f320c915fdbd710045c03b07add0ec45aec8cf73e  -
+[exit 0, 0.1 s]
+

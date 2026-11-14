@@ -1,0 +1,61 @@
+### token handling in bench scripts
+--- e2e-cli.sh: set -x / xtrace / echo of token?
+--- run.sh: token mentions
+31:# Workspace access tokens are read only inside bench/e2e.cjs and bench/portal.cjs and never printed.
+--- e2e.cjs: token mentions
+10://                           <workspace>/access-token inside this script and is never printed, logged or stored)
+64:let token = '';
+65:let tokenError = null;
+67:  token = fs.readFileSync(path.join(workspace, 'access-token'), 'utf8').trim();
+69:  tokenError = error.message;
+73:  if (token.length > 0) {
+74:    text = text.split(token).join('[redacted]');
+75:    text = text.split(encodeURIComponent(token)).join('[redacted]');
+119:  if (!token) throw new Error(`no access token available: ${tokenError}`);
+121:  await page.locator('#access-code').fill(token);
+200:      assert.ok(token, `access token unavailable: ${tokenError}`);
+201:      await page.locator('#access-code').fill(token);
+235:        await page.locator('#access-code').fill(token);
+609:  if (tokenError) log('read-token', `FAILED: ${tokenError}`);
+--- portal.cjs: token mentions
+16:// The workspace access token is read from <workspace>/access-token, typed into the login field and never
+48:let token = '';
+49:let tokenError = null;
+51:  token = fs.readFileSync(path.join(workspace, 'access-token'), 'utf8').trim();
+53:  tokenError = error.message;
+57:  if (token.length > 0) text = text.split(token).join('[redacted]');
+58:  if (token.length > 0) text = text.split(encodeURIComponent(token)).join('[redacted]');
+108:if (tokenError) {
+109:  results.errors.push({step: 'read-token', error: redact(tokenError)});
+110:  log('read-token', `FAILED: ${tokenError}`);
+320:  // 2. Unlock the workspace with the local access token (never logged).
+322:    if (!token) throw new Error('no access token available');
+323:    await page.locator('#access-code').fill(token);
+--- pipeline.exs: token mentions
+764:        "Evidence.search/1 runs an FTS5 MATCH (literal tokens, LIMIT 50) and then loads every hit as a source DTO including its current revision body; " <>
+### mix test / git write commands in bench scripts
+bench/run.sh:28:# explicitly for every command and cleared otherwise); `mix test` is never run; git is never run except a read-only
+### default workspace references in bench scripts
+bench/run.sh:27:# Guarantees: the default workspace (~/.local/share/harnessforge) is never used (HARNESSFORGE_WORKSPACE is set
+bench/run.sh:258:  "${HOME:-/nonexistent}/.local/share/harnessforge"*) die "BENCH_TMP_ROOT must not point at the default workspace tree: $TMP_ROOT" ;;
+### run.sh: where it writes (BENCH_OUT_ROOT default and rerun guard)
+15:#   BENCH_OUT_ROOT         evidence root; default docs/benchmarks/$(date +%F) under the repository. If that default
+16:#                          already holds a README.md (a published evidence set), the run writes to
+17:#                          docs/benchmarks/<date>-rerun-<UTC time> instead of overwriting it.
+33:# Output layout under BENCH_OUT_ROOT:
+53:TODAY=$(date +%F)
+231:OUT_ROOT=${BENCH_OUT_ROOT:-}
+234:  if [ -f "$OUT_ROOT/README.md" ]; then
+235:    OUT_ROOT=$PROJECT/docs/benchmarks/$TODAY-rerun-$(date -u +%H%M%S)
+### run.sh: stage names and tmp cleanup
+18:#   BENCH_TMP_ROOT         scratch root for workspaces, exports and corpus copies; default tmp/bench-<UTC timestamp>
+21:#   BENCH_STAGES           comma-separated subset of e2e-browser,e2e-cli,pipeline,portal (default: all four).
+22:#   BENCH_KEEP_TMP=1       keep the default scratch root even after a successful run.
+55:STAGES=${BENCH_STAGES:-e2e-browser,e2e-cli,pipeline,portal}
+56:KEEP_TMP=${BENCH_KEEP_TMP:-0}
+202:skip_stage() { log "=== stage $1: skipped (BENCH_STAGES=$STAGES)"; }
+210:      rm -rf "$TMP_ROOT"
+247:if [ -n "${BENCH_TMP_ROOT:-}" ]; then
+248:  TMP_ROOT=$BENCH_TMP_ROOT
+255:  *) die "BENCH_TMP_ROOT must be an absolute path: $TMP_ROOT" ;;
+258:  "${HOME:-/nonexistent}/.local/share/harnessforge"*) die "BENCH_TMP_ROOT must not point at the default workspace tree: $TMP_ROOT" ;;

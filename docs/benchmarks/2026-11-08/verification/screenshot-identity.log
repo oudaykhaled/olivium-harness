@@ -1,0 +1,23 @@
+### md5 of login-related screenshots across runs
+MD5 (docs/benchmarks/2026-11-08/e2e/screenshots/B01.png) = 8f002c68225aa127cfc4f83641f8e552
+MD5 (docs/benchmarks/2026-11-08/e2e/screenshots/B02.png) = 8f002c68225aa127cfc4f83641f8e552
+MD5 (docs/benchmarks/2026-11-08/e2e/screenshots/B14.png) = 8f002c68225aa127cfc4f83641f8e552
+MD5 (docs/benchmarks/2026-11-08/e2e/repeat2/screenshots/B01.png) = 5eb5f2c52b5a82a8760df9c5d7b7c6eb
+MD5 (docs/benchmarks/2026-11-08/e2e/repeat2/screenshots/B02.png) = 5eb5f2c52b5a82a8760df9c5d7b7c6eb
+MD5 (docs/benchmarks/2026-11-08/e2e/repeat2/screenshots/B14.png) = 5eb5f2c52b5a82a8760df9c5d7b7c6eb
+MD5 (docs/benchmarks/2026-11-08/e2e/repeat3/screenshots/B01.png) = dec0f12c716b69ac494b0cb3821b4d47
+MD5 (docs/benchmarks/2026-11-08/e2e/repeat3/screenshots/B02.png) = dec0f12c716b69ac494b0cb3821b4d47
+MD5 (docs/benchmarks/2026-11-08/e2e/repeat3/screenshots/B14.png) = dec0f12c716b69ac494b0cb3821b4d47
+MD5 (docs/benchmarks/2026-11-08/e2e/run1-partial/screenshots/B01.png) = 8f002c68225aa127cfc4f83641f8e552
+MD5 (docs/benchmarks/2026-11-08/e2e/run1-partial/screenshots/B02.png) = 8f002c68225aa127cfc4f83641f8e552
+MD5 (docs/benchmarks/2026-11-08/e2e/run1-partial/screenshots/B14.png) = 8f002c68225aa127cfc4f83641f8e552
+MD5 (docs/benchmarks/2026-11-08/portal/screenshots/01-login.png) = 4c3f3ba6d63d2f8b4e914f6b32a834ac
+MD5 (docs/benchmarks/2026-11-08/portal/run1-aborted/screenshots/01-login.png) = 4c3f3ba6d63d2f8b4e914f6b32a834ac
+### B13 vs 10-mobile-evidence (both 56958 bytes)
+MD5 (docs/benchmarks/2026-11-08/e2e/screenshots/B13.png) = cc880ce1c0fc1d3458f6b9e8a7fb4082
+MD5 (docs/benchmarks/2026-11-08/portal/screenshots/10-mobile-evidence.png) = cc880ce1c0fc1d3458f6b9e8a7fb4082
+MD5 (docs/benchmarks/2026-11-08/e2e/screenshots/B07.png) = c3c92cb667f0b6f0ea7c23a4c3212fcd
+### B02 scenario in bench/e2e.cjs
+212:    id: 'B02', title: 'A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly',
+219:        attach(page, 'B02-fresh-context');
+234:        await ctx.shot(page, 'B02', 'Fresh browser context after submitting a dummy access code: "The access code is incorrect." alert, still on /login (screenshot taken before the real code is typed).');

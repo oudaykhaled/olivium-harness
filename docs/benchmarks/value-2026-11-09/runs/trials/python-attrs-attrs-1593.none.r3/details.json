@@ -1,0 +1,32 @@
+{
+  "arm_sha256": [],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.0322101,
+  "exit_code": 0,
+  "grade": {
+    "f2p_passed": 1,
+    "f2p_total": 1,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 1384,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [],
+    "solved": true,
+    "status": "ok",
+    "test_exit": "0",
+    "test_patch_applied": true,
+    "tests_seen": 1396
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-python-attrs-attrs-1593:v1",
+  "image_id": "sha256:276ce2d8354b5d88596ab577a115f03613d88c5423e4517aca9469ab3400b0ea",
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "permission_mode": "bypassPermissions",
+  "prompt_sha256": "ebe4e4344a60fda8e0cda5aee41425a1d93e96b5821eab8a9c22e8ea4016fcb8",
+  "settings_sha256": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647"
+}

@@ -1,0 +1,19 @@
+### bash -n bench/run.sh bench/e2e-cli.sh
+exit=0
+### /bin/bash --version
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin25)
+### /bin/bash -n (macOS bash 3.2)
+exit=0
+### test -x
+exit=0
+-rwxr-xr-x@ 1 <user>  staff  20306 Nov  8 14:30 bench/e2e-cli.sh
+-rwxr-xr-x@ 1 <user>  staff  17218 Nov  8 14:53 bench/run.sh
+### node --check
+exit=0
+### node --version
+v24.10.0
+### elixir string_to_quoted
+pipeline.exs parses OK
+exit=0
+### mix format --check-formatted bench/pipeline.exs
+exit=0

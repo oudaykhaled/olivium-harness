@@ -1,0 +1,122 @@
+{
+  "arm": "olivium",
+  "arm_sha256": "e0f00e66193753b3b88951bdbea86e649884f7e546d88bdee7b3a119c924fcd5",
+  "claims_approved": 11,
+  "claims_total": 11,
+  "cost_upper_bound_usd": 0.167216,
+  "cost_usd": 0.10696,
+  "decide_errors": [],
+  "digest": "1946fd6e2264737520d640a9d08dbbc5a7b4e0bc5a52a9de71fd7abf130362ae",
+  "harness_bytes": 3168,
+  "harness_files": [
+    ".claude/agents/implementer.md",
+    ".claude/skills/reviewed-change/SKILL.md",
+    "CLAUDE.md"
+  ],
+  "manifest_markdown_files_count": 25,
+  "markdown_files_imported": 25,
+  "mode": "paid",
+  "model_status": {
+    "availability": "available",
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "reason": null
+  },
+  "proposals": [
+    {
+      "claims": 0,
+      "error": "invalid_provider_response",
+      "path": "README.md",
+      "status": "error"
+    },
+    {
+      "claims": 3,
+      "path": ".github/CONTRIBUTING.md",
+      "status": "ok"
+    },
+    {
+      "claims": 3,
+      "path": "docs/comparison.md",
+      "status": "ok"
+    },
+    {
+      "claims": 2,
+      "path": "docs/extending.md",
+      "status": "ok"
+    },
+    {
+      "claims": 3,
+      "path": "docs/glossary.md",
+      "status": "ok"
+    }
+  ],
+  "proposed_files": [
+    "README.md",
+    ".github/CONTRIBUTING.md",
+    "docs/comparison.md",
+    "docs/extending.md",
+    "docs/glossary.md"
+  ],
+  "rehearsal_fixture": false,
+  "status": "ok",
+  "task_id": "python-attrs-attrs-1593",
+  "tokens": {
+    "cache_creation": 0,
+    "cache_read": 0,
+    "input": 15535,
+    "output": 7589
+  },
+  "usage_requests": [
+    {
+      "billing_status": "unknown",
+      "input_tokens": null,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": null,
+      "reserved_estimated_microusd": 60256,
+      "reserved_tokens": 13744,
+      "state": "uncertain",
+      "usage_status": "unknown"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 5480,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 2404,
+      "reserved_estimated_microusd": 70204,
+      "reserved_tokens": 18718,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 1613,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 2199,
+      "reserved_estimated_microusd": 49608,
+      "reserved_tokens": 8420,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 5103,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 1187,
+      "reserved_estimated_microusd": 65818,
+      "reserved_tokens": 16525,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 3339,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 1799,
+      "reserved_estimated_microusd": 58850,
+      "reserved_tokens": 13041,
+      "state": "completed",
+      "usage_status": "reported"
+    }
+  ],
+  "usage_source": "application ledger (not the meter; the provider rejects any endpoint except api.anthropic.com)"
+}

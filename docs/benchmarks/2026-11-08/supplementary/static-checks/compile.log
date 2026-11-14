@@ -1,0 +1,33 @@
+=== [compile-test-run-1] started_at=2026-11-08T13:12:15Z cwd=<repo> MIX_ENV=test TMPDIR=<scratch>/tmpdir
+=== command: mix compile --warnings-as-errors
+=== load_before: 14.40 11.88 11.21
+real 0.71
+user 0.98
+sys 0.22
+=== exit_status=0
+=== wall_seconds=0.729
+=== load_after: 14.40 11.88 11.21
+=== ended_at=2026-11-08T13:12:16Z
+
+=== [compile-test-run-2] started_at=2026-11-08T13:12:16Z cwd=<repo> MIX_ENV=test TMPDIR=<scratch>/tmpdir
+=== command: mix compile --warnings-as-errors
+=== load_before: 14.40 11.88 11.21
+real 0.68
+user 0.94
+sys 0.22
+=== exit_status=0
+=== wall_seconds=0.707
+=== load_after: 14.40 11.88 11.21
+=== ended_at=2026-11-08T13:12:17Z
+
+=== [compile-test-run-3] started_at=2026-11-08T13:12:17Z cwd=<repo> MIX_ENV=test TMPDIR=<scratch>/tmpdir
+=== command: mix compile --warnings-as-errors
+=== load_before: 14.40 11.88 11.21
+real 0.66
+user 0.91
+sys 0.19
+=== exit_status=0
+=== wall_seconds=0.684
+=== load_after: 14.40 11.88 11.21
+=== ended_at=2026-11-08T13:12:18Z
+

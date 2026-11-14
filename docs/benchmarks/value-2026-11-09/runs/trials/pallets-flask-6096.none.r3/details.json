@@ -1,0 +1,35 @@
+{
+  "arm_sha256": [],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.0386977,
+  "exit_code": 0,
+  "grade": {
+    "f2p_passed": 2,
+    "f2p_total": 2,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 491,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [
+      "tests/test_basic.py",
+      "tests/test_testing.py"
+    ],
+    "solved": true,
+    "status": "ok",
+    "test_exit": "0",
+    "test_patch_applied": true,
+    "tests_seen": 493
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-pallets-flask-6096:v1",
+  "image_id": "sha256:03773b8f407dc23f5c1d733aa7b82a7b6e703ebd519a014e798eb12711c849be",
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "permission_mode": "bypassPermissions",
+  "prompt_sha256": "ce947559c8b39c416c22a7114d9f0d3a73d4383e064225fd1709efbb961d5479",
+  "settings_sha256": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647"
+}

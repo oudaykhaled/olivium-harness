@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="v" width="760" height="240" viewBox="0 0 760 240" role="img">
+<title>Cost per solved task, by arm</title>
+<style>
+.v{--bg:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#6a6963;--grid:#e1e0d9;--axis:#c3c2b7;--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--crit:#d03b3b;font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme:dark){.v{--bg:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#a8a69c;--grid:#2c2c2a;--axis:#383835;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--crit:#d03b3b}}
+.bg{fill:var(--bg)}.t{fill:var(--ink);font-size:16px;font-weight:600}.p{fill:var(--ink2);font-size:12px}.l{fill:var(--ink2);font-size:12px}.m{fill:var(--muted);font-size:11px}.h{fill:var(--ink);font-size:13px;font-weight:600}
+.banner{fill:var(--crit)}.bt{fill:#fff;font-size:13px;font-weight:700}
+.grid{stroke:var(--grid);stroke-width:1}.axis{stroke:var(--axis);stroke-width:1}.zero{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.s1{fill:var(--s1)}.s2{fill:var(--s2)}.s3{fill:var(--s3)}.ls1{stroke:var(--s1);stroke-width:2}.ls2{stroke:var(--s2);stroke-width:2}.ls3{stroke:var(--s3);stroke-width:2}
+.ring{stroke:var(--bg);stroke-width:2}
+</style>
+<rect class="bg" width="760" height="240"/>
+<text class="t" x="16" y="26">Cost per solved task, by arm</text>
+<text class="p" x="16" y="44">Total cost of the arm&#x27;s runs divided by the runs that solved the task.</text>
+<text class="p" x="16" y="60">Held-out measurement: 3 tasks, one model, one agent. This can show a direction or a problem. It cannot prove a general effect.</text>
+<line class="grid" x1="120.0" x2="120.0" y1="84" y2="204"/><text class="m" x="120.0" y="220" text-anchor="middle">$0.00</text><line class="grid" x1="216.0" x2="216.0" y1="84" y2="204"/><text class="m" x="216.0" y="220" text-anchor="middle">+$0.05</text><line class="grid" x1="312.0" x2="312.0" y1="84" y2="204"/><text class="m" x="312.0" y="220" text-anchor="middle">+$0.10</text><line class="grid" x1="408.0" x2="408.0" y1="84" y2="204"/><text class="m" x="408.0" y="220" text-anchor="middle">+$0.15</text><line class="grid" x1="504.0" x2="504.0" y1="84" y2="204"/><text class="m" x="504.0" y="220" text-anchor="middle">+$0.20</text><line class="grid" x1="600.0" x2="600.0" y1="84" y2="204"/><text class="m" x="600.0" y="220" text-anchor="middle">+$0.25</text><text class="l" x="108" y="108" text-anchor="end">none</text><rect class="s1" x="120" y="96" width="378.6" height="16" rx="4"><title>none: $0.1972 per solved task, 3 of 9 solved</title></rect><text class="l" x="506.6" y="108">$0.1972 (3 of 9 solved)</text><text class="l" x="108" y="148" text-anchor="end">generic</text><rect class="s2" x="120" y="136" width="398.3" height="16" rx="4"><title>generic: $0.2075 per solved task, 3 of 9 solved</title></rect><text class="l" x="526.3" y="148">$0.2075 (3 of 9 solved)</text><text class="l" x="108" y="188" text-anchor="end">olivium</text><rect class="s3" x="120" y="176" width="415.5" height="16" rx="4"><title>olivium: $0.2164 per solved task, 3 of 9 solved</title></rect><text class="l" x="543.5" y="188">$0.2164 (3 of 9 solved)</text>
+</svg>

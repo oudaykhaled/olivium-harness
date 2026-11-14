@@ -1,0 +1,36 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 2,
+  "files_read_list": [
+    "lib/request.js",
+    "test/req.fresh.js"
+  ],
+  "first_gold_edit": {
+    "path": "lib/request.js",
+    "tool": "Bash",
+    "tool_calls_before": 1,
+    "turns_before": 1
+  },
+  "init_model": "claude-sonnet-5-5",
+  "malformed_lines": 0,
+  "permission_mode": "bypassPermissions",
+  "result": {
+    "duration_ms": 15864,
+    "is_error": false,
+    "num_turns": 7,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.03889469999999999
+  },
+  "tool_calls": {
+    "Bash": 6
+  },
+  "tool_calls_before_first_gold_edit": 1,
+  "tool_calls_total": 6,
+  "turns": 6,
+  "turns_before_first_gold_edit": 1,
+  "wasted_reads": 1,
+  "wasted_reads_list": [
+    "test/req.fresh.js"
+  ]
+}

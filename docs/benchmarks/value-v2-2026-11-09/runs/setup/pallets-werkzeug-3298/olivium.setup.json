@@ -1,0 +1,96 @@
+{
+  "arm": "olivium",
+  "arm_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda",
+  "blueprint_version": "python@2",
+  "cost_upper_bound_usd": 0.0,
+  "cost_usd": 0.0,
+  "counts": {
+    "agents": 0,
+    "allowed_commands": 41,
+    "denied_commands": 61,
+    "hooks": 3,
+    "rules": 2,
+    "skills": 0
+  },
+  "diagnostics": [
+    {
+      "code": "runtime_unqualified",
+      "message": "Claude Code native preview only. A rendered configuration does not establish authenticated execution or isolation.",
+      "severity": "warning"
+    },
+    {
+      "capability": "execution.timeout_seconds",
+      "code": "unsupported_control",
+      "message": "Requested control is not enforced by this export.",
+      "severity": "warning"
+    },
+    {
+      "code": "workspace_trust_required",
+      "message": "Claude Code ignores permissions.allow in .claude/settings.json until the folder is trusted. Accept the trust prompt once by running claude in the folder, or pass --settings .claude/settings.json to an unattended claude -p run.",
+      "severity": "warning"
+    },
+    {
+      "code": "allowed_programs_unrestricted",
+      "message": "The allow list lets the detected toolchain (for example python3, uv run, node, npx) and sed, awk, find and xargs start without a prompt. The interpreters and runners execute arbitrary code, which can read, write or delete any file the OS user can and run any command, including one a deny rule names; sed, awk and find can write files and start commands too. Such a program can also write .claude/settings.local.json, which Claude Code reloads during the session: from then on it allows what that file lists, unless a deny rule names it. Claude Code checks only the command line, and the guard only pattern-matches it. Run unattended sessions in a container or sandbox.",
+      "severity": "warning"
+    },
+    {
+      "code": "secret_deny_is_partial",
+      "message": "Secret files are covered by Edit deny rules and by the PreToolUse guard .claude/hooks/olivium-guard.sh, which pattern-matches each tool call's text, follows links with realpath and expands unquoted wildcards such as dir/* in the project. It does not stop grep -r over a directory holding a secret, a file list piped to another command (find . | xargs cat), a link or copy made in the same command, or a program the agent runs. It is a guard against accidents, not a sandbox. Without realpath in /usr/bin or /bin the guard does not follow links.",
+      "severity": "info"
+    },
+    {
+      "code": "registry_access",
+      "message": "The project's own toolchain still reaches its package registry: the install command, uv run syncing the environment, a script that downloads. The guard refuses only commands that download a package the project does not declare: npx, bunx or npm exec of a package missing from node_modules or with --yes, pnpm/yarn dlx, uvx, uv tool, pipx, uv run --with, and pip, uv or npm installs or downloads that name a package.",
+      "severity": "info"
+    },
+    {
+      "code": "approval_still_required",
+      "message": "Claude Code 2.1.311 asks before shell it cannot check statically, whatever the allow rules say, for example a cd followed by a write, .. after cd, a ( ) group, $( ), escaped spaces and environment prefixes such as PYTHONPATH=. The guard never approves anything, so these still ask, and an unattended claude -p run refuses them; the agent sees the refusal and can retry without the cd or prefix.",
+      "severity": "info"
+    },
+    {
+      "code": "guard_missing_fails_open",
+      "message": "The hook runs .claude/hooks/olivium-guard.sh only while its SHA-256 matches the one in .claude/settings.json. If the file is missing or changed, or cannot be checked (no sha256sum or shasum in /usr/bin or /bin), the hook does not run it; if it fails (no awk, say), the hook reports that. Either way the hook prints a one-line warning and exits 0, so the session keeps working under Claude Code's own rules alone and the guard's refusals are gone. The guard refuses git stash -u and the usual ways of removing or overwriting .claude (rm, mv, cp, ln, sed -i, sed w, sort -o, uniq, awk print >, redirects, Edit, Write) so an agent does not remove it by accident; a program such as python3 can still change or delete it. To change what the guard refuses, change the spec and generate again.",
+      "severity": "info"
+    }
+  ],
+  "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+  "exported_settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+  "generator": "bin/harnessforge generate --runtime claude_code --json",
+  "harness_bytes": 68464,
+  "harness_files": [
+    ".claude/hooks/olivium-before-stop.sh",
+    ".claude/hooks/olivium-format.sh",
+    ".claude/hooks/olivium-guard.sh",
+    ".claude/settings.json",
+    ".olivium/capabilities.json",
+    ".olivium/guidance-provenance.json",
+    ".olivium/manifest.json",
+    ".olivium/provenance.json",
+    ".olivium/spec.json",
+    "CLAUDE.md"
+  ],
+  "mode": "paid",
+  "post_base_check": {
+    "commits_at_base_in_bare_clone": 6065,
+    "commits_in_truncated_history": 6065,
+    "exported_files_scanned": 10,
+    "failures": [],
+    "forbidden_commits_checked": 2,
+    "head": "25663ddc295879d362a206b4c33f16ea2e694392"
+  },
+  "profile_digest": "aea382e8d8cd1e6ea67bb76ccc629fec41c873a455709086efbb6ae818379374",
+  "rehearsal_fixture": false,
+  "removed_instruction_files": [],
+  "setup_model_calls": 0,
+  "skipped_commands": [],
+  "status": "ok",
+  "task_id": "pallets-werkzeug-3298",
+  "tokens": {
+    "cache_creation": 0,
+    "cache_read": 0,
+    "input": 0,
+    "output": 0
+  }
+}

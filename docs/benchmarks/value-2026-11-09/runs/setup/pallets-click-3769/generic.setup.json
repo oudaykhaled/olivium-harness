@@ -1,0 +1,26 @@
+{
+  "arm": "generic",
+  "arm_sha256": "8995fb8d24ff1a5b05258ba60f3497a9c5842680425f4467e5c9101f9bde2146",
+  "claude_code_version": "2.1.311",
+  "cost_usd": 0.0544443,
+  "harness_bytes": 3609,
+  "harness_files": [
+    "CLAUDE.md"
+  ],
+  "image_id": "sha256:9ee7489c5ed0c9c7a54c49493141fe1c4f59cf771554f0cd4d43912ce041d24f",
+  "mode": "paid",
+  "model": "claude-sonnet-5-5",
+  "rehearsal_fixture": false,
+  "requests": 4,
+  "run_id": "setup-generic.pallets-click-3769",
+  "status": "ok",
+  "task_id": "pallets-click-3769",
+  "tokens": {
+    "cache_creation": 10375,
+    "cache_read": 70508,
+    "input": 8,
+    "output": 2144
+  },
+  "turns": 4,
+  "wall_seconds": 20.0
+}

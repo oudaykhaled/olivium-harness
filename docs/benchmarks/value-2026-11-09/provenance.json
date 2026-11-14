@@ -1,0 +1,57 @@
+{
+  "benchmark": "value (bench/value), PROTOCOL.md checksum-frozen task list aa9b6795b6fa1e6cd6e4367d723f3051d8f647cb12fde12e89a93db419c50e43",
+  "date_utc": "2026-11-09",
+  "model": "claude-sonnet-5-5",
+  "claude_code_version": "2.1.311",
+  "runs": {
+    "scheduled": 45,
+    "completed": 45,
+    "solved": 36,
+    "infra_error": 0,
+    "timeout": 0,
+    "turn_limit": 0,
+    "budget_exhausted": 0,
+    "as_exported_runs": 1
+  },
+  "spend_usd": {
+    "pilot_scored_trials": 2.046955,
+    "pilot_as_exported_run": 0.0264911,
+    "pilot_setup_generic_init": 0.3198128,
+    "pilot_setup_olivium_proposals_reported": 0.433756,
+    "pilot_setup_olivium_proposals_upper_bound": 0.5416,
+    "pilot_total_upper_bound": 2.9349,
+    "canary_meter_total": 0.317784,
+    "canary_olivium_proposals_upper_bound": 0.157364,
+    "diagnostic_replays": 0.07165,
+    "grand_total_upper_bound": 3.4818,
+    "ceiling": 60.0,
+    "sources": "pilot and canary: meter/requests.jsonl (API-reported usage priced from meter/prices.json) and the application ledger for proposal calls; diagnostics: API usage fields at list prices"
+  },
+  "proposal_requests": {
+    "total": 21,
+    "ok": 15,
+    "invalid_model_output_whole_proposal_rejected": 4,
+    "invalid_provider_response": 2,
+    "claims_approved_per_task": {
+      "pallets-click-3858": 9,
+      "pallets-flask-6096": 3,
+      "python-attrs-attrs-1593": 11,
+      "expressjs-express-7366": 2,
+      "pallets-click-3769": 4
+    }
+  },
+  "excluded_from_this_directory": [
+    "third-party source",
+    "issue text (prompt.txt)",
+    "test patches",
+    "agent patches",
+    "transcripts",
+    "test and lint logs",
+    "results.xml",
+    "generated arm files (they quote repository documentation)"
+  ],
+  "file_sha256": {
+    "results.json": "6eee624ae27b3f4d0f9698b9790ddf218db2f2d5fad03c4341dc01bb71f4376e",
+    "report.md": "ed4621a352c14c05a2ec0db927e5234a533a23636c6cc3acff7e28ce3f28fa29"
+  }
+}

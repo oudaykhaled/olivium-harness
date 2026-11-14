@@ -1,0 +1,15 @@
+# 2026-11-08T10:25:03Z timed restarts, launch and poll in the same shell (mix phx.server, PORT=8866, PHX_SERVER=true)
+main instance: stopped pid=43919 sigterm_to_gone_s=1.349
+warm1 workspace=<scratch>/portal-ws start_to_ready_s=3.302 first_http=302 polls=26 poll_interval_s=0.1 beam_pid=44237 rss_kb_at_ready=104148
+stopped pid=44237 sigterm_to_gone_s=1.316
+warm2 workspace=<scratch>/portal-ws start_to_ready_s=2.899 first_http=302 polls=23 poll_interval_s=0.1 beam_pid=44403 rss_kb_at_ready=105992
+stopped pid=44403 sigterm_to_gone_s=1.436
+warm3 workspace=<scratch>/portal-ws start_to_ready_s=3.067 first_http=302 polls=24 poll_interval_s=0.1 beam_pid=44545 rss_kb_at_ready=100616
+stopped pid=44545 sigterm_to_gone_s=1.322
+fresh1 workspace=<scratch>/portal-ws-fresh1 start_to_ready_s=3.399 first_http=302 polls=27 poll_interval_s=0.1 beam_pid=44686 rss_kb_at_ready=112504
+stopped pid=44686 sigterm_to_gone_s=1.451
+fresh2 workspace=<scratch>/portal-ws-fresh2 start_to_ready_s=3.682 first_http=302 polls=29 poll_interval_s=0.1 beam_pid=44842 rss_kb_at_ready=109604
+stopped pid=44842 sigterm_to_gone_s=1.313
+fresh3 workspace=<scratch>/portal-ws-fresh3 start_to_ready_s=3.433 first_http=302 polls=27 poll_interval_s=0.1 beam_pid=44998 rss_kb_at_ready=116052
+stopped pid=44998 sigterm_to_gone_s=1.325
+final check: port 8866 free

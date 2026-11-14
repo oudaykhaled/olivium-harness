@@ -1,0 +1,2080 @@
+Cover compiling modules ...
+Running ExUnit with seed: 982134, max_cases: 32
+
+...........................................................................................................................................................................................................................................................................................................................................................................................
+
+  1) test lazy serving materializes one bounded SQL window rather than a full revision (HarnessForge.Evidence.PassagesTest)
+     test/harness_forge/evidence/passages_test.exs:85
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: {:ok, connection} =
+     stacktrace:
+       test/harness_forge/evidence/passages_test.exs:90: (test)
+
+
+
+  2) test only actual paragraph boundaries prove completeness; overlong paragraphs stay incomplete (HarnessForge.Evidence.PassagesTest)
+     test/harness_forge/evidence/passages_test.exs:157
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: {:ok, connection} =
+     stacktrace:
+       test/harness_forge/evidence/passages_test.exs:164: (test)
+
+.
+
+  3) test index publication is idempotent and exact reads reject forged spans (HarnessForge.Evidence.PassagesTest)
+     test/harness_forge/evidence/passages_test.exs:27
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: {:ok, connection} =
+     stacktrace:
+       test/harness_forge/evidence/passages_test.exs:32: (test)
+
+........................
+
+  4) test workspace-bound envelope refuses a restored row whose storage scope was rebound (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:455
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+  5) test query plan is deterministic, bounded, and escapes FTS operator-looking input (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:246
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+  6) test one lane cannot exhaust its reservation before another lane's leading relevance (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:425
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+  7) test strict question, forged scope and unavailable graph never dispatch a fallback (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:48
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+  8) test each lane uses its own lexical ordinal and source diversity (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:407
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+  9) test explicit invalid declaration references never fall back to legacy capture (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:100
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 10) test packing retains lexical relevance and diverse sources without promoting completeness (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:284
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 11) test alternate contrary and unknown memberships survive broad support deduplication (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:312
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 12) test a short lower-relevance parent cannot displace the best lexical paragraph (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:380
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 13) test question tokens preserve middle and late qualifiers without adding searches (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:256
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 14) test a completed physical scan resolves a bounded server-owned exact pack (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:165
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 15) test identical parent context consumes one slot and incomplete evidence stays incomplete (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:345
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 16) test interleaved lanes retain highly ranked partial context and other lane coverage (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:366
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 17) test new member invalidates an immutable run while existing cited bytes stay unchanged (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:129
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+
+
+ 18) test incomplete capture stays inspectable but cannot resolve for analysis (HarnessForge.Company.RetrievalTest)
+     test/harness_forge/company/retrieval_test.exs:75
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_test.exs:9: HarnessForge.Company.RetrievalTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_test.exs:1: HarnessForge.Company.RetrievalTest.__ex_unit__/2
+
+........................................................................................................12:29:27.187 [warning] You are running migration 20261102000100 but an older migration with version 20261104000200 has already run.
+
+This can be an issue if you have already ran 20261104000200 in production because a new deployment may migrate 20261102000100 but a rollback command would revert 20261104000200 instead of 20261102000100.
+
+If this can be an issue, we recommend to rollback 20261102000100 and change it to a version later than 20261104000200.
+
+............................
+
+ 19) test source page size and strict authority/DTO boundaries do not get relaxed (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:587
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:588: (test)
+
+
+
+ 20) test building, missing and self-referential parents remain uncertified (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:502
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:503: (test)
+
+
+
+ 21) test metadata-only initial validation checks permission and never materializes a large body (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:241
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3, true)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:242: (test)
+
+
+
+ 22) test embed_input uses immutable typed versions and prior sealed inputs without weakening guards (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:610
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:612: (test)
+
+
+
+ 23) test rendered_message uses immutable typed versions and prior sealed inputs without weakening guards (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:610
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:612: (test)
+
+
+
+ 24) test source generation and denied source certificate invalidate current descendants (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:479
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:480: (test)
+
+
+
+ 25) test an inventory lookup miss preserves the caller transaction for current-save fallback (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:11
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: {_certificate, auth} = garden(1) |> certify()
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:12: (test)
+
+
+
+ 26) test a fresh stage/operation reuses stable source eligibility but not historical local authority (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:415
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:416: (test)
+
+
+
+ 27) test historical inventory helpers cannot bypass a changed source generation (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:83
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:84: (test)
+
+
+
+ 28) test noncontiguous pages cannot certify a partial source set (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:297
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:298: (test)
+
+
+
+ 29) test graph context schema policy rejects catalogue substitution and unqualified prompt stage seam or transform (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:776
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1, false, [summary, extraction])
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:779: (test)
+
+
+
+ 30) test missing final markers and wrong expected counts never seal (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:314
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: for failure <- [:missing_final, :wrong_total] do
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:316: anonymous fn/2 in HarnessForge.Evidence.GraphManifestsTest."test missing final markers and wrong expected counts never seal"/1
+       (elixir 1.19.5) lib/enum.ex:2520: Enum."-reduce/3-lists^foldl/2-0-"/3
+       test/harness_forge/evidence/graph_manifests_test.exs:315: (test)
+
+
+
+ 31) test typed versions require prior certified input, correct hash, and immutable predecessor identity (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:526
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:527: (test)
+
+
+
+ 32) test building rows/header are immutable before publication (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:386
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:387: (test)
+
+
+
+ 33) test changed replay denies a building record and exact accepted replay remains stable (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:266
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:267: (test)
+
+
+
+ 34) test local manifests inherit sources by certificate without copying or reading source bodies (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:180
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(104, true)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:181: (test)
+
+
+
+ 35) test a current root control cannot substitute a stale or forged source body hash (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:342
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:343: (test)
+
+
+
+ 36) test one qualified graph catalogue pin admits distinct measured schemas and preserves inputs rules (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:727
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:728: (test)
+
+
+
+ 37) test synthesis retains direct schema equality independently of the graph catalogue (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:823
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1, false, [synthesis])
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:825: (test)
+
+
+
+ 38) test final worker page cannot omit an independently pinned original source (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:362
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(3)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:363: (test)
+
+
+
+ 39) test deterministic_output uses immutable typed versions and prior sealed inputs without weakening guards (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:610
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:612: (test)
+
+
+
+ 40) test bootstrap seals a multi-page exact source set before the partition has a manifest (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:106
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(104, true)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:107: (test)
+
+
+
+ 41) test a source certificate proves an empty base but cannot impersonate a completed graph inventory (HarnessForge.Evidence.GraphManifestsTest)
+     test/harness_forge/evidence/graph_manifests_test.exs:35
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: f = garden(1)
+     stacktrace:
+       test/harness_forge/evidence/graph_manifests_test.exs:854: HarnessForge.Evidence.GraphManifestsTest.garden/3
+       test/harness_forge/evidence/graph_manifests_test.exs:36: (test)
+
+............................
+
+ 42) test current evidence contract preserves admitted public questions and the dense envelope bound (HarnessForge.Company.WholeQuestionRetrievalTest)
+     test/harness_forge/company/whole_question_retrieval_test.exs:12
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: fixture = public_fixture!()
+     stacktrace:
+       (harness_forge 0.1.0) test/support/iteration15_public_cases.ex:373: HarnessForge.Iteration15PublicCases.create!/2
+       test/harness_forge/company/whole_question_retrieval_test.exs:13: (test)
+
+
+
+ 43) test question diagnostics count unique passage attribution independently of chosen packing lane (HarnessForge.Company.WholeQuestionRetrievalTest)
+     test/harness_forge/company/whole_question_retrieval_test.exs:108
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: fixture = public_fixture!()
+     stacktrace:
+       (harness_forge 0.1.0) test/support/iteration15_public_cases.ex:373: HarnessForge.Iteration15PublicCases.create!/2
+       test/harness_forge/company/whole_question_retrieval_test.exs:109: (test)
+
+
+
+ 44) test constructed plain v2 and v3 fixtures preserve raw digests and diagnostic availability (HarnessForge.Company.WholeQuestionRetrievalTest)
+     test/harness_forge/company/whole_question_retrieval_test.exs:188
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: fixture = public_fixture!()
+     stacktrace:
+       (harness_forge 0.1.0) test/support/iteration15_public_cases.ex:373: HarnessForge.Iteration15PublicCases.create!/2
+       test/harness_forge/company/whole_question_retrieval_test.exs:189: (test)
+
+
+
+ 45) test frozen independent public obligations survive bounded retrieval (HarnessForge.Company.WholeQuestionRetrievalTest)
+     test/harness_forge/company/whole_question_retrieval_test.exs:58
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: fixture = public_fixture!()
+     stacktrace:
+       (harness_forge 0.1.0) test/support/iteration15_public_cases.ex:373: HarnessForge.Iteration15PublicCases.create!/2
+       test/harness_forge/company/whole_question_retrieval_test.exs:59: (test)
+
+........................................................
+
+ 46) test changed or revoked connection refuses previously displayed evidence (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:196
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 47) test named excerpts retain exact UTF-8 pins, diagnostics and separate exact context (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:18
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 48) test pages check only 25 bounded windows and never hydrate the sentinel (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:112
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 49) test session denial and an incomplete privacy operation prevent list serving (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:239
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 50) test display rechecks corpus membership and current connector document scope (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:218
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 51) test changed or revoked source refuses previously displayed evidence (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:196
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 52) test changed or revoked revision refuses previously displayed evidence (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:196
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 53) test missing or unsafe display metadata stays unknown without substituting capture dates (HarnessForge.Company.RetrievalPresentationTest)
+     test/harness_forge/company/retrieval_presentation_test.exs:81
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/retrieval_presentation_test.exs:13: HarnessForge.Company.RetrievalPresentationTest.__ex_unit_setup_1/1
+       test/harness_forge/company/retrieval_presentation_test.exs:1: HarnessForge.Company.RetrievalPresentationTest.__ex_unit__/2
+
+
+
+ 54) test 100-corpus pages persist across fresh callers, fence once, and preserve removal between pages (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:443
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 55) test failed cleanup rolls back the page, version claim, and all generation changes (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:388
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 56) test same command and canonical server identity replays across fresh session pins (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:175
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 57) test the no-hold source invalidation keeps its existing generation behavior (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:577
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 58) test a removed member stays excluded with its original revision after hold cleanup (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:530
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 59) test checkpoint insert failure rolls back the restriction and leaves prior authority unchanged (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:371
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 60) test one atomic restriction denies all purposes immediately without changing or erasing bytes (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:18
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 61) test mutations reject caller-owned transactions before acquiring the privacy fence (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:346
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 62) test stale, mismatched, missing, and foreign exact references cannot create a hold (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:102
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 63) test identical bytes in another connection or workspace keep independent existing authority (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:207
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 64) test restriction, receipt reads, replay, and cleanup never hydrate source bodies (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:635
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 65) test held source recapture cannot replace bytes, revise metadata, or clear the hold (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:237
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 66) test authorization loss after cleanup effects also rolls back the checkpoint and generations (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:421
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 67) test read guards return denial inside the owning transaction without poisoning unrelated work (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:319
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 68) test unknown and foreign event IDs reveal no restriction receipt (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:193
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 69) test authorization changing at the write fence or before commit rolls back every row (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:156
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 70) test malformed references and unknown purposes fail closed; absence grants no operator access (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:259
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 71) test database read failure denies instead of reporting an empty restriction set (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:608
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 72) test the trusted SQL predicate excludes the same revision while retaining an identical-byte identity (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:289
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 73) test resume versions are nonnegative typed integers and completed replays are inert (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:589
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 74) test authorization is mandatory on create, replay, status, and resume (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:134
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+
+
+ 75) test the request is strictly string-keyed, versioned, typed, and deny-only (HarnessForge.RevisionUseHoldsTest)
+     test/harness_forge/revision_use_holds_test.exs:65
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_holds_test.exs:683: HarnessForge.RevisionUseHoldsTest.connect/2
+       test/harness_forge/revision_use_holds_test.exs:13: HarnessForge.RevisionUseHoldsTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_holds_test.exs:1: HarnessForge.RevisionUseHoldsTest.__ex_unit__/2
+
+........................................................................
+
+ 76) test checked retrieval summary contains exact scope metadata without passage bodies or writes (HarnessForge.Company.ReadinessSummaryTest)
+     test/harness_forge/company/readiness_summary_test.exs:47
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/readiness_summary_test.exs:10: HarnessForge.Company.ReadinessSummaryTest.__ex_unit_setup_1/1
+       test/harness_forge/company/readiness_summary_test.exs:1: HarnessForge.Company.ReadinessSummaryTest.__ex_unit__/2
+
+
+
+ 77) test verified physical capture pins its completion scope and later source change stays stale (HarnessForge.Company.ReadinessSummaryTest)
+     test/harness_forge/company/readiness_summary_test.exs:94
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/readiness_summary_test.exs:10: HarnessForge.Company.ReadinessSummaryTest.__ex_unit_setup_1/1
+       test/harness_forge/company/readiness_summary_test.exs:1: HarnessForge.Company.ReadinessSummaryTest.__ex_unit__/2
+
+
+
+ 78) test legacy capture completion without stored generation pins remains unknown (HarnessForge.Company.ReadinessSummaryTest)
+     test/harness_forge/company/readiness_summary_test.exs:142
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/readiness_summary_test.exs:10: HarnessForge.Company.ReadinessSummaryTest.__ex_unit_setup_1/1
+       test/harness_forge/company/readiness_summary_test.exs:1: HarnessForge.Company.ReadinessSummaryTest.__ex_unit__/2
+
+
+
+ 79) test retrieval summary preserves digest, authorization, workspace and generation fences (HarnessForge.Company.ReadinessSummaryTest)
+     test/harness_forge/company/readiness_summary_test.exs:68
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/readiness_summary_test.exs:10: HarnessForge.Company.ReadinessSummaryTest.__ex_unit_setup_1/1
+       test/harness_forge/company/readiness_summary_test.exs:1: HarnessForge.Company.ReadinessSummaryTest.__ex_unit__/2
+
+.........................................
+
+ 80) test missing qualification denies; independent checkpointed scan and certificate agree beyond 100 (HarnessForge.Evidence.GraphSourcesTest)
+     test/harness_forge/evidence/graph_sources_test.exs:60
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/graph_sources_test.exs:21: HarnessForge.Evidence.GraphSourcesTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/graph_sources_test.exs:1: HarnessForge.Evidence.GraphSourcesTest.__ex_unit__/2
+
+
+
+ 81) test source authorization change fences unfinished scan before certification (HarnessForge.Evidence.GraphSourcesTest)
+     test/harness_forge/evidence/graph_sources_test.exs:246
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/graph_sources_test.exs:21: HarnessForge.Evidence.GraphSourcesTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/graph_sources_test.exs:1: HarnessForge.Evidence.GraphSourcesTest.__ex_unit__/2
+
+
+
+ 82) test consent grant pages once; scalar certificate reuses scope across operation epochs and revocation denies (HarnessForge.Evidence.GraphSourcesTest)
+     test/harness_forge/evidence/graph_sources_test.exs:122
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/graph_sources_test.exs:21: HarnessForge.Evidence.GraphSourcesTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/graph_sources_test.exs:1: HarnessForge.Evidence.GraphSourcesTest.__ex_unit__/2
+
+.....
+
+ 83) test summary does not hydrate text and history or index versions never become authority (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:198
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 84) test equivalent explicit defaults preserve request identity without Unicode normalization (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:36
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 85) test partial and abstained projections do not become ready (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:469
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 86) test empty and foreign resolved scope and machine-shaped caller fail before search (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:92
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 87) test live caller binding and final publication authorization cannot be bypassed (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:269
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 88) test current source revocation denies old bundle pages and opens (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:327
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 89) test real pages bind cursor to snapshot and principal without legacy fallback (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:393
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 90) test current pages and opens preserve exact multibyte slices and reject invalid current evidence (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:221
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 91) test new binding is exactly 180 canonical bytes and legacy envelopes stay unchanged (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:168
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 92) test a restored v3 digest cannot substitute citation hashes or byte spans (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:347
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 93) test malformed stored v3 binding is never reinterpreted as an unbound legacy run (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:374
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 94) test one immutable snapshot has identical bundle and exact citation identities across adapter fixtures (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:121
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+
+
+ 95) test forged authority and unsupported contracts reject before FTS or writes (HarnessForge.Company.EvidenceBundleTest)
+     test/harness_forge/company/evidence_bundle_test.exs:58
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/evidence_bundle_test.exs:11: HarnessForge.Company.EvidenceBundleTest.__ex_unit_setup_1/1
+       test/harness_forge/company/evidence_bundle_test.exs:1: HarnessForge.Company.EvidenceBundleTest.__ex_unit__/2
+
+.................................*********........READINESS_TRACE {HarnessForge.Execution.Command, :docker, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :local_endpoint, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :resolve_context, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :invoke, 4} matches=1
+READINESS_TRACE {Port, :open, 2} matches=1
+READINESS_TRACE {:erlang, :open_port, 2} matches=1
+READINESS_TRACE {System, :cmd, 2} matches=1
+READINESS_TRACE {System, :cmd, 3} matches=1
+READINESS_TRACE {HarnessForge.Models, :status, 0} matches=1
+READINESS_TRACE {HarnessForge.Evaluations, :capabilities, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution, :probe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :availability, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile_digest, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :admit, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :run, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :stop_session, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :cleanup, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :observe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :verify, 1} matches=1
+READINESS_TRACE {HarnessForge.Readiness, :for_artifact, 2} matches=1
+READINESS_TRACE {HarnessForge.MCP.Tools, :call, 2} matches=1
+READINESS_TRACE {HarnessForge.ReadinessTest, :trace_marker, 0} matches=1
+....................READINESS_TRACE {HarnessForge.Execution.Command, :docker, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :local_endpoint, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :resolve_context, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :invoke, 4} matches=1
+READINESS_TRACE {Port, :open, 2} matches=1
+READINESS_TRACE {:erlang, :open_port, 2} matches=1
+READINESS_TRACE {System, :cmd, 2} matches=1
+READINESS_TRACE {System, :cmd, 3} matches=1
+READINESS_TRACE {HarnessForge.Models, :status, 0} matches=1
+READINESS_TRACE {HarnessForge.Evaluations, :capabilities, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution, :probe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :availability, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile_digest, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :admit, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :run, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :stop_session, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :cleanup, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :observe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :verify, 1} matches=1
+READINESS_TRACE {HarnessForge.Readiness, :for_artifact, 2} matches=1
+READINESS_TRACE {HarnessForge.MCP.Tools, :call, 2} matches=1
+READINESS_TRACE {HarnessForge.ReadinessTest, :trace_marker, 0} matches=1
+....READINESS_TRACE {HarnessForge.Execution.Command, :docker, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :local_endpoint, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :resolve_context, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :docker_at, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.Command, :invoke, 4} matches=1
+READINESS_TRACE {Port, :open, 2} matches=1
+READINESS_TRACE {:erlang, :open_port, 2} matches=1
+READINESS_TRACE {System, :cmd, 2} matches=1
+READINESS_TRACE {System, :cmd, 3} matches=1
+READINESS_TRACE {HarnessForge.Models, :status, 0} matches=1
+READINESS_TRACE {HarnessForge.Evaluations, :capabilities, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution, :probe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :availability, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :profile_digest, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :admit, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :run, 3} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :stop_session, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :cleanup, 1} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 2} matches=1
+READINESS_TRACE {HarnessForge.Execution.Coding, :coding_command, 4} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :observe, 0} matches=1
+READINESS_TRACE {HarnessForge.Execution.CodingTransport, :verify, 1} matches=1
+READINESS_TRACE {HarnessForge.Readiness, :for_artifact, 2} matches=1
+READINESS_TRACE {HarnessForge.MCP.Tools, :call, 2} matches=1
+READINESS_TRACE {HarnessForge.ReadinessTest, :trace_marker, 0} matches=1
+............................************
+
+ 96) test wrong scope, changed goal and denied caller cannot enumerate declarations (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:92
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+
+
+ 97) test valid scope without a saved declaration returns an explicit empty choice (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:25
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+
+
+ 98) test a declaration with changed corpus generation is stale rather than an empty choice (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:46
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+
+
+ 99) test a database lookup failure is unavailable, never an empty success (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:122
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+
+
+100) test revocation withholds the saved choice rather than returning its identity (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:82
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+
+
+101) test an expected stale declaration read preserves the caller's transaction (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:52
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+
+
+102) test only the exact current revision is offered as bounded metadata, with no dispatch (HarnessForge.Evidence.RequirementsSavedChoiceTest)
+     test/harness_forge/evidence/requirements_saved_choice_test.exs:31
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:9: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_saved_choice_test.exs:1: HarnessForge.Evidence.RequirementsSavedChoiceTest.__ex_unit__/2
+
+*****..**....................
+
+103) test supported status with a declared conflict requires saved resolution; edited exact successor reaches deliberate plan and export (HarnessForgeWeb.CompanyAnalysisTest)
+     test/harness_forge_web/company_analysis_test.exs:114
+     ** (RuntimeError) expected async processes to finish within 100ms
+     code: submit(view)
+     stacktrace:
+       (phoenix_live_view 1.2.13) lib/phoenix_live_view/test/live_view_test.ex:1080: anonymous fn/3 in Phoenix.LiveViewTest.render_async/2
+       (elixir 1.19.5) lib/enum.ex:961: Enum."-each/2-lists^foreach/1-0-"/2
+       (phoenix_live_view 1.2.13) lib/phoenix_live_view/test/live_view_test.ex:1077: Phoenix.LiveViewTest.render_async/2
+       test/harness_forge_web/company_analysis_test.exs:127: (test)
+
+.......
+
+104) test manual analysis shows a safe rejection reason without retaining response content or resending (HarnessForgeWeb.CompanyAnalysisTest)
+     test/harness_forge_web/company_analysis_test.exs:83
+     ** (RuntimeError) expected async processes to finish within 100ms
+     code: submit(view)
+     stacktrace:
+       (phoenix_live_view 1.2.13) lib/phoenix_live_view/test/live_view_test.ex:1080: anonymous fn/3 in Phoenix.LiveViewTest.render_async/2
+       (elixir 1.19.5) lib/enum.ex:961: Enum."-each/2-lists^foreach/1-0-"/2
+       (phoenix_live_view 1.2.13) lib/phoenix_live_view/test/live_view_test.ex:1077: Phoenix.LiveViewTest.render_async/2
+       test/harness_forge_web/company_analysis_test.exs:89: (test)
+
+...................................................................................................................
+
+105) test the retained public browser question includes the governing policy without rephrasing (HarnessForge.Company.HistoricalQuestionRegressionTest)
+     test/harness_forge/company/historical_question_regression_test.exs:11
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: fixture = CompanyAnalysisFixture.create!(root)
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/company/historical_question_regression_test.exs:21: (test)
+
+................................
+
+106) test strict server authorization and string-keyed boundaries (HarnessForge.Evidence.CorporaTest)
+     test/harness_forge/evidence/corpora_test.exs:21
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/corpora_test.exs:11: HarnessForge.Evidence.CorporaTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/corpora_test.exs:1: HarnessForge.Evidence.CorporaTest.__ex_unit__/2
+
+
+
+107) test generation change invalidates previous eligibility without changing citations (HarnessForge.Evidence.CorporaTest)
+     test/harness_forge/evidence/corpora_test.exs:92
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/corpora_test.exs:11: HarnessForge.Evidence.CorporaTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/corpora_test.exs:1: HarnessForge.Evidence.CorporaTest.__ex_unit__/2
+
+
+
+108) test relational membership exceeds the old array cap and no-op replay is stable (HarnessForge.Evidence.CorporaTest)
+     test/harness_forge/evidence/corpora_test.exs:37
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/corpora_test.exs:11: HarnessForge.Evidence.CorporaTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/corpora_test.exs:1: HarnessForge.Evidence.CorporaTest.__ex_unit__/2
+
+...........................................
+
+109) test dense public evidence and maximal term fanout retain the bounded publication fence (HarnessForge.Company.QuestionResourceProbeTest)
+     test/harness_forge/company/question_resource_probe_test.exs:9
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     code: fixture = Iteration15PublicCases.create!(root, caller())
+     stacktrace:
+       (harness_forge 0.1.0) test/support/iteration15_public_cases.ex:373: HarnessForge.Iteration15PublicCases.create!/2
+       test/harness_forge/company/question_resource_probe_test.exs:17: (test)
+
+.........................................................Readiness event trace: Command.run/* absent; matched [{{HarnessForge.Execution.Command, :docker, 1}, 1}, {{HarnessForge.Execution.Command, :docker, 2}, 1}, {{HarnessForge.Execution.Command, :docker, 3}, 1}, {{HarnessForge.Execution.Command, :local_endpoint, 0}, 1}, {{HarnessForge.Execution.Command, :resolve_context, 1}, 1}, {{HarnessForge.Execution.Command, :docker_at, 2}, 1}, {{HarnessForge.Execution.Command, :docker_at, 3}, 1}, {{HarnessForge.Execution.Command, :docker_at, 4}, 1}, {{HarnessForge.Execution.Command, :invoke, 4}, 1}, {{Port, :open, 2}, 1}, {{:erlang, :open_port, 2}, 1}, {{System, :cmd, 2}, 1}, {{System, :cmd, 3}, 1}, {{HarnessForge.Models, :status, 0}, 1}, {{HarnessForge.Evaluations, :capabilities, 0}, 1}, {{HarnessForge.Execution, :probe, 0}, 1}, {{HarnessForge.Execution.Coding, :availability, ...}, ...}, ...]
+..........Readiness event trace: Command.run/* absent; matched [{{HarnessForge.Execution.Command, :docker, 1}, 1}, {{HarnessForge.Execution.Command, :docker, 2}, 1}, {{HarnessForge.Execution.Command, :docker, 3}, 1}, {{HarnessForge.Execution.Command, :local_endpoint, 0}, 1}, {{HarnessForge.Execution.Command, :resolve_context, 1}, 1}, {{HarnessForge.Execution.Command, :docker_at, 2}, 1}, {{HarnessForge.Execution.Command, :docker_at, 3}, 1}, {{HarnessForge.Execution.Command, :docker_at, 4}, 1}, {{HarnessForge.Execution.Command, :invoke, 4}, 1}, {{Port, :open, 2}, 1}, {{:erlang, :open_port, 2}, 1}, {{System, :cmd, 2}, 1}, {{System, :cmd, 3}, 1}, {{HarnessForge.Models, :status, 0}, 1}, {{HarnessForge.Evaluations, :capabilities, 0}, 1}, {{HarnessForge.Execution, :probe, 0}, 1}, {{HarnessForge.Execution.Coding, :availability, ...}, ...}, ...]
+......................................................................................................................................
+
+110) test recorded results distinguish browser proof, missing images and unproved task benefit (HarnessForgeWeb.VerificationTest)
+     test/harness_forge_web/verification_test.exs:16
+     Assertion with == failed
+     code:  assert response.status == 200
+     left:  404
+     right: 200
+     stacktrace:
+       test/harness_forge_web/verification_test.exs:95: anonymous fn/3 in HarnessForgeWeb.VerificationTest."test recorded results distinguish browser proof, missing images and unproved task benefit"/1
+       (elixir 1.19.5) lib/enum.ex:2520: Enum."-reduce/3-lists^foldl/2-0-"/3
+       test/harness_forge_web/verification_test.exs:93: (test)
+
+.
+
+111) test generations, revocation and configuration changes withhold selected completion (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:208
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+112) test real required capture and failed optional receipt survive reload with exact named provenance and usable retrieval (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:48
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+113) test required failure blocks and an optional partial capture cannot hide active corpus members (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:134
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+114) test capture choices paginate metadata and bind caller, connection and generation (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:264
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+115) test unknown fields, duplicate roles, optional-only and foreign receipts cannot become saved authority (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:317
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+116) test a queued receipt cannot silently become a completed declaration after scan (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:241
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+117) test exact revision, declaration version, digest and caller scope reject stale or forged selection (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:163
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+118) test one directory receipt cannot complete undeclared corpus membership (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:149
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+119) test an absent receipt or an optional missing directory does not fabricate an outage (HarnessForge.Evidence.RequirementsTest)
+     test/harness_forge/evidence/requirements_test.exs:109
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       (harness_forge 0.1.0) test/support/company_analysis_fixture.ex:9: HarnessForge.CompanyAnalysisFixture.create!/1
+       test/harness_forge/evidence/requirements_test.exs:10: HarnessForge.Evidence.RequirementsTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/requirements_test.exs:1: HarnessForge.Evidence.RequirementsTest.__ex_unit__/2
+
+
+
+120) test the owning publication entry holds the privacy fence before its first SQL operation (HarnessForge.RevisionUseHoldProposalTest)
+     test/harness_forge/revision_use_hold_proposal_test.exs:38
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_hold_proposal_test.exs:12: HarnessForge.RevisionUseHoldProposalTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_hold_proposal_test.exs:1: HarnessForge.RevisionUseHoldProposalTest.__ex_unit__/2
+
+
+
+121) test a restriction committed before publication admits no claim or citation (HarnessForge.RevisionUseHoldProposalTest)
+     test/harness_forge/revision_use_hold_proposal_test.exs:68
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_hold_proposal_test.exs:12: HarnessForge.RevisionUseHoldProposalTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_hold_proposal_test.exs:1: HarnessForge.RevisionUseHoldProposalTest.__ex_unit__/2
+
+
+
+122) test a concurrent publication waits outside SQL while the restriction owns the privacy fence (HarnessForge.RevisionUseHoldProposalTest)
+     test/harness_forge/revision_use_hold_proposal_test.exs:94
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_hold_proposal_test.exs:12: HarnessForge.RevisionUseHoldProposalTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_hold_proposal_test.exs:1: HarnessForge.RevisionUseHoldProposalTest.__ex_unit__/2
+
+
+
+123) test an externally owned transaction is refused before publication takes a privacy fence (HarnessForge.RevisionUseHoldProposalTest)
+     test/harness_forge/revision_use_hold_proposal_test.exs:61
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/revision_use_hold_proposal_test.exs:12: HarnessForge.RevisionUseHoldProposalTest.__ex_unit_setup_1/1
+       test/harness_forge/revision_use_hold_proposal_test.exs:1: HarnessForge.RevisionUseHoldProposalTest.__ex_unit__/2
+
+
+
+124) test exact wire replay returns its original ACK without advancing the persisted call (HarnessForge.Graphiti.ObservationLedgerTest)
+     test/harness_forge/graphiti_observation_ledger_test.exs:124
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/graphiti_observation_ledger_test.exs:50: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit_setup_1/1
+       test/harness_forge/graphiti_observation_ledger_test.exs:1: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit__/2
+
+
+
+125) test persisted capsules ACKs and immutable event identities contain no observed bodies (HarnessForge.Graphiti.ObservationLedgerTest)
+     test/harness_forge/graphiti_observation_ledger_test.exs:198
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/graphiti_observation_ledger_test.exs:50: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit_setup_1/1
+       test/harness_forge/graphiti_observation_ledger_test.exs:1: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit__/2
+
+
+
+126) test finished metadata-only calls preserve their final ACK and cannot resume (HarnessForge.Graphiti.ObservationLedgerTest)
+     test/harness_forge/graphiti_observation_ledger_test.exs:328
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/graphiti_observation_ledger_test.exs:50: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit_setup_1/1
+       test/harness_forge/graphiti_observation_ledger_test.exs:1: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit__/2
+
+
+
+127) test a metadata-only reserved attempt consumes its binding once and ACK replay cannot rearm it (HarnessForge.Graphiti.ObservationLedgerTest)
+     test/harness_forge/graphiti_observation_ledger_test.exs:278
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/graphiti_observation_ledger_test.exs:50: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit_setup_1/1
+       test/harness_forge/graphiti_observation_ledger_test.exs:1: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit__/2
+
+
+
+128) test invalid ACK versions stale sequence and event conflict roll back the complete P V C transaction (HarnessForge.Graphiti.ObservationLedgerTest)
+     test/harness_forge/graphiti_observation_ledger_test.exs:161
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/graphiti_observation_ledger_test.exs:50: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit_setup_1/1
+       test/harness_forge/graphiti_observation_ledger_test.exs:1: HarnessForge.Graphiti.ObservationLedgerTest.__ex_unit__/2
+
+
+
+129) test pause/resume/cancel use exact revisions and invalidate old leases (HarnessForge.Evidence.CaptureTest)
+     test/harness_forge/evidence/capture_test.exs:24
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/capture_test.exs:13: HarnessForge.Evidence.CaptureTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/capture_test.exs:1: HarnessForge.Evidence.CaptureTest.__ex_unit__/2
+
+
+
+130) test expired lease recovery reobserves frontier and cannot skip a committed but unacked batch (HarnessForge.Evidence.CaptureTest)
+     test/harness_forge/evidence/capture_test.exs:71
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/capture_test.exs:13: HarnessForge.Evidence.CaptureTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/capture_test.exs:1: HarnessForge.Evidence.CaptureTest.__ex_unit__/2
+
+
+
+131) test an incomplete scan cannot remove an unseen corpus member (HarnessForge.Evidence.CaptureTest)
+     test/harness_forge/evidence/capture_test.exs:120
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/capture_test.exs:13: HarnessForge.Evidence.CaptureTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/capture_test.exs:1: HarnessForge.Evidence.CaptureTest.__ex_unit__/2
+
+
+
+132) test physical capture spans batches and replay does not duplicate revisions (HarnessForge.Evidence.CaptureTest)
+     test/harness_forge/evidence/capture_test.exs:37
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/capture_test.exs:13: HarnessForge.Evidence.CaptureTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/capture_test.exs:1: HarnessForge.Evidence.CaptureTest.__ex_unit__/2
+
+......................................................................................................................................
+Finished in 480.8 seconds (17.1s async, 463.6s sync)
+1546 tests, 132 failures, 28 skipped
+
+Generating cover results ...
+
+| Percentage | Module                                         |
+|------------|------------------------------------------------|
+|      0.00% | HarnessForge.Evidence.CaptureFrontier          |
+|      0.00% | HarnessForge.Evidence.CaptureItem              |
+|      0.00% | HarnessForge.Evidence.CorpusMember             |
+|      0.00% | HarnessForge.Graphiti.IngestIntent             |
+|      0.00% | HarnessForge.Graphiti.ObservationLedger        |
+|      0.00% | HarnessForge.Graphiti.ReaderProfile            |
+|      0.00% | HarnessForge.Jobs.Operation                    |
+|      0.00% | HarnessForge.Jobs.Sync                         |
+|      0.00% | HarnessForge.Models.GraphConsent               |
+|      0.00% | HarnessForgeWeb.CoreComponents                 |
+|      0.00% | HarnessForgeWeb.Layouts                        |
+|      0.00% | HarnessForgeWeb.PageController                 |
+|      0.00% | HarnessForgeWeb.PageHTML                       |
+|      0.00% | Inspect.HarnessForge.Execution.CodingTransport |
+|      5.48% | HarnessForge.Graphiti.Worker                   |
+|      7.36% | HarnessForge.Graphiti.Runtime                  |
+|      7.74% | HarnessForge.Graphiti.SearchCompletion         |
+|      7.89% | HarnessForge.Iteration15PublicCases            |
+|      9.52% | HarnessForge.Graphiti.Pipe                     |
+|     12.42% | HarnessForge.Graphiti.Backend                  |
+|     19.00% | HarnessForge.Graphiti.Completion               |
+|     20.00% | HarnessForge.Jobs.PassageIndex                 |
+|     21.43% | HarnessForgeWeb.EvaluationReason               |
+|     21.79% | HarnessForge.CLI                               |
+|     26.32% | HarnessForge.Execution.Docker                  |
+|     28.57% | HarnessForge.Execution                         |
+|     28.70% | HarnessForge.Graphiti.SearchIntent             |
+|     30.77% | HarnessForge.Graphiti                          |
+|     31.27% | HarnessForge.Graphiti.RootObserver             |
+|     31.48% | HarnessForge.Graphiti.Bootstrap                |
+|     32.35% | HarnessForge.Graphiti.ReplayTranscript         |
+|     40.00% | HarnessForge.Jobs.Capture                      |
+|     42.22% | HarnessForge.Graphiti.Inventory                |
+|     42.86% | HarnessForge.StartupGate                       |
+|     43.86% | HarnessForge.Graphiti.Image                    |
+|     44.41% | HarnessForge.Evidence.GraphManifests           |
+|     48.23% | HarnessForge.Execution.Coding                  |
+|     48.98% | HarnessForge.Graphiti.ResponseProof            |
+|     50.00% | HarnessForgeWeb.ErrorHTML                      |
+|     58.33% | HarnessForge.Evidence.Capture.Scanner          |
+|     62.50% | HarnessForge.DataCase                          |
+|     68.18% | HarnessForgeWeb.AccountPanel                   |
+|     70.43% | HarnessForgeWeb.CompanyAssessmentState         |
+|     72.31% | HarnessForge.Evaluations                       |
+|     72.73% | HarnessForge.Audit                             |
+|     73.33% | HarnessForge.Execution.CodingSession           |
+|     73.74% | HarnessForge.Models.StageAuthority             |
+|     75.00% | HarnessForge.Application                       |
+|     75.00% | HarnessForge.Harnesses.Templates               |
+|     75.00% | HarnessForge.Models.AttemptGateway             |
+|     77.19% | HarnessForge.Models.Proposal                   |
+|     77.50% | HarnessForge.Evidence.RevisionUseHolds         |
+|     77.78% | HarnessForgeWeb.Plugs.LocalOrigin              |
+|     78.67% | HarnessForgeWeb.Company.Requirements           |
+|     78.74% | HarnessForge.Company.Readiness                 |
+|     79.38% | HarnessForge.Connectors.Jira                   |
+|     80.00% | HarnessForge.Execution.Command                 |
+|     80.00% | HarnessForgeWeb.SessionHTML                    |
+|     80.00% | HarnessForgeWeb.Telemetry                      |
+|     80.00% | HarnessForgeWeb.VerificationController         |
+|     80.70% | HarnessForge.Models.CodexProtocol              |
+|     80.75% | HarnessForgeWeb.PackageReadiness               |
+|     80.91% | HarnessForge.Accounts.Provider                 |
+|     80.97% | HarnessForge.Evidence.Capture                  |
+|     81.17% | HarnessForge.Evidence.Corpora                  |
+|     81.25% | HarnessForge.Demo                              |
+|     81.48% | HarnessForge.Workspaces                        |
+|     82.83% | HarnessForgeWeb.CorpusReviewLive               |
+|     83.19% | HarnessForge.Graphiti.Protocol                 |
+|     83.33% | HarnessForge.Execution.CodingTransport         |
+|     83.33% | HarnessForge.Models.OpenAI                     |
+|     83.48% | HarnessForge.Evidence.SetupCaptureBounds       |
+|     83.72% | HarnessForge.Execution.RelayPlug               |
+|     83.90% | HarnessForge.Models.RuntimeProtocol            |
+|     84.08% | HarnessForge.Company.Retrieval                 |
+|     84.09% | HarnessForge.MCP.SourceTools                   |
+|     84.09% | HarnessForge.Models.Stages                     |
+|     84.75% | HarnessForge.Evaluation.TaskSuite              |
+|     84.97% | HarnessForge.Evidence.OriginV2                 |
+|     84.99% | HarnessForge.Company.CorpusReview              |
+|     85.07% | HarnessForge.MCP.Protocol                      |
+|     85.21% | HarnessForge.Connectors.GitHubProjects         |
+|     85.58% | HarnessForge.Company.AnalysisV2                |
+|     85.71% | HarnessForge.Evidence.Store                    |
+|     85.71% | HarnessForge.Graphiti.CompletionCommitment     |
+|     85.71% | HarnessForge.Graphiti.NativeProjection         |
+|     85.71% | HarnessForge.MCP.Clients                       |
+|     85.71% | HarnessForgeWeb.SessionController              |
+|     85.96% | HarnessForge.Company.ReadinessProjection       |
+|     86.36% | HarnessForge.Connectors.Common                 |
+|     86.36% | HarnessForge.Evidence.GraphSources             |
+|     86.61% | HarnessForgeWeb.Plugs.MCP                      |
+|     86.67% | HarnessForge.Graphiti.Private                  |
+|     86.87% | HarnessForge.Chat.Snapshot                     |
+|     86.89% | HarnessForge.Evidence.Passages                 |
+|     86.91% | HarnessForgeWeb.CompanyPanel                   |
+|     87.16% | HarnessForge.Connectors.GitHub                 |
+|     87.18% | HarnessForge.Execution.Relay                   |
+|     87.37% | HarnessForgeWeb.PortalLive                     |
+|     87.73% | HarnessForge.Connectors.Slack                  |
+|     87.88% | HarnessForge.Connectors.ServiceAccount         |
+|     87.97% | HarnessForge.Graphiti.BackendProfile           |
+|     88.24% | HarnessForge.Evidence.Requirements             |
+|     88.24% | HarnessForge.MCP.ClientContext                 |
+|     88.24% | HarnessForge.Models.Ollama                     |
+|     88.67% | HarnessForge.Models.HTTP                       |
+|     88.85% | HarnessForgeWeb.SetupLive                      |
+|     88.89% | HarnessForge.Privacy                           |
+|     88.89% | HarnessForge.Privacy.Files                     |
+|     88.89% | HarnessForgeWeb.MCPAccessController            |
+|     89.03% | HarnessForge.Artifacts                         |
+|     89.47% | HarnessForge.Evidence.Capture.Writer           |
+|     89.62% | HarnessForge.Execution.CodexCommandPolicy      |
+|     89.68% | HarnessForge.Graphiti.LaunchProfile            |
+|     89.76% | HarnessForge.Connectors.Confluence             |
+|     90.10% | HarnessForge.Evidence.LocalImport              |
+|     90.13% | HarnessForge.Graphiti.SchemaPolicy             |
+|     90.29% | HarnessForgeWeb.HarnessLive                    |
+|     90.91% | HarnessForge.Company.AssessmentAttempts        |
+|     91.01% | HarnessForge.Models.RunAuthorization           |
+|     91.49% | HarnessForge.Chat                              |
+|     91.53% | HarnessForge.Connectors.Registry               |
+|     91.67% | HarnessForge.Adapters.Registry                 |
+|     91.67% | HarnessForge.Releases.Validation               |
+|     91.74% | HarnessForge.Evidence.SetupCapture             |
+|     91.76% | HarnessForgeWeb.HarnessDelivery                |
+|     91.89% | HarnessForge.Execution.Codex                   |
+|     91.94% | HarnessForge.Chat.Retrieval                    |
+|     92.05% | HarnessForge.Company.Assessments               |
+|     92.31% | HarnessForge.Company.EvidenceBundle            |
+|     92.31% | HarnessForgeWeb.Plugs.OperatorSession          |
+|     92.50% | HarnessForge.MCP.Auth                          |
+|     92.69% | HarnessForgeWeb.Company.Analysis               |
+|     92.98% | HarnessForge.Graphiti.ObservationFlow          |
+|     93.10% | HarnessForge.Connectors.GitHubAccount          |
+|     93.21% | HarnessForge.Company.Analysis                  |
+|     93.39% | HarnessForge.Company.SetupRuns                 |
+|     93.44% | HarnessForge.Contracts                         |
+|     93.51% | HarnessForge.Models.Ledger                     |
+|     93.55% | HarnessForgeWeb.CommandApproval                |
+|     93.65% | HarnessForge.Company.SetupSessions             |
+|     93.75% | HarnessForge.Chat.Output                       |
+|     93.75% | HarnessForge.CommandApprovalsFixture           |
+|     93.88% | HarnessForge.Models.StageControl               |
+|     93.94% | HarnessForge.Compiler                          |
+|     94.12% | HarnessForge.Company.AssessmentValidation      |
+|     94.12% | HarnessForge.Models.Profile                    |
+|     94.20% | HarnessForgeWeb.ChatPanel                      |
+|     94.44% | HarnessForge.Privacy.Company                   |
+|     94.47% | HarnessForge.Privacy.Snapshot                  |
+|     94.66% | HarnessForge.Harnesses                         |
+|     94.74% | HarnessForge.Evaluation.HoldoutSuite           |
+|     94.87% | HarnessForge.Privacy.Purge                     |
+|     95.00% | HarnessForge.Models.Configuration              |
+|     95.11% | HarnessForge.Evidence                          |
+|     95.12% | HarnessForge.MCP.DisclosureGrants              |
+|     95.24% | HarnessForge.Evaluation.HistoricalFtoaSuite    |
+|     95.24% | HarnessForge.MCP.Tools                         |
+|     95.24% | HarnessForge.Models.LocalModelIdentity         |
+|     95.30% | HarnessForge.Models.Runtime                    |
+|     95.76% | HarnessForgeWeb.Company.CorpusReview           |
+|     96.10% | HarnessForge.Execution.CommandApprovals        |
+|     96.15% | HarnessForgeWeb.VerificationHTML               |
+|     96.19% | HarnessForge.Accounts                          |
+|     96.30% | HarnessForge.Decisions                         |
+|     96.30% | HarnessForge.Models                            |
+|     96.30% | HarnessForge.Models.CompanyAnalysis            |
+|     96.30% | HarnessForgeWeb.MCPAccessHTML                  |
+|     96.36% | HarnessForgeWeb.Company.Guide                  |
+|     96.41% | HarnessForge.Releases                          |
+|     96.59% | HarnessForge.Company                           |
+|     97.14% | HarnessForge.Readiness                         |
+|     97.18% | HarnessForge.Evidence.Origin                   |
+|     97.19% | HarnessForgeWeb.Company.Assessment             |
+|     97.92% | HarnessForge.CodingDockerFixture               |
+|     98.10% | HarnessForgeWeb.Company.Plan                   |
+|     98.51% | HarnessForge.Adapters.OpenCode                 |
+|     98.68% | HarnessForge.Adapters.ClaudeCode               |
+|     99.11% | HarnessForgeWeb.Company.Catalog                |
+|    100.00% | HarnessForge                                   |
+|    100.00% | HarnessForge.Adapters.Codex                    |
+|    100.00% | HarnessForge.Chat.Intent                       |
+|    100.00% | HarnessForge.Company.Assessment                |
+|    100.00% | HarnessForge.Company.Plan                      |
+|    100.00% | HarnessForge.Company.PlanDecision              |
+|    100.00% | HarnessForge.Company.Profile                   |
+|    100.00% | HarnessForge.Company.Project                   |
+|    100.00% | HarnessForge.Company.Repository                |
+|    100.00% | HarnessForge.Company.RetrievalItem             |
+|    100.00% | HarnessForge.Company.RetrievalRun              |
+|    100.00% | HarnessForge.Company.SetupRun                  |
+|    100.00% | HarnessForge.Company.SetupRunCommand           |
+|    100.00% | HarnessForge.Company.SetupRunConfig            |
+|    100.00% | HarnessForge.Company.SetupRunOperation         |
+|    100.00% | HarnessForge.Company.SetupRunPreparation       |
+|    100.00% | HarnessForge.Company.SetupRunState             |
+|    100.00% | HarnessForge.Company.SetupSession              |
+|    100.00% | HarnessForge.Company.TaskRubric                |
+|    100.00% | HarnessForge.Company.Validation                |
+|    100.00% | HarnessForge.CompanyAnalysisFixture            |
+|    100.00% | HarnessForge.CompanyAssessmentFixture          |
+|    100.00% | HarnessForge.Contracts.Connector               |
+|    100.00% | HarnessForge.Contracts.Error                   |
+|    100.00% | HarnessForge.Contracts.ModelProvider           |
+|    100.00% | HarnessForge.Contracts.RuntimeAdapter          |
+|    100.00% | HarnessForge.Evaluation.Run                    |
+|    100.00% | HarnessForge.Evidence.AuditEvent               |
+|    100.00% | HarnessForge.Evidence.CaptureRun               |
+|    100.00% | HarnessForge.Evidence.Citation                 |
+|    100.00% | HarnessForge.Evidence.Claim                    |
+|    100.00% | HarnessForge.Evidence.Connection               |
+|    100.00% | HarnessForge.Evidence.Corpus                   |
+|    100.00% | HarnessForge.Evidence.Decision                 |
+|    100.00% | HarnessForge.Evidence.Goal                     |
+|    100.00% | HarnessForge.Evidence.Passage                  |
+|    100.00% | HarnessForge.Evidence.PassageSet               |
+|    100.00% | HarnessForge.Evidence.Revision                 |
+|    100.00% | HarnessForge.Evidence.SetupCaptureBinding      |
+|    100.00% | HarnessForge.Evidence.SetupCaptureCharge       |
+|    100.00% | HarnessForge.Evidence.SetupCaptureCounter      |
+|    100.00% | HarnessForge.Evidence.SetupCapturePage         |
+|    100.00% | HarnessForge.Evidence.Source                   |
+|    100.00% | HarnessForge.Execution.CommandApproval         |
+|    100.00% | HarnessForge.Execution.Relay.Handle            |
+|    100.00% | HarnessForge.Goals                             |
+|    100.00% | HarnessForge.Harnesses.ArtifactBinding         |
+|    100.00% | HarnessForge.Models.Anthropic                  |
+|    100.00% | HarnessForge.Models.Budget                     |
+|    100.00% | HarnessForge.Models.OpenAIResponses            |
+|    100.00% | HarnessForge.Models.Provider                   |
+|    100.00% | HarnessForge.Models.Request                    |
+|    100.00% | HarnessForge.Models.RunAuthorizationRecord     |
+|    100.00% | HarnessForge.Models.RunAuthorizationState      |
+|    100.00% | HarnessForge.Models.RunDisclosure              |
+|    100.00% | HarnessForge.Models.Settings                   |
+|    100.00% | HarnessForge.Models.StageAttempt               |
+|    100.00% | HarnessForge.Models.StageConfig                |
+|    100.00% | HarnessForge.Models.StageConsent               |
+|    100.00% | HarnessForge.Privacy.SetupHistory              |
+|    100.00% | HarnessForge.Releases.Approval                 |
+|    100.00% | HarnessForge.Releases.Channel                  |
+|    100.00% | HarnessForge.Releases.Event                    |
+|    100.00% | HarnessForge.Repo                              |
+|    100.00% | HarnessForge.SetupRunModelsFixture             |
+|    100.00% | HarnessForgeWeb                                |
+|    100.00% | HarnessForgeWeb.Company.ReadinessFacts         |
+|    100.00% | HarnessForgeWeb.ConnCase                       |
+|    100.00% | HarnessForgeWeb.Endpoint                       |
+|    100.00% | HarnessForgeWeb.ErrorJSON                      |
+|    100.00% | HarnessForgeWeb.HarnessDownloadController      |
+|    100.00% | HarnessForgeWeb.PackageBuild                   |
+|    100.00% | HarnessForgeWeb.PackageExport                  |
+|    100.00% | HarnessForgeWeb.Router                         |
+|    100.00% | Inspect.HarnessForge.Evaluation.Run            |
+|    100.00% | Inspect.HarnessForge.Execution.CommandApproval |
+|    100.00% | Inspect.HarnessForge.Execution.Relay.Handle    |
+|------------|------------------------------------------------|
+|     75.50% | Total                                          |
+
+Coverage test failed, threshold not met:
+
+    Coverage:   75.50%
+    Threshold:  90.00%
+
+Generated HTML coverage results in "cover" directory
+real 505.37
+user 750.86
+sys 78.10
+
+##### run metadata (appended by the benchmark wrapper after the command finished) #####
+=== [test] started_at=2026-11-08T11:26:32Z cwd=<repo>
+=== command: /usr/bin/time -p mix test --cover 2>&1 | tee test.log
+=== load_before: 8.77 8.56 9.14
+=== exit_status=3
+=== wall_seconds=505.401
+=== load_after: 9.23 9.85 9.98
+=== ended_at=2026-11-08T11:34:57Z

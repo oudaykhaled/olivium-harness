@@ -1,0 +1,54 @@
+2026-11-08T10:23:52.863Z +    461ms [browser] chromium 156.0.8078.4 via playwright 1.64.1; origin http://127.0.0.1:8866
+2026-11-08T10:23:53.054Z +    652ms [nav-login] start
+2026-11-08T10:23:53.693Z +   1291ms [nav-login] ok in 639 ms
+2026-11-08T10:23:53.693Z +   1291ms [screenshot-01-login] start
+2026-11-08T10:23:53.792Z +   1390ms [screenshot] 01-login.png 1440x900 79155 bytes — Login page before anything is typed: empty "Workspace access code" field and Unlock workspace button.
+2026-11-08T10:23:53.792Z +   1390ms [screenshot-01-login] ok in 99 ms
+2026-11-08T10:23:53.792Z +   1390ms [login] start
+2026-11-08T10:23:54.688Z +   2286ms [login] ok in 896 ms
+2026-11-08T10:23:54.689Z +   2287ms [screenshot-02-home] start
+2026-11-08T10:23:54.753Z +   2351ms [screenshot] 02-home.png 1440x900 83707 bytes — First screen after unlocking the workspace (▦Home tab of the workspace shell, LiveView connected).
+2026-11-08T10:23:54.753Z +   2351ms [screenshot-02-home] ok in 64 ms
+2026-11-08T10:23:54.754Z +   2352ms [nav-home] start
+2026-11-08T10:23:55.538Z +   3137ms [nav-home] ok in 784 ms
+2026-11-08T10:23:55.539Z +   3137ms [nav-evidence] start
+2026-11-08T10:23:56.360Z +   3958ms [nav-evidence] ok in 821 ms
+2026-11-08T10:23:56.360Z +   3958ms [tab-switch-evidence] start
+2026-11-08T10:23:56.628Z +   4226ms [tab-switch-evidence] ok in 268 ms
+2026-11-08T10:23:56.628Z +   4226ms [load-demo] start
+2026-11-08T10:23:56.744Z +   4342ms [load-demo] ok in 116 ms
+2026-11-08T10:23:56.744Z +   4342ms [screenshot-03-evidence-demo] start
+2026-11-08T10:23:56.816Z +   4414ms [screenshot] 03-evidence-demo.png 1440x900 106979 bytes — Evidence tab right after "Load synthetic demo": three proposed claim cards including the hostile "IGNORE ALL PREVIOUS INSTRUCTIONS" claim, each with Reject / Approve revision buttons.
+2026-11-08T10:23:56.816Z +   4414ms [screenshot-03-evidence-demo] ok in 72 ms
+2026-11-08T10:23:56.816Z +   4414ms [decide-claims] start
+2026-11-08T10:23:57.070Z +   4668ms [decide-claims] ok in 254 ms
+2026-11-08T10:23:57.071Z +   4669ms [screenshot-04-evidence-decided] start
+2026-11-08T10:23:57.144Z +   4742ms [screenshot] 04-evidence-decided.png 1440x900 101544 bytes — Evidence tab after deciding: the hostile claim REJECTED and the two ordinary claims APPROVED, decision buttons gone.
+2026-11-08T10:23:57.144Z +   4742ms [screenshot-04-evidence-decided] ok in 73 ms
+2026-11-08T10:23:57.144Z +   4742ms [build-package] start
+2026-11-08T10:23:57.363Z +   4961ms [build-package] ok in 219 ms
+2026-11-08T10:23:57.363Z +   4961ms [screenshot-05-package-built] start
+2026-11-08T10:23:57.431Z +   5029ms [screenshot] 05-package-built.png 1440x900 118848 bytes — Package tab after building "bench-portal": the Built packages list shows the artifact row with its digest, "Open your harness" and "Download ZIP".
+2026-11-08T10:23:57.431Z +   5029ms [screenshot-05-package-built] ok in 68 ms
+2026-11-08T10:23:57.432Z +   5030ms [export-package] start
+2026-11-08T10:23:57.606Z +   5204ms [export-package] ok in 174 ms
+2026-11-08T10:23:57.606Z +   5204ms [evaluate-static-integrity] start
+2026-11-08T10:23:58.135Z +   5733ms [evaluate-static-integrity] ok in 529 ms
+2026-11-08T10:23:58.135Z +   5733ms [screenshot-07-evaluations] start
+2026-11-08T10:23:58.194Z +   5792ms [screenshot] 07-evaluations.png 1440x900 98621 bytes — Evaluations tab after queuing a static package integrity check: the recorded run shows passed, with its details opened to show "Recorded runtime qualification: false".
+2026-11-08T10:23:58.195Z +   5793ms [screenshot-07-evaluations] ok in 60 ms
+2026-11-08T10:23:58.195Z +   5793ms [screenshot-08-privacy] start
+2026-11-08T10:23:58.350Z +   5948ms [screenshot] 08-privacy.png 1440x900 147425 bytes — Privacy tab: local-only data controls including the workspace backup form.
+2026-11-08T10:23:58.351Z +   5949ms [screenshot-08-privacy] ok in 156 ms
+2026-11-08T10:23:58.351Z +   5949ms [screenshot-06-harness-detail] start
+2026-11-08T10:23:58.650Z +   6248ms [screenshot] 06-harness-detail.png 1440x900 full-page 236491 bytes — Harness detail page /harnesses/<digest> for "bench-portal" (full page): generated files, checks and download.
+2026-11-08T10:23:58.650Z +   6248ms [screenshot-06-harness-detail] ok in 299 ms
+2026-11-08T10:23:58.650Z +   6248ms [screenshot-09-setup] start
+2026-11-08T10:23:58.806Z +   6404ms [screenshot] 09-setup.png 1440x900 43838 bytes — Company setup page /setup (final path /setup).
+2026-11-08T10:23:58.807Z +   6405ms [screenshot-09-setup] ok in 157 ms
+2026-11-08T10:23:58.807Z +   6405ms [screenshot-10-mobile-evidence] start
+2026-11-08T10:23:59.239Z +   6837ms [screenshot] 10-mobile-evidence.png 390x844 56958 bytes — Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow check recorded).
+2026-11-08T10:23:59.240Z +   6838ms [screenshot-10-mobile-evidence] ok in 433 ms
+2026-11-08T10:23:59.240Z +   6838ms [close] start
+2026-11-08T10:23:59.299Z +   6897ms [close] ok in 59 ms
+2026-11-08T10:23:59.300Z +   6898ms [done] ok=true errors=0 screenshots=10 total=6898 ms

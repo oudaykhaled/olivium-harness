@@ -1,0 +1,36 @@
+{
+  "arm_sha256": [
+    "905e41274531cdc2f57c1ad73d4d2ab7ff64b5c263f35ec199088178c44e808a"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.033297,
+  "exit_code": 0,
+  "grade": {
+    "f2p_passed": 1,
+    "f2p_total": 1,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 1251,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [
+      "test/req.fresh.js"
+    ],
+    "solved": true,
+    "status": "ok",
+    "test_exit": "0",
+    "test_patch_applied": true,
+    "tests_seen": 1252
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-expressjs-express-7366:v1",
+  "image_id": "sha256:0ae429260abde0e2c489ba2fb3a8ad89a238b82a683daa01e51f751f51541b6c",
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "permission_mode": "bypassPermissions",
+  "prompt_sha256": "f3638f3030a365b3b29bd9b2c77bd7698813af19b2692d379dceac53d893eeb3",
+  "settings_sha256": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647"
+}

@@ -1,0 +1,11 @@
+{
+  "arm": "generic",
+  "attempt": 1,
+  "finished_at": "2026-11-09T15:54:16Z",
+  "repeat": 3,
+  "run_id": "pallets-flask-6096.generic.r3",
+  "stage": "done",
+  "started_at": "2026-11-09T15:53:33Z",
+  "status": "completed",
+  "task_id": "pallets-flask-6096"
+}

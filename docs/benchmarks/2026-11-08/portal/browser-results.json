@@ -1,0 +1,566 @@
+{
+  "schema": "harnessforge-portal-bench/1",
+  "started_at": "2026-11-08T10:23:52.402Z",
+  "ended_at": "2026-11-08T10:23:59.300Z",
+  "origin": "http://127.0.0.1:8866",
+  "workspace": "<scratch>/portal-ws",
+  "out_dir": "<repo>/docs/benchmarks/2026-11-08/portal",
+  "commit": "628676e",
+  "node_version": "v24.10.0",
+  "playwright_version": "1.64.1",
+  "browser_version": "156.0.8078.4",
+  "viewports": {
+    "desktop": "1440x900",
+    "mobile": "390x844"
+  },
+  "settings": {
+    "package_name": "bench-portal",
+    "nav_samples": 5,
+    "step_timeout_ms": 30000,
+    "eval_timeout_ms": 90000
+  },
+  "methods": {
+    "navigation_timing": "page.goto(url, {waitUntil: \"load\"}); values from performance.getEntriesByType(\"navigation\")[0] in ms relative to navigation start; live_connected_ms = performance.now() captured by a MutationObserver installed via addInitScript when the first .phx-connected element appears (null when the page has no LiveView).",
+    "action_latency": "In-page: a capture-phase click listener on document records performance.now() at the real click; a MutationObserver records performance.now() when the target selector (optionally with text) first matches. latency_ms = done - click. No CDP round-trip in the measured interval.",
+    "step_ms": "Node-side wall time (Date.now()) of the whole step including Playwright round trips; coarser than the in-page numbers.",
+    "summary": "p50 = median of the samples (mean of the two middle values for an even count)."
+  },
+  "steps": [
+    {
+      "step": "nav-login",
+      "ok": true,
+      "ms": 639
+    },
+    {
+      "step": "screenshot-01-login",
+      "ok": true,
+      "ms": 99
+    },
+    {
+      "step": "login",
+      "ok": true,
+      "ms": 896
+    },
+    {
+      "step": "screenshot-02-home",
+      "ok": true,
+      "ms": 64
+    },
+    {
+      "step": "nav-home",
+      "ok": true,
+      "ms": 784
+    },
+    {
+      "step": "nav-evidence",
+      "ok": true,
+      "ms": 821
+    },
+    {
+      "step": "tab-switch-evidence",
+      "ok": true,
+      "ms": 268
+    },
+    {
+      "step": "load-demo",
+      "ok": true,
+      "ms": 116
+    },
+    {
+      "step": "screenshot-03-evidence-demo",
+      "ok": true,
+      "ms": 72
+    },
+    {
+      "step": "decide-claims",
+      "ok": true,
+      "ms": 254
+    },
+    {
+      "step": "screenshot-04-evidence-decided",
+      "ok": true,
+      "ms": 73
+    },
+    {
+      "step": "build-package",
+      "ok": true,
+      "ms": 219
+    },
+    {
+      "step": "screenshot-05-package-built",
+      "ok": true,
+      "ms": 68
+    },
+    {
+      "step": "export-package",
+      "ok": true,
+      "ms": 174
+    },
+    {
+      "step": "evaluate-static-integrity",
+      "ok": true,
+      "ms": 529
+    },
+    {
+      "step": "screenshot-07-evaluations",
+      "ok": true,
+      "ms": 60
+    },
+    {
+      "step": "screenshot-08-privacy",
+      "ok": true,
+      "ms": 156
+    },
+    {
+      "step": "screenshot-06-harness-detail",
+      "ok": true,
+      "ms": 299
+    },
+    {
+      "step": "screenshot-09-setup",
+      "ok": true,
+      "ms": 157
+    },
+    {
+      "step": "screenshot-10-mobile-evidence",
+      "ok": true,
+      "ms": 433
+    },
+    {
+      "step": "close",
+      "ok": true,
+      "ms": 59
+    }
+  ],
+  "navigation_timing": {
+    "login": {
+      "url": "/login",
+      "live_view": false,
+      "samples": [
+        {
+          "http_status": 200,
+          "final_path": "/login",
+          "ttfb_ms": 88.7,
+          "dom_content_loaded_ms": 160.6,
+          "load_event_end_ms": 160.6,
+          "live_connected_ms": null,
+          "transfer_size_bytes": 1934,
+          "encoded_body_bytes": 1634,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/login",
+          "ttfb_ms": 42.3,
+          "dom_content_loaded_ms": 60.2,
+          "load_event_end_ms": 60.3,
+          "live_connected_ms": null,
+          "transfer_size_bytes": 1932,
+          "encoded_body_bytes": 1632,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/login",
+          "ttfb_ms": 76.5,
+          "dom_content_loaded_ms": 85,
+          "load_event_end_ms": 85.8,
+          "live_connected_ms": null,
+          "transfer_size_bytes": 1930,
+          "encoded_body_bytes": 1630,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/login",
+          "ttfb_ms": 65.5,
+          "dom_content_loaded_ms": 74.2,
+          "load_event_end_ms": 74.9,
+          "live_connected_ms": null,
+          "transfer_size_bytes": 1930,
+          "encoded_body_bytes": 1630,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/login",
+          "ttfb_ms": 91.6,
+          "dom_content_loaded_ms": 102.1,
+          "load_event_end_ms": 102.9,
+          "live_connected_ms": null,
+          "transfer_size_bytes": 1934,
+          "encoded_body_bytes": 1634,
+          "redirect_count": 0
+        }
+      ],
+      "summary": {
+        "ttfb_ms": {
+          "p50": 76.5,
+          "min": 42.3,
+          "max": 91.6,
+          "n": 5
+        },
+        "dom_content_loaded_ms": {
+          "p50": 85,
+          "min": 60.2,
+          "max": 160.6,
+          "n": 5
+        },
+        "load_event_end_ms": {
+          "p50": 85.8,
+          "min": 60.3,
+          "max": 160.6,
+          "n": 5
+        }
+      }
+    },
+    "home": {
+      "url": "/",
+      "live_view": true,
+      "samples": [
+        {
+          "http_status": 200,
+          "final_path": "/",
+          "ttfb_ms": 117.5,
+          "dom_content_loaded_ms": 135,
+          "load_event_end_ms": 137.2,
+          "live_connected_ms": 281.2,
+          "transfer_size_bytes": 12551,
+          "encoded_body_bytes": 12251,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/",
+          "ttfb_ms": 37.2,
+          "dom_content_loaded_ms": 51.5,
+          "load_event_end_ms": 53.1,
+          "live_connected_ms": 117.2,
+          "transfer_size_bytes": 12546,
+          "encoded_body_bytes": 12246,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/",
+          "ttfb_ms": 43.3,
+          "dom_content_loaded_ms": 56.8,
+          "load_event_end_ms": 58.4,
+          "live_connected_ms": 120.4,
+          "transfer_size_bytes": 12544,
+          "encoded_body_bytes": 12244,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/",
+          "ttfb_ms": 36.8,
+          "dom_content_loaded_ms": 50.1,
+          "load_event_end_ms": 51.6,
+          "live_connected_ms": 111.6,
+          "transfer_size_bytes": 12541,
+          "encoded_body_bytes": 12241,
+          "redirect_count": 0
+        },
+        {
+          "http_status": 200,
+          "final_path": "/",
+          "ttfb_ms": 38,
+          "dom_content_loaded_ms": 52.1,
+          "load_event_end_ms": 53.7,
+          "live_connected_ms": 111.8,
+          "transfer_size_bytes": 12547,
+          "encoded_body_bytes": 12247,
+          "redirect_count": 0
+        }
+      ],
+      "summary": {
+        "ttfb_ms": {
+          "p50": 38,
+          "min": 36.8,
+          "max": 117.5,
+          "n": 5
+        },
+        "dom_content_loaded_ms": {
+          "p50": 52.1,
+          "min": 50.1,
+          "max": 135,
+          "n": 5
+        },
+        "load_event_end_ms": {
+          "p50": 53.7,
+          "min": 51.6,
+          "max": 137.2,
+          "n": 5
+        },
+        "live_connected_ms": {
+          "p50": 117.2,
+          "min": 111.6,
+          "max": 281.2,
+          "n": 5
+        }
+      }
+    },
+    "evidence": {
+      "url": "/?view=evidence",
+      "live_view": true,
+      "samples": [
+        {
+          "http_status": 200,
+          "final_path": "/?view=evidence",
+          "ttfb_ms": 48.8,
+          "dom_content_loaded_ms": 63.1,
+          "load_event_end_ms": 64.8,
+          "live_connected_ms": 170.7,
+          "transfer_size_bytes": 13633,
+          "encoded_body_bytes": 13333,
+          "redirect_count": 0,
+          "evidence_panel_present": true
+        },
+        {
+          "http_status": 200,
+          "final_path": "/?view=evidence",
+          "ttfb_ms": 53.4,
+          "dom_content_loaded_ms": 66.9,
+          "load_event_end_ms": 68.3,
+          "live_connected_ms": 134.7,
+          "transfer_size_bytes": 13630,
+          "encoded_body_bytes": 13330,
+          "redirect_count": 0,
+          "evidence_panel_present": true
+        },
+        {
+          "http_status": 200,
+          "final_path": "/?view=evidence",
+          "ttfb_ms": 40.1,
+          "dom_content_loaded_ms": 55.3,
+          "load_event_end_ms": 56.7,
+          "live_connected_ms": 117.7,
+          "transfer_size_bytes": 13628,
+          "encoded_body_bytes": 13328,
+          "redirect_count": 0,
+          "evidence_panel_present": true
+        },
+        {
+          "http_status": 200,
+          "final_path": "/?view=evidence",
+          "ttfb_ms": 39.5,
+          "dom_content_loaded_ms": 57.5,
+          "load_event_end_ms": 59.3,
+          "live_connected_ms": 132.3,
+          "transfer_size_bytes": 13623,
+          "encoded_body_bytes": 13323,
+          "redirect_count": 0,
+          "evidence_panel_present": true
+        },
+        {
+          "http_status": 200,
+          "final_path": "/?view=evidence",
+          "ttfb_ms": 46.5,
+          "dom_content_loaded_ms": 62.2,
+          "load_event_end_ms": 63.6,
+          "live_connected_ms": 138.4,
+          "transfer_size_bytes": 13635,
+          "encoded_body_bytes": 13335,
+          "redirect_count": 0,
+          "evidence_panel_present": true
+        }
+      ],
+      "summary": {
+        "ttfb_ms": {
+          "p50": 46.5,
+          "min": 39.5,
+          "max": 53.4,
+          "n": 5
+        },
+        "dom_content_loaded_ms": {
+          "p50": 62.2,
+          "min": 55.3,
+          "max": 66.9,
+          "n": 5
+        },
+        "load_event_end_ms": {
+          "p50": 63.6,
+          "min": 56.7,
+          "max": 68.3,
+          "n": 5
+        },
+        "live_connected_ms": {
+          "p50": 134.7,
+          "min": 117.7,
+          "max": 170.7,
+          "n": 5
+        }
+      }
+    }
+  },
+  "action_latency": {
+    "tab_switch_click_to_evidence_panel": {
+      "latency_ms": 31.3,
+      "node_side_ms": 70,
+      "signal_already_present_before_click": false,
+      "signal": "#evidence-panel"
+    },
+    "load_demo_to_first_claim_card": {
+      "latency_ms": 67.1,
+      "node_side_ms": 89,
+      "signal_already_present_before_click": false,
+      "signal": ".claim-card"
+    },
+    "approve_click_to_card_approved": {
+      "latency_ms": 43.8,
+      "node_side_ms": 66,
+      "signal_already_present_before_click": false,
+      "signal": "#claim-af729343-c9f3-4604-9971-5e2222778557 .pill.approved"
+    },
+    "build_click_to_artifact_row": {
+      "latency_ms": 97,
+      "node_side_ms": 140,
+      "signal_already_present_before_click": false,
+      "signal": "#package-panel .artifact-row[data-export-digest] containing \"bench-portal\""
+    },
+    "export_click_to_status": {
+      "latency_ms": 95.8,
+      "node_side_ms": 136,
+      "signal_already_present_before_click": false,
+      "signal": "[id^=\"package-export-result-\"][role=\"status\"]"
+    },
+    "evaluation_submit_to_passed": {
+      "latency_ms": 318.1,
+      "node_side_ms": 352,
+      "signal_already_present_before_click": false,
+      "signal": "[id^=\"run-\"][data-outcome=\"passed\"]"
+    }
+  },
+  "checks": {
+    "login_submit_to_live_shell_ms": 728,
+    "home_path_after_login": "/",
+    "home_active_tab": "▦Home",
+    "claim_cards_before_demo": 0,
+    "claim_cards_after_demo": 3,
+    "hostile_claim_present": true,
+    "claims_approved": 2,
+    "claims_rejected": 1,
+    "claims_proposed_remaining": 0,
+    "package_form_defaults": {
+      "version": "0.1.0",
+      "runtime": "opencode",
+      "runtime_version": "unqualified"
+    },
+    "artifact_digest": "23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d",
+    "artifact_rows": 1,
+    "export_target": "<scratch>/portal-export-1794133437460",
+    "export_agents_md_exists": true,
+    "export_includes_approved_rule": true,
+    "export_excludes_rejected_claim": true,
+    "export_file_count": 12,
+    "evaluation_run_id": "25bec53b-b189-44eb-95db-d151f0da190e",
+    "evaluation_text_includes_passed": true,
+    "evaluation_text_includes_static": false,
+    "evaluation_runtime_qualified_false_text": "Recorded runtime qualification: false",
+    "harness_detail_load_ms": 131,
+    "harness_detail_title": "Your harness · HarnessForge",
+    "harness_detail_path": "/harnesses/23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d",
+    "setup_http_status": 200,
+    "setup_final_path": "/setup",
+    "setup_title": "Saved company setup · HarnessForge",
+    "mobile_workspace_shell_count": 1,
+    "mobile_no_horizontal_overflow": true
+  },
+  "console": {
+    "pageerror_count": 0,
+    "console_error_count": 0,
+    "console_warning_count": 0,
+    "console_message_counts": {},
+    "request_failed_count": 0,
+    "pageerrors": [],
+    "console_errors": [],
+    "request_failed": []
+  },
+  "screenshots": [
+    {
+      "file": "01-login.png",
+      "caption": "Login page before anything is typed: empty \"Workspace access code\" field and Unlock workspace button.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 79155,
+      "url": "http://127.0.0.1:8866/login"
+    },
+    {
+      "file": "02-home.png",
+      "caption": "First screen after unlocking the workspace (▦Home tab of the workspace shell, LiveView connected).",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 83707,
+      "url": "http://127.0.0.1:8866/"
+    },
+    {
+      "file": "03-evidence-demo.png",
+      "caption": "Evidence tab right after \"Load synthetic demo\": three proposed claim cards including the hostile \"IGNORE ALL PREVIOUS INSTRUCTIONS\" claim, each with Reject / Approve revision buttons.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 106979,
+      "url": "http://127.0.0.1:8866/"
+    },
+    {
+      "file": "04-evidence-decided.png",
+      "caption": "Evidence tab after deciding: the hostile claim REJECTED and the two ordinary claims APPROVED, decision buttons gone.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 101544,
+      "url": "http://127.0.0.1:8866/"
+    },
+    {
+      "file": "05-package-built.png",
+      "caption": "Package tab after building \"bench-portal\": the Built packages list shows the artifact row with its digest, \"Open your harness\" and \"Download ZIP\".",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 118848,
+      "url": "http://127.0.0.1:8866/"
+    },
+    {
+      "file": "07-evaluations.png",
+      "caption": "Evaluations tab after queuing a static package integrity check: the recorded run shows passed, with its details opened to show \"Recorded runtime qualification: false\".",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 98621,
+      "url": "http://127.0.0.1:8866/?artifact=23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d&check=static_integrity&view=evaluations"
+    },
+    {
+      "file": "08-privacy.png",
+      "caption": "Privacy tab: local-only data controls including the workspace backup form.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 147425,
+      "url": "http://127.0.0.1:8866/?artifact=23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d&check=static_integrity&view=evaluations"
+    },
+    {
+      "file": "06-harness-detail.png",
+      "caption": "Harness detail page /harnesses/<digest> for \"bench-portal\" (full page): generated files, checks and download.",
+      "viewport": "1440x900",
+      "full_page": true,
+      "bytes": 236491,
+      "url": "http://127.0.0.1:8866/harnesses/23843af726572adc91c1f550686c82ee4cad42f263be18e01db937b72362470d"
+    },
+    {
+      "file": "09-setup.png",
+      "caption": "Company setup page /setup (final path /setup).",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 43838,
+      "url": "http://127.0.0.1:8866/setup"
+    },
+    {
+      "file": "10-mobile-evidence.png",
+      "caption": "Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow check recorded).",
+      "viewport": "390x844",
+      "full_page": false,
+      "bytes": 56958,
+      "url": "http://127.0.0.1:8866/"
+    }
+  ],
+  "errors": [],
+  "total_ms": 6898,
+  "screenshots_total_bytes": 1073566,
+  "ok": true
+}

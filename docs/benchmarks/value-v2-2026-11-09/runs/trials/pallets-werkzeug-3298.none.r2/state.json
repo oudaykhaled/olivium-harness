@@ -1,0 +1,11 @@
+{
+  "arm": "none",
+  "attempt": 1,
+  "finished_at": "2026-11-10T10:34:52Z",
+  "repeat": 2,
+  "run_id": "pallets-werkzeug-3298.none.r2",
+  "stage": "done",
+  "started_at": "2026-11-10T10:33:50Z",
+  "status": "completed",
+  "task_id": "pallets-werkzeug-3298"
+}

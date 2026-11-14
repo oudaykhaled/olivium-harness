@@ -1,0 +1,11 @@
+{
+  "arm": "olivium",
+  "attempt": 1,
+  "finished_at": "2026-11-10T12:14:58Z",
+  "repeat": 3,
+  "run_id": "pallets-werkzeug-3273.olivium.r3",
+  "stage": "done",
+  "started_at": "2026-11-10T12:11:19Z",
+  "status": "completed",
+  "task_id": "pallets-werkzeug-3273"
+}

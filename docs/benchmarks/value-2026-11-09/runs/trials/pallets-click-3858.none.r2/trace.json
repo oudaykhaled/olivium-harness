@@ -1,0 +1,33 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 1,
+  "files_read_list": [
+    "src/click/types.py"
+  ],
+  "first_gold_edit": {
+    "path": "src/click/types.py",
+    "tool": "Bash",
+    "tool_calls_before": 3,
+    "turns_before": 3
+  },
+  "init_model": "claude-sonnet-5-5",
+  "malformed_lines": 0,
+  "permission_mode": "bypassPermissions",
+  "result": {
+    "duration_ms": 62842,
+    "is_error": false,
+    "num_turns": 5,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.0769847
+  },
+  "tool_calls": {
+    "Bash": 4
+  },
+  "tool_calls_before_first_gold_edit": 3,
+  "tool_calls_total": 4,
+  "turns": 5,
+  "turns_before_first_gold_edit": 3,
+  "wasted_reads": 0,
+  "wasted_reads_list": []
+}

@@ -1,0 +1,122 @@
+{
+  "arm": "olivium",
+  "arm_sha256": "9275f62644b74c81bb720eddc666f798c11f9b41df44c6d760d4670a8001dba1",
+  "claims_approved": 9,
+  "claims_total": 9,
+  "cost_upper_bound_usd": 0.138658,
+  "cost_usd": 0.138658,
+  "decide_errors": [],
+  "digest": "2a3296ec9935d1a34cc84f3bf42340d28db1d5205e86a25568f5408f0ba0dd69",
+  "harness_bytes": 2704,
+  "harness_files": [
+    ".claude/agents/implementer.md",
+    ".claude/skills/reviewed-change/SKILL.md",
+    "CLAUDE.md"
+  ],
+  "manifest_markdown_files_count": 42,
+  "markdown_files_imported": 42,
+  "mode": "paid",
+  "model_status": {
+    "availability": "available",
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "reason": null
+  },
+  "proposals": [
+    {
+      "claims": 0,
+      "error": "invalid_model_output",
+      "path": "README.md",
+      "status": "error"
+    },
+    {
+      "claims": 3,
+      "path": "docs/contributing.md",
+      "status": "ok"
+    },
+    {
+      "claims": 2,
+      "path": "docs/advanced.md",
+      "status": "ok"
+    },
+    {
+      "claims": 1,
+      "path": "docs/api.md",
+      "status": "ok"
+    },
+    {
+      "claims": 3,
+      "path": "docs/arguments.md",
+      "status": "ok"
+    }
+  ],
+  "proposed_files": [
+    "README.md",
+    "docs/contributing.md",
+    "docs/advanced.md",
+    "docs/api.md",
+    "docs/arguments.md"
+  ],
+  "rehearsal_fixture": false,
+  "status": "ok",
+  "task_id": "pallets-click-3858",
+  "tokens": {
+    "cache_creation": 0,
+    "cache_read": 0,
+    "input": 15124,
+    "output": 10841
+  },
+  "usage_requests": [
+    {
+      "billing_status": "estimated",
+      "input_tokens": 1455,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 2221,
+      "reserved_estimated_microusd": 48962,
+      "reserved_tokens": 8097,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 1200,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 3635,
+      "reserved_estimated_microusd": 47706,
+      "reserved_tokens": 7469,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 6273,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 1719,
+      "reserved_estimated_microusd": 74504,
+      "reserved_tokens": 20868,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 3281,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 790,
+      "reserved_estimated_microusd": 54602,
+      "reserved_tokens": 10917,
+      "state": "completed",
+      "usage_status": "reported"
+    },
+    {
+      "billing_status": "estimated",
+      "input_tokens": 2915,
+      "model": "claude-sonnet-5-5",
+      "output_tokens": 2476,
+      "reserved_estimated_microusd": 55906,
+      "reserved_tokens": 11569,
+      "state": "completed",
+      "usage_status": "reported"
+    }
+  ],
+  "usage_source": "application ledger (not the meter; the provider rejects any endpoint except api.anthropic.com)"
+}

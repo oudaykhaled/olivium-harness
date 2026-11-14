@@ -1,0 +1,70 @@
+{
+  "schema": "harnessforge-bench-run/1",
+  "started_at": "2026-11-08T13:54:19Z",
+  "ended_at": "2026-11-08T13:56:28Z",
+  "project": "<repo>",
+  "evidence_root": "<scratch>/runsh-verify",
+  "scratch_root": "<scratch>/runsh-tmp",
+  "stages_requested": [
+    "e2e-browser",
+    "e2e-cli",
+    "pipeline",
+    "portal"
+  ],
+  "stages": [
+    {
+      "stage": "e2e-browser",
+      "exit_status": 0,
+      "wall_ms": 14334,
+      "command": "mix phx.server (fresh workspace, free port) + node bench/e2e.cjs"
+    },
+    {
+      "stage": "e2e-cli",
+      "exit_status": 0,
+      "wall_ms": 62767,
+      "command": "bash bench/e2e-cli.sh (fresh workspace)"
+    },
+    {
+      "stage": "pipeline",
+      "exit_status": 0,
+      "wall_ms": 38509,
+      "command": "mix run bench/pipeline.exs (fresh workspace)"
+    },
+    {
+      "stage": "portal",
+      "exit_status": 0,
+      "wall_ms": 12691,
+      "command": "mix phx.server (fresh workspace, free port) + node bench/portal.cjs + curl probes"
+    }
+  ],
+  "all_passed": true,
+  "files": {
+    "e2e": [
+      "results.json",
+      "e2e.log",
+      "screenshots/",
+      "server.log",
+      "server-start-timing.txt",
+      "stdout.log",
+      "cli-results.json",
+      "cli.log",
+      "cli-stdout.log"
+    ],
+    "pipeline": [
+      "results.json",
+      "pipeline.log",
+      "console.log"
+    ],
+    "portal": [
+      "browser-results.json",
+      "browser.log",
+      "screenshots/",
+      "server.log",
+      "server-start-timing.txt",
+      "rss-after-ready.txt",
+      "rss-after-flow.txt",
+      "curl.log",
+      "stdout.log"
+    ]
+  }
+}

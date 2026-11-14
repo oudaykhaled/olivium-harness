@@ -1,0 +1,26 @@
+{
+  "arm": "generic",
+  "arm_sha256": "8c9b5160ee6ff20c861787996db6c087f6aeed9a65d93b8415f7dc3c54177a78",
+  "claude_code_version": "2.1.311",
+  "cost_usd": 0.0439754,
+  "harness_bytes": 2454,
+  "harness_files": [
+    "CLAUDE.md"
+  ],
+  "image_id": "sha256:0ae429260abde0e2c489ba2fb3a8ad89a238b82a683daa01e51f751f51541b6c",
+  "mode": "paid",
+  "model": "claude-sonnet-5-5",
+  "rehearsal_fixture": false,
+  "requests": 4,
+  "run_id": "setup-generic.expressjs-express-7366",
+  "status": "ok",
+  "task_id": "expressjs-express-7366",
+  "tokens": {
+    "cache_creation": 8696,
+    "cache_read": 68994,
+    "input": 8,
+    "output": 1532
+  },
+  "turns": 4,
+  "wall_seconds": 16.0
+}

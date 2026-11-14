@@ -1,0 +1,1085 @@
+{
+  "REHEARSAL": false,
+  "notice": null,
+  "rehearsal_reasons": [],
+  "pilot_note": "Pilot: 5 tasks, one model, one agent. This can show a direction or a problem. It cannot prove a general effect.",
+  "design": {
+    "arms": [
+      "none",
+      "generic",
+      "olivium"
+    ],
+    "comparisons": [
+      "olivium - none",
+      "olivium - generic"
+    ],
+    "repeats_expected": 3,
+    "interval": "percentile bootstrap 95% of the median, resampling tasks",
+    "resamples": 10000,
+    "seed": 20261108,
+    "percentile_method": "linear interpolation between order statistics"
+  },
+  "tasks": [
+    "pallets-click-3858",
+    "pallets-flask-6096",
+    "python-attrs-attrs-1593",
+    "expressjs-express-7366",
+    "pallets-click-3769"
+  ],
+  "input": {
+    "dir": "<bench-out>/pilot-2026-11-09",
+    "trial_rows": 45,
+    "by_status": {
+      "completed": 45,
+      "timeout": 0,
+      "turn_limit": 0,
+      "budget_exhausted": 0,
+      "infra_error": 0
+    },
+    "budget_exhausted": 0,
+    "missing_repeats": [],
+    "meter_modes": [
+      "live"
+    ]
+  },
+  "arms": {
+    "none": {
+      "scored_runs": 15,
+      "solved": 12,
+      "solve_rate": 0.8,
+      "total_cost_usd": 0.648619,
+      "cost_per_solved_usd": 0.0540515833,
+      "by_status": {
+        "completed": 15,
+        "timeout": 0,
+        "turn_limit": 0,
+        "budget_exhausted": 0,
+        "infra_error": 0
+      },
+      "infra_error_cost_usd": 0,
+      "setup_cost_usd": 0.0
+    },
+    "generic": {
+      "scored_runs": 15,
+      "solved": 12,
+      "solve_rate": 0.8,
+      "total_cost_usd": 0.8244113,
+      "cost_per_solved_usd": 0.0687009417,
+      "by_status": {
+        "completed": 15,
+        "timeout": 0,
+        "turn_limit": 0,
+        "budget_exhausted": 0,
+        "infra_error": 0
+      },
+      "infra_error_cost_usd": 0,
+      "setup_cost_usd": 0.3198128
+    },
+    "olivium": {
+      "scored_runs": 15,
+      "solved": 12,
+      "solve_rate": 0.8,
+      "total_cost_usd": 0.5739244,
+      "cost_per_solved_usd": 0.0478270333,
+      "by_status": {
+        "completed": 15,
+        "timeout": 0,
+        "turn_limit": 0,
+        "budget_exhausted": 0,
+        "infra_error": 0
+      },
+      "infra_error_cost_usd": 0,
+      "setup_cost_usd": 0.433756
+    }
+  },
+  "per_task": {
+    "pallets-click-3858": {
+      "none": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.2158964,
+        "cost_per_solved_usd": 0.0719654667,
+        "means": {
+          "cost_usd": 0.0719654667,
+          "input_tokens": 10.6666666667,
+          "output_tokens": 3107.6666666667,
+          "cache_creation_tokens": 12212.6666666667,
+          "cache_read_tokens": 103358.0,
+          "wasted_reads": 0.0,
+          "turns_before_first_gold_edit": 3.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "generic": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.2259614,
+        "cost_per_solved_usd": 0.0753204667,
+        "means": {
+          "cost_usd": 0.0753204667,
+          "input_tokens": 12.0,
+          "output_tokens": 2891.0,
+          "cache_creation_tokens": 13179.0,
+          "cache_read_tokens": 134389.6666666667,
+          "wasted_reads": 1.0,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "tool_calls_before_first_gold_edit": 2.6666666667,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "olivium": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1679935,
+        "cost_per_solved_usd": 0.0559978333,
+        "means": {
+          "cost_usd": 0.0559978333,
+          "input_tokens": 10.0,
+          "output_tokens": 2444.3333333333,
+          "cache_creation_tokens": 8542.3333333333,
+          "cache_read_tokens": 101786.6666666667,
+          "wasted_reads": 0.0,
+          "turns_before_first_gold_edit": 2.0,
+          "tool_calls_before_first_gold_edit": 2.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 2,
+          "tool_calls_before_first_gold_edit": 2,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      }
+    },
+    "pallets-flask-6096": {
+      "none": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1228665,
+        "cost_per_solved_usd": 0.0409555,
+        "means": {
+          "cost_usd": 0.0409555,
+          "input_tokens": 12.6666666667,
+          "output_tokens": 1795.0,
+          "cache_creation_tokens": 4738.6666666667,
+          "cache_read_tokens": 111335.0,
+          "wasted_reads": 1.6666666667,
+          "turns_before_first_gold_edit": 2.5,
+          "tool_calls_before_first_gold_edit": 2.5,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 2,
+          "tool_calls_before_first_gold_edit": 2,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "generic": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1592917,
+        "cost_per_solved_usd": 0.0530972333,
+        "means": {
+          "cost_usd": 0.0530972333,
+          "input_tokens": 14.6666666667,
+          "output_tokens": 2071.6666666667,
+          "cache_creation_tokens": 7370.6666666667,
+          "cache_read_tokens": 139245.6666666667,
+          "wasted_reads": 2.3333333333,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "tool_calls_before_first_gold_edit": 2.6666666667,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "olivium": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1133368,
+        "cost_per_solved_usd": 0.0377789333,
+        "means": {
+          "cost_usd": 0.0377789333,
+          "input_tokens": 12.6666666667,
+          "output_tokens": 1606.3333333333,
+          "cache_creation_tokens": 4167.6666666667,
+          "cache_read_tokens": 112711.0,
+          "wasted_reads": 2.0,
+          "turns_before_first_gold_edit": 3.6666666667,
+          "tool_calls_before_first_gold_edit": 4.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      }
+    },
+    "python-attrs-attrs-1593": {
+      "none": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.130573,
+        "cost_per_solved_usd": 0.0435243333,
+        "means": {
+          "cost_usd": 0.0435243333,
+          "input_tokens": 15.3333333333,
+          "output_tokens": 1631.0,
+          "cache_creation_tokens": 5422.0,
+          "cache_read_tokens": 136286.6666666667,
+          "wasted_reads": 0.0,
+          "turns_before_first_gold_edit": null,
+          "tool_calls_before_first_gold_edit": null,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 0,
+          "tool_calls_before_first_gold_edit": 0,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "generic": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1358908,
+        "cost_per_solved_usd": 0.0452969333,
+        "means": {
+          "cost_usd": 0.0452969333,
+          "input_tokens": 14.0,
+          "output_tokens": 1853.3333333333,
+          "cache_creation_tokens": 5160.6666666667,
+          "cache_read_tokens": 138339.3333333333,
+          "wasted_reads": 1.6666666667,
+          "turns_before_first_gold_edit": 3.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "olivium": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1033324,
+        "cost_per_solved_usd": 0.0344441333,
+        "means": {
+          "cost_usd": 0.0344441333,
+          "input_tokens": 8.0,
+          "output_tokens": 1063.0,
+          "cache_creation_tokens": 6839.6666666667,
+          "cache_read_tokens": 66989.6666666667,
+          "wasted_reads": 0.0,
+          "turns_before_first_gold_edit": 2.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 2,
+          "tool_calls_before_first_gold_edit": 2,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      }
+    },
+    "expressjs-express-7366": {
+      "none": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.0961514,
+        "cost_per_solved_usd": 0.0320504667,
+        "means": {
+          "cost_usd": 0.0320504667,
+          "input_tokens": 11.3333333333,
+          "output_tokens": 994.3333333333,
+          "cache_creation_tokens": 4919.0,
+          "cache_read_tokens": 97869.6666666667,
+          "wasted_reads": 1.3333333333,
+          "turns_before_first_gold_edit": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "generic": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.0962042,
+        "cost_per_solved_usd": 0.0320680667,
+        "means": {
+          "cost_usd": 0.0320680667,
+          "input_tokens": 10.6666666667,
+          "output_tokens": 875.6666666667,
+          "cache_creation_tokens": 5435.0,
+          "cache_read_tokens": 97025.6666666667,
+          "wasted_reads": 1.0,
+          "turns_before_first_gold_edit": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "olivium": {
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.0942354,
+        "cost_per_solved_usd": 0.0314118,
+        "means": {
+          "cost_usd": 0.0314118,
+          "input_tokens": 10.6666666667,
+          "output_tokens": 872.0,
+          "cache_creation_tokens": 5295.3333333333,
+          "cache_read_tokens": 94321.3333333333,
+          "wasted_reads": 1.0,
+          "turns_before_first_gold_edit": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "solved": 1.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      }
+    },
+    "pallets-click-3769": {
+      "none": {
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.0831317,
+        "cost_per_solved_usd": null,
+        "means": {
+          "cost_usd": 0.0277105667,
+          "input_tokens": 8.0,
+          "output_tokens": 847.6666666667,
+          "cache_creation_tokens": 5030.6666666667,
+          "cache_read_tokens": 66412.3333333333,
+          "wasted_reads": 0.0,
+          "turns_before_first_gold_edit": 2.0,
+          "tool_calls_before_first_gold_edit": 2.0,
+          "solved": 0.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 2,
+          "tool_calls_before_first_gold_edit": 2,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "generic": {
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.2070632,
+        "cost_per_solved_usd": null,
+        "means": {
+          "cost_usd": 0.0690210667,
+          "input_tokens": 16.0,
+          "output_tokens": 1776.3333333333,
+          "cache_creation_tokens": 14363.0,
+          "cache_read_tokens": 153182.3333333333,
+          "wasted_reads": 1.0,
+          "turns_before_first_gold_edit": 2.0,
+          "tool_calls_before_first_gold_edit": 2.0,
+          "solved": 0.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 1,
+          "tool_calls_before_first_gold_edit": 1,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      },
+      "olivium": {
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.0950263,
+        "cost_per_solved_usd": null,
+        "means": {
+          "cost_usd": 0.0316754333,
+          "input_tokens": 9.3333333333,
+          "output_tokens": 989.3333333333,
+          "cache_creation_tokens": 5473.6666666667,
+          "cache_read_tokens": 80792.6666666667,
+          "wasted_reads": 0.0,
+          "turns_before_first_gold_edit": 3.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "solved": 0.0,
+          "p2p_regressions": 0.0,
+          "lint_ok": 1.0
+        },
+        "values_used": {
+          "cost_usd": 3,
+          "input_tokens": 3,
+          "output_tokens": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "wasted_reads": 3,
+          "turns_before_first_gold_edit": 2,
+          "tool_calls_before_first_gold_edit": 2,
+          "solved": 3,
+          "p2p_regressions": 3,
+          "lint_ok": 3
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "olivium_minus_none": {
+      "cost_usd": {
+        "per_task": {
+          "pallets-click-3858": -0.0159676333,
+          "pallets-flask-6096": -0.0031765667,
+          "python-attrs-attrs-1593": -0.0090802,
+          "expressjs-express-7366": -0.0006386667,
+          "pallets-click-3769": 0.0039648667
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -0.0031765667,
+        "ci95": [
+          -0.0159676333,
+          0.0039648667
+        ]
+      },
+      "input_tokens": {
+        "per_task": {
+          "pallets-click-3858": -0.6666666667,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": -7.3333333333,
+          "expressjs-express-7366": -0.6666666667,
+          "pallets-click-3769": 1.3333333333
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -0.6666666667,
+        "ci95": [
+          -7.3333333333,
+          1.3333333333
+        ]
+      },
+      "output_tokens": {
+        "per_task": {
+          "pallets-click-3858": -663.3333333333,
+          "pallets-flask-6096": -188.6666666667,
+          "python-attrs-attrs-1593": -568.0,
+          "expressjs-express-7366": -122.3333333333,
+          "pallets-click-3769": 141.6666666667
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -188.6666666667,
+        "ci95": [
+          -663.3333333333,
+          141.6666666667
+        ]
+      },
+      "cache_creation_tokens": {
+        "per_task": {
+          "pallets-click-3858": -3670.3333333333,
+          "pallets-flask-6096": -571.0,
+          "python-attrs-attrs-1593": 1417.6666666667,
+          "expressjs-express-7366": 376.3333333333,
+          "pallets-click-3769": 443.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 376.3333333333,
+        "ci95": [
+          -3670.3333333333,
+          1417.6666666667
+        ]
+      },
+      "cache_read_tokens": {
+        "per_task": {
+          "pallets-click-3858": -1571.3333333333,
+          "pallets-flask-6096": 1376.0,
+          "python-attrs-attrs-1593": -69297.0,
+          "expressjs-express-7366": -3548.3333333333,
+          "pallets-click-3769": 14380.3333333333
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -1571.3333333333,
+        "ci95": [
+          -69297.0,
+          14380.3333333333
+        ]
+      },
+      "wasted_reads": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.3333333333,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": -0.3333333333,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          -0.3333333333,
+          0.3333333333
+        ]
+      },
+      "turns_before_first_gold_edit": {
+        "per_task": {
+          "pallets-click-3858": -1.0,
+          "pallets-flask-6096": 1.1666666667,
+          "python-attrs-attrs-1593": null,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0
+        },
+        "tasks_used": 4,
+        "tasks_excluded": [
+          "python-attrs-attrs-1593"
+        ],
+        "median": 0.5,
+        "ci95": [
+          -1.0,
+          1.1666666667
+        ]
+      },
+      "tool_calls_before_first_gold_edit": {
+        "per_task": {
+          "pallets-click-3858": -1.0,
+          "pallets-flask-6096": 1.5,
+          "python-attrs-attrs-1593": null,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0
+        },
+        "tasks_used": 4,
+        "tasks_excluded": [
+          "python-attrs-attrs-1593"
+        ],
+        "median": 0.5,
+        "ci95": [
+          -1.0,
+          1.5
+        ]
+      },
+      "solved": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "p2p_regressions": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "lint_ok": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "olivium_minus_generic": {
+      "cost_usd": {
+        "per_task": {
+          "pallets-click-3858": -0.0193226333,
+          "pallets-flask-6096": -0.0153183,
+          "python-attrs-attrs-1593": -0.0108528,
+          "expressjs-express-7366": -0.0006562667,
+          "pallets-click-3769": -0.0373456333
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -0.0153183,
+        "ci95": [
+          -0.0373456333,
+          -0.0006562667
+        ]
+      },
+      "input_tokens": {
+        "per_task": {
+          "pallets-click-3858": -2.0,
+          "pallets-flask-6096": -2.0,
+          "python-attrs-attrs-1593": -6.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": -6.6666666667
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -2.0,
+        "ci95": [
+          -6.6666666667,
+          0.0
+        ]
+      },
+      "output_tokens": {
+        "per_task": {
+          "pallets-click-3858": -446.6666666667,
+          "pallets-flask-6096": -465.3333333333,
+          "python-attrs-attrs-1593": -790.3333333333,
+          "expressjs-express-7366": -3.6666666667,
+          "pallets-click-3769": -787.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -465.3333333333,
+        "ci95": [
+          -790.3333333333,
+          -3.6666666667
+        ]
+      },
+      "cache_creation_tokens": {
+        "per_task": {
+          "pallets-click-3858": -4636.6666666667,
+          "pallets-flask-6096": -3203.0,
+          "python-attrs-attrs-1593": 1679.0,
+          "expressjs-express-7366": -139.6666666667,
+          "pallets-click-3769": -8889.3333333333
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -3203.0,
+        "ci95": [
+          -8889.3333333333,
+          1679.0
+        ]
+      },
+      "cache_read_tokens": {
+        "per_task": {
+          "pallets-click-3858": -32603.0,
+          "pallets-flask-6096": -26534.6666666667,
+          "python-attrs-attrs-1593": -71349.6666666667,
+          "expressjs-express-7366": -2704.3333333333,
+          "pallets-click-3769": -72389.6666666667
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -32603.0,
+        "ci95": [
+          -72389.6666666667,
+          -2704.3333333333
+        ]
+      },
+      "wasted_reads": {
+        "per_task": {
+          "pallets-click-3858": -1.0,
+          "pallets-flask-6096": -0.3333333333,
+          "python-attrs-attrs-1593": -1.6666666667,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": -1.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": -1.0,
+        "ci95": [
+          -1.6666666667,
+          0.0
+        ]
+      },
+      "turns_before_first_gold_edit": {
+        "per_task": {
+          "pallets-click-3858": -0.6666666667,
+          "pallets-flask-6096": 1.0,
+          "python-attrs-attrs-1593": -1.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          -1.0,
+          1.0
+        ]
+      },
+      "tool_calls_before_first_gold_edit": {
+        "per_task": {
+          "pallets-click-3858": -0.6666666667,
+          "pallets-flask-6096": 1.3333333333,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          -0.6666666667,
+          1.3333333333
+        ]
+      },
+      "solved": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "p2p_regressions": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "lint_ok": {
+        "per_task": {
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "python-attrs-attrs-1593": 0.0,
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0
+        },
+        "tasks_used": 5,
+        "tasks_excluded": [],
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "answers": {
+    "fewer_tokens": {
+      "question": "Did the agent use fewer tokens and cost less?",
+      "sentences": [
+        "Against none, no clear difference: median difference -$0.0032 (95% interval -$0.0160 to +$0.0040 across 5 tasks); the interval includes zero.",
+        "Against generic, on these 5 tasks, the olivium arm cost less per run (a direction, not proof): median difference -$0.0153 (95% interval -$0.0373 to -$0.0007 across 5 tasks)."
+      ]
+    },
+    "better_context": {
+      "question": "Did the agent have better context?",
+      "sentences": [
+        "Against none, no clear difference: median difference 0 (95% interval -0.33 to +0.33 across 5 tasks); the interval includes zero.",
+        "Against generic, no clear difference: median difference -1 (95% interval -1.67 to 0 across 5 tasks); the interval includes zero."
+      ]
+    },
+    "more_accurate": {
+      "question": "Was the agent more accurate?",
+      "sentences": [
+        "Against none, no clear difference: median difference 0.00 (95% interval 0.00 to 0.00 across 5 tasks); the interval includes zero.",
+        "Against generic, no clear difference: median difference 0.00 (95% interval 0.00 to 0.00 across 5 tasks); the interval includes zero."
+      ]
+    }
+  },
+  "setup": {
+    "none": {
+      "cost_usd": 0.0,
+      "cost_upper_bound_usd": 0.0,
+      "failed": [],
+      "tasks": {
+        "pallets-click-3858": {
+          "status": "ok",
+          "cost_usd": 0.0,
+          "harness_bytes": 0
+        },
+        "pallets-flask-6096": {
+          "status": "ok",
+          "cost_usd": 0.0,
+          "harness_bytes": 0
+        },
+        "python-attrs-attrs-1593": {
+          "status": "ok",
+          "cost_usd": 0.0,
+          "harness_bytes": 0
+        },
+        "expressjs-express-7366": {
+          "status": "ok",
+          "cost_usd": 0.0,
+          "harness_bytes": 0
+        },
+        "pallets-click-3769": {
+          "status": "ok",
+          "cost_usd": 0.0,
+          "harness_bytes": 0
+        }
+      }
+    },
+    "generic": {
+      "cost_usd": 0.3198128,
+      "cost_upper_bound_usd": 0.3198128,
+      "failed": [],
+      "tasks": {
+        "pallets-click-3858": {
+          "status": "ok",
+          "cost_usd": 0.0907264,
+          "harness_bytes": 3650
+        },
+        "pallets-flask-6096": {
+          "status": "ok",
+          "cost_usd": 0.0551299,
+          "harness_bytes": 2914
+        },
+        "python-attrs-attrs-1593": {
+          "status": "ok",
+          "cost_usd": 0.0755368,
+          "harness_bytes": 4174
+        },
+        "expressjs-express-7366": {
+          "status": "ok",
+          "cost_usd": 0.0439754,
+          "harness_bytes": 2454
+        },
+        "pallets-click-3769": {
+          "status": "ok",
+          "cost_usd": 0.0544443,
+          "harness_bytes": 3609
+        }
+      }
+    },
+    "olivium": {
+      "cost_usd": 0.433756,
+      "cost_upper_bound_usd": 0.541644,
+      "failed": [],
+      "tasks": {
+        "pallets-click-3858": {
+          "status": "ok",
+          "cost_usd": 0.138658,
+          "harness_bytes": 2704
+        },
+        "pallets-flask-6096": {
+          "status": "ok",
+          "cost_usd": 0.053078,
+          "harness_bytes": 1394
+        },
+        "python-attrs-attrs-1593": {
+          "status": "ok",
+          "cost_usd": 0.10696,
+          "harness_bytes": 3168
+        },
+        "expressjs-express-7366": {
+          "status": "ok",
+          "cost_usd": 0.046304,
+          "harness_bytes": 1163
+        },
+        "pallets-click-3769": {
+          "status": "ok",
+          "cost_usd": 0.088756,
+          "harness_bytes": 1643
+        }
+      }
+    }
+  },
+  "as_exported": [
+    {
+      "task_id": "pallets-click-3858",
+      "status": "completed",
+      "solved": false,
+      "cost_usd": 0.0264911,
+      "tool_calls": {
+        "Bash": 1,
+        "Grep": 1,
+        "Read": 1
+      },
+      "turns": 3,
+      "files_read": 0
+    }
+  ]
+}

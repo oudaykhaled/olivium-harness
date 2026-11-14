@@ -1,0 +1,2832 @@
+{
+  "REHEARSAL": false,
+  "arms": {
+    "generic": {
+      "agent_calls": 0.0,
+      "by_status": {
+        "budget_exhausted": 0,
+        "completed": 24,
+        "infra_error": 1,
+        "timeout": 0,
+        "turn_limit": 0
+      },
+      "cost_per_solved_usd": 0.1132573769,
+      "infra_error_cost_usd": 0.0525235,
+      "median_cost_per_run_usd": 0.05594245,
+      "median_total_tokens_per_run": 121602.0,
+      "runs_using_skill_or_agent": 0,
+      "scored_runs": 24,
+      "setup_cost_usd": 0.4990521,
+      "skill_calls": 0.0,
+      "solve_rate": 0.5416666667,
+      "solved": 13,
+      "total_cost_usd": 1.4723459,
+      "total_tokens": 3136029.0
+    },
+    "none": {
+      "agent_calls": 0.0,
+      "by_status": {
+        "budget_exhausted": 0,
+        "completed": 24,
+        "infra_error": 0,
+        "timeout": 0,
+        "turn_limit": 0
+      },
+      "cost_per_solved_usd": 0.0806931867,
+      "infra_error_cost_usd": 0,
+      "median_cost_per_run_usd": 0.05168275,
+      "median_total_tokens_per_run": 108861.0,
+      "runs_using_skill_or_agent": 0,
+      "scored_runs": 24,
+      "setup_cost_usd": 0.0,
+      "skill_calls": 0.0,
+      "solve_rate": 0.625,
+      "solved": 15,
+      "total_cost_usd": 1.2103978,
+      "total_tokens": 2672999.0
+    },
+    "olivium": {
+      "agent_calls": 0.0,
+      "by_status": {
+        "budget_exhausted": 0,
+        "completed": 24,
+        "infra_error": 0,
+        "timeout": 0,
+        "turn_limit": 0
+      },
+      "cost_per_solved_usd": 0.0670815111,
+      "infra_error_cost_usd": 0,
+      "median_cost_per_run_usd": 0.04870885,
+      "median_total_tokens_per_run": 65976.5,
+      "runs_using_skill_or_agent": 6,
+      "scored_runs": 24,
+      "setup_cost_usd": 0.0,
+      "skill_calls": 6.0,
+      "solve_rate": 0.75,
+      "solved": 18,
+      "total_cost_usd": 1.2074672,
+      "total_tokens": 1592276.0
+    },
+    "olivium-nn": {
+      "agent_calls": 0.0,
+      "by_status": {
+        "budget_exhausted": 0,
+        "completed": 24,
+        "infra_error": 0,
+        "timeout": 0,
+        "turn_limit": 0
+      },
+      "cost_per_solved_usd": 0.0710178133,
+      "infra_error_cost_usd": 0,
+      "median_cost_per_run_usd": 0.0459853,
+      "median_total_tokens_per_run": 43249.0,
+      "runs_using_skill_or_agent": 0,
+      "scored_runs": 24,
+      "setup_cost_usd": 0.0,
+      "skill_calls": 0.0,
+      "solve_rate": 0.625,
+      "solved": 15,
+      "total_cost_usd": 1.0652672,
+      "total_tokens": 1284742.0
+    }
+  },
+  "checks": {
+    "claude_code_version_expected": "2.1.311",
+    "infra_error_limit": 9,
+    "infra_error_limit_passed": false,
+    "infra_error_rows": 1,
+    "meter_rows": 587,
+    "meter_total_usd": 5.507054,
+    "model_expected": "claude-sonnet-5-5",
+    "runs_on_another_model": [],
+    "runs_on_another_version": [],
+    "runs_with_web_tool_uses": [],
+    "scheduled_runs": 96,
+    "total_cap_passed": false,
+    "total_cap_usd": 15.0
+  },
+  "comparisons": {
+    "olivium_minus_generic": {
+      "agent_calls": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cache_creation_tokens": {
+        "ci95": [
+          -2908.3333333333,
+          -1143.3333333333
+        ],
+        "median": -1885.6666666667,
+        "per_task": {
+          "expressjs-express-7366": 3354.0,
+          "pallets-click-3769": -1265.3333333333,
+          "pallets-click-3858": -1143.3333333333,
+          "pallets-flask-6096": -2288.3333333333,
+          "pallets-werkzeug-3266": -6525.0,
+          "pallets-werkzeug-3273": -1616.3333333333,
+          "pallets-werkzeug-3298": -2908.3333333333,
+          "python-attrs-attrs-1593": -2155.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cache_read_tokens": {
+        "ci95": [
+          -94599.0,
+          -33062.6666666667
+        ],
+        "median": -55244.0,
+        "per_task": {
+          "expressjs-express-7366": -33062.6666666667,
+          "pallets-click-3769": -24893.0,
+          "pallets-click-3858": -120818.6666666667,
+          "pallets-flask-6096": -67904.3333333333,
+          "pallets-werkzeug-3266": -76285.0,
+          "pallets-werkzeug-3273": -39691.0,
+          "pallets-werkzeug-3298": -42583.6666666667,
+          "python-attrs-attrs-1593": -94599.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cost_usd": {
+        "ci95": [
+          -0.0199447333,
+          -0.0003326333
+        ],
+        "median": -0.0106732333,
+        "per_task": {
+          "expressjs-express-7366": 0.0089454,
+          "pallets-click-3769": -0.0003326333,
+          "pallets-click-3858": -0.0179042,
+          "pallets-flask-6096": -0.0103972667,
+          "pallets-werkzeug-3266": -0.0350336667,
+          "pallets-werkzeug-3273": -0.0026766,
+          "pallets-werkzeug-3298": -0.0109492,
+          "python-attrs-attrs-1593": -0.0199447333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "hook_blocks": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "input_tokens": {
+        "ci95": [
+          -5.3333333333,
+          3.3333333333
+        ],
+        "median": -0.6666666667,
+        "per_task": {
+          "expressjs-express-7366": 3.3333333333,
+          "pallets-click-3769": 3.3333333333,
+          "pallets-click-3858": -5.3333333333,
+          "pallets-flask-6096": -1.3333333333,
+          "pallets-werkzeug-3266": -1.3333333333,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": -5.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "lint_ok": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "output_tokens": {
+        "ci95": [
+          -508.6666666667,
+          459.6666666667
+        ],
+        "median": 134.8333333333,
+        "per_task": {
+          "expressjs-express-7366": 386.0,
+          "pallets-click-3769": 531.3333333333,
+          "pallets-click-3858": -295.3333333333,
+          "pallets-flask-6096": 211.6666666667,
+          "pallets-werkzeug-3266": -1109.0,
+          "pallets-werkzeug-3273": 533.3333333333,
+          "pallets-werkzeug-3298": 58.0,
+          "python-attrs-attrs-1593": -508.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "p2p_regressions": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": -2.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "permission_denials": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "skill_calls": {
+        "ci95": [
+          0.0,
+          0.5
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 1.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "solved": {
+        "ci95": [
+          0.0,
+          0.6666666667
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 1.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.6666666667,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "tool_calls_before_first_gold_edit": {
+        "ci95": [
+          -0.3333333333,
+          0.3333333333
+        ],
+        "median": 0.1666666667,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": -0.1666666667,
+          "pallets-click-3858": -0.3333333333,
+          "pallets-flask-6096": 0.3333333333,
+          "pallets-werkzeug-3266": 0.3333333333,
+          "pallets-werkzeug-3273": 3.6666666667,
+          "pallets-werkzeug-3298": 0.3333333333,
+          "python-attrs-attrs-1593": -0.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "total_tokens": {
+        "ci95": [
+          -97268.0,
+          -29319.3333333333
+        ],
+        "median": -57708.1666666667,
+        "per_task": {
+          "expressjs-express-7366": -29319.3333333333,
+          "pallets-click-3769": -25623.6666666667,
+          "pallets-click-3858": -122262.6666666667,
+          "pallets-flask-6096": -69982.3333333333,
+          "pallets-werkzeug-3266": -83920.3333333333,
+          "pallets-werkzeug-3273": -40774.0,
+          "pallets-werkzeug-3298": -45434.0,
+          "python-attrs-attrs-1593": -97268.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "turns": {
+        "ci95": [
+          -2.6666666667,
+          1.6666666667
+        ],
+        "median": -0.3333333333,
+        "per_task": {
+          "expressjs-express-7366": 1.6666666667,
+          "pallets-click-3769": 1.6666666667,
+          "pallets-click-3858": -2.6666666667,
+          "pallets-flask-6096": -0.6666666667,
+          "pallets-werkzeug-3266": -0.6666666667,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": -2.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "turns_before_first_gold_edit": {
+        "ci95": [
+          -0.6666666667,
+          0.3333333333
+        ],
+        "median": -0.1666666667,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": -0.6666666667,
+          "pallets-click-3858": 0.3333333333,
+          "pallets-flask-6096": -0.3333333333,
+          "pallets-werkzeug-3266": -0.6666666667,
+          "pallets-werkzeug-3273": 0.3333333333,
+          "pallets-werkzeug-3298": 0.3333333333,
+          "python-attrs-attrs-1593": -0.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "wasted_reads": {
+        "ci95": [
+          -0.3333333333,
+          0.6666666667
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.6666666667,
+          "pallets-click-3769": 0.3333333333,
+          "pallets-click-3858": -0.6666666667,
+          "pallets-flask-6096": 1.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": -0.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      }
+    },
+    "olivium_minus_none": {
+      "agent_calls": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cache_creation_tokens": {
+        "ci95": [
+          -991.6666666667,
+          1425.0
+        ],
+        "median": -140.6666666667,
+        "per_task": {
+          "expressjs-express-7366": 6329.6666666667,
+          "pallets-click-3769": 1425.0,
+          "pallets-click-3858": -438.6666666667,
+          "pallets-flask-6096": -991.6666666667,
+          "pallets-werkzeug-3266": 990.0,
+          "pallets-werkzeug-3273": -340.6666666667,
+          "pallets-werkzeug-3298": 59.3333333333,
+          "python-attrs-attrs-1593": -1247.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cache_read_tokens": {
+        "ci95": [
+          -71530.6666666667,
+          -23621.3333333333
+        ],
+        "median": -52646.0,
+        "per_task": {
+          "expressjs-express-7366": -23621.3333333333,
+          "pallets-click-3769": 21698.6666666667,
+          "pallets-click-3858": -48774.6666666667,
+          "pallets-flask-6096": -71530.6666666667,
+          "pallets-werkzeug-3266": -79174.0,
+          "pallets-werkzeug-3273": -43985.0,
+          "pallets-werkzeug-3298": -66259.3333333333,
+          "python-attrs-attrs-1593": -56517.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cost_usd": {
+        "ci95": [
+          -0.0093220667,
+          0.0161703667
+        ],
+        "median": -0.0038788833,
+        "per_task": {
+          "expressjs-express-7366": 0.0181000333,
+          "pallets-click-3769": 0.0161703667,
+          "pallets-click-3858": 0.0004378667,
+          "pallets-flask-6096": -0.0067975667,
+          "pallets-werkzeug-3266": -0.0118077333,
+          "pallets-werkzeug-3273": -0.0010248333,
+          "pallets-werkzeug-3298": -0.0067329333,
+          "python-attrs-attrs-1593": -0.0093220667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "hook_blocks": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "input_tokens": {
+        "ci95": [
+          -2.6666666667,
+          4.0
+        ],
+        "median": -1.6666666667,
+        "per_task": {
+          "expressjs-express-7366": 4.0,
+          "pallets-click-3769": 7.3333333333,
+          "pallets-click-3858": -0.6666666667,
+          "pallets-flask-6096": -2.6666666667,
+          "pallets-werkzeug-3266": -2.6666666667,
+          "pallets-werkzeug-3273": -0.6666666667,
+          "pallets-werkzeug-3298": -2.6666666667,
+          "python-attrs-attrs-1593": -2.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "lint_ok": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "output_tokens": {
+        "ci95": [
+          -54.6666666667,
+          641.3333333333
+        ],
+        "median": 353.3333333333,
+        "per_task": {
+          "expressjs-express-7366": 463.0,
+          "pallets-click-3769": 1042.3333333333,
+          "pallets-click-3858": 641.3333333333,
+          "pallets-flask-6096": 284.0,
+          "pallets-werkzeug-3266": -636.0,
+          "pallets-werkzeug-3273": 422.6666666667,
+          "pallets-werkzeug-3298": -25.0,
+          "python-attrs-attrs-1593": -54.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "p2p_regressions": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": -2.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "permission_denials": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "skill_calls": {
+        "ci95": [
+          0.0,
+          0.5
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 1.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "solved": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 1.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "tool_calls_before_first_gold_edit": {
+        "ci95": [
+          0.1666666667,
+          1.3333333333
+        ],
+        "median": 0.3333333333,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.3333333333,
+          "pallets-click-3858": 0.3333333333,
+          "pallets-flask-6096": 0.3333333333,
+          "pallets-werkzeug-3266": 0.6666666667,
+          "pallets-werkzeug-3273": 3.0,
+          "pallets-werkzeug-3298": 0.1666666667,
+          "python-attrs-attrs-1593": null
+        },
+        "tasks_excluded": [
+          "python-attrs-attrs-1593"
+        ],
+        "tasks_used": 7
+      },
+      "total_tokens": {
+        "ci95": [
+          -72241.0,
+          -16824.6666666667
+        ],
+        "median": -53197.3333333333,
+        "per_task": {
+          "expressjs-express-7366": -16824.6666666667,
+          "pallets-click-3769": 24173.3333333333,
+          "pallets-click-3858": -48572.6666666667,
+          "pallets-flask-6096": -72241.0,
+          "pallets-werkzeug-3266": -78822.6666666667,
+          "pallets-werkzeug-3273": -43903.6666666667,
+          "pallets-werkzeug-3298": -66227.6666666667,
+          "python-attrs-attrs-1593": -57822.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "turns": {
+        "ci95": [
+          -1.3333333333,
+          2.0
+        ],
+        "median": -0.8333333333,
+        "per_task": {
+          "expressjs-express-7366": 2.0,
+          "pallets-click-3769": 3.6666666667,
+          "pallets-click-3858": -0.3333333333,
+          "pallets-flask-6096": -1.3333333333,
+          "pallets-werkzeug-3266": -1.3333333333,
+          "pallets-werkzeug-3273": -0.3333333333,
+          "pallets-werkzeug-3298": -1.3333333333,
+          "python-attrs-attrs-1593": -1.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "turns_before_first_gold_edit": {
+        "ci95": [
+          -0.3333333333,
+          0.3333333333
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.3333333333,
+          "pallets-click-3858": 0.3333333333,
+          "pallets-flask-6096": -0.3333333333,
+          "pallets-werkzeug-3266": -0.3333333333,
+          "pallets-werkzeug-3273": -0.3333333333,
+          "pallets-werkzeug-3298": 0.3333333333,
+          "python-attrs-attrs-1593": null
+        },
+        "tasks_excluded": [
+          "python-attrs-attrs-1593"
+        ],
+        "tasks_used": 7
+      },
+      "wasted_reads": {
+        "ci95": [
+          0.0,
+          1.0
+        ],
+        "median": 0.3333333333,
+        "per_task": {
+          "expressjs-express-7366": 1.0,
+          "pallets-click-3769": 1.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.6666666667,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      }
+    },
+    "olivium_minus_olivium-nn": {
+      "agent_calls": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cache_creation_tokens": {
+        "ci95": [
+          -313.0,
+          3487.3333333333
+        ],
+        "median": 1447.1666666667,
+        "per_task": {
+          "expressjs-express-7366": 6799.0,
+          "pallets-click-3769": 3487.3333333333,
+          "pallets-click-3858": 1230.6666666667,
+          "pallets-flask-6096": -313.0,
+          "pallets-werkzeug-3266": 554.0,
+          "pallets-werkzeug-3273": 1663.6666666667,
+          "pallets-werkzeug-3298": -653.3333333333,
+          "python-attrs-attrs-1593": 1690.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cache_read_tokens": {
+        "ci95": [
+          -7156.0,
+          28545.3333333333
+        ],
+        "median": 12448.6666666667,
+        "per_task": {
+          "expressjs-express-7366": 15073.0,
+          "pallets-click-3769": 48443.0,
+          "pallets-click-3858": 28545.3333333333,
+          "pallets-flask-6096": 5318.3333333333,
+          "pallets-werkzeug-3266": -7156.0,
+          "pallets-werkzeug-3273": 16523.0,
+          "pallets-werkzeug-3298": -28762.6666666667,
+          "python-attrs-attrs-1593": 9824.3333333333
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "cost_usd": {
+        "ci95": [
+          -0.0105192667,
+          0.0190973
+        ],
+        "median": 0.0065777833,
+        "per_task": {
+          "expressjs-express-7366": 0.0199254667,
+          "pallets-click-3769": 0.0190973,
+          "pallets-click-3858": 0.0182985333,
+          "pallets-flask-6096": -0.0006893333,
+          "pallets-werkzeug-3266": -0.0105192667,
+          "pallets-werkzeug-3273": 0.0084648,
+          "pallets-werkzeug-3298": -0.0118682667,
+          "python-attrs-attrs-1593": 0.0046907667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "hook_blocks": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "input_tokens": {
+        "ci95": [
+          -2.6666666667,
+          2.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 2.0,
+          "pallets-click-3769": 4.0,
+          "pallets-click-3858": 2.0,
+          "pallets-flask-6096": -2.6666666667,
+          "pallets-werkzeug-3266": -2.6666666667,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": -6.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "lint_ok": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "output_tokens": {
+        "ci95": [
+          -734.6666666667,
+          552.6666666667
+        ],
+        "median": 49.1666666667,
+        "per_task": {
+          "expressjs-express-7366": 141.6666666667,
+          "pallets-click-3769": 552.6666666667,
+          "pallets-click-3858": 1236.3333333333,
+          "pallets-flask-6096": -43.3333333333,
+          "pallets-werkzeug-3266": -1118.3333333333,
+          "pallets-werkzeug-3273": 265.3333333333,
+          "pallets-werkzeug-3298": -734.6666666667,
+          "python-attrs-attrs-1593": -51.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "p2p_regressions": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": -3.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "permission_denials": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "skill_calls": {
+        "ci95": [
+          0.0,
+          0.5
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.0,
+          "pallets-werkzeug-3273": 1.0,
+          "pallets-werkzeug-3298": 0.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "solved": {
+        "ci95": [
+          0.0,
+          0.3333333333
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": 0.3333333333,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": 0.6666666667,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "tool_calls_before_first_gold_edit": {
+        "ci95": [
+          -0.3333333333,
+          1.3333333333
+        ],
+        "median": 0.1666666667,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 1.3333333333,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.3333333333,
+          "pallets-werkzeug-3266": -0.3333333333,
+          "pallets-werkzeug-3273": 3.0,
+          "pallets-werkzeug-3298": -1.0,
+          "python-attrs-attrs-1593": 0.5
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "total_tokens": {
+        "ci95": [
+          -7723.0,
+          31014.3333333333
+        ],
+        "median": 14957.3333333333,
+        "per_task": {
+          "expressjs-express-7366": 22015.6666666667,
+          "pallets-click-3769": 52487.0,
+          "pallets-click-3858": 31014.3333333333,
+          "pallets-flask-6096": 4959.3333333333,
+          "pallets-werkzeug-3266": -7723.0,
+          "pallets-werkzeug-3273": 18452.0,
+          "pallets-werkzeug-3298": -30156.6666666667,
+          "python-attrs-attrs-1593": 11462.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "turns": {
+        "ci95": [
+          -1.3333333333,
+          1.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 1.0,
+          "pallets-click-3769": 2.0,
+          "pallets-click-3858": 1.0,
+          "pallets-flask-6096": -1.3333333333,
+          "pallets-werkzeug-3266": -1.3333333333,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": -3.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "turns_before_first_gold_edit": {
+        "ci95": [
+          -0.6666666667,
+          0.0
+        ],
+        "median": 0.0,
+        "per_task": {
+          "expressjs-express-7366": 0.0,
+          "pallets-click-3769": 0.3333333333,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 0.0,
+          "pallets-werkzeug-3266": -0.6666666667,
+          "pallets-werkzeug-3273": 0.0,
+          "pallets-werkzeug-3298": -1.0,
+          "python-attrs-attrs-1593": 0.0
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      },
+      "wasted_reads": {
+        "ci95": [
+          -0.3333333333,
+          0.6666666667
+        ],
+        "median": 0.1666666667,
+        "per_task": {
+          "expressjs-express-7366": 0.3333333333,
+          "pallets-click-3769": 0.0,
+          "pallets-click-3858": 0.0,
+          "pallets-flask-6096": 1.0,
+          "pallets-werkzeug-3266": -0.3333333333,
+          "pallets-werkzeug-3273": 0.3333333333,
+          "pallets-werkzeug-3298": -0.3333333333,
+          "python-attrs-attrs-1593": 0.6666666667
+        },
+        "tasks_excluded": [],
+        "tasks_used": 8
+      }
+    }
+  },
+  "design": {
+    "arms": [
+      "none",
+      "generic",
+      "olivium",
+      "olivium-nn"
+    ],
+    "interval": "percentile bootstrap 95% of the median, resampling tasks",
+    "primary_comparisons": [
+      "olivium - none",
+      "olivium - olivium-nn",
+      "olivium - generic"
+    ],
+    "primary_metrics": [
+      "total_tokens",
+      "cost_usd",
+      "solved"
+    ],
+    "repeats_expected": 3,
+    "resamples": 10000,
+    "seed": 20261108
+  },
+  "development_tasks": "These are development tasks: the generator was changed while looking at results on these same 8 tasks (including the three pallets/werkzeug tasks), so no task here is held out. The result can show a direction or a problem on tasks the generator was tuned on; it cannot show a gain on unseen repositories.",
+  "input": {
+    "by_status": {
+      "budget_exhausted": 0,
+      "completed": 96,
+      "infra_error": 1,
+      "timeout": 0,
+      "turn_limit": 0
+    },
+    "meter_modes": [
+      "live"
+    ],
+    "missing_repeats": [],
+    "schedule_file": "schedule.none+generic+olivium+olivium-nn.json",
+    "trial_rows": 97
+  },
+  "native_in_olivium_export": {
+    "expressjs-express-7366": {
+      "agents": [
+        "olivium-test-runner"
+      ],
+      "skills": []
+    },
+    "pallets-click-3769": {
+      "agents": [
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-click",
+        "olivium-area-click-2",
+        "olivium-area-click-3"
+      ]
+    },
+    "pallets-click-3858": {
+      "agents": [
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-click",
+        "olivium-area-click-2"
+      ]
+    },
+    "pallets-flask-6096": {
+      "agents": [
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-flask"
+      ]
+    },
+    "pallets-werkzeug-3266": {
+      "agents": [
+        "olivium-locator",
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-werkzeug",
+        "olivium-area-werkzeug-2",
+        "olivium-area-werkzeug-sansio"
+      ]
+    },
+    "pallets-werkzeug-3273": {
+      "agents": [
+        "olivium-locator",
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-werkzeug",
+        "olivium-area-werkzeug-2"
+      ]
+    },
+    "pallets-werkzeug-3298": {
+      "agents": [
+        "olivium-locator",
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-werkzeug",
+        "olivium-area-werkzeug-2",
+        "olivium-area-werkzeug-datastructures"
+      ]
+    },
+    "python-attrs-attrs-1593": {
+      "agents": [
+        "olivium-test-runner"
+      ],
+      "skills": [
+        "olivium-area-attr",
+        "olivium-area-init-compat"
+      ]
+    }
+  },
+  "notice": null,
+  "per_task": {
+    "expressjs-express-7366": {
+      "generic": {
+        "cost_per_solved_usd": 0.0346053333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 7347.0,
+          "cache_read_tokens": 82558.3333333333,
+          "cost_usd": 0.0346053333,
+          "hook_blocks": 0.0,
+          "input_tokens": 9.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 796.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "total_tokens": 90711.0,
+          "turns": 4.6666666667,
+          "turns_before_first_gold_edit": 1.0,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.103816,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": 0.0254507,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 4371.3333333333,
+          "cache_read_tokens": 73117.0,
+          "cost_usd": 0.0254507,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 719.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "total_tokens": 78216.3333333333,
+          "turns": 4.3333333333,
+          "turns_before_first_gold_edit": 1.0,
+          "wasted_reads": 0.6666666667
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.0763521,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": 0.0435507333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10701.0,
+          "cache_read_tokens": 49495.6666666667,
+          "cost_usd": 0.0435507333,
+          "hook_blocks": 0.0,
+          "input_tokens": 12.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 1182.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "total_tokens": 61391.6666666667,
+          "turns": 6.3333333333,
+          "turns_before_first_gold_edit": 1.0,
+          "wasted_reads": 1.6666666667
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1306522,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": 0.0236252667,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 3902.0,
+          "cache_read_tokens": 34422.6666666667,
+          "cost_usd": 0.0236252667,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 1040.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 1.0,
+          "total_tokens": 39376.0,
+          "turns": 5.3333333333,
+          "turns_before_first_gold_edit": 1.0,
+          "wasted_reads": 1.3333333333
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.0708758,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "pallets-click-3769": {
+      "generic": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 9592.3333333333,
+          "cache_read_tokens": 112162.3333333333,
+          "cost_usd": 0.0495744,
+          "hook_blocks": 0.0,
+          "input_tokens": 12.0,
+          "lint_ok": 1.0,
+          "output_tokens": 1435.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 3.5,
+          "total_tokens": 123202.0,
+          "turns": 6.0,
+          "turns_before_first_gold_edit": 3.0,
+          "wasted_reads": 0.6666666667
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.1487232,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 2,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 2,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 6902.0,
+          "cache_read_tokens": 65570.6666666667,
+          "cost_usd": 0.0330714,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.0,
+          "lint_ok": 1.0,
+          "output_tokens": 924.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 2.0,
+          "total_tokens": 73405.0,
+          "turns": 4.0,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 0.0
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.0992142,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 8327.0,
+          "cache_read_tokens": 87269.3333333333,
+          "cost_usd": 0.0492417667,
+          "hook_blocks": 0.0,
+          "input_tokens": 15.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 1966.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 1.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 97578.3333333333,
+          "turns": 7.6666666667,
+          "turns_before_first_gold_edit": 2.3333333333,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.1477253,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 4839.6666666667,
+          "cache_read_tokens": 38826.3333333333,
+          "cost_usd": 0.0301444667,
+          "hook_blocks": 0.0,
+          "input_tokens": 11.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 1414.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 2.0,
+          "total_tokens": 45091.3333333333,
+          "turns": 5.6666666667,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.0904334,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "pallets-click-3858": {
+      "generic": {
+        "cost_per_solved_usd": 0.0844799,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10943.0,
+          "cache_read_tokens": 185237.3333333333,
+          "cost_usd": 0.0844799,
+          "hook_blocks": 0.0,
+          "input_tokens": 16.0,
+          "lint_ok": 1.0,
+          "output_tokens": 3856.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 200053.0,
+          "turns": 8.0,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "wasted_reads": 0.6666666667
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.2534397,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": 0.0661378333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10238.3333333333,
+          "cache_read_tokens": 113193.3333333333,
+          "cost_usd": 0.0661378333,
+          "hook_blocks": 0.0,
+          "input_tokens": 11.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 2920.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 2.6666666667,
+          "total_tokens": 126363.0,
+          "turns": 5.6666666667,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "wasted_reads": 0.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1984135,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": 0.0665757,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 9799.6666666667,
+          "cache_read_tokens": 64418.6666666667,
+          "cost_usd": 0.0665757,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 3561.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "total_tokens": 77790.3333333333,
+          "turns": 5.3333333333,
+          "turns_before_first_gold_edit": 3.0,
+          "wasted_reads": 0.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1997271,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 2,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 2,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": 0.0482771667,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 8569.0,
+          "cache_read_tokens": 35873.3333333333,
+          "cost_usd": 0.0482771667,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 2325.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "total_tokens": 46776.0,
+          "turns": 4.3333333333,
+          "turns_before_first_gold_edit": 3.0,
+          "wasted_reads": 0.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1448315,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 1,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 1,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "pallets-flask-6096": {
+      "generic": {
+        "cost_per_solved_usd": 0.0492307667,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 7074.3333333333,
+          "cache_read_tokens": 124849.3333333333,
+          "cost_usd": 0.0492307667,
+          "hook_blocks": 0.0,
+          "input_tokens": 13.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 1903.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 133840.3333333333,
+          "turns": 6.6666666667,
+          "turns_before_first_gold_edit": 3.3333333333,
+          "wasted_reads": 1.6666666667
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1476923,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": 0.0456310667,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 5777.6666666667,
+          "cache_read_tokens": 128475.6666666667,
+          "cost_usd": 0.0456310667,
+          "hook_blocks": 0.0,
+          "input_tokens": 14.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 1831.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 136099.0,
+          "turns": 7.3333333333,
+          "turns_before_first_gold_edit": 3.3333333333,
+          "wasted_reads": 2.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1368932,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": 0.0388335,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 4786.0,
+          "cache_read_tokens": 56945.0,
+          "cost_usd": 0.0388335,
+          "hook_blocks": 0.0,
+          "input_tokens": 12.0,
+          "lint_ok": 1.0,
+          "output_tokens": 2115.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.6666666667,
+          "total_tokens": 63858.0,
+          "turns": 6.0,
+          "turns_before_first_gold_edit": 3.0,
+          "wasted_reads": 2.6666666667
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1165005,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": 0.0395228333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 5099.0,
+          "cache_read_tokens": 51626.6666666667,
+          "cost_usd": 0.0395228333,
+          "hook_blocks": 0.0,
+          "input_tokens": 14.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 2158.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 58898.6666666667,
+          "turns": 7.3333333333,
+          "turns_before_first_gold_edit": 3.0,
+          "wasted_reads": 1.6666666667
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1185685,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "pallets-werkzeug-3266": {
+      "generic": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 16651.0,
+          "cache_read_tokens": 131261.0,
+          "cost_usd": 0.0897076,
+          "hook_blocks": 0.0,
+          "input_tokens": 12.0,
+          "lint_ok": 1.0,
+          "output_tokens": 3493.0,
+          "p2p_regressions": 2.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 2.6666666667,
+          "total_tokens": 151417.0,
+          "turns": 6.0,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "wasted_reads": 5.0
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.2691228,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 9136.0,
+          "cache_read_tokens": 134150.0,
+          "cost_usd": 0.0664816667,
+          "hook_blocks": 0.0,
+          "input_tokens": 13.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 3020.0,
+          "p2p_regressions": 2.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 2.3333333333,
+          "total_tokens": 146319.3333333333,
+          "turns": 6.6666666667,
+          "turns_before_first_gold_edit": 2.3333333333,
+          "wasted_reads": 5.0
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.199445,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": 0.0546739333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10126.0,
+          "cache_read_tokens": 54976.0,
+          "cost_usd": 0.0546739333,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 2384.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "total_tokens": 67496.6666666667,
+          "turns": 5.3333333333,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 5.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1640218,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 1,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 1,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": 0.0977898,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 9572.0,
+          "cache_read_tokens": 62132.0,
+          "cost_usd": 0.0651932,
+          "hook_blocks": 0.0,
+          "input_tokens": 13.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 3502.3333333333,
+          "p2p_regressions": 3.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.6666666667,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 75219.6666666667,
+          "turns": 6.6666666667,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "wasted_reads": 5.3333333333
+        },
+        "runs": 3,
+        "solved": 2,
+        "total_cost_usd": 0.1955796,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "pallets-werkzeug-3273": {
+      "generic": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 12155.6666666667,
+          "cache_read_tokens": 96130.3333333333,
+          "cost_usd": 0.0735822,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.0,
+          "lint_ok": 1.0,
+          "output_tokens": 3356.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 2.3333333333,
+          "total_tokens": 111652.0,
+          "turns": 5.0,
+          "turns_before_first_gold_edit": 2.3333333333,
+          "wasted_reads": 0.6666666667
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.2207466,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10880.0,
+          "cache_read_tokens": 100424.3333333333,
+          "cost_usd": 0.0719304333,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 3466.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "total_tokens": 114781.6666666667,
+          "turns": 5.3333333333,
+          "turns_before_first_gold_edit": 3.0,
+          "wasted_reads": 0.6666666667
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.2157913,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10539.3333333333,
+          "cache_read_tokens": 56439.3333333333,
+          "cost_usd": 0.0709056,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.0,
+          "lint_ok": 1.0,
+          "output_tokens": 3889.3333333333,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 1.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 6.0,
+          "total_tokens": 70878.0,
+          "turns": 5.0,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "wasted_reads": 0.6666666667
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.2127168,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": null,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 8875.6666666667,
+          "cache_read_tokens": 39916.3333333333,
+          "cost_usd": 0.0624408,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.0,
+          "lint_ok": 1.0,
+          "output_tokens": 3624.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "total_tokens": 52426.0,
+          "turns": 5.0,
+          "turns_before_first_gold_edit": 2.6666666667,
+          "wasted_reads": 0.3333333333
+        },
+        "runs": 3,
+        "solved": 0,
+        "total_cost_usd": 0.1873224,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "pallets-werkzeug-3298": {
+      "generic": {
+        "cost_per_solved_usd": 0.1882251,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 13170.3333333333,
+          "cache_read_tokens": 82785.3333333333,
+          "cost_usd": 0.0627417,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 2152.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.3333333333,
+          "tool_calls_before_first_gold_edit": 2.3333333333,
+          "total_tokens": 98116.3333333333,
+          "turns": 4.3333333333,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 1,
+        "total_cost_usd": 0.1882251,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": 0.0585254333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10202.6666666667,
+          "cache_read_tokens": 106461.0,
+          "cost_usd": 0.0585254333,
+          "hook_blocks": 0.0,
+          "input_tokens": 11.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 2235.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 2.5,
+          "total_tokens": 118910.0,
+          "turns": 5.6666666667,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1755763,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 2,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 2,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": 0.0517925,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10262.0,
+          "cache_read_tokens": 40201.6666666667,
+          "cost_usd": 0.0517925,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 2210.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 2.6666666667,
+          "total_tokens": 52682.3333333333,
+          "turns": 4.3333333333,
+          "turns_before_first_gold_edit": 2.3333333333,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1553775,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": 0.1909823,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 10915.3333333333,
+          "cache_read_tokens": 68964.3333333333,
+          "cost_usd": 0.0636607667,
+          "hook_blocks": 0.0,
+          "input_tokens": 14.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 2944.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 0.3333333333,
+          "tool_calls_before_first_gold_edit": 3.6666666667,
+          "total_tokens": 82839.0,
+          "turns": 7.3333333333,
+          "turns_before_first_gold_edit": 3.3333333333,
+          "wasted_reads": 1.3333333333
+        },
+        "runs": 3,
+        "solved": 1,
+        "total_cost_usd": 0.1909823,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      }
+    },
+    "python-attrs-attrs-1593": {
+      "generic": {
+        "cost_per_solved_usd": 0.0468600667,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 7040.6666666667,
+          "cache_read_tokens": 127650.6666666667,
+          "cost_usd": 0.0468600667,
+          "hook_blocks": 0.0,
+          "input_tokens": 13.3333333333,
+          "lint_ok": 1.0,
+          "output_tokens": 1646.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.3333333333,
+          "total_tokens": 136351.3333333333,
+          "turns": 6.6666666667,
+          "turns_before_first_gold_edit": 2.3333333333,
+          "wasted_reads": 1.3333333333
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1405802,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "none": {
+        "cost_per_solved_usd": 0.0362374,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 6133.0,
+          "cache_read_tokens": 89569.0,
+          "cost_usd": 0.0362374,
+          "hook_blocks": 0.0,
+          "input_tokens": 10.6666666667,
+          "lint_ok": 1.0,
+          "output_tokens": 1192.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": null,
+          "total_tokens": 96905.3333333333,
+          "turns": 5.3333333333,
+          "turns_before_first_gold_edit": null,
+          "wasted_reads": 0.3333333333
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.1087122,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 0,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 0,
+          "wasted_reads": 3
+        }
+      },
+      "olivium": {
+        "cost_per_solved_usd": 0.0269153333,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 4885.6666666667,
+          "cache_read_tokens": 33051.6666666667,
+          "cost_usd": 0.0269153333,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.0,
+          "lint_ok": 1.0,
+          "output_tokens": 1138.0,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 3.0,
+          "total_tokens": 39083.3333333333,
+          "turns": 4.0,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 1.0
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.080746,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 3,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 3,
+          "wasted_reads": 3
+        }
+      },
+      "olivium-nn": {
+        "cost_per_solved_usd": 0.0222245667,
+        "means": {
+          "agent_calls": 0.0,
+          "cache_creation_tokens": 3195.6666666667,
+          "cache_read_tokens": 23227.3333333333,
+          "cost_usd": 0.0222245667,
+          "hook_blocks": 0.0,
+          "input_tokens": 8.0,
+          "lint_ok": 1.0,
+          "output_tokens": 1189.6666666667,
+          "p2p_regressions": 0.0,
+          "permission_denials": 0.0,
+          "skill_calls": 0.0,
+          "solved": 1.0,
+          "tool_calls_before_first_gold_edit": 2.5,
+          "total_tokens": 27620.6666666667,
+          "turns": 4.0,
+          "turns_before_first_gold_edit": 2.0,
+          "wasted_reads": 0.3333333333
+        },
+        "runs": 3,
+        "solved": 3,
+        "total_cost_usd": 0.0666737,
+        "values_used": {
+          "agent_calls": 3,
+          "cache_creation_tokens": 3,
+          "cache_read_tokens": 3,
+          "cost_usd": 3,
+          "hook_blocks": 3,
+          "input_tokens": 3,
+          "lint_ok": 3,
+          "output_tokens": 3,
+          "p2p_regressions": 3,
+          "permission_denials": 3,
+          "skill_calls": 3,
+          "solved": 3,
+          "tool_calls_before_first_gold_edit": 2,
+          "total_tokens": 3,
+          "turns": 3,
+          "turns_before_first_gold_edit": 2,
+          "wasted_reads": 3
+        }
+      }
+    }
+  },
+  "protocol": "PROTOCOL-v2r.md",
+  "rehearsal_reasons": [],
+  "setup": {
+    "generic": {
+      "cost_upper_bound_usd": 0.4990521,
+      "cost_usd": 0.4990521,
+      "failed": [],
+      "tasks": {
+        "expressjs-express-7366": {
+          "cost_usd": 0.0447447,
+          "harness_bytes": 2471,
+          "status": "ok"
+        },
+        "pallets-click-3769": {
+          "cost_usd": 0.0540385,
+          "harness_bytes": 3279,
+          "status": "ok"
+        },
+        "pallets-click-3858": {
+          "cost_usd": 0.0900006,
+          "harness_bytes": 3395,
+          "status": "ok"
+        },
+        "pallets-flask-6096": {
+          "cost_usd": 0.0537418,
+          "harness_bytes": 3173,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3266": {
+          "cost_usd": 0.0540412,
+          "harness_bytes": 3431,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3273": {
+          "cost_usd": 0.0619739,
+          "harness_bytes": 3754,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3298": {
+          "cost_usd": 0.061267,
+          "harness_bytes": 3287,
+          "status": "ok"
+        },
+        "python-attrs-attrs-1593": {
+          "cost_usd": 0.0792444,
+          "harness_bytes": 3731,
+          "status": "ok"
+        }
+      }
+    },
+    "none": {
+      "cost_upper_bound_usd": 0.0,
+      "cost_usd": 0.0,
+      "failed": [],
+      "tasks": {
+        "expressjs-express-7366": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "pallets-click-3769": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "pallets-click-3858": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "pallets-flask-6096": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3266": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3273": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3298": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        },
+        "python-attrs-attrs-1593": {
+          "cost_usd": 0.0,
+          "harness_bytes": 0,
+          "status": "ok"
+        }
+      }
+    },
+    "olivium": {
+      "cost_upper_bound_usd": 0.0,
+      "cost_usd": 0.0,
+      "failed": [],
+      "tasks": {
+        "expressjs-express-7366": {
+          "cost_usd": 0.0,
+          "harness_bytes": 94971,
+          "status": "ok"
+        },
+        "pallets-click-3769": {
+          "cost_usd": 0.0,
+          "harness_bytes": 118475,
+          "status": "ok"
+        },
+        "pallets-click-3858": {
+          "cost_usd": 0.0,
+          "harness_bytes": 111382,
+          "status": "ok"
+        },
+        "pallets-flask-6096": {
+          "cost_usd": 0.0,
+          "harness_bytes": 101468,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3266": {
+          "cost_usd": 0.0,
+          "harness_bytes": 124958,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3273": {
+          "cost_usd": 0.0,
+          "harness_bytes": 123985,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3298": {
+          "cost_usd": 0.0,
+          "harness_bytes": 143419,
+          "status": "ok"
+        },
+        "python-attrs-attrs-1593": {
+          "cost_usd": 0.0,
+          "harness_bytes": 118565,
+          "status": "ok"
+        }
+      }
+    },
+    "olivium-nn": {
+      "cost_upper_bound_usd": 0.0,
+      "cost_usd": 0.0,
+      "failed": [],
+      "tasks": {
+        "expressjs-express-7366": {
+          "cost_usd": 0.0,
+          "harness_bytes": 86606,
+          "status": "ok"
+        },
+        "pallets-click-3769": {
+          "cost_usd": 0.0,
+          "harness_bytes": 96477,
+          "status": "ok"
+        },
+        "pallets-click-3858": {
+          "cost_usd": 0.0,
+          "harness_bytes": 94202,
+          "status": "ok"
+        },
+        "pallets-flask-6096": {
+          "cost_usd": 0.0,
+          "harness_bytes": 89638,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3266": {
+          "cost_usd": 0.0,
+          "harness_bytes": 99584,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3273": {
+          "cost_usd": 0.0,
+          "harness_bytes": 101106,
+          "status": "ok"
+        },
+        "pallets-werkzeug-3298": {
+          "cost_usd": 0.0,
+          "harness_bytes": 114088,
+          "status": "ok"
+        },
+        "python-attrs-attrs-1593": {
+          "cost_usd": 0.0,
+          "harness_bytes": 100362,
+          "status": "ok"
+        }
+      }
+    }
+  },
+  "tasks": [
+    "pallets-click-3858",
+    "pallets-flask-6096",
+    "python-attrs-attrs-1593",
+    "expressjs-express-7366",
+    "pallets-click-3769",
+    "pallets-werkzeug-3298",
+    "pallets-werkzeug-3273",
+    "pallets-werkzeug-3266"
+  ]
+}

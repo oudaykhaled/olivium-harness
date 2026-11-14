@@ -1,0 +1,11 @@
+[info] Running HarnessForgeWeb.Endpoint with Bandit 1.14.1 at 127.0.0.1:8866 (http)
+[info] Access HarnessForgeWeb.Endpoint at http://localhost:8866
+[watch] build finished, watching for changes...
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 302 in 29ms
+[debug] Phoenix.Router halted in :authenticated/2
+[notice] SIGTERM received - shutting down
+

@@ -1,0 +1,14 @@
+### cover/ before move
+14624	cover
+256
+moved cover/ -> <scratch>/leftovers/cover
+cover/ no longer in repository
+### tmp/ left in place (gitignored), summary:
+15464	tmp
+revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e
+workspaces
+test-46992
+test-49810
+test-50128
+test-50176
+test-51321

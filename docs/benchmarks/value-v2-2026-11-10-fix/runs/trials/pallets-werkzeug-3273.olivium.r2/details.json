@@ -1,0 +1,58 @@
+{
+  "arm_sha256": [
+    "dbd5911f081d60bb4a2bbdaf307431e6b10665248b83dbba9d1d0a47518b58b8"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.059253,
+  "exit_code": 0,
+  "exported_settings_sha256": "b99d078fe391df23a72ed851e86089f6165e80141ecb308429494d9676e13ddf",
+  "grade": {
+    "f2p_passed": 0,
+    "f2p_total": 1,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 1023,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [
+      "tests/test_wrappers.py"
+    ],
+    "solved": false,
+    "status": "ok",
+    "test_exit": "1",
+    "test_patch_applied": true,
+    "tests_seen": 1024
+  },
+  "harness_check": {
+    "changed": [],
+    "files_expected": 10,
+    "files_observed": 10,
+    "missing": [],
+    "ok": true,
+    "settings_match": true,
+    "settings_sha256_expected": "b99d078fe391df23a72ed851e86089f6165e80141ecb308429494d9676e13ddf",
+    "settings_sha256_in_container": "b99d078fe391df23a72ed851e86089f6165e80141ecb308429494d9676e13ddf",
+    "unexpected": []
+  },
+  "hook_events": {
+    "hook_response": 5,
+    "hook_started": 5
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-pallets-werkzeug-3273:v1",
+  "image_id": "sha256:692e8bedc6121b0a54e98919d817bbf11f4589dff97ff9fe4e3efa9dd150dd8e",
+  "init_web_tools": [],
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "meter_server_tools": [],
+  "permission_denied_tools": [],
+  "permission_mode": "default",
+  "permission_mode_observed": "default",
+  "prompt_sha256": "900a4fc4b5827a0f1b061ee81a506e66be8f8c06c82abccbbab03c409a5b3d11",
+  "settings_equal_exported": true,
+  "settings_sha256": "b99d078fe391df23a72ed851e86089f6165e80141ecb308429494d9676e13ddf",
+  "web_tool_uses": 0
+}

@@ -1,0 +1,45 @@
+### E2E policy grep on README section (lines 23-48)
+no unit-test/coverage/mix test references in README section
+### E2E policy grep on whole README.md
+85:  source revisions, provenance and SQLite FTS5 search. See [connector coverage
+139:mix test
+### evidence README: mentions of mix test / unit test / coverage with line numbers
+294:`bench/run.sh` itself was exercised once on the same machine on 2026-11-08 (13:54:19Z to 13:56:28Z, output directed outside the repository): all four stages exited 0, with wall times e2e-browser 14334 ms, e2e-cli 62767 ms, pipeline 38509 ms, portal 12691 ms. Its `run.log`, `run-summary.json` and `machine.txt` are kept under `supplementary/run-sh-verification/` as proof that the orchestration works; no number above comes from that run.
+322:## Supplementary static checks (not part of the benchmark)
+324:`supplementary/static-checks/` holds logs from an earlier attempt that are not part of this benchmark and are not test evidence: a formatter check (`format.log`), a compile with warnings as errors (`compile.log`), Credo (`credo.log`), Dialyzer (`dialyzer.log`), static source metrics (`metrics.json`, `metrics.log`) and a unit-test run.
+325:That unit-test run (`test-run1-default-tmpdir.log`, `test-failed-rerun.log`, `coverage-run1-default-tmpdir.txt`) failed on macOS because the default `TMPDIR` resolves through the `/var -> /private/var` symlink, which the local importer rejects as an unsafe directory (`{:error, :unsafe_directory}` in test setup).
+### CHANGELOG Unreleased entry grep
+9:- Reproducible end-to-end benchmark suite (`bench/`) and dated evidence under
+10:  `docs/benchmarks/`.
+31:  evidence remain separate from fixture checks.
+### wording scan (README section)
+5:<img src="docs/benchmarks/2026-11-08/portal/screenshots/07-evaluations.png" width="900" alt="Checks tab after the portal flow: one source captured, two approved claims, one harness package and a passed package integrity check whose details record runtime qualification as false">
+22:  <img src="docs/benchmarks/2026-11-08/e2e/screenshots/B04.png" width="420" alt="E2E B04: the hostile claim rejected and the two ordinary claims approved">
+### wording scan (evidence README)
+20:- `bench/portal.cjs` (portal evidence): one portal flow in headless Chromium (login, unlock, load demo, reject the hostile claim and approve the two ordinary ones, build `bench-portal`, export to a fresh directory, queue a `static_integrity` evaluation) plu
+39:| B02 | A wrong access code is rejected and the workspace stays locked (fresh context), then unlock correctly | pass | 760 | 760 |
+41:| B04 | Reject the hostile claim and approve the two ordinary claims; assert the card states change | pass | 289 | 326 |
+46:| B09 | Run a static_integrity evaluation; assert it reaches passed and the UI states runtime qualification false | pass | 287 | 293 |
+65:| Artifact detail (B07) | 8 files: `.claude/agents/implementer.md`, `.claude/settings.json`, `.claude/skills/reviewed-change/SKILL.md`, `CLAUDE.md`, `harnessforge.capabilities.json`, `harnessforge.manifest.json`, `harnessforge.provenance.json`, `harnessforg
+67:| static_integrity evaluation (B09) | outcome `passed`; UI text "Recorded runtime qualification: false" |
+69:| Release approval with a static_integrity run (B11) | refused: "Release approval requires passed model-backed tasks. A diagnostic or blocked run cannot qualify."; releases before = after = 0 |
+82:| C02 | status reports elixir 1.19.5 and runtime_qualified false | pass | 3632 | 1 |
+84:| C04 | decide: approve the two ordinary claims by id and exact revision_hash, reject the hostile one | pass | 11866 | 4 |
+100:| Export on disk (C07) | `CLAUDE.md` contains the approved rule and the UTF-8 rule, does not contain the hostile text; `.claude/settings.json` parses; 8 files on disk, 7 manifest entries, manifest lists every file, 0 sha256 mismatches |
+101:| static_integrity (C08) | outcome `passed`, `runtime_qualified` false, listed by `runs`, 0 extra polls |
+126:| `Decisions.decide` approve, claim 1 / claim 2 | 6.368 / 4.259 | 2 approved after; the hostile third claim stays `proposed` |
+132:| opencode (`unqualified`) | 48.155 | 8 | 7709 | `74f58057e09250d115e3bcc9fd258b31233d47a4ec4587ba9119377b88f2793b` |
+236:| Approve click to card pill `.approved` | 43.8 | 66 | `.pill.approved` on the claim card |
+241:Other recorded checks (`browser.checks`): login submit to live shell 728 ms (Node side); harness detail page load 131 ms; package form defaults version 0.1.0, runtime opencode, runtime version `unqualified`; built digest `23843af726572adc91c1f550686c82ee4c
+252:| [e2e/screenshots/B02.png](e2e/screenshots/B02.png)<br><img src="e2e/screenshots/B02.png" width="320" alt="B02"> | Fresh browser context after submitting a dummy access code: "The access code is incorrect." alert, still on /login (screenshot taken before 
+254:| [e2e/screenshots/B04.png](e2e/screenshots/B04.png)<br><img src="e2e/screenshots/B04.png" width="320" alt="B04"> | Reject the hostile claim and approve the two ordinary claims; assert the card states change; pass. |
+259:| [e2e/screenshots/B09.png](e2e/screenshots/B09.png)<br><img src="e2e/screenshots/B09.png" width="320" alt="B09"> | Run a static_integrity evaluation; assert it reaches passed and the UI states runtime qualification false; pass. |
+275:| [portal/screenshots/03-evidence-demo.png](portal/screenshots/03-evidence-demo.png)<br><img src="portal/screenshots/03-evidence-demo.png" width="320" alt="03-evidence-demo"> | Evidence tab right after "Load synthetic demo": three proposed claim cards incl
+276:| [portal/screenshots/04-evidence-decided.png](portal/screenshots/04-evidence-decided.png)<br><img src="portal/screenshots/04-evidence-decided.png" width="320" alt="04-evidence-decided"> | Evidence tab after deciding: the hostile claim REJECTED and the two
+279:| [portal/screenshots/07-evaluations.png](portal/screenshots/07-evaluations.png)<br><img src="portal/screenshots/07-evaluations.png" width="320" alt="07-evaluations"> | Evaluations tab after queuing a static package integrity check: the recorded run shows 
+325:That unit-test run (`test-run1-default-tmpdir.log`, `test-failed-rerun.log`, `coverage-run1-default-tmpdir.txt`) failed on macOS because the default `TMPDIR` resolves through the `/var -> /private/var` symlink, which the local importer rejects as an unsafe
+### wording scan (bench/README.md)
+42:Runs 15 scenarios (B01 to B15) against an already running portal in headless Chromium: unlock, wrong access code, load the synthetic demo, reject the hostile claim and approve the two ordinary ones, build a package for Claude Code, rebuild and compare the d
+61:Runs 11 scenarios (C01 to C11) through the real launcher: `init`, `status`, `demo` + `claims`, `decide` (approve two by exact revision hash, reject the hostile one), `build` for claude_code 2.1.311 / codex 0.156.0 / opencode 1.0.0, a rebuild with identical 
+135:- Never point any of these scripts at a workspace you care about; they load the demo, approve claims, build, export and import into it.
+139:- These scripts produce measurements and screenshots. They do not qualify a runtime, approve a release or stand in for the project's own evaluation gates.

@@ -1,0 +1,52 @@
+2026-11-08T10:19:22.083Z +   3228ms [browser] chromium 156.0.8078.4 via playwright 1.64.1; origin http://127.0.0.1:8866
+2026-11-08T10:19:22.191Z +   3336ms [nav-login] start
+2026-11-08T10:19:22.601Z +   3746ms [nav-login] ok in 410 ms
+2026-11-08T10:19:22.602Z +   3747ms [screenshot-01-login] start
+2026-11-08T10:19:24.367Z +   5512ms [screenshot] 01-login.png 1440x900 79155 bytes — Login page before anything is typed: empty "Workspace access code" field and Unlock workspace button.
+2026-11-08T10:19:24.367Z +   5512ms [screenshot-01-login] ok in 1765 ms
+2026-11-08T10:19:24.367Z +   5512ms [login] start
+2026-11-08T10:19:24.986Z +   6131ms [login] ok in 619 ms
+2026-11-08T10:19:24.986Z +   6131ms [screenshot-02-home] start
+2026-11-08T10:19:25.038Z +   6183ms [screenshot] 02-home.png 1440x900 83707 bytes — First screen after unlocking the workspace (▦Home tab of the workspace shell, LiveView connected).
+2026-11-08T10:19:25.038Z +   6183ms [screenshot-02-home] ok in 52 ms
+2026-11-08T10:19:25.038Z +   6183ms [nav-home] start
+2026-11-08T10:19:25.700Z +   6845ms [nav-home] ok in 662 ms
+2026-11-08T10:19:25.700Z +   6845ms [nav-evidence] start
+2026-11-08T10:19:26.466Z +   7611ms [nav-evidence] ok in 766 ms
+2026-11-08T10:19:26.466Z +   7611ms [tab-switch-evidence] start
+2026-11-08T10:19:26.659Z +   7804ms [tab-switch-evidence] ok in 193 ms
+2026-11-08T10:19:26.659Z +   7804ms [load-demo] start
+2026-11-08T10:19:26.778Z +   7923ms [load-demo] ok in 119 ms
+2026-11-08T10:19:26.778Z +   7923ms [screenshot-03-evidence-demo] start
+2026-11-08T10:19:26.860Z +   8005ms [screenshot] 03-evidence-demo.png 1440x900 106579 bytes — Evidence tab right after "Load synthetic demo": three proposed claim cards including the hostile "IGNORE ALL PREVIOUS INSTRUCTIONS" claim, each with Reject / Approve revision buttons.
+2026-11-08T10:19:26.860Z +   8005ms [screenshot-03-evidence-demo] ok in 82 ms
+2026-11-08T10:19:26.860Z +   8005ms [decide-claims] start
+2026-11-08T10:19:27.104Z +   8249ms [decide-claims] ok in 244 ms
+2026-11-08T10:19:27.105Z +   8250ms [screenshot-04-evidence-decided] start
+2026-11-08T10:19:27.159Z +   8304ms [screenshot] 04-evidence-decided.png 1440x900 101144 bytes — Evidence tab after deciding: the hostile claim REJECTED and the two ordinary claims APPROVED, decision buttons gone.
+2026-11-08T10:19:27.160Z +   8305ms [screenshot-04-evidence-decided] ok in 55 ms
+2026-11-08T10:19:27.160Z +   8305ms [build-package] start
+2026-11-08T10:19:27.351Z +   8496ms [build-package] ok in 191 ms
+2026-11-08T10:19:27.351Z +   8496ms [screenshot-05-package-built] start
+2026-11-08T10:19:57.432Z +  38577ms [screenshot] 05-package-built.png 1440x900 118619 bytes — Package tab after building "bench-portal": the Built packages list shows the artifact row with its digest, "Open your harness" and "Download ZIP".
+2026-11-08T10:19:57.433Z +  38578ms [screenshot-05-package-built] ok in 30082 ms
+2026-11-08T10:19:57.433Z +  38578ms [export-package] start
+2026-11-08T10:20:27.433Z +  68578ms [export-package] FAILED after 30000 ms: locator.evaluate: Timeout 30000ms exceeded. | Call log: | [2m  - waiting for locator('.artifact-row').filter({ hasText: 'bench-portal' }).first().locator('details[id^="package-export-options-"]')[22m | 
+2026-11-08T10:20:27.433Z +  68578ms [evaluate-static-integrity] start
+2026-11-08T10:20:27.702Z +  68847ms [evaluate-static-integrity] ok in 269 ms
+2026-11-08T10:20:27.702Z +  68847ms [screenshot-07-evaluations] start
+2026-11-08T10:20:27.791Z +  68936ms [screenshot] 07-evaluations.png 1440x900 98322 bytes — Evaluations tab after queuing a static package integrity check: the recorded run shows passed, with its details opened to show "Recorded runtime qualification: false".
+2026-11-08T10:20:27.791Z +  68936ms [screenshot-07-evaluations] ok in 89 ms
+2026-11-08T10:20:27.792Z +  68937ms [screenshot-08-privacy] start
+2026-11-08T10:20:57.794Z +  98939ms [screenshot-08-privacy] FAILED after 30002 ms: locator.click: Timeout 30000ms exceeded. | Call log: | [2m  - waiting for locator('#nav-privacy')[22m | [2m    - locator resolved to <button phx-click="tab" id="nav-privacy" class="nav-item " data-phx-loc="2752" phx-value-tab="privacy">…</button>[22m | [2m  - attempting click action[22m | [2m    2 × waiting for element to be visible, enabled and stable[22m
+2026-11-08T10:20:57.795Z +  98940ms [screenshot-06-harness-detail] start
+2026-11-08T10:20:57.796Z +  98941ms [screenshot-06-harness-detail] FAILED after 1 ms: no artifact digest from the build step
+2026-11-08T10:20:57.796Z +  98941ms [screenshot-09-setup] start
+2026-11-08T10:20:57.956Z +  99101ms [screenshot] 09-setup.png 1440x900 43838 bytes — Company setup page /setup (final path /setup).
+2026-11-08T10:20:57.956Z +  99101ms [screenshot-09-setup] ok in 160 ms
+2026-11-08T10:20:57.956Z +  99101ms [screenshot-10-mobile-evidence] start
+2026-11-08T10:20:58.260Z +  99405ms [screenshot] 10-mobile-evidence.png 390x844 56958 bytes — Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow check recorded).
+2026-11-08T10:20:58.260Z +  99405ms [screenshot-10-mobile-evidence] ok in 304 ms
+2026-11-08T10:20:58.260Z +  99405ms [close] start
+2026-11-08T10:20:58.306Z +  99451ms [close] ok in 46 ms
+2026-11-08T10:20:58.307Z +  99452ms [done] ok=false errors=3 screenshots=8 total=99451 ms

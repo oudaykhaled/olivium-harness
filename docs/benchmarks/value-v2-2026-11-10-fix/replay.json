@@ -1,0 +1,238 @@
+{
+ "deny_rules_without_guard": {
+  "calls": [
+   {
+    "command": "mkdir -p .rules-proof",
+    "outcome": "ran"
+   },
+   {
+    "command": "rm -rf .rules-proof",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "rm -r .rules-proof",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "curl -s http://meter:8080/healthz",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "git push origin HEAD",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "wget -q http://meter:8080/",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "git commit -m x",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "sudo ls",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "cat .env",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "git reset --hard HEAD",
+    "outcome": "refused_rule"
+   },
+   {
+    "command": "ls",
+    "outcome": "ran"
+   }
+  ],
+  "denials": 9,
+  "method": "Guard file deleted from the fixed pallets-click-3858 export (the hook then lets Claude Code's rules decide alone); synthetic commands; plain Bash allowed.",
+  "permission_mode": "default"
+ },
+ "guard_with_bash_allowed": {
+  "calls": [
+   {
+    "command": "mkdir -p .mock-allow-proof",
+    "outcome": "ran",
+    "run": "expressjs-express-7366.olivium.r1"
+   },
+   {
+    "command": "rm -rf .mock-allow-proof",
+    "outcome": "refused_guard",
+    "run": "expressjs-express-7366.olivium.r1"
+   },
+   {
+    "command": "curl -s http://meter:8080/healthz",
+    "outcome": "refused_guard",
+    "run": "expressjs-express-7366.olivium.r1"
+   },
+   {
+    "command": "mkdir -p .mock-allow-proof",
+    "outcome": "ran",
+    "run": "pallets-click-3858.olivium.r1"
+   },
+   {
+    "command": "rm -rf .mock-allow-proof",
+    "outcome": "refused_guard",
+    "run": "pallets-click-3858.olivium.r1"
+   },
+   {
+    "command": "curl -s http://meter:8080/healthz",
+    "outcome": "refused_guard",
+    "run": "pallets-click-3858.olivium.r1"
+   }
+  ],
+  "method": "Mock permcheck scenario, fixed export, 2 tasks."
+ },
+ "pretooluse_events_in_fixed_replay": {
+  "guard_warnings": 0,
+  "hook_approvals": 0,
+  "nonzero_exit": 0,
+  "responses": 142
+ },
+ "replay_of_refused_runs": {
+  "method": "Every main-session tool call (Bash, Read, Edit, Write, Glob, Grep, MultiEdit) of the 14 olivium runs of the 2026-11-09/10 scored run that had a permission denial, replayed in original order, one session per run, with the trial's run configuration.",
+  "runs": {
+   "expressjs-express-7366.olivium.r1": {
+    "calls_replayed": 6,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 1,
+    "replay_fixed_export": 0,
+    "replay_old_export": 1,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "expressjs-express-7366.olivium.r3": {
+    "calls_replayed": 7,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 1,
+    "replay_fixed_export": 0,
+    "replay_old_export": 1,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "pallets-click-3769.olivium.r1": {
+    "calls_replayed": 5,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 1,
+    "replay_fixed_export": 0,
+    "replay_old_export": 1,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "pallets-click-3769.olivium.r2": {
+    "calls_replayed": 7,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 3,
+    "replay_fixed_export": 0,
+    "replay_old_export": 3,
+    "replay_old_export_bypass_mode": 1,
+    "replay_old_export_plus_bash_allow": 1
+   },
+   "pallets-click-3858.olivium.r1": {
+    "calls_replayed": 15,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 5,
+    "replay_fixed_export": 0,
+    "replay_old_export": 5,
+    "replay_old_export_bypass_mode": 1,
+    "replay_old_export_plus_bash_allow": 1
+   },
+   "pallets-click-3858.olivium.r2": {
+    "calls_replayed": 22,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 5,
+    "replay_fixed_export": 0,
+    "replay_old_export": 5,
+    "replay_old_export_bypass_mode": 1,
+    "replay_old_export_plus_bash_allow": 1
+   },
+   "pallets-click-3858.olivium.r3": {
+    "calls_replayed": 15,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 3,
+    "replay_fixed_export": 0,
+    "replay_old_export": 3,
+    "replay_old_export_bypass_mode": 1,
+    "replay_old_export_plus_bash_allow": 1
+   },
+   "pallets-flask-6096.olivium.r1": {
+    "calls_replayed": 10,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 2,
+    "replay_fixed_export": 0,
+    "replay_old_export": 2,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "pallets-flask-6096.olivium.r2": {
+    "calls_replayed": 8,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 1,
+    "replay_fixed_export": 0,
+    "replay_old_export": 1,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "pallets-flask-6096.olivium.r3": {
+    "calls_replayed": 10,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 2,
+    "replay_fixed_export": 0,
+    "replay_old_export": 2,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "pallets-werkzeug-3266.olivium.r3": {
+    "calls_replayed": 5,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 1,
+    "replay_fixed_export": 0,
+    "replay_old_export": 1,
+    "replay_old_export_bypass_mode": 0,
+    "replay_old_export_plus_bash_allow": 0
+   },
+   "python-attrs-attrs-1593.olivium.r1": {
+    "calls_replayed": 12,
+    "fixed_export_refusals": [],
+    "refused_in_paid_run": 3,
+    "replay_fixed_export": 0,
+    "replay_old_export": 3,
+    "replay_old_export_bypass_mode": 1,
+    "replay_old_export_plus_bash_allow": 1
+   },
+   "python-attrs-attrs-1593.olivium.r2": {
+    "calls_replayed": 15,
+    "fixed_export_refusals": [
+     "guard: names a path outside the project: ~/"
+    ],
+    "refused_in_paid_run": 3,
+    "replay_fixed_export": 1,
+    "replay_old_export": 3,
+    "replay_old_export_bypass_mode": 2,
+    "replay_old_export_plus_bash_allow": 2
+   },
+   "python-attrs-attrs-1593.olivium.r3": {
+    "calls_replayed": 13,
+    "fixed_export_refusals": [
+     "guard: runs a denied command: rm -rf"
+    ],
+    "refused_in_paid_run": 4,
+    "replay_fixed_export": 1,
+    "replay_old_export": 4,
+    "replay_old_export_bypass_mode": 2,
+    "replay_old_export_plus_bash_allow": 2
+   }
+  },
+  "totals": {
+   "calls_replayed": 150,
+   "refused_in_paid_run": 35,
+   "replay_fixed_export": 2,
+   "replay_old_export": 35,
+   "replay_old_export_bypass_mode": 9,
+   "replay_old_export_plus_bash_allow": 9
+  }
+ },
+ "what": "Proofs at $0 (mock meter, no API calls) through real Claude Code 2.1.311 in each task's agent image. Command text of the paid runs is not published here; counts and refusal reasons only."
+}

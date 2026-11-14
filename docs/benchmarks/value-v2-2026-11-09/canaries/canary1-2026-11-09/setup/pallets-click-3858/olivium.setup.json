@@ -1,0 +1,75 @@
+{
+  "arm": "olivium",
+  "arm_sha256": "de56af958dd709ab4868a26e2e75034b9812f1faea5b08d9db5e08b60e2f8d64",
+  "blueprint_version": "python@1",
+  "cost_upper_bound_usd": 0.0,
+  "cost_usd": 0.0,
+  "counts": {
+    "agents": 0,
+    "allowed_commands": 13,
+    "denied_commands": 23,
+    "hooks": 3,
+    "rules": 2,
+    "skills": 0
+  },
+  "diagnostics": [
+    {
+      "code": "runtime_unqualified",
+      "message": "Claude Code native preview only. A rendered configuration does not establish authenticated execution or isolation.",
+      "severity": "warning"
+    },
+    {
+      "capability": "execution.timeout_seconds",
+      "code": "unsupported_control",
+      "message": "Requested control is not enforced by this export.",
+      "severity": "warning"
+    },
+    {
+      "code": "workspace_trust_required",
+      "message": "Claude Code ignores permissions.allow in .claude/settings.json until the folder is trusted. Accept the trust prompt once by running claude in the folder, or pass --settings .claude/settings.json to an unattended claude -p run.",
+      "severity": "warning"
+    },
+    {
+      "code": "secret_deny_is_partial",
+      "message": "Deny rules for secret files cover Read and Edit. They do not stop grep -r or a program the agent runs, so treat them as guard rails and not as a boundary.",
+      "severity": "info"
+    }
+  ],
+  "digest": "933ba3e69433329f35af3f6bcb62ca99219f73c11c387c8a50a245d9fc63bc13",
+  "exported_settings_sha256": "7e795a965a4564963e5bfe8cca8210e02be7f8973efcc762c022a71f26c6dd49",
+  "generator": "bin/harnessforge generate --runtime claude_code --json",
+  "harness_bytes": 24736,
+  "harness_files": [
+    ".claude/hooks/olivium-before-stop.sh",
+    ".claude/hooks/olivium-format.sh",
+    ".claude/settings.json",
+    ".olivium/capabilities.json",
+    ".olivium/guidance-provenance.json",
+    ".olivium/manifest.json",
+    ".olivium/provenance.json",
+    ".olivium/spec.json",
+    "CLAUDE.md"
+  ],
+  "mode": "paid",
+  "post_base_check": {
+    "commits_at_base_in_bare_clone": 3361,
+    "commits_in_truncated_history": 3361,
+    "exported_files_scanned": 9,
+    "failures": [],
+    "forbidden_commits_checked": 2,
+    "head": "7944461a80b780d060899c8835acab3c273a04a6"
+  },
+  "profile_digest": "4b7147b4d5157d99eb661900e5f861f034638158bfb6167c1fcad6c46f73e849",
+  "rehearsal_fixture": false,
+  "removed_instruction_files": [],
+  "setup_model_calls": 0,
+  "skipped_commands": [],
+  "status": "ok",
+  "task_id": "pallets-click-3858",
+  "tokens": {
+    "cache_creation": 0,
+    "cache_read": 0,
+    "input": 0,
+    "output": 0
+  }
+}

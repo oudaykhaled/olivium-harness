@@ -1,0 +1,555 @@
+{
+  "what": "Evidence that the model-free generator (bin/harnessforge generate and the portal's /generate page), with the fixed Claude Code settings and refuse-only guard hook, runs on real public repositories at pre-registered base commits. It shows what the harness contains and that it is deterministic; it says nothing about whether the harness helps a coding agent.",
+  "recorded_utc": "2026-11-10T09:31Z to 2026-11-10T09:43Z",
+  "supersedes": {
+    "recorded_utc": "2026-11-09T23:10Z to 2026-11-09T23:18Z",
+    "reason": "recorded from the generator before the settings/hook fix (43 Read() denies, narrower allow list, no guard hook); every file in this folder was replaced",
+    "old_digests": {
+      "pallets-werkzeug-3298": "892860fe179412f172739fd8d30d8bd3c618c7f6af9ea5dccc094ec8119b85af",
+      "pallets-werkzeug-3273": "749216e3658ce447d65743ae0c40a461e3933cc1edce9e7d6cc1b9c664b510be",
+      "pallets-werkzeug-3266": "91bda8ba4bdb6cc1621f4ae4cce431b34d2247dc4f65a06a45c35d44faff7fa9",
+      "pallets-click-3858": "933ba3e69433329f35af3f6bcb62ca99219f73c11c387c8a50a245d9fc63bc13"
+    },
+    "claude_md_unchanged": "The four CLAUDE.md files are byte-identical to the old record (same sha256); settings.json, the hooks, manifest and .olivium files changed."
+  },
+  "model_calls": 0,
+  "spend_usd": 0,
+  "repositories": [
+    {
+      "task": "pallets-werkzeug-3298",
+      "repo": "pallets/werkzeug",
+      "base_sha": "25663ddc295879d362a206b4c33f16ea2e694392",
+      "held_out": true,
+      "commits_in_checkout": 6065,
+      "refs": [
+        "refs/heads/main"
+      ],
+      "remotes": [],
+      "instruction_files": []
+    },
+    {
+      "task": "pallets-werkzeug-3273",
+      "repo": "pallets/werkzeug",
+      "base_sha": "a33190bffb7f6dd4c7084c08257b4542689b8c66",
+      "held_out": true,
+      "commits_in_checkout": 6001,
+      "refs": [
+        "refs/heads/main"
+      ],
+      "remotes": [],
+      "instruction_files": []
+    },
+    {
+      "task": "pallets-werkzeug-3266",
+      "repo": "pallets/werkzeug",
+      "base_sha": "0005c79e09bae5f4cc2bd8ccd468d7dafe24a455",
+      "held_out": true,
+      "commits_in_checkout": 5985,
+      "refs": [
+        "refs/heads/main"
+      ],
+      "remotes": [],
+      "instruction_files": []
+    },
+    {
+      "task": "pallets-click-3858",
+      "repo": "pallets/click",
+      "base_sha": "7944461a80b780d060899c8835acab3c273a04a6",
+      "held_out": false,
+      "commits_in_checkout": 3361,
+      "refs": [
+        "refs/heads/main"
+      ],
+      "remotes": [],
+      "instruction_files": []
+    }
+  ],
+  "held_out_limit": "Only one held-out repository exists in manifest-v2 (pallets/werkzeug). The three held-out subjects are three base commits of that one repository, not separate repositories. 3273 and 3266 produce identical CLAUDE.md text and identical settings and guard files; their exports differ only in the repository profile digest recorded in .olivium/spec.json and .olivium/provenance.json, and so in the manifest and digest.",
+  "checkouts": "Fresh under scratchpad/real/v3, built with bench/value/arms/olivium_v2.py build_truncated_repo from the cached bare clones (<bench-out>/value-v2-2026-11-09/material/.clones): base_sha and its ancestors only, branch main, no remote, no tags, reflog expired, gc. No instruction files existed at these commits, so none were removed.",
+  "product_source": {
+    "repo_head": "628676e7c48d7f3e02cca7785e5c476393cfca91 plus uncommitted working-tree changes (the settings/hook fix and other lanes)",
+    "generator_snapshot_digests": {
+      "lib_sha256": "ccc8a19c4753cff2e932ce23f141c136b22c1def8bcbf465d3dcf784f7d47f07",
+      "config_sha256": "90480eee9e2baa5e09c8afc7847f2b8b84a39b5dfc9b29afa3fedacbfda25b6f",
+      "priv_blueprints_sha256": "82e96fc7b4f3f6d50dd066ff91660272867a9290a882659c936f28ab39d244ed",
+      "bin_harnessforge_sha256": "c97c5c227b9b3a7669314f1b8f126bc3c99538a89612e6e1b54daba28e15144b",
+      "mix_lock_sha256": "07b56ec946f046cba4df2aeba0db9cb461230078ed5ac3bc16111382ce02e805"
+    },
+    "equals_final_rereview_snapshot": true,
+    "note": "Digests computed with bench/value/arms/olivium_v2.py generator_snapshot_digests; identical to the app snapshot the final re-review (settings-review r3/re2) built and tested. The click export here is byte-identical (tree sha256 3dc9aa9f...) to both of that review's click builds."
+  },
+  "runtime": {
+    "mix_env": "dev",
+    "mix_build_root": "scratchpad/build/record3 (separate from the project _build); 'mix compile' then 'mix assets.build' run there first",
+    "elixir": "1.19.5 / OTP 28",
+    "os": "macOS 26.6 x86_64",
+    "server": "Fresh HARNESSFORGE_WORKSPACE (record3/ws/portal), free port 54879, PHX_SERVER=true, started with 'mix run --no-start --no-halt' after setting the endpoint's watchers to [] so the run did not rebuild assets; stopped after the screenshot pass. This is the only difference from 'bin/harnessforge serve'. Server log: no [error] lines.",
+    "cli": "bin/harnessforge (mix run) with the same build root; every run in its own fresh workspace; workspace access tokens deleted afterwards and never printed.",
+    "browser": "Playwright 1.64.1, Chromium headless shell 156.0.8078.4, viewport 1280x800, device scale 1. The portal renders its own dark theme.",
+    "side_effects_outside_evidence": "mix assets.build rewrote the build artifact priv/static/assets/js/app.js (sha256 90e09c41... 1,253,514 B dev-watcher build with inline source map -> 539afc87... 357,275 B); priv/static/assets/css/app.css unchanged (da8e0c3b...). The tailwind 4.3.3 and esbuild 0.25.4 binaries were downloaded into the scratch build root. This recording wrote no other file outside this folder and the scratchpad, ran no Docker container and made no model call."
+  },
+  "method": {
+    "portal": "One walkthrough video on werkzeug 3298, then two full screenshot passes over all four checkouts in the same signed-in workspace. Pass 2 is published; pass 1 was superseded only because its CLAUDE.md capture was 568 px wide (its exports are still in the disk proof). In each pass every checkout was generated, the page reloaded and generated again (same-session repeat), then exported to a fresh directory.",
+    "text_pages": "The portal shows .claude/settings.json and the hooks only as names and sizes, so the recorder rendered the exported settings.json and the guard header as plain HTML text pages in the same Chromium (JavaScript off) for werkzeug 3298.",
+    "image_check": "Every image was opened and looked at. The four CLAUDE.md clips were trimmed by 6 px at the bottom to remove a sliver of the export field; nothing else was edited."
+  },
+  "results": {
+    "pallets-click-3858": {
+      "held_out": false,
+      "exports_checked": 4,
+      "portal_exports": 2,
+      "cli_exports": 2,
+      "distinct_digests": [
+        "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071"
+      ],
+      "distinct_tree_sha256": [
+        "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+      ],
+      "portal_digest_equals_cli_digest": true,
+      "all_exports_byte_identical": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "every_guard_pin_matches_file": true,
+      "files": 10,
+      "bytes": 68376,
+      "claude_md_bytes": 486,
+      "guard_bytes": 34270,
+      "allow_rules": 47,
+      "deny_rules": 104,
+      "read_deny_rules": 0,
+      "same_session_portal_repeat_digests_equal": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "equals_reviewer_build": true,
+      "checkout": {
+        "unchanged_content_including_git_dir": true,
+        "unchanged_mtimes": true,
+        "entries": 243,
+        "files": 203
+      }
+    },
+    "pallets-werkzeug-3266": {
+      "held_out": true,
+      "exports_checked": 4,
+      "portal_exports": 2,
+      "cli_exports": 2,
+      "distinct_digests": [
+        "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4"
+      ],
+      "distinct_tree_sha256": [
+        "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798"
+      ],
+      "portal_digest_equals_cli_digest": true,
+      "all_exports_byte_identical": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "every_guard_pin_matches_file": true,
+      "files": 10,
+      "bytes": 67680,
+      "claude_md_bytes": 421,
+      "guard_bytes": 34257,
+      "allow_rules": 47,
+      "deny_rules": 104,
+      "read_deny_rules": 0,
+      "same_session_portal_repeat_digests_equal": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "equals_reviewer_build": null,
+      "checkout": {
+        "unchanged_content_including_git_dir": true,
+        "unchanged_mtimes": true,
+        "entries": 387,
+        "files": 317
+      }
+    },
+    "pallets-werkzeug-3273": {
+      "held_out": true,
+      "exports_checked": 4,
+      "portal_exports": 2,
+      "cli_exports": 2,
+      "distinct_digests": [
+        "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3"
+      ],
+      "distinct_tree_sha256": [
+        "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e"
+      ],
+      "portal_digest_equals_cli_digest": true,
+      "all_exports_byte_identical": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "every_guard_pin_matches_file": true,
+      "files": 10,
+      "bytes": 67680,
+      "claude_md_bytes": 421,
+      "guard_bytes": 34257,
+      "allow_rules": 47,
+      "deny_rules": 104,
+      "read_deny_rules": 0,
+      "same_session_portal_repeat_digests_equal": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "equals_reviewer_build": null,
+      "checkout": {
+        "unchanged_content_including_git_dir": true,
+        "unchanged_mtimes": true,
+        "entries": 387,
+        "files": 317
+      }
+    },
+    "pallets-werkzeug-3298": {
+      "held_out": true,
+      "exports_checked": 6,
+      "portal_exports": 3,
+      "cli_exports": 3,
+      "distinct_digests": [
+        "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206"
+      ],
+      "distinct_tree_sha256": [
+        "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+      ],
+      "portal_digest_equals_cli_digest": true,
+      "all_exports_byte_identical": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "every_guard_pin_matches_file": true,
+      "files": 10,
+      "bytes": 68464,
+      "claude_md_bytes": 541,
+      "guard_bytes": 34257,
+      "allow_rules": 47,
+      "deny_rules": 104,
+      "read_deny_rules": 0,
+      "same_session_portal_repeat_digests_equal": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "equals_reviewer_build": null,
+      "checkout": {
+        "unchanged_content_including_git_dir": true,
+        "unchanged_mtimes": true,
+        "entries": 389,
+        "files": 319
+      }
+    }
+  },
+  "exports_checked_total": 18,
+  "limits": [
+    "Nothing here measures agent cost, context or accuracy; this is generator output only.",
+    "The running-stage screenshots are best-effort single frames: the pipeline took 1.1 to 1.9 s from click to ready, and each image shows Detect running.",
+    "The click, 3273 and 3266 running-stage frames are byte-identical because the unfocused path field shows only the shared prefix; the DOM facts in proofs/portal-results.json tell them apart.",
+    "No Claude Code session was run against these exports in this recording; the guard's behaviour is documented in docs/claude-code-connector.md and the review records, not here."
+  ],
+  "files": [
+    {
+      "path": "cli/cli-session-werkzeug-3298.txt",
+      "bytes": 6314,
+      "sha256": "4ea414c2665d5f6e626bf44ef9ba84f3e40b58bbc3291c4b5a4e9e60f6968c48",
+      "shows": "Verbatim CLI session on werkzeug at 25663ddc in a fresh workspace: rev-parse/commit count/refs/remotes, analyze (7 commands, 1 convention, 2 auto rules, 5 held back), generate with export (digest d280b1e4..., 9 files plus manifest, 41 allowed and 61 denied commands, 3 hooks), file modes and sizes, sha256 per file, tree hashes, a refused re-export into the same directory (export_conflict, exit 1), and the same tree hashes afterwards."
+    },
+    {
+      "path": "cli/generate-json-runs.json",
+      "bytes": 6858,
+      "sha256": "1d4ee8dd7c7e80325eb717545b9ed383102da2108a8e5c14c8b2ec4ee13e7abb",
+      "shows": "Eight 'generate --json' runs, two per checkout, each in its own fresh workspace: all exit 0 with empty stderr, 4.2 to 4.8 s wall time, one digest per checkout, counts and diagnostics codes."
+    },
+    {
+      "path": "generated-claude-md/pallets-click-3858.md",
+      "bytes": 486,
+      "sha256": "4360c7d7a9a08e450535a5e54e67d0105beda3f7723f70aa2cede68d0f6904bb",
+      "shows": "The CLAUDE.md exported by the portal for click 3858 (7944461a, pilot task, analyzer tuned on click), byte-identical to the CLI exports and unchanged from the 2026-11-09 record; renamed so no agent loads it as instructions."
+    },
+    {
+      "path": "generated-claude-md/pallets-werkzeug-3266.md",
+      "bytes": 421,
+      "sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "shows": "The CLAUDE.md exported by the portal for werkzeug 3266 (0005c79e, held out), byte-identical to the CLI exports and unchanged from the 2026-11-09 record; renamed so no agent loads it as instructions."
+    },
+    {
+      "path": "generated-claude-md/pallets-werkzeug-3273.md",
+      "bytes": 421,
+      "sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "shows": "The CLAUDE.md exported by the portal for werkzeug 3273 (a33190bf, held out), byte-identical to the CLI exports and unchanged from the 2026-11-09 record; renamed so no agent loads it as instructions."
+    },
+    {
+      "path": "generated-claude-md/pallets-werkzeug-3298.md",
+      "bytes": 541,
+      "sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "shows": "The CLAUDE.md exported by the portal for werkzeug 3298 (25663ddc, held out), byte-identical to the CLI exports and unchanged from the 2026-11-09 record; renamed so no agent loads it as instructions."
+    },
+    {
+      "path": "proofs/disk-proof.json",
+      "bytes": 40609,
+      "sha256": "202eed3056753902e4185b77abcaa1e8da35b4d3b2c78494e0871a45fc9765dc",
+      "shows": "18 exports (8 CLI JSON, 1 CLI text demo, 1 portal video, 8 portal screenshot passes) checked against their manifests (path, sha256, size, mode), per-task digests and tree sha256, guard SHA-256 pinned in settings.json versus the guard file, click compared with the reviewer's two builds, and before/after snapshots of the four checkouts including .git and mtimes."
+    },
+    {
+      "path": "proofs/portal-results.json",
+      "bytes": 22275,
+      "sha256": "2012ac2e8cb57d8af4146018918db550f3d44a24bb52b7a7af7b142ee9cfd94b",
+      "shows": "DOM facts read from the portal during the video and the published screenshot pass: digests, tiles, commands, meters, notice codes, file list with sizes, running-stage capture state, same-session repeat digest, export path, preview equals exported CLAUDE.md, console errors (none); plus digests of the superseded first pass."
+    },
+    {
+      "path": "proofs/settings-facts-werkzeug-3298.json",
+      "bytes": 1643,
+      "sha256": "4fca6f0405e92256202f0e2d3b58fae12b852ab9951fe1b18cb6cac5546e9c84",
+      "shows": "Counts and hashes behind the three werkzeug 3298 text pages: settings.json 4,343 B with 47 allow / 104 deny / 0 ask rules (0 Read denies), hook events and timeouts, guard 34,257 B and 583 lines, guard sha256 equal to the manifest and to the SHA-256 pinned in the PreToolUse command."
+    },
+    {
+      "path": "screenshots/00-login.png",
+      "bytes": 81973,
+      "sha256": "8b2866642a7553fffd5f0ede68ebc2b21f32809cc1472da49d5d1b18cbd5d1be",
+      "shows": "Login page with the empty masked access-code field; it shows the path of the access-token file in the fresh record3 workspace, not the code."
+    },
+    {
+      "path": "screenshots/01-home-sidebar-generate-link.png",
+      "bytes": 79739,
+      "sha256": "5511bbebfdb5b70d3e0b315b0e7c474b0bd5c0c5c64562035fe07c4dfbf78512",
+      "shows": "Portal home after sign-in with 'Generate from repo' at the top of the sidebar (hovered); 'Your harnesses' shows the first three (by name: click, werkzeug, werkzeug) of the harnesses saved earlier in this same workspace by the video and the first screenshot pass."
+    },
+    {
+      "path": "screenshots/02-generate-empty.png",
+      "bytes": 14811,
+      "sha256": "9fc401d282c0f78f30167a206fd20aec26cefcb2a48602e9ce5f7abf6cccf871",
+      "shows": "/generate reached through the sidebar link: empty path field with placeholder /path/to/repository, four idle pipeline nodes (Detect, Analyze, Generate, Export)."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-1-path-entered.png",
+      "bytes": 22355,
+      "sha256": "244d2e7ed2fa66cf69ea291695c9174499c9e04f8eb4d594e2e4be07e88ecf4e",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): checkout path typed into the field (the visible end reads .../real/v3/pallets-click-3858/click), pipeline idle."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-2-pipeline-running.png",
+      "bytes": 23452,
+      "sha256": "4e28b6ffa25b17a66f7318b0a6675fe24aa4a8d1ff8a5152e75f4dde5ac37bed",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): status 'Working', Detect node running (purple), later stages idle, Generate button dimmed; byte-identical to the other two non-3298 running frames because the unfocused path field shows only the shared path prefix."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-3-pipeline-ready.png",
+      "bytes": 109288,
+      "sha256": "e4a3a44d727cc486d7a8b2b462cb6deee0d805491cef48367790b82c53d7a0b1",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): 'Ready', Detect/Analyze/Generate checked, Export pending; tiles 7 commands / 2 conventions / 0 files that change together; 7 command chips (install chip 'uv sync --all-extras'); six meters; four warning notices (native preview only, control not enforced, allow list ignored until the folder is trusted, what the allow list lets run without a prompt); digest 7f1290ab... at the bottom edge."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-4-preview-and-files.png",
+      "bytes": 140596,
+      "sha256": "79ffafee2f80c08fc6ecba5da505a363dd915856272aa2eeb8886f5db002d89b",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): the CLAUDE.md preview beside the 10-file list with sizes, including .claude/hooks/olivium-before-stop.sh 1628 B, olivium-format.sh 432 B, olivium-guard.sh 34270 B, .claude/settings.json 4356 B; export field below."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-5-generated-full-page.png",
+      "bytes": 182502,
+      "sha256": "885fe8791a137a5a245f768d51546236ff42edacf29e64456e0ea45727e0d969",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): full page of the ready state (1280x1250): tiles, chips, meters, notices, digest 7f1290ab..., CLAUDE.md preview, file list and export field."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-6-claude-md-full.png",
+      "bytes": 80921,
+      "sha256": "bdacd6b02f1475e185bc60c54f90ba8e11c48c13d289459cb69878f465d03c0f",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): 1280-wide clip of the output row with the preview's height limit lifted for this capture only: the whole CLAUDE.md (Commands (7, install 'uv sync --all-extras'), Layout, Conventions, Do and Don't (CHANGES.md entry for every bug fix; avoid ternary expressions); 486 B) beside the file list."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-7-export-target.png",
+      "bytes": 140337,
+      "sha256": "112099c74686e7d2a10389e0636ac95971010a2a90b06a4d1abc211a71ec090d",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): export field focused, holding the fresh directory exports/shots2/portal-pallets-click-3858, next to the Export button."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-8-exported.png",
+      "bytes": 142913,
+      "sha256": "50560fa67d76ba32625437914b8bc8b728944c7427e51e924c754bd6e4508832",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): export confirmation (check mark and the exported path) under the export field."
+    },
+    {
+      "path": "screenshots/pallets-click-3858-9-exported-full-page.png",
+      "bytes": 198635,
+      "sha256": "1ee38d911147fdb74be7a28fc578673819a46791fdc29d141c77bd0d57704aaf",
+      "shows": "click 3858 (7944461a, pilot task, analyzer tuned on click): full page after export (1280x1350), all four pipeline nodes checked, confirmation at the bottom."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-1-path-entered.png",
+      "bytes": 22922,
+      "sha256": "4d6408d3742c2cc7a01a71da9fdbf67f03d332518877d1b763aafd32dfc45113",
+      "shows": "werkzeug 3266 (0005c79e, held out): checkout path typed into the field (the visible end reads .../real/v3/pallets-werkzeug-3266/werkzeug), pipeline idle."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-2-pipeline-running.png",
+      "bytes": 23452,
+      "sha256": "4e28b6ffa25b17a66f7318b0a6675fe24aa4a8d1ff8a5152e75f4dde5ac37bed",
+      "shows": "werkzeug 3266 (0005c79e, held out): status 'Working', Detect node running (purple), later stages idle, Generate button dimmed; byte-identical to the other two non-3298 running frames because the unfocused path field shows only the shared path prefix."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-3-pipeline-ready.png",
+      "bytes": 108499,
+      "sha256": "b0d9d5bd8d54dc0e8c6e53c0e447478846886e66fa507954420a76a0e88f2ea1",
+      "shows": "werkzeug 3266 (0005c79e, held out): 'Ready', Detect/Analyze/Generate checked, Export pending; tiles 7 commands / 2 conventions / 0 files that change together; 7 command chips (install chip 'uv sync'); six meters; four warning notices (native preview only, control not enforced, allow list ignored until the folder is trusted, what the allow list lets run without a prompt); digest ff716a63... at the bottom edge."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-4-preview-and-files.png",
+      "bytes": 139870,
+      "sha256": "e9bf1bc4d548bb15d95db961c591d9327f89c12cf986993075e350b7e820749d",
+      "shows": "werkzeug 3266 (0005c79e, held out): the CLAUDE.md preview beside the 10-file list with sizes, including .claude/hooks/olivium-before-stop.sh 1628 B, olivium-format.sh 432 B, olivium-guard.sh 34257 B, .claude/settings.json 4343 B; export field below."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-5-generated-full-page.png",
+      "bytes": 181062,
+      "sha256": "6a027cadf1690a16cf61c98ae8a769bd71ca3608997f5086e7401cbf5e9077f2",
+      "shows": "werkzeug 3266 (0005c79e, held out): full page of the ready state (1280x1250): tiles, chips, meters, notices, digest ff716a63..., CLAUDE.md preview, file list and export field."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-6-claude-md-full.png",
+      "bytes": 75148,
+      "sha256": "0b42b242419b6812346668e3ad5c959fac06d1f415c6b97d31ac6a2e501cb814",
+      "shows": "werkzeug 3266 (0005c79e, held out): 1280-wide clip of the output row with the preview's height limit lifted for this capture only: the whole CLAUDE.md (Commands (7), Layout, Conventions, Do and Don't (CHANGES.rst entry), no Change together section; 421 B, text identical to 3273) beside the file list."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-7-export-target.png",
+      "bytes": 139928,
+      "sha256": "2f107087d3ff4699113ec197926407a7e0a1ddadbd6f25c8c9629b78a3d7d7c0",
+      "shows": "werkzeug 3266 (0005c79e, held out): export field focused, holding the fresh directory exports/shots2/portal-pallets-werkzeug-3266, next to the Export button."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-8-exported.png",
+      "bytes": 142134,
+      "sha256": "b2e26c760d03f1f6803c956821aadb8709447a5131c25437e986123dc18bee66",
+      "shows": "werkzeug 3266 (0005c79e, held out): export confirmation (check mark and the exported path) under the export field."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3266-9-exported-full-page.png",
+      "bytes": 197133,
+      "sha256": "8c802599e9c0cb862c7c20d213544d287d90da29171fc0cd117e4c78389e542f",
+      "shows": "werkzeug 3266 (0005c79e, held out): full page after export (1280x1350), all four pipeline nodes checked, confirmation at the bottom."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-1-path-entered.png",
+      "bytes": 22857,
+      "sha256": "5d00d93b30e149bc6d8bf1df867618e81ffc12f21bfddd69bb48d80ecbb1361d",
+      "shows": "werkzeug 3273 (a33190bf, held out): checkout path typed into the field (the visible end reads .../real/v3/pallets-werkzeug-3273/werkzeug), pipeline idle."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-2-pipeline-running.png",
+      "bytes": 23452,
+      "sha256": "4e28b6ffa25b17a66f7318b0a6675fe24aa4a8d1ff8a5152e75f4dde5ac37bed",
+      "shows": "werkzeug 3273 (a33190bf, held out): status 'Working', Detect node running (purple), later stages idle, Generate button dimmed; byte-identical to the other two non-3298 running frames because the unfocused path field shows only the shared path prefix."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-3-pipeline-ready.png",
+      "bytes": 109095,
+      "sha256": "0e56198488c1284ecd4786fee3db757b3011663b5f663e50f555bf3cf4990598",
+      "shows": "werkzeug 3273 (a33190bf, held out): 'Ready', Detect/Analyze/Generate checked, Export pending; tiles 7 commands / 2 conventions / 0 files that change together; 7 command chips (install chip 'uv sync'); six meters; four warning notices (native preview only, control not enforced, allow list ignored until the folder is trusted, what the allow list lets run without a prompt); digest 252bc894... at the bottom edge."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-4-preview-and-files.png",
+      "bytes": 140466,
+      "sha256": "afbbdbb1af0397f9c23addeb89cbaf4000b1a16fc907112941689e9956164f82",
+      "shows": "werkzeug 3273 (a33190bf, held out): the CLAUDE.md preview beside the 10-file list with sizes, including .claude/hooks/olivium-before-stop.sh 1628 B, olivium-format.sh 432 B, olivium-guard.sh 34257 B, .claude/settings.json 4343 B; export field below."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-5-generated-full-page.png",
+      "bytes": 181675,
+      "sha256": "ad422befd7ea9ee4fb34e8dea3388fb08c6a14d1b000466f1c5cc9b74bebe78f",
+      "shows": "werkzeug 3273 (a33190bf, held out): full page of the ready state (1280x1250): tiles, chips, meters, notices, digest 252bc894..., CLAUDE.md preview, file list and export field."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-6-claude-md-full.png",
+      "bytes": 75148,
+      "sha256": "0b42b242419b6812346668e3ad5c959fac06d1f415c6b97d31ac6a2e501cb814",
+      "shows": "werkzeug 3273 (a33190bf, held out): 1280-wide clip of the output row with the preview's height limit lifted for this capture only: the whole CLAUDE.md (Commands (7), Layout, Conventions, Do and Don't (CHANGES.rst entry), no Change together section; 421 B, text identical to 3266) beside the file list."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-7-export-target.png",
+      "bytes": 140357,
+      "sha256": "0ec1edaa81cc19e3d30eb77a1e32aa2c8c885640d633abf92548951e9a01f54b",
+      "shows": "werkzeug 3273 (a33190bf, held out): export field focused, holding the fresh directory exports/shots2/portal-pallets-werkzeug-3273, next to the Export button."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-8-exported.png",
+      "bytes": 142890,
+      "sha256": "a4b055c5ff389b15fa200dcc3fddf8a68b45941ac33c1dd5167ed5ec10319c41",
+      "shows": "werkzeug 3273 (a33190bf, held out): export confirmation (check mark and the exported path) under the export field."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3273-9-exported-full-page.png",
+      "bytes": 197912,
+      "sha256": "2b61d87e36edcb743e656a6fb9592fb1343d3430a12b5626051c35bef3caceb0",
+      "shows": "werkzeug 3273 (a33190bf, held out): full page after export (1280x1350), all four pipeline nodes checked, confirmation at the bottom."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-1-path-entered.png",
+      "bytes": 22944,
+      "sha256": "a0345aa6ca7c7f0b649734aa3a25cffef3e78168399e0467f6c7b71665ca987d",
+      "shows": "werkzeug 3298 (25663ddc, held out): checkout path typed into the field (the visible end reads .../real/v3/pallets-werkzeug-3298/werkzeug), pipeline idle."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-10-settings-permissions.png",
+      "bytes": 289169,
+      "sha256": "5dd19dcacaf2dea3053ead3b09f65443cc7fd596b7c3648e3df19a55ae206d2c",
+      "shows": "werkzeug 3298: text page rendered by the recorder from the exported .claude/settings.json (the portal shows only its name and size): all 47 allow rules (41 Bash plus Edit, Edit(./**), Glob, Grep, Read, Write), all 104 deny rules (61 Bash, 43 Edit, 0 Read), empty ask list, disableSkillShellExecution true, defaultMode default; sha256 equal to the manifest."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-11-settings-hooks.png",
+      "bytes": 127072,
+      "sha256": "70dd662f2c6d649b1db49e5d78e4748a0d81a9de98007cb0618e48261d1cffd3",
+      "shows": "werkzeug 3298: the three hooks from the exported settings.json verbatim: PostToolUse Edit|Write 30 s (format script via /bin/sh), PreToolUse Bash|Read|Edit|Write|MultiEdit|NotebookEdit|Grep|Glob 10 s (PATH=/usr/bin:/bin, runs the guard only when its SHA-256 is 7dc67999..., passes on only a deny line), Stop 420 s; the pinned hash equals the guard file's."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-12-guard-header.png",
+      "bytes": 89470,
+      "sha256": "3824d95a83dc73921fe6e7e2d6d47d7967f8b179c74c36fd91c185eb34886810",
+      "shows": "werkzeug 3298: lines 1 to 12 of the 583-line, 34,257 B .claude/hooks/olivium-guard.sh verbatim: the comment header (it only refuses, never approves; runs only while its SHA-256 is the generated one; not a sandbox) and the 'exec awk' line; sha256 equal to the manifest and the pin."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-2-pipeline-running.png",
+      "bytes": 23448,
+      "sha256": "0ab55a8cba8cd09c8c476d0413b35f7f1a96f1aa6ee07d31594aab218fc35523",
+      "shows": "werkzeug 3298 (25663ddc, held out): status 'Working', Detect node running (purple), later stages idle, Generate button dimmed."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-3-pipeline-ready.png",
+      "bytes": 108218,
+      "sha256": "f31cbce1f26fc5e349ba6142549d9afd2fa04d7614a5c53af360befde557dccc",
+      "shows": "werkzeug 3298 (25663ddc, held out): 'Ready', Detect/Analyze/Generate checked, Export pending; tiles 7 commands / 2 conventions / 1 files that change together; 7 command chips (install chip 'uv sync'); six meters; four warning notices (native preview only, control not enforced, allow list ignored until the folder is trusted, what the allow list lets run without a prompt); digest d280b1e4... at the bottom edge."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-4-preview-and-files.png",
+      "bytes": 140384,
+      "sha256": "582fd11a95aad37f21040a7af2de066be75a747e6536462c938738d5572962e2",
+      "shows": "werkzeug 3298 (25663ddc, held out): the CLAUDE.md preview beside the 10-file list with sizes, including .claude/hooks/olivium-before-stop.sh 1628 B, olivium-format.sh 432 B, olivium-guard.sh 34257 B, .claude/settings.json 4343 B; export field below."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-5-generated-full-page.png",
+      "bytes": 181152,
+      "sha256": "757858b6ede24d2f2842a0f1182d9eb0b29cc9e69267f5cadc5283c3ec2db9ce",
+      "shows": "werkzeug 3298 (25663ddc, held out): full page of the ready state (1280x1250): tiles, chips, meters, notices, digest d280b1e4..., CLAUDE.md preview, file list and export field."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-6-claude-md-full.png",
+      "bytes": 86452,
+      "sha256": "a87f2f853d457a0453b8010929c2a64cbb7b2edd2dc89dfd9efe8865c8a9a54a",
+      "shows": "werkzeug 3298 (25663ddc, held out): 1280-wide clip of the output row with the preview's height limit lifted for this capture only: the whole CLAUDE.md (Commands (7), Layout, Conventions, Change together (src/werkzeug/datastructures/cache_control.py with tests/test_datastructures.py), Do and Don't (CHANGES.rst entry); 541 B) beside the file list."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-7-export-target.png",
+      "bytes": 140359,
+      "sha256": "4d94628da5d933fa01d9a59fac0719c456b5b122cc4f0426b8919883ac50316f",
+      "shows": "werkzeug 3298 (25663ddc, held out): export field focused, holding the fresh directory exports/shots2/portal-pallets-werkzeug-3298, next to the Export button."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-8-exported.png",
+      "bytes": 142728,
+      "sha256": "df89b7becb9ca9610ba095b4d3340521999af5e4a62acd86916d336a23db87f5",
+      "shows": "werkzeug 3298 (25663ddc, held out): export confirmation (check mark and the exported path) under the export field."
+    },
+    {
+      "path": "screenshots/pallets-werkzeug-3298-9-exported-full-page.png",
+      "bytes": 197321,
+      "sha256": "122eea8249b758c8d4be6aeeec1c34cb527d25e263a8064efb4ecf558e45bf9c",
+      "shows": "werkzeug 3298 (25663ddc, held out): full page after export (1280x1350), all four pipeline nodes checked, confirmation at the bottom."
+    },
+    {
+      "path": "video/portal-generate-werkzeug-3298.webm",
+      "bytes": 5107373,
+      "sha256": "83e905f976106fa5664fd357980bee7fbf0f59f6ac4d3c6e339b0bdd946398ba",
+      "shows": "36.9 s, 1280x800 VP9 at 25 fps, werkzeug at 25663ddc: login with the access code typed into a masked field (every frame of the typing checked: dots only), home, sidebar 'Generate from repo', path typed, Generate, pipeline done, tiles/command chips/meters/four notices, CLAUDE.md preview scrolled, the file list with the four .claude settings and hook files held for 3.5 s, export path typed, export confirmation."
+    }
+  ]
+}

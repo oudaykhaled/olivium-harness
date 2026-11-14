@@ -1,0 +1,7 @@
+{
+  "pallets-click-3858": {
+    "agent_image": "olivium-bench-agent-pallets-click-3858:v1",
+    "agent_image_id": "sha256:fbc38054278658f487f4ff0aba3f9e4fdc25dc1fe31530b9063794e4c4cb7590",
+    "deps_image_id": "sha256:c07e33e8675e32b3109caa6f2c750efb2c6ebb0ec32eef97205d9005931860a2"
+  }
+}

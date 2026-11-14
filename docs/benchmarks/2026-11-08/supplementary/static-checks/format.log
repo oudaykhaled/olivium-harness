@@ -1,0 +1,273 @@
+=== [format-run-1] started_at=2026-11-08T13:12:11Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix format --check-formatted
+=== load_before: 14.69 11.89 11.21
+** (Mix) mix format failed due to --check-formatted.
+The following files are not formatted:
+
+[1m[31m<repo>/test/harness_forge/grader_diagnostics_test.exs
+[0m
+         |
+ 85  85  |      script = formatter_script(@suite, "missing_fixture", "/protected/missing.log")
+ 86  86  |
+ 87     -|      assert %{exit_status: 41, output: output} = grade(@suite, @task, fixture["candidate"], script)
+     87 +|      assert %{exit_status: 41, output: output} =
+     88 +|               grade(@suite, @task, fixture["candidate"], script)
+     89 +|
+ 88  90  |      assert output =~ "[grader_failure stage=missing_fixture exit=41]"
+ 89  91  |      assert output =~ "[grader_log_unavailable]"
+         |
+175 177  |             Command.docker(
+176 178  |               [
+177     -|                 "run", "--rm", "--name", name,
+178     -|                 "--network", "none", "--user", "65534:65534", "--read-only",
+179     -|                 "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
+180     -|                 "--pids-limit", "128", "--memory", "1g", "--memory-swap", "1g",
+181     -|                 "--cpus", "1", "--tmpfs", "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+182     -|                 "--env", "HOME=/tmp", "--env", "GOCACHE=/tmp/cache",
+183     -|                 "--env", "GOPROXY=off", "--env", "GOSUMDB=off",
+184     -|                 "--env", "GOTOOLCHAIN=local", "--env", "GOFLAGS=-p=1",
+185     -|                 "--env", "HARNESSFORGE_TASK=#{task}",
+186     -|                 "--mount", "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+187     -|                 "--mount", "type=bind,source=#{root}/protected,target=/protected,readonly",
+188     -|                 "--entrypoint", "/bin/sh", Coding.grader_image(), "-ec",
+    179 +|                 "run",
+    180 +|                 "--rm",
+    181 +|                 "--name",
+    182 +|                 name,
+    183 +|                 "--network",
+    184 +|                 "none",
+    185 +|                 "--user",
+    186 +|                 "65534:65534",
+    187 +|                 "--read-only",
+    188 +|                 "--cap-drop",
+    189 +|                 "ALL",
+    190 +|                 "--security-opt",
+    191 +|                 "no-new-privileges",
+    192 +|                 "--pids-limit",
+    193 +|                 "128",
+    194 +|                 "--memory",
+    195 +|                 "1g",
+    196 +|                 "--memory-swap",
+    197 +|                 "1g",
+    198 +|                 "--cpus",
+    199 +|                 "1",
+    200 +|                 "--tmpfs",
+    201 +|                 "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+    202 +|                 "--env",
+    203 +|                 "HOME=/tmp",
+    204 +|                 "--env",
+    205 +|                 "GOCACHE=/tmp/cache",
+    206 +|                 "--env",
+    207 +|                 "GOPROXY=off",
+    208 +|                 "--env",
+    209 +|                 "GOSUMDB=off",
+    210 +|                 "--env",
+    211 +|                 "GOTOOLCHAIN=local",
+    212 +|                 "--env",
+    213 +|                 "GOFLAGS=-p=1",
+    214 +|                 "--env",
+    215 +|                 "HARNESSFORGE_TASK=#{task}",
+    216 +|                 "--mount",
+    217 +|                 "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+    218 +|                 "--mount",
+    219 +|                 "type=bind,source=#{root}/protected,target=/protected,readonly",
+    220 +|                 "--entrypoint",
+    221 +|                 "/bin/sh",
+    222 +|                 Coding.grader_image(),
+    223 +|                 "-ec",
+189 224  |                 script || TaskSuite.grader_script(suite)
+190 225  |               ],
+         |
+
+
+
+real 1.34
+user 8.40
+sys 0.92
+=== exit_status=1
+=== wall_seconds=1.366
+=== load_after: 14.69 11.89 11.21
+=== ended_at=2026-11-08T13:12:12Z
+
+=== [format-run-2] started_at=2026-11-08T13:12:12Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix format --check-formatted
+=== load_before: 14.69 11.89 11.21
+** (Mix) mix format failed due to --check-formatted.
+The following files are not formatted:
+
+[1m[31m<repo>/test/harness_forge/grader_diagnostics_test.exs
+[0m
+         |
+ 85  85  |      script = formatter_script(@suite, "missing_fixture", "/protected/missing.log")
+ 86  86  |
+ 87     -|      assert %{exit_status: 41, output: output} = grade(@suite, @task, fixture["candidate"], script)
+     87 +|      assert %{exit_status: 41, output: output} =
+     88 +|               grade(@suite, @task, fixture["candidate"], script)
+     89 +|
+ 88  90  |      assert output =~ "[grader_failure stage=missing_fixture exit=41]"
+ 89  91  |      assert output =~ "[grader_log_unavailable]"
+         |
+175 177  |             Command.docker(
+176 178  |               [
+177     -|                 "run", "--rm", "--name", name,
+178     -|                 "--network", "none", "--user", "65534:65534", "--read-only",
+179     -|                 "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
+180     -|                 "--pids-limit", "128", "--memory", "1g", "--memory-swap", "1g",
+181     -|                 "--cpus", "1", "--tmpfs", "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+182     -|                 "--env", "HOME=/tmp", "--env", "GOCACHE=/tmp/cache",
+183     -|                 "--env", "GOPROXY=off", "--env", "GOSUMDB=off",
+184     -|                 "--env", "GOTOOLCHAIN=local", "--env", "GOFLAGS=-p=1",
+185     -|                 "--env", "HARNESSFORGE_TASK=#{task}",
+186     -|                 "--mount", "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+187     -|                 "--mount", "type=bind,source=#{root}/protected,target=/protected,readonly",
+188     -|                 "--entrypoint", "/bin/sh", Coding.grader_image(), "-ec",
+    179 +|                 "run",
+    180 +|                 "--rm",
+    181 +|                 "--name",
+    182 +|                 name,
+    183 +|                 "--network",
+    184 +|                 "none",
+    185 +|                 "--user",
+    186 +|                 "65534:65534",
+    187 +|                 "--read-only",
+    188 +|                 "--cap-drop",
+    189 +|                 "ALL",
+    190 +|                 "--security-opt",
+    191 +|                 "no-new-privileges",
+    192 +|                 "--pids-limit",
+    193 +|                 "128",
+    194 +|                 "--memory",
+    195 +|                 "1g",
+    196 +|                 "--memory-swap",
+    197 +|                 "1g",
+    198 +|                 "--cpus",
+    199 +|                 "1",
+    200 +|                 "--tmpfs",
+    201 +|                 "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+    202 +|                 "--env",
+    203 +|                 "HOME=/tmp",
+    204 +|                 "--env",
+    205 +|                 "GOCACHE=/tmp/cache",
+    206 +|                 "--env",
+    207 +|                 "GOPROXY=off",
+    208 +|                 "--env",
+    209 +|                 "GOSUMDB=off",
+    210 +|                 "--env",
+    211 +|                 "GOTOOLCHAIN=local",
+    212 +|                 "--env",
+    213 +|                 "GOFLAGS=-p=1",
+    214 +|                 "--env",
+    215 +|                 "HARNESSFORGE_TASK=#{task}",
+    216 +|                 "--mount",
+    217 +|                 "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+    218 +|                 "--mount",
+    219 +|                 "type=bind,source=#{root}/protected,target=/protected,readonly",
+    220 +|                 "--entrypoint",
+    221 +|                 "/bin/sh",
+    222 +|                 Coding.grader_image(),
+    223 +|                 "-ec",
+189 224  |                 script || TaskSuite.grader_script(suite)
+190 225  |               ],
+         |
+
+
+
+real 1.62
+user 8.45
+sys 1.03
+=== exit_status=1
+=== wall_seconds=1.646
+=== load_after: 14.69 11.89 11.21
+=== ended_at=2026-11-08T13:12:14Z
+
+=== [format-run-3] started_at=2026-11-08T13:12:14Z cwd=<repo> MIX_ENV=unset TMPDIR=<scratch>/tmpdir
+=== command: mix format --check-formatted
+=== load_before: 14.69 11.89 11.21
+** (Mix) mix format failed due to --check-formatted.
+The following files are not formatted:
+
+[1m[31m<repo>/test/harness_forge/grader_diagnostics_test.exs
+[0m
+         |
+ 85  85  |      script = formatter_script(@suite, "missing_fixture", "/protected/missing.log")
+ 86  86  |
+ 87     -|      assert %{exit_status: 41, output: output} = grade(@suite, @task, fixture["candidate"], script)
+     87 +|      assert %{exit_status: 41, output: output} =
+     88 +|               grade(@suite, @task, fixture["candidate"], script)
+     89 +|
+ 88  90  |      assert output =~ "[grader_failure stage=missing_fixture exit=41]"
+ 89  91  |      assert output =~ "[grader_log_unavailable]"
+         |
+175 177  |             Command.docker(
+176 178  |               [
+177     -|                 "run", "--rm", "--name", name,
+178     -|                 "--network", "none", "--user", "65534:65534", "--read-only",
+179     -|                 "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
+180     -|                 "--pids-limit", "128", "--memory", "1g", "--memory-swap", "1g",
+181     -|                 "--cpus", "1", "--tmpfs", "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+182     -|                 "--env", "HOME=/tmp", "--env", "GOCACHE=/tmp/cache",
+183     -|                 "--env", "GOPROXY=off", "--env", "GOSUMDB=off",
+184     -|                 "--env", "GOTOOLCHAIN=local", "--env", "GOFLAGS=-p=1",
+185     -|                 "--env", "HARNESSFORGE_TASK=#{task}",
+186     -|                 "--mount", "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+187     -|                 "--mount", "type=bind,source=#{root}/protected,target=/protected,readonly",
+188     -|                 "--entrypoint", "/bin/sh", Coding.grader_image(), "-ec",
+    179 +|                 "run",
+    180 +|                 "--rm",
+    181 +|                 "--name",
+    182 +|                 name,
+    183 +|                 "--network",
+    184 +|                 "none",
+    185 +|                 "--user",
+    186 +|                 "65534:65534",
+    187 +|                 "--read-only",
+    188 +|                 "--cap-drop",
+    189 +|                 "ALL",
+    190 +|                 "--security-opt",
+    191 +|                 "no-new-privileges",
+    192 +|                 "--pids-limit",
+    193 +|                 "128",
+    194 +|                 "--memory",
+    195 +|                 "1g",
+    196 +|                 "--memory-swap",
+    197 +|                 "1g",
+    198 +|                 "--cpus",
+    199 +|                 "1",
+    200 +|                 "--tmpfs",
+    201 +|                 "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+    202 +|                 "--env",
+    203 +|                 "HOME=/tmp",
+    204 +|                 "--env",
+    205 +|                 "GOCACHE=/tmp/cache",
+    206 +|                 "--env",
+    207 +|                 "GOPROXY=off",
+    208 +|                 "--env",
+    209 +|                 "GOSUMDB=off",
+    210 +|                 "--env",
+    211 +|                 "GOTOOLCHAIN=local",
+    212 +|                 "--env",
+    213 +|                 "GOFLAGS=-p=1",
+    214 +|                 "--env",
+    215 +|                 "HARNESSFORGE_TASK=#{task}",
+    216 +|                 "--mount",
+    217 +|                 "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+    218 +|                 "--mount",
+    219 +|                 "type=bind,source=#{root}/protected,target=/protected,readonly",
+    220 +|                 "--entrypoint",
+    221 +|                 "/bin/sh",
+    222 +|                 Coding.grader_image(),
+    223 +|                 "-ec",
+189 224  |                 script || TaskSuite.grader_script(suite)
+190 225  |               ],
+         |
+
+
+
+real 1.38
+user 8.83
+sys 0.92
+=== exit_status=1
+=== wall_seconds=1.408
+=== load_after: 14.40 11.88 11.21
+=== ended_at=2026-11-08T13:12:15Z
+

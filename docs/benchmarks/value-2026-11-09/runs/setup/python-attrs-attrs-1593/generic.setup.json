@@ -1,0 +1,26 @@
+{
+  "arm": "generic",
+  "arm_sha256": "f39972289168d658bee1598a77b3e8d180a6f78510852747800bd4701c6c2c2c",
+  "claude_code_version": "2.1.311",
+  "cost_usd": 0.0755368,
+  "harness_bytes": 4174,
+  "harness_files": [
+    "CLAUDE.md"
+  ],
+  "image_id": "sha256:276ce2d8354b5d88596ab577a115f03613d88c5423e4517aca9469ab3400b0ea",
+  "mode": "paid",
+  "model": "claude-sonnet-5-5",
+  "rehearsal_fixture": false,
+  "requests": 5,
+  "run_id": "setup-generic.python-attrs-attrs-1593",
+  "status": "ok",
+  "task_id": "python-attrs-attrs-1593",
+  "tokens": {
+    "cache_creation": 15807,
+    "cache_read": 101893,
+    "input": 10,
+    "output": 2581
+  },
+  "turns": 5,
+  "wall_seconds": 22.0
+}

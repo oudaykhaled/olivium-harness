@@ -1,0 +1,22 @@
+# 2026-11-08T10:19:12Z curl -s -o /dev/null -w '%{http_code} %{size_download} %{time_starttransfer}' (5 samples each, unauthenticated)
+GET / -> 302 72 0.035212
+GET / -> 302 72 0.035617
+GET / -> 302 72 0.032071
+GET / -> 302 72 0.034167
+GET / -> 302 72 0.035230
+GET /login -> 200 4060 0.069220
+GET /login -> 200 4060 0.027782
+GET /login -> 200 4060 0.027386
+GET /login -> 200 4060 0.033434
+GET /login -> 200 4060 0.028991
+# 2026-11-08T10:24:46Z second server instance (fresh workspace run), 5 samples each, unauthenticated
+GET / -> 302 72 0.034639
+GET / -> 302 72 0.026979
+GET / -> 302 72 0.031429
+GET / -> 302 72 0.047210
+GET / -> 302 72 0.032031
+GET /login -> 200 4060 0.030807
+GET /login -> 200 4060 0.027487
+GET /login -> 200 4060 0.026056
+GET /login -> 200 4060 0.026464
+GET /login -> 200 4060 0.026027

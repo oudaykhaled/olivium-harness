@@ -1,0 +1,236 @@
+{
+  "schema": "harnessforge-evidence-verification/1",
+  "title": "Adversarial verification of the published 2026-11-08 benchmark and end-to-end evidence",
+  "started_at": "2026-11-08T14:05:21Z",
+  "ended_at": "2026-11-08T14:20:29Z",
+  "date_of_run": "2026-11-08",
+  "machine": {
+    "cpu": "Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz",
+    "logical_cores": 16,
+    "memory_bytes": 34359738368,
+    "os": "macOS 26.6 build 25G72",
+    "kernel": "25.6.0",
+    "elixir": "Elixir 1.19.5 (compiled with Erlang/OTP 28)",
+    "erlang": "28.3.1 (ERTS 16.2)",
+    "node": "v24.10.0",
+    "playwright": "1.64.1",
+    "load_average_1_5_15_at_end": "3.65 3.42 4.59",
+    "local_timezone": "CET (UTC+1); all times in this file are UTC"
+  },
+  "commit": {
+    "sha": "628676e7c48d7f3e02cca7785e5c476393cfca91",
+    "short": "628676e",
+    "working_tree": "uncommitted documentation reorganisation (2026-11-07) plus bench/ and docs/benchmarks/; 776 entries in git status --short at the end of verification"
+  },
+  "scope": [
+    "README.md section 'Benchmarks and evidence' (lines 23-48, 26 lines)",
+    "CHANGELOG.md Unreleased entry",
+    "docs/benchmarks/2026-11-08/README.md",
+    "bench/README.md, bench/run.sh, bench/e2e.cjs, bench/e2e-cli.sh, bench/pipeline.exs, bench/portal.cjs",
+    "everything under docs/benchmarks/2026-11-08"
+  ],
+  "commands": [
+    {
+      "purpose": "git scope, listening ports, beam processes",
+      "log": "verification/scope-and-ports.log",
+      "command": "git status --short; lsof -ti :8865/:8866/:8867/:8868; pgrep -fl beam.smp"
+    },
+    {
+      "purpose": "script checks",
+      "log": "verification/scripts-check.log",
+      "command": "bash -n bench/run.sh bench/e2e-cli.sh; /bin/bash -n (3.2.57); test -x; node --check bench/e2e.cjs bench/portal.cjs; elixir -e 'Code.string_to_quoted!(File.read!(\"bench/pipeline.exs\"))'; mix format --check-formatted bench/pipeline.exs"
+    },
+    {
+      "purpose": "token leak",
+      "log": "verification/token-leak-check.log",
+      "command": "for each <scratchpad>/{portal-ws,e2e-ws,e2e-cli-ws,bench-ws,e2e-ws-rep2,e2e-ws-rep3,bench-ws-cli}/access-token: grep -rIlF (value held in a shell variable, never printed) over docs/benchmarks/2026-11-08, bench/, README.md, CHANGELOG.md"
+    },
+    {
+      "purpose": "number cross-check",
+      "log": "verification/numbers-check.log (before edits), verification/numbers-check-final.log (after edits)",
+      "command": "python3 -I <scratchpad>/verify/numbers.py: every numeric token of both READMEs located in a .json/.log/.txt/.sh file under the evidence root; medians/min/max/sums re-derived from the raw JSON"
+    },
+    {
+      "purpose": "timestamps, versions, digests, scenario details, launcher-call counts",
+      "log": "verification/details-check.log",
+      "command": "python3 -I <scratchpad>/verify/details.py"
+    },
+    {
+      "purpose": "links and images",
+      "log": "verification/links-check.log, verification/final-checks.log",
+      "command": "every src=\"...\" and ](...) target of both READMEs tested with test -e relative to the repository root / the evidence directory; backticked evidence paths tested too"
+    },
+    {
+      "purpose": "E2E policy and wording scan",
+      "log": "verification/policy-and-wording.log, verification/final-checks.log",
+      "command": "grep -i for mix test/unit test/coverage/ExUnit and for qualification/productivity/security/superiority vocabulary"
+    },
+    {
+      "purpose": "screenshot identity",
+      "log": "verification/screenshot-identity.log",
+      "command": "md5 of all login-related screenshots and of B13.png vs 10-mobile-evidence.png; Read tool on B01, B02, 01-login (final), repeat2 B02, repeat3 B01, run1-aborted 01-login, B13"
+    },
+    {
+      "purpose": "hygiene",
+      "log": "verification/hygiene-check.log, verification/hygiene-check-2.log, verification/leftovers.log",
+      "command": "find -newermt '2026-11-08 00:00:00' outside allowed paths; git status --ignored; provenance of cover/ and tmp/"
+    },
+    {
+      "purpose": "B02 screenshot fix verification (real browser E2E run)",
+      "log": "verification/e2e-b02-fix.log, verification/e2e-b02-fix/",
+      "command": "PORT=8869 HARNESSFORGE_WORKSPACE=<scratchpad>/verify/e2e-b02-ws PHX_SERVER=true mix phx.server; HARNESSFORGE_URL=http://127.0.0.1:8869 BENCH_OUT=<scratchpad>/verify/e2e-b02-out E2E_EXPORT_ROOT=<scratchpad>/verify/e2e-b02-exports node bench/e2e.cjs; kill; port verified free"
+    },
+    {
+      "purpose": "post-run process check and machine facts",
+      "log": "verification/post-run-process-check.log, verification/machine-and-state.log",
+      "command": "ps -p <pid>; pgrep -f beam.smp; lsof -ti :8865..8869; sysctl; sw_vers; git rev-parse"
+    }
+  ],
+  "checks": {
+    "1_numbers": {
+      "result": "fixed",
+      "readme_section_distinct_numeric_tokens": 41,
+      "readme_section_tokens_not_found": 0,
+      "evidence_readme_distinct_numeric_tokens_before_edits": 296,
+      "evidence_readme_distinct_numeric_tokens_after_edits": 306,
+      "evidence_readme_tokens_not_found": 0,
+      "tokens_found_only_under_supplementary": [
+        "14334",
+        "62767",
+        "38509",
+        "12691 (run.sh verification stage wall times in ms; source supplementary/run-sh-verification/run-summary.json, cited as such)"
+      ],
+      "per_scenario_medians_recomputed_from_raw_json": "15/15 browser rows match (final duration, median of 3)",
+      "suite_totals_ms": [
+        6821,
+        7331,
+        7307
+      ],
+      "cli_launcher_calls_per_scenario_from_cli_log": {
+        "C01": 1,
+        "C02": 1,
+        "C03": 2,
+        "C04": 4,
+        "C05": 3,
+        "C06": 1,
+        "C07": 1,
+        "C08": 2,
+        "C09": 1,
+        "C10": 3,
+        "C11": 1,
+        "sum": 20
+      },
+      "corrections": [
+        "evidence README CLI section: '(about 2.8 to 4.3 s per call here)' was an estimate with no key behind it; replaced by the measured single-call scenario durations 2789 ms (C06) and 4261 ms (C01) and the pipeline step-1 bin/harnessforge status baseline 2.84 s median / 2.51 s min / 2.99 s max (n = 3); the source of the launcher-call column (length of scenarios[].commands) is now named",
+        "README.md row 'Rebuilds with an identical package digest ... 6/6' relabelled 'Builds returning one identical package digest per runtime (first build + 5 rebuilds ...)' because steps.5_determinism total = 6 builds, of which 5 are rebuilds",
+        "evidence README: 'only bounded above' now states the bound from e2e/results.json server.second_instance_ready (about 25 s)"
+      ]
+    },
+    "2_e2e_policy": {
+      "result": "pass",
+      "readme_section_unit_test_or_coverage_references": 0,
+      "evidence_readme_static_check_mentions": "only lines 327-330 under '## Supplementary static checks (not part of the benchmark)', labelled 'not test evidence'; no unit-test counts or coverage figures quoted anywhere",
+      "note": "README.md line 139 ('mix test') is in the owner's pre-existing Development section, outside the benchmark section"
+    },
+    "3_links_and_images": {
+      "result": "pass",
+      "readme_section_targets": 5,
+      "evidence_readme_targets_unique": 50,
+      "missing": 0,
+      "hero_image_path": "docs/benchmarks/2026-11-08/portal/screenshots/07-evaluations.png (relative to the repository root, exists)"
+    },
+    "4_token_leak_and_login_screenshots": {
+      "result": "fixed",
+      "token_files_read": 7,
+      "token_length_chars": 43,
+      "published_hits": 0,
+      "scratchpad_runsh_verify_hits": 0,
+      "server_logs": "login POST parameters are [FILTERED]",
+      "login_renders_viewed": "e2e B01/B02 (final), portal 01-login, repeat2 B02, repeat3 B01, run1-aborted 01-login: all show an empty access-code field; the page prints only the path of the token file",
+      "defect_found": "B02.png is byte-identical to B01.png and B14.png in every run (md5 8f002c68225aa127cfc4f83641f8e552 final, 5eb5f2c52b5a82a8760df9c5d7b7c6eb repeat2, dec0f12c716b69ac494b0cb3821b4d47 repeat3) because bench/e2e.cjs navigated to /?view=evidence (redirect to /login) before the shot; the index.json/e2e.log caption claimed the 'access code is incorrect' alert was visible",
+      "fix": "evidence README caption and notes corrected (raw index.json/e2e.log left untouched); bench/e2e.cjs now takes the B02 shot right after the alert assertion; verified by one real browser E2E run: 15/15 passed, 7301 ms, B02.png 76345 bytes differs from B01.png 74242 bytes and shows the alert above an empty field (verification/e2e-b02-fix/)",
+      "b13_identity": "e2e/screenshots/B13.png == portal/screenshots/10-mobile-evidence.png (md5 cc880ce1c0fc1d3458f6b9e8a7fb4082); both logs record 56958-byte captures at different times; viewport content identical by construction; documented in the evidence README"
+    },
+    "5_wording": {
+      "result": "fixed",
+      "rewritten": [
+        "evidence README: 'as proof that the orchestration works' -> 'as the record of that run'"
+      ],
+      "scan": "no claim of runtime qualification, productivity gain, security guarantee, model quality or superiority in the README section, the evidence README, bench/README.md or the CHANGELOG entry; every 'qualification' mention reports the observed value false"
+    },
+    "6_scope_of_changes": {
+      "result": "pass",
+      "git_status_forbidden_paths": "none under lib/, test/, config/, priv/, assets/, mix.exs, mix.lock",
+      "modified_tracked": [
+        "AGENTS.md (2026-11-07)",
+        "CHANGELOG.md",
+        "README.md",
+        "docs/*.md and packaging/* (mtime 2026-11-07 22:58-22:59 local, pre-existing)"
+      ],
+      "untracked": [
+        "bench/",
+        "docs/benchmarks/",
+        "docs/archive/README.md (2026-11-07)",
+        "docs/plans/ (2026-11-07)"
+      ],
+      "gitignored_side_effects_observed": [
+        "priv/static/assets/css/app.css and js/app.js rewritten today by the dev server's esbuild/tailwind watchers or the asset build (md5 unchanged across my own run)",
+        "test/browser/node_modules (Playwright install from setup)"
+      ]
+    },
+    "7_scripts": {
+      "result": "pass",
+      "bash_n": "exit 0 (bash 5 and /bin/bash 3.2.57)",
+      "test_x": "exit 0 (run.sh, e2e-cli.sh)",
+      "node_check": "exit 0 (e2e.cjs before and after the B02 edit, portal.cjs)",
+      "elixir_string_to_quoted": "ok",
+      "mix_format_check_formatted_pipeline_exs": "exit 0"
+    },
+    "8_size": {
+      "result": "pass",
+      "du_sk_kib_before_verification": 8564,
+      "du_sk_kib_after_verification": 9000,
+      "verification_dir_kib": 432,
+      "png_bytes_total_before_verification": 7219050,
+      "png_bytes_total_after_verification": 7369637,
+      "png_limit_bytes": 8000000,
+      "downscaled": false
+    },
+    "9_leftover_processes": {
+      "result": "pass",
+      "ports_8865_8866_8867_8868_8869": "empty at start (14:05Z), after the B02 fix run (14:16Z) and at the end",
+      "beam_smp_processes": "none at start; my own verification server (pid 62852) was observed exiting at 14:16:2xZ and is gone",
+      "killed": []
+    },
+    "10_hygiene": {
+      "result": "fixed",
+      "cover_dir": "cover/ (gitignored, 256 HTML files, 14624 KiB, all written 2026-11-08 11:34:57Z by the supplementary unit-test coverage run) moved out of the repository to <scratchpad>/leftovers/cover",
+      "tmp_dir": "tmp/ (gitignored) holds unit-test leftovers: tmp/workspaces/test-{46992,49810,50128,50176,51321} and tmp/revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e, 15464 KiB, written 2026-11-08 11:26Z to 13:17Z; left in place as the task tolerates tmp/",
+      "other": "no other files outside README.md, CHANGELOG.md, bench/, docs/benchmarks/ and the pre-existing 2026-11-07 documentation changes"
+    }
+  },
+  "b02_fix_run": {
+    "started_at": "2026-11-08T14:15:31Z",
+    "suite_started_at": "2026-11-08T14:15:37.116Z",
+    "suite_ended_at": "2026-11-08T14:15:44.417Z",
+    "ended_at": "2026-11-08T14:15:45Z",
+    "port": 8869,
+    "server_start_to_ready_s_upper_bound": 4.802,
+    "passed": 15,
+    "failed": 0,
+    "total_duration_ms": 7301,
+    "console_errors_total": 1,
+    "pageerrors_total": 0,
+    "b01_png_bytes": 74242,
+    "b02_png_bytes": 76345,
+    "token_value_occurrences_in_outputs": 0,
+    "note": "verification of the script change only; no published number comes from this run"
+  },
+  "files_changed_by_verifier": [
+    "README.md (two rows of the Benchmarks section reworded; no new numbers)",
+    "docs/benchmarks/2026-11-08/README.md (CLI source sentence, bounded-above figure, run.sh wording, B02 caption, gallery intro, image notes, methodology clause)",
+    "bench/e2e.cjs (B02 screenshot taken before the redirect check; caption updated; no assertion changed)",
+    "docs/benchmarks/2026-11-08/verification/ (new: logs, results.json, e2e-b02-fix/)",
+    "cover/ moved to the session scratchpad"
+  ]
+}

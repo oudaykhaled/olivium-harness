@@ -1,0 +1,11 @@
+{
+  "arm": "none",
+  "attempt": 1,
+  "finished_at": "2026-11-10T10:46:04Z",
+  "repeat": 2,
+  "run_id": "python-attrs-attrs-1593.none.r2",
+  "stage": "done",
+  "started_at": "2026-11-10T10:45:08Z",
+  "status": "completed",
+  "task_id": "python-attrs-attrs-1593"
+}

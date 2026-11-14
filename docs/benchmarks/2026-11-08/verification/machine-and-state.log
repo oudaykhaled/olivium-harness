@@ -1,0 +1,61 @@
+cpu=Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
+logical_cores=16
+memory_bytes=34359738368
+os=26.6 build 25G72
+kernel=25.6.0
+elixir=Elixir 1.19.5 (compiled with Erlang/OTP 28)
+erlang_erts=16.2
+node=v24.10.0
+playwright=1.64.1
+commit=628676e7c48d7f3e02cca7785e5c476393cfca91 short=628676e
+status_entries=776
+load_average={ 3.65 3.42 4.59 }
+### git diff --stat (my touched tracked files)
+ CHANGELOG.md |  2 ++
+ README.md    | 37 ++++++++++++++++++++++++++++++++-----
+ 2 files changed, 34 insertions(+), 5 deletions(-)
+### bench/e2e.cjs diff vs publisher version is untracked; show the changed B02 block
+        await page.locator('#login-error[role="alert"]').waitFor();
+        const error = ((await page.locator('#login-error').textContent()) || '').trim();
+        assert.match(error, /incorrect/i, 'login error must say the code is incorrect');
+        assert.equal(response.status(), 401, 'wrong code must answer 401');
+        assert.equal(pathOf(page.url()), '/login');
+        // Screenshot while the alert is on screen (before the redirect check re-renders the login page);
+        // the only value that can appear in the field here is the dummy code above, never the real one.
+        await ctx.shot(page, 'B02', 'Fresh browser context right after submitting a dummy access code: "The access code is incorrect." alert visible, still on /login (the real code has not been typed).');
+        await page.goto(`${origin}/?view=evidence`, {waitUntil: 'load'});
+        assert.equal(pathOf(page.url()), '/login', 'protected page must redirect to /login while locked');
+        assert.equal(await page.locator('.workspace-shell').count(), 0, 'no workspace shell while locked');
+        await page.locator('#access-code').fill(token);
+        await page.locator('#unlock-workspace').click();
+### verification dir listing
+ 
+ 
+640 .
+256 ..
+31977 details-check.log
+160 e2e-b02-fix
+2100 e2e-b02-fix.log
+1674 final-checks.log
+3331 hygiene-check-2.log
+4341 hygiene-check.log
+407 leftovers.log
+2205 links-check.log
+1818 machine-and-state.log
+32812 numbers-check-final.log
+33292 numbers-check.log
+7212 policy-and-wording.log
+859 post-run-process-check.log
+69971 scope-and-ports.log
+2217 screenshot-identity.log
+498 scripts-check.log
+4018 scripts-token-handling.log
+9435 token-leak-check.log
+ 
+ 
+ 
+160 .
+640 ..
+9864 e2e.log
+16630 results.json
+160 screenshots

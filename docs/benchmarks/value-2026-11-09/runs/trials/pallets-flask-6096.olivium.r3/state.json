@@ -1,0 +1,11 @@
+{
+  "arm": "olivium",
+  "attempt": 1,
+  "finished_at": "2026-11-09T15:39:51Z",
+  "repeat": 3,
+  "run_id": "pallets-flask-6096.olivium.r3",
+  "stage": "done",
+  "started_at": "2026-11-09T15:39:03Z",
+  "status": "completed",
+  "task_id": "pallets-flask-6096"
+}

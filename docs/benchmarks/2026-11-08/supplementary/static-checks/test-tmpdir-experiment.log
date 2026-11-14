@@ -1,0 +1,68 @@
+=== [corpora_test-default-TMPDIR] started_at=2026-11-08T13:07:14Z cwd=<repo> MIX_ENV=unset
+=== command: mix test test/harness_forge/evidence/corpora_test.exs
+=== load_before: 6.72 11.31 10.99
+Running ExUnit with seed: 710252, max_cases: 32
+
+
+
+  1) test relational membership exceeds the old array cap and no-op replay is stable (HarnessForge.Evidence.CorporaTest)
+     test/harness_forge/evidence/corpora_test.exs:37
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/corpora_test.exs:11: HarnessForge.Evidence.CorporaTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/corpora_test.exs:1: HarnessForge.Evidence.CorporaTest.__ex_unit__/2
+
+
+
+  2) test generation change invalidates previous eligibility without changing citations (HarnessForge.Evidence.CorporaTest)
+     test/harness_forge/evidence/corpora_test.exs:92
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/corpora_test.exs:11: HarnessForge.Evidence.CorporaTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/corpora_test.exs:1: HarnessForge.Evidence.CorporaTest.__ex_unit__/2
+
+
+
+  3) test strict server authorization and string-keyed boundaries (HarnessForge.Evidence.CorporaTest)
+     test/harness_forge/evidence/corpora_test.exs:21
+     ** (MatchError) no match of right hand side value:
+
+         {:error, :unsafe_directory}
+
+     stacktrace:
+       test/harness_forge/evidence/corpora_test.exs:11: HarnessForge.Evidence.CorporaTest.__ex_unit_setup_1/1
+       test/harness_forge/evidence/corpora_test.exs:1: HarnessForge.Evidence.CorporaTest.__ex_unit__/2
+
+
+Finished in 0.1 seconds (0.00s async, 0.1s sync)
+3 tests, 3 failures
+real 1.63
+user 2.81
+sys 0.40
+=== exit_status=2
+=== wall_seconds=1.653
+=== load_after: 6.26 11.14 10.93
+=== ended_at=2026-11-08T13:07:15Z
+
+=== [corpora_test-TMPDIR=<tmp>/hf-quality-tmpdir] started_at=2026-11-08T13:07:15Z cwd=<repo> MIX_ENV=unset
+=== command: mix test test/harness_forge/evidence/corpora_test.exs
+=== load_before: 6.26 11.14 10.93
+Running ExUnit with seed: 399908, max_cases: 32
+
+...
+Finished in 0.5 seconds (0.00s async, 0.5s sync)
+3 tests, 0 failures
+real 1.97
+user 3.24
+sys 0.45
+=== exit_status=0
+=== wall_seconds=1.993
+=== load_after: 6.26 11.14 10.93
+=== ended_at=2026-11-08T13:07:17Z
+

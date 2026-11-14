@@ -1,0 +1,11 @@
+{
+  "changed": [],
+  "files_expected": 10,
+  "files_observed": 10,
+  "missing": [],
+  "ok": true,
+  "settings_match": true,
+  "settings_sha256_expected": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+  "settings_sha256_in_container": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+  "unexpected": []
+}

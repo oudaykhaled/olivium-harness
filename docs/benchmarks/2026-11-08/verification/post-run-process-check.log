@@ -1,0 +1,21 @@
+### leftover process check at 2026-11-08T14:16:27Z
+pid 62852 is gone
+beam.smp processes now: []
+port 8865: []
+port 8866: []
+port 8867: []
+port 8868: []
+port 8869: []
+### copy fix-run artefacts (no token inside, checked) into verification/e2e-b02-fix
+docs/benchmarks/2026-11-08/verification/e2e-b02-fix:
+total 64
+-rw-r--r--@ 1 <user>  staff   9864 Nov  8 15:16 e2e.log
+-rw-r--r--@ 1 <user>  staff  16630 Nov  8 15:16 results.json
+drwxr-xr-x@ 5 <user>  staff    160 Nov  8 15:16 screenshots
+
+docs/benchmarks/2026-11-08/verification/e2e-b02-fix/screenshots:
+total 312
+-rw-r--r--@ 1 <user>  staff  74242 Nov  8 15:16 B01.png
+-rw-r--r--@ 1 <user>  staff  76345 Nov  8 15:16 B02.png
+-rw-r--r--@ 1 <user>  staff   3285 Nov  8 15:16 index.json
+started_at 2026-11-08T14:15:37.116Z ended_at 2026-11-08T14:15:44.417Z total_duration_ms 7301

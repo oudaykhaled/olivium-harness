@@ -1,0 +1,332 @@
+{
+  "generated_at": "2026-11-08T13:14:46Z",
+  "finished_at": "2026-11-08T13:14:49Z",
+  "cwd": "<repo>",
+  "log": "<repo>/docs/benchmarks/2026-11-08/quality/metrics.log",
+  "note": "Static metrics; each value is the literal output of the recorded shell command run from the repository root.",
+  "metrics": {
+    "lib_elixir_lines_ex_and_heex": {
+      "value": 72014,
+      "unit": "lines",
+      "description": "Lines of Elixir source in lib (.ex and .heex files)",
+      "command": "find lib -type f \\( -name '*.ex' -o -name '*.heex' \\) -print0 | xargs -0 cat | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "lib_ex_lines": {
+      "value": 71799,
+      "unit": "lines",
+      "description": "Lines in lib/**/*.ex only",
+      "command": "find lib -type f -name '*.ex' -print0 | xargs -0 cat | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "lib_heex_lines": {
+      "value": 215,
+      "unit": "lines",
+      "description": "Lines in lib/**/*.heex only",
+      "command": "find lib -type f -name '*.heex' -print0 | xargs -0 cat | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "lib_ex_files": {
+      "value": 207,
+      "unit": "files",
+      "description": "Number of .ex files under lib",
+      "command": "find lib -type f -name '*.ex' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "lib_heex_files": {
+      "value": 2,
+      "unit": "files",
+      "description": "Number of .heex files under lib",
+      "command": "find lib -type f -name '*.heex' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "lib_total_files": {
+      "value": 210,
+      "unit": "files",
+      "description": "All files under lib (any extension)",
+      "command": "find lib -type f | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_exs_lines": {
+      "value": 60229,
+      "unit": "lines",
+      "description": "Lines of test code in test/**/*.exs (excluding test/browser/node_modules)",
+      "command": "find test -type f -name '*.exs' -not -path '*/node_modules/*' -print0 | xargs -0 cat | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_exs_lines_including_node_modules": {
+      "value": 60229,
+      "unit": "lines",
+      "description": "Lines in test/**/*.exs with no path exclusion (control value)",
+      "command": "find test -type f -name '*.exs' -print0 | xargs -0 cat | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_support_ex_lines": {
+      "value": 1638,
+      "unit": "lines",
+      "description": "Lines in test/support/**/*.ex (compiled test helpers)",
+      "command": "find test/support -type f -name '*.ex' -print0 | xargs -0 cat | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "modules_grep_rc_sum": {
+      "value": 243,
+      "unit": "modules",
+      "description": "Top-level module definitions: sum of grep -rc \"^defmodule\" lib per-file counts (task-specified command)",
+      "command": "grep -rc \"^defmodule\" lib | awk -F: '{s+=$NF} END {print s}'",
+      "exit_status": 0
+    },
+    "modules_including_indented": {
+      "value": 244,
+      "unit": "modules",
+      "description": "defmodule lines including nested/indented modules",
+      "command": "grep -rhoE '^[[:space:]]*defmodule ' lib | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_files": {
+      "value": 163,
+      "unit": "files",
+      "description": "Test files named *_test.exs (excluding node_modules)",
+      "command": "find test -type f -name '*_test.exs' -not -path '*/node_modules/*' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_exs_files_all": {
+      "value": 164,
+      "unit": "files",
+      "description": "All .exs files under test (excluding node_modules)",
+      "command": "find test -type f -name '*.exs' -not -path '*/node_modules/*' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_cases_task_command_raw": {
+      "value": "   3                 property \n   1             test \n   2         test \n  27     test \n1359   test \n   2 test ",
+      "unit": "raw",
+      "description": "Exact task-specified command; raw uniq -c output (counts lines in every file under test, including test/browser/node_modules)",
+      "command": "grep -rhoE \"^\\s*(test|property|describe) \" test | sort | uniq -c",
+      "exit_status": 0
+    },
+    "test_cases_task_command_total": {
+      "value": 1394,
+      "unit": "lines",
+      "description": "Total matches of the task-specified test-case grep across every file under test",
+      "command": "grep -rhoE \"^\\s*(test|property|describe) \" test | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_cases_exs_only_raw": {
+      "value": "1381 test ",
+      "unit": "raw",
+      "description": "Same grep restricted to .exs files, leading whitespace normalised",
+      "command": "grep -rhoE '^[[:space:]]*(test|property|describe) ' test --include='*.exs' | sed 's/^[[:space:]]*//' | sort | uniq -c",
+      "exit_status": 0
+    },
+    "test_cases_exs_only_total": {
+      "value": 1381,
+      "unit": "test cases",
+      "description": "Static count of test/property/describe lines in .exs files",
+      "command": "grep -rhoE '^[[:space:]]*(test|property|describe) ' test --include='*.exs' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "test_macro_calls_exs": {
+      "value": 1381,
+      "unit": "test cases",
+      "description": "Lines starting with `test \"` in .exs files",
+      "command": "grep -rhoE '^[[:space:]]*test \"' test --include='*.exs' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "describe_blocks_exs": {
+      "value": 0,
+      "unit": "blocks",
+      "description": "Lines starting with `describe \"` in .exs files",
+      "command": "grep -rhoE '^[[:space:]]*describe \"' test --include='*.exs' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "property_tests_exs": {
+      "value": 0,
+      "unit": "properties",
+      "description": "Lines starting with `property \"` in .exs files",
+      "command": "grep -rhoE '^[[:space:]]*property \"' test --include='*.exs' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "doctest_calls_exs": {
+      "value": 0,
+      "unit": "doctest calls",
+      "description": "doctest lines in .exs files",
+      "command": "grep -rhoE '^[[:space:]]*doctest ' test --include='*.exs' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "for_comprehension_lines_in_test_files": {
+      "value": 347,
+      "unit": "lines",
+      "description": "`for ... do` lines in *_test.exs (tests generated in loops are counted once statically but many times at runtime)",
+      "command": "grep -rhoE '^[[:space:]]*for .* do$' test --include='*_test.exs' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "migrations": {
+      "value": 18,
+      "unit": "files",
+      "description": "Ecto migrations in priv/repo/migrations",
+      "command": "ls priv/repo/migrations/*.exs | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "mix_lock_dependencies": {
+      "value": 44,
+      "unit": "packages",
+      "description": "Locked dependencies in mix.lock (lines starting with two spaces and a quote)",
+      "command": "grep -cE '^  \"' mix.lock",
+      "exit_status": 0
+    },
+    "mix_exs_direct_deps": {
+      "value": 20,
+      "unit": "packages",
+      "description": "Direct dependencies declared in mix.exs deps/0",
+      "command": "awk '/defp deps do/,/^  end/' mix.exs | grep -cE '^\\s*\\{:'",
+      "exit_status": 0
+    },
+    "docs_live_pages": {
+      "value": 21,
+      "unit": "pages",
+      "description": "Markdown pages under docs excluding docs/archive and docs/plans (task definition)",
+      "command": "find docs -type f -name '*.md' -not -path 'docs/archive/*' -not -path 'docs/plans/*' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "docs_live_pages_excluding_benchmarks": {
+      "value": 21,
+      "unit": "pages",
+      "description": "Same, also excluding docs/benchmarks",
+      "command": "find docs -type f -name '*.md' -not -path 'docs/archive/*' -not -path 'docs/plans/*' -not -path 'docs/benchmarks/*' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "docs_live_pages_list": {
+      "value": [
+        "docs/architecture.md",
+        "docs/branding.md",
+        "docs/chat.md",
+        "docs/claude-code-connector.md",
+        "docs/cloud-model-connectors.md",
+        "docs/codex-connector.md",
+        "docs/company-builder-contract.md",
+        "docs/company-builder.md",
+        "docs/compatibility.md",
+        "docs/confluence-connector.md",
+        "docs/contracts.md",
+        "docs/execution.md",
+        "docs/github-account.md",
+        "docs/github-projects-connector.md",
+        "docs/github-repository-pagination.md",
+        "docs/integrations.md",
+        "docs/mcp.md",
+        "docs/privacy.md",
+        "docs/quickstart.md",
+        "docs/service-accounts.md",
+        "docs/status.md"
+      ],
+      "unit": "list",
+      "description": "The live documentation pages",
+      "command": "find docs -type f -name '*.md' -not -path 'docs/archive/*' -not -path 'docs/plans/*' | sort",
+      "exit_status": 0
+    },
+    "docs_archive_pages": {
+      "value": 759,
+      "unit": "pages",
+      "description": "Markdown pages under docs/archive",
+      "command": "find docs/archive -type f -name '*.md' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "docs_plans_pages": {
+      "value": 2,
+      "unit": "pages",
+      "description": "Markdown pages under docs/plans",
+      "command": "find docs/plans -type f -name '*.md' | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "json_schemas": {
+      "value": 2,
+      "unit": "files",
+      "description": "JSON schemas in priv/schemas",
+      "command": "ls priv/schemas/*.json | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "json_schemas_list": {
+      "value": [
+        "priv/schemas/harness-v1alpha1.json",
+        "priv/schemas/records-v1alpha1.json"
+      ],
+      "unit": "list",
+      "description": "The JSON schema files",
+      "command": "ls priv/schemas/*.json",
+      "exit_status": 0
+    },
+    "archive_size_human": {
+      "value": "6.2M",
+      "unit": "du -sh",
+      "description": "Size of archived evidence (du -sh docs/archive)",
+      "command": "du -sh docs/archive | cut -f1",
+      "exit_status": 0
+    },
+    "archive_size_kib": {
+      "value": 6328,
+      "unit": "KiB",
+      "description": "Size of archived evidence in 1024-byte blocks",
+      "command": "du -sk docs/archive | cut -f1",
+      "exit_status": 0
+    },
+    "archive_file_count": {
+      "value": 763,
+      "unit": "files",
+      "description": "Files under docs/archive",
+      "command": "find docs/archive -type f | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "elixir_version_output": {
+      "value": "Erlang/OTP 28 [erts-16.2] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [dtrace]\n\nElixir 1.19.5 (compiled with Erlang/OTP 28)",
+      "unit": "raw",
+      "description": "elixir --version",
+      "command": "elixir --version 2>&1",
+      "exit_status": 0
+    },
+    "otp_version_file": {
+      "value": "28.3.1",
+      "unit": "raw",
+      "description": "Exact OTP patch version from the OTP_VERSION release file",
+      "command": "cat \"$(erl -noshell -eval 'io:format(\"~s\", [code:root_dir()]), halt().')\"/releases/*/OTP_VERSION",
+      "exit_status": 0
+    },
+    "git_head_short": {
+      "value": "628676e",
+      "unit": "raw",
+      "description": "git rev-parse --short HEAD",
+      "command": "git rev-parse --short HEAD",
+      "exit_status": 0
+    },
+    "git_head_full": {
+      "value": "628676e7c48d7f3e02cca7785e5c476393cfca91",
+      "unit": "raw",
+      "description": "git rev-parse HEAD",
+      "command": "git rev-parse HEAD",
+      "exit_status": 0
+    },
+    "git_porcelain_entries": {
+      "value": 775,
+      "unit": "entries",
+      "description": "Uncommitted working-tree entries (git status --porcelain)",
+      "command": "git status --porcelain | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "git_protected_paths_changed": {
+      "value": 0,
+      "unit": "entries",
+      "description": "Uncommitted entries under lib test config mix.exs mix.lock priv assets (expected 0)",
+      "command": "git status --porcelain -- lib test config mix.exs mix.lock priv assets | wc -l | tr -d ' '",
+      "exit_status": 0
+    },
+    "git_non_docs_changes_list": {
+      "value": [
+        " M packaging/VERIFICATION.md",
+        " M packaging/build.sh",
+        "?? bench/"
+      ],
+      "unit": "list",
+      "description": "Uncommitted entries outside docs/, README.md, AGENTS.md, PROGRESS.md",
+      "command": "git status --porcelain | grep -vE '^.. +(docs/|README\\.md|AGENTS\\.md|PROGRESS\\.md)' | sed 's/[[:space:]]*$//'",
+      "exit_status": 0
+    }
+  }
+}

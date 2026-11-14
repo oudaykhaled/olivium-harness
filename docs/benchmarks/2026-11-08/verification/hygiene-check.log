@@ -1,0 +1,99 @@
+### files under docs/archive, docs/*.md, packaging, AGENTS.md modified on or after 2026-11-08 (should be none)
+(end)
+(end recursive)
+### ignored files at repo top level (git status --ignored, top-level entries)
+   1 tmp/
+   1 test/browser
+   1 priv/static
+   1 deps/
+   1 cover/
+   1 _build/
+### tmp/
+total 0
+drwxr-xr-x@  4 <user>  staff   128 Nov  8 14:17 .
+drwxr-xr-x@ 35 <user>  staff  1120 Nov  8 14:52 ..
+drwxr-xr-x@  6 <user>  staff   192 Nov  8 14:17 revision-use-consumers-1f255239-0d9b-472d-889f-219a4cc9c56e
+drwxr-xr-x@  7 <user>  staff   224 Nov  8 14:13 workspaces
+(end tmp)
+.gitignore:43:/tmp/	tmp
+### repo root listing for stray files
+    
+225 Nov 7 17:14 .formatter.exs
+1480 Nov 7 17:14 .gitignore
+35 Nov 7 17:14 .tool-versions
+1789 Nov 7 22:59 AGENTS.md
+1651 Nov 8 14:52 CHANGELOG.md
+999 Nov 7 17:14 CODE_OF_CONDUCT.md
+3018 Nov 7 17:14 CONTRIBUTING.md
+3873 Nov 7 17:14 GLOSSARY.md
+11358 Nov 7 17:14 LICENSE
+509 Nov 7 17:14 NOTICE
+9150 Nov 8 14:52 README.md
+1590 Nov 7 17:14 SECURITY.md
+2976 Nov 7 17:14 THIRD_PARTY_NOTICES.md
+3056 Nov 7 17:14 mix.exs
+15815 Nov 7 17:14 mix.lock
+### recently modified files anywhere in repo (excluding _build, deps, node_modules, .git, docs/benchmarks) since 2026-11-08 00:00
+./CHANGELOG.md
+./README.md
+./cover/Elixir.HarnessForge.Evidence.GraphSources.html
+./cover/Elixir.HarnessForge.Graphiti.IngestIntent.html
+./cover/Elixir.HarnessForge.Graphiti.Worker.html
+./cover/Elixir.HarnessForge.Models.Ollama.html
+./cover/Elixir.Inspect.HarnessForge.Execution.CodingTransport.html
+./cover/Elixir.HarnessForge.Execution.CodexCommandPolicy.html
+./cover/Elixir.HarnessForge.Models.CodexProtocol.html
+./cover/Elixir.HarnessForge.Company.AnalysisV2.html
+./cover/Elixir.HarnessForge.Iteration15PublicCases.html
+./cover/Elixir.HarnessForge.Evaluation.HoldoutSuite.html
+./cover/Elixir.HarnessForge.Execution.Coding.html
+./cover/Elixir.HarnessForge.Artifacts.html
+./cover/Elixir.HarnessForge.Chat.Retrieval.html
+./cover/Elixir.HarnessForge.Graphiti.html
+./cover/Elixir.HarnessForge.Evidence.CaptureFrontier.html
+./cover/Elixir.HarnessForge.Graphiti.SearchCompletion.html
+./cover/Elixir.HarnessForge.Evidence.OriginV2.html
+./cover/Elixir.HarnessForgeWeb.Company.Requirements.html
+./cover/Elixir.HarnessForge.Evidence.SetupCapturePage.html
+./cover/Elixir.HarnessForgeWeb.Company.ReadinessFacts.html
+./cover/Elixir.HarnessForge.StartupGate.html
+./cover/Elixir.HarnessForge.Execution.html
+./cover/Elixir.HarnessForge.Graphiti.Pipe.html
+./cover/Elixir.HarnessForge.Evidence.Capture.Scanner.html
+./cover/Elixir.HarnessForge.Contracts.Error.html
+./cover/Elixir.HarnessForge.Models.AttemptGateway.html
+./cover/Elixir.HarnessForge.Evidence.AuditEvent.html
+./cover/Elixir.HarnessForge.Connectors.ServiceAccount.html
+./cover/Elixir.HarnessForge.Models.Proposal.html
+./cover/Elixir.HarnessForge.Chat.html
+./cover/Elixir.HarnessForge.Evidence.Citation.html
+./cover/Elixir.HarnessForge.Connectors.GitHubProjects.html
+./cover/Elixir.HarnessForge.Audit.html
+./cover/Elixir.HarnessForge.Graphiti.SearchIntent.html
+./cover/Elixir.HarnessForge.Company.SetupSession.html
+./cover/Elixir.Inspect.HarnessForge.Execution.Relay.Handle.html
+./cover/Elixir.HarnessForgeWeb.Company.Analysis.html
+./cover/Elixir.HarnessForge.Models.RunAuthorizationRecord.html
+(end recent)
+### priv/static and assets recent changes?
+test/browser/node_modules/.package-lock.json
+test/browser/node_modules/playwright/cli.js
+test/browser/node_modules/playwright/index.d.ts
+test/browser/node_modules/playwright-core/browsers.json
+test/browser/node_modules/playwright-core/cli.js
+test/browser/node_modules/playwright-core/index.d.ts
+test/browser/node_modules/playwright/LICENSE
+test/browser/node_modules/playwright/test.d.ts
+test/browser/node_modules/playwright/index.js
+test/browser/node_modules/playwright/NOTICE
+test/browser/node_modules/playwright/README.md
+test/browser/node_modules/playwright/package.json
+test/browser/node_modules/playwright/index.mjs
+test/browser/node_modules/playwright-core/ThirdPartyNotices.txt
+test/browser/node_modules/playwright-core/LICENSE
+test/browser/node_modules/playwright-core/index.js
+test/browser/node_modules/playwright-core/NOTICE
+test/browser/node_modules/playwright-core/README.md
+test/browser/node_modules/playwright-core/package.json
+test/browser/node_modules/playwright-core/index.mjs
+(end)

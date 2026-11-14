@@ -1,0 +1,245 @@
+{
+  "runs": [
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3298-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3298",
+      "wall_s": 4.32
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3298-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3298",
+      "wall_s": 4.34
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3273-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3273",
+      "wall_s": 4.24
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3273-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3273",
+      "wall_s": 4.3
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3266-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3266",
+      "wall_s": 4.75
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3266-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3266",
+      "wall_s": 4.49
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "exit": 0,
+      "export": "exports/cli-pallets-click-3858-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-click-3858",
+      "wall_s": 4.39
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "exit": 0,
+      "export": "exports/cli-pallets-click-3858-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-click-3858",
+      "wall_s": 4.17
+    }
+  ],
+  "what": "Eight 'bin/harnessforge generate PATH --runtime claude_code --export DIR --json' runs, two per checkout, each in its own fresh HARNESSFORGE_WORKSPACE (MIX_ENV=dev, separate MIX_BUILD_ROOT). Exit code, wall time, digest, counts and diagnostics codes as printed; export paths are relative to the scratch record directory."
+}

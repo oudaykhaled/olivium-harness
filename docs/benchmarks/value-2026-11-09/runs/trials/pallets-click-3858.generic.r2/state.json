@@ -1,0 +1,11 @@
+{
+  "arm": "generic",
+  "attempt": 1,
+  "finished_at": "2026-11-09T15:35:49Z",
+  "repeat": 2,
+  "run_id": "pallets-click-3858.generic.r2",
+  "stage": "done",
+  "started_at": "2026-11-09T15:34:16Z",
+  "status": "completed",
+  "task_id": "pallets-click-3858"
+}

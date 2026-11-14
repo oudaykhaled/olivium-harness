@@ -1,0 +1,427 @@
+=== [dialyzer] started_at=2026-11-08T11:25:05Z cwd=<repo> MIX_ENV=unset
+=== command: mix dialyzer
+=== load_before: 4.38 8.14 9.07
+Finding suitable PLTs
+Checking PLT...
+[:asn1, :bandit, :compiler, :crypto, :db_connection, :decimal, :ecto, :ecto_sql, :ecto_sqlite3, :eex, :elixir, :esbuild, :exqlite, :file_system, :finch, :harness_forge, :hpax, :inets, :jason, :kernel, :logger, :mime, :mint, :nimble_options, :nimble_pool, :oban, :phoenix, :phoenix_ecto, :phoenix_html, :phoenix_live_reload, :phoenix_live_view, :phoenix_pubsub, :phoenix_template, :plug, :plug_crypto, :public_key, :req, :runtime_tools, :ssl, :stdlib, :tailwind, :telemetry, :telemetry_metrics, :telemetry_poller, :thousand_island, :websock, :websock_adapter]
+Looking up modules in dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+Looking up modules in dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+Looking up modules in dialyxir_erlang-28.3.1.plt
+Finding applications for dialyxir_erlang-28.3.1.plt
+Finding modules for dialyxir_erlang-28.3.1.plt
+Creating dialyxir_erlang-28.3.1.plt
+Looking up modules in dialyxir_erlang-28.3.1.plt
+Removing 3 modules from dialyxir_erlang-28.3.1.plt
+Checking 19 modules in dialyxir_erlang-28.3.1.plt
+Adding 201 modules to dialyxir_erlang-28.3.1.plt
+done in 0m38.82s
+Finding applications for dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+Finding modules for dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+Copying dialyxir_erlang-28.3.1.plt to dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+Looking up modules in dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+Checking 220 modules in dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+Adding 272 modules to dialyxir_erlang-28.3.1_elixir-1.19.5.plt
+done in 0m27.48s
+Finding applications for dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+Finding modules for dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+Copying dialyxir_erlang-28.3.1_elixir-1.19.5.plt to dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+Looking up modules in dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+Checking 492 modules in dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+Adding 1320 modules to dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt
+done in 2m27.71s
+No :ignore_warnings opt specified in mix.exs and default does not exist.
+
+Starting Dialyzer
+[
+  check_plt: false,
+  init_plt: ~c"<repo>/_build/dev/dialyxir_erlang-28.3.1_elixir-1.19.5_deps-dev.plt",
+  files: [~c"<repo>/_build/dev/lib/harness_forge/ebin/Elixir.HarnessForge.Decisions.beam",
+   ~c"<repo>/_build/dev/lib/harness_forge/ebin/Elixir.HarnessForge.Connectors.GitHubProjects.beam",
+   ~c"<repo>/_build/dev/lib/harness_forge/ebin/Elixir.HarnessForge.Execution.Coding.beam",
+   ~c"<repo>/_build/dev/lib/harness_forge/ebin/Elixir.HarnessForge.Models.Runtime.beam",
+   ~c"<repo>/_build/dev/lib/harness_forge/ebin/Elixir.HarnessForge.MCP.SourceTools.beam",
+   ...],
+  ...
+]
+Total errors: 15, Skipped: 0, Unnecessary Skips: 0
+done in 0m20.27s
+lib/harness_forge/execution/codex.ex:100:40:call_without_opaque
+Function call without opaqueness type mismatch.
+
+Call does not have expected opaque term of type HarnessForge.Execution.CodingTransport.t() in the 1st position.
+
+HarnessForge.Execution.CodingTransport.verify(_observation :: %HarnessForge.Execution.CodingTransport{})
+
+________________________________________________________________________________
+lib/harness_forge/execution/codex.ex:141:82:call_without_opaque
+Function call without opaqueness type mismatch.
+
+Call does not have expected opaque term of type HarnessForge.Execution.CodingTransport.t() in the 1st position.
+
+HarnessForge.Execution.CodingTransport.identity_digest(_observation :: %HarnessForge.Execution.CodingTransport{})
+
+________________________________________________________________________________
+lib/harness_forge/execution/coding.ex:1:pattern_match
+The pattern can never match the type.
+
+Pattern:
+false
+
+Type:
+true
+
+________________________________________________________________________________
+lib/harness_forge/execution/coding.ex:31:86:call_without_opaque
+Function call without opaqueness type mismatch.
+
+Call does not have expected opaque term of type HarnessForge.Execution.CodingTransport.t() in the 1st position.
+
+HarnessForge.Execution.Coding.profile(_observation :: %HarnessForge.Execution.CodingTransport{})
+
+________________________________________________________________________________
+lib/harness_forge/execution/coding.ex:74:33:call_without_opaque
+Function call without opaqueness type mismatch.
+
+Call does not have expected opaque term of type HarnessForge.Execution.CodingTransport.t() in the 1st position.
+
+HarnessForge.Execution.CodingTransport.context(
+  _observation :: %HarnessForge.Execution.CodingTransport{},
+  _workspace :: any(),
+  _run :: any()
+)
+
+________________________________________________________________________________
+lib/harness_forge/execution/relay.ex:1:pattern_match
+The pattern can never match the type.
+
+Pattern:
+false
+
+Type:
+true
+
+________________________________________________________________________________
+lib/harness_forge/graphiti/inventory.ex:197:guard_fail
+The guard clause:
+
+when _ :: binary() === nil
+
+can never succeed.
+
+________________________________________________________________________________
+lib/harness_forge/graphiti/inventory.ex:53:15:pattern_match_cov
+The pattern
+:variable_
+
+can never match, because previous clauses completely cover the type
+
+  {:error,
+   :closure_incomplete
+   | :graph_launch_mismatch
+   | :invalid_frame
+   | :reconcile_required
+   | :timed_out
+   | :worker_lost}
+.
+
+________________________________________________________________________________
+lib/harness_forge/mcp/source_tools.ex:122:62:call
+The function call will not succeed.
+
+HarnessForge.Company.Retrieval.retrieve_evidence(_attrs :: map(), _caller :: %HarnessForge.MCP.ClientContext{})
+
+breaks the contract
+(term(), :elixir.keyword()) :: {:ok, map()} | {:error, term()}
+
+________________________________________________________________________________
+lib/harness_forge/mcp/source_tools.ex:134:14:call
+The function call will not succeed.
+
+HarnessForge.Company.Retrieval.read_evidence(any(), any(), map(), _caller :: %HarnessForge.MCP.ClientContext{})
+
+breaks the contract
+(String.t(), String.t(), map(), :elixir.keyword()) :: {:ok, map()} | {:error, term()}
+
+________________________________________________________________________________
+lib/harness_forge/mcp/source_tools.ex:147:14:call
+The function call will not succeed.
+
+HarnessForge.Company.Retrieval.open_evidence_passage(any(), any(), any(), _caller :: %HarnessForge.MCP.ClientContext{})
+
+breaks the contract
+(String.t(), String.t(), String.t(), :elixir.keyword()) :: {:ok, map()} | {:error, term()}
+
+________________________________________________________________________________
+lib/harness_forge/models/ledger.ex:29:9:pattern_match_cov
+The pattern
+variable_error
+
+can never match, because previous clauses completely cover the type
+{:error, :budget_not_found} | {:ok, map()}.
+
+________________________________________________________________________________
+lib/harness_forge/models/runtime.ex:110:11:pattern_match_cov
+The pattern
+variable_error
+
+can never match, because previous clauses completely cover the type
+{:error, :budget_not_found} | {:ok, map()}.
+
+________________________________________________________________________________
+lib/harness_forge/releases.ex:47:15:call_without_opaque
+Function call without opaqueness type mismatch.
+
+Call does not have expected term of type %Ecto.Multi{
+  :names => %MapSet{:map => MapSet.internal(_)},
+  :operations => [
+    {_,
+     {:inspect, Keyword.t()}
+     | {:merge,
+        (map() -> %Ecto.Multi{:names => map(), :operations => [{_, _}], _ => _})
+        | {atom(), atom(), [any()]}}
+     | {:put, _}
+     | {:run, (atom(), map() -> {:error, _} | {:ok, _})}
+     | {:changeset,
+        %Ecto.Changeset{
+          :action => atom(),
+          :changes => %{atom() => _},
+          :constraints => [
+            %{
+              :constraint =>
+                binary() | %Regex{:opts => [any()], :re_pattern => _, :source => binary()},
+              :error_message => binary(),
+              :error_type => atom(),
+              :field => atom(),
+              :match => :exact | :prefix | :suffix,
+              :type => :check | :exclusion | :foreign_key | :unique
+            }
+          ],
+          :data => nil | map(),
+          :empty_values => _,
+          :errors => Keyword.t({binary(), Keyword.t()}),
+          :filters => %{atom() => _},
+          :params => nil | %{binary() => _},
+          :prepare => [(_ -> any())],
+          :repo => atom(),
+          :repo_opts => Keyword.t(),
+          :required => [atom()],
+          :types => %{
+            atom() =>
+              atom()
+              | {:array | :assoc | :embed | :in | :map | :parameterized | :supertype | :try,
+                 _}
+          },
+          :valid? => boolean(),
+          :validations => Keyword.t()
+        }, Keyword.t()}
+     | {:delete_all,
+        %Ecto.Query{
+          :aliases => _,
+          :assocs => _,
+          :combinations => _,
+          :distinct => _,
+          :from => _,
+          :group_bys => _,
+          :havings => _,
+          :joins => _,
+          :limit => _,
+          :lock => _,
+          :offset => _,
+          :order_bys => _,
+          :prefix => _,
+          :preloads => _,
+          :select => _,
+          :sources => _,
+          :updates => _,
+          :wheres => _,
+          :windows => _,
+          :with_ctes => _
+        }, Keyword.t()}
+     | {:update_all,
+        %Ecto.Query{
+          :aliases => _,
+          :assocs => _,
+          :combinations => _,
+          :distinct => _,
+          :from => _,
+          :group_bys => _,
+          :havings => _,
+          :joins => _,
+          :limit => _,
+          :lock => _,
+          :offset => _,
+          :order_bys => _,
+          :prefix => _,
+          :preloads => _,
+          :select => _,
+          :sources => _,
+          :updates => _,
+          :wheres => _,
+          :windows => _,
+          :with_ctes => _
+        }, Keyword.t()}
+     | {:insert_all, atom() | binary() | {binary(), atom()}, [Keyword.t() | map()],
+        Keyword.t()}}
+  ]
+} (with opaque subterms) in the 1st position.
+
+Ecto.Multi.run(%Ecto.Multi{:names => %MapSet{:map => %{}}, :operations => []}, :validate, (_, _ ->
+                                                                                {:error,
+                                                                                 atom()
+                                                                                 | %HarnessForge.Contracts.Error{
+                                                                                     :code =>
+                                                                                       binary(),
+                                                                                     :correlation_id =>
+                                                                                       nil
+                                                                                       | binary(),
+                                                                                     :details =>
+                                                                                       [
+                                                                                         any()
+                                                                                       ],
+                                                                                     :message =>
+                                                                                       binary(),
+                                                                                     :retryable =>
+                                                                                       boolean()
+                                                                                   }}
+                                                                                | {:ok,
+                                                                                   {map(),
+                                                                                    nil
+                                                                                    | maybe_improper_list()
+                                                                                    | map()}})) ::
+  :ok
+def a() do
+  :ok
+end
+
+________________________________________________________________________________
+lib/harness_forge/releases.ex:121:15:call_without_opaque
+Function call without opaqueness type mismatch.
+
+Call does not have expected term of type %Ecto.Multi{
+  :names => %MapSet{:map => MapSet.internal(_)},
+  :operations => [
+    {_,
+     {:inspect, Keyword.t()}
+     | {:merge,
+        (map() -> %Ecto.Multi{:names => map(), :operations => [{_, _}], _ => _})
+        | {atom(), atom(), [any()]}}
+     | {:put, _}
+     | {:run, (atom(), map() -> {:error, _} | {:ok, _})}
+     | {:changeset,
+        %Ecto.Changeset{
+          :action => atom(),
+          :changes => %{atom() => _},
+          :constraints => [
+            %{
+              :constraint =>
+                binary() | %Regex{:opts => [any()], :re_pattern => _, :source => binary()},
+              :error_message => binary(),
+              :error_type => atom(),
+              :field => atom(),
+              :match => :exact | :prefix | :suffix,
+              :type => :check | :exclusion | :foreign_key | :unique
+            }
+          ],
+          :data => nil | map(),
+          :empty_values => _,
+          :errors => Keyword.t({binary(), Keyword.t()}),
+          :filters => %{atom() => _},
+          :params => nil | %{binary() => _},
+          :prepare => [(_ -> any())],
+          :repo => atom(),
+          :repo_opts => Keyword.t(),
+          :required => [atom()],
+          :types => %{
+            atom() =>
+              atom()
+              | {:array | :assoc | :embed | :in | :map | :parameterized | :supertype | :try,
+                 _}
+          },
+          :valid? => boolean(),
+          :validations => Keyword.t()
+        }, Keyword.t()}
+     | {:delete_all,
+        %Ecto.Query{
+          :aliases => _,
+          :assocs => _,
+          :combinations => _,
+          :distinct => _,
+          :from => _,
+          :group_bys => _,
+          :havings => _,
+          :joins => _,
+          :limit => _,
+          :lock => _,
+          :offset => _,
+          :order_bys => _,
+          :prefix => _,
+          :preloads => _,
+          :select => _,
+          :sources => _,
+          :updates => _,
+          :wheres => _,
+          :windows => _,
+          :with_ctes => _
+        }, Keyword.t()}
+     | {:update_all,
+        %Ecto.Query{
+          :aliases => _,
+          :assocs => _,
+          :combinations => _,
+          :distinct => _,
+          :from => _,
+          :group_bys => _,
+          :havings => _,
+          :joins => _,
+          :limit => _,
+          :lock => _,
+          :offset => _,
+          :order_bys => _,
+          :prefix => _,
+          :preloads => _,
+          :select => _,
+          :sources => _,
+          :updates => _,
+          :wheres => _,
+          :windows => _,
+          :with_ctes => _
+        }, Keyword.t()}
+     | {:insert_all, atom() | binary() | {binary(), atom()}, [Keyword.t() | map()],
+        Keyword.t()}}
+  ]
+} (with opaque subterms) in the 1st position.
+
+Ecto.Multi.run(%Ecto.Multi{:names => %MapSet{:map => %{}}, :operations => []}, :release, (_, _ ->
+                                                                               {:error,
+                                                                                atom()
+                                                                                | %HarnessForge.Contracts.Error{
+                                                                                    :code =>
+                                                                                      binary(),
+                                                                                    :correlation_id =>
+                                                                                      nil
+                                                                                      | binary(),
+                                                                                    :details =>
+                                                                                      [
+                                                                                        any()
+                                                                                      ],
+                                                                                    :message =>
+                                                                                      binary(),
+                                                                                    :retryable =>
+                                                                                      boolean()
+                                                                                  }}
+                                                                               | {:ok, _})) ::
+  :ok
+def a() do
+  :ok
+end
+
+________________________________________________________________________________
+done (warnings were emitted)
+Halting VM with exit status 2
+real 243.85
+user 1168.80
+sys 56.82
+=== exit_status=2
+=== wall_seconds=243.885
+=== load_after: 14.57 12.37 10.71
+=== ended_at=2026-11-08T11:29:09Z

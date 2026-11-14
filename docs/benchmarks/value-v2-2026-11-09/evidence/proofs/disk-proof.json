@@ -1,0 +1,1089 @@
+{
+  "checkouts": {
+    "pallets-click-3858": {
+      "after": {
+        "content_digest_all": "4501dc5936d11ac1a440dee867dd2a02ef49c68213fbfb886c47d4e107c9f042",
+        "content_digest_git_dir": "9df190f7ac5c60f01fbb220a4cfb37dc28eb0861a0b69c00f00e03030ab20393",
+        "content_digest_worktree": "5307ca7ccf1ca906cde136a12916c72feae730578ee47455042d635aab855df9",
+        "mtime_digest_all": "c5381b6476f8c3e661a378acbbbda032d329480c208e1d0d76b0ae9206414d03"
+      },
+      "before": {
+        "content_digest_all": "4501dc5936d11ac1a440dee867dd2a02ef49c68213fbfb886c47d4e107c9f042",
+        "content_digest_git_dir": "9df190f7ac5c60f01fbb220a4cfb37dc28eb0861a0b69c00f00e03030ab20393",
+        "content_digest_worktree": "5307ca7ccf1ca906cde136a12916c72feae730578ee47455042d635aab855df9",
+        "mtime_digest_all": "c5381b6476f8c3e661a378acbbbda032d329480c208e1d0d76b0ae9206414d03"
+      },
+      "entries": 243,
+      "files": 203,
+      "unchanged_content_including_git_dir": true,
+      "unchanged_mtimes": true
+    },
+    "pallets-werkzeug-3266": {
+      "after": {
+        "content_digest_all": "3d044eca0d86a7d12892cc397d6673a918c90870e6ace58a332b85647d3a26eb",
+        "content_digest_git_dir": "14a56f6342fba4eb6ff7fe9cc14e18f0f538a26061325c60c3179f370c6e33f1",
+        "content_digest_worktree": "901968a248e6a478ed475d5f4a69598c1c88bf514b84c2acc7ed4a3d9e7ee4e9",
+        "mtime_digest_all": "f1dd400398e3239ecbcd5d4af61ff6d91659233310093ce1fcef5137f2f484dc"
+      },
+      "before": {
+        "content_digest_all": "3d044eca0d86a7d12892cc397d6673a918c90870e6ace58a332b85647d3a26eb",
+        "content_digest_git_dir": "14a56f6342fba4eb6ff7fe9cc14e18f0f538a26061325c60c3179f370c6e33f1",
+        "content_digest_worktree": "901968a248e6a478ed475d5f4a69598c1c88bf514b84c2acc7ed4a3d9e7ee4e9",
+        "mtime_digest_all": "f1dd400398e3239ecbcd5d4af61ff6d91659233310093ce1fcef5137f2f484dc"
+      },
+      "entries": 387,
+      "files": 317,
+      "unchanged_content_including_git_dir": true,
+      "unchanged_mtimes": true
+    },
+    "pallets-werkzeug-3273": {
+      "after": {
+        "content_digest_all": "b2a9378850b17233d6b289b28d9b0096542420247271f1300001bb3e46b200c6",
+        "content_digest_git_dir": "be6427fd93e84661c780a348371be2cb5c2c175770ab7a549abc14e7af5be65d",
+        "content_digest_worktree": "2e58abb7fa9c5ccadb387d5a9f98cdc4ed45f08f76f79fb798caf26e8a968ca9",
+        "mtime_digest_all": "1227863b76b80c2d9fae5a622bddb31bedaa4e639bb4c84688ffe52fd9eedd99"
+      },
+      "before": {
+        "content_digest_all": "b2a9378850b17233d6b289b28d9b0096542420247271f1300001bb3e46b200c6",
+        "content_digest_git_dir": "be6427fd93e84661c780a348371be2cb5c2c175770ab7a549abc14e7af5be65d",
+        "content_digest_worktree": "2e58abb7fa9c5ccadb387d5a9f98cdc4ed45f08f76f79fb798caf26e8a968ca9",
+        "mtime_digest_all": "1227863b76b80c2d9fae5a622bddb31bedaa4e639bb4c84688ffe52fd9eedd99"
+      },
+      "entries": 387,
+      "files": 317,
+      "unchanged_content_including_git_dir": true,
+      "unchanged_mtimes": true
+    },
+    "pallets-werkzeug-3298": {
+      "after": {
+        "content_digest_all": "4b05b6d1c8e475f002886feb9ee95eb2aaa76459791e04f095e54e5097308ec1",
+        "content_digest_git_dir": "34df52cb7222feaa058d4b02dc3c8b1098a8517f3745982a27a09f84f366cf4c",
+        "content_digest_worktree": "80d949a45a0cd41ab1f44eca3f0c61ee1a8b9b6c9f548a47b9c8a836b34af9b0",
+        "mtime_digest_all": "8b93010c45c3190a50e73cbd9d9b7cf59dac9dd868d473016fbdca60ad4e9821"
+      },
+      "before": {
+        "content_digest_all": "4b05b6d1c8e475f002886feb9ee95eb2aaa76459791e04f095e54e5097308ec1",
+        "content_digest_git_dir": "34df52cb7222feaa058d4b02dc3c8b1098a8517f3745982a27a09f84f366cf4c",
+        "content_digest_worktree": "80d949a45a0cd41ab1f44eca3f0c61ee1a8b9b6c9f548a47b9c8a836b34af9b0",
+        "mtime_digest_all": "8b93010c45c3190a50e73cbd9d9b7cf59dac9dd868d473016fbdca60ad4e9821"
+      },
+      "entries": 389,
+      "files": 319,
+      "unchanged_content_including_git_dir": true,
+      "unchanged_mtimes": true
+    }
+  },
+  "cli_runs": [
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3298-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3298",
+      "wall_s": 4.32
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3298-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3298",
+      "wall_s": 4.34
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3273-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3273",
+      "wall_s": 4.24
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3273-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3273",
+      "wall_s": 4.3
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3266-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3266",
+      "wall_s": 4.75
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 1,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "exit": 0,
+      "export": "exports/cli-pallets-werkzeug-3266-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-werkzeug-3266",
+      "wall_s": 4.49
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "exit": 0,
+      "export": "exports/cli-pallets-click-3858-a",
+      "files_reported": 9,
+      "ok": true,
+      "run": "a",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-click-3858",
+      "wall_s": 4.39
+    },
+    {
+      "counts": {
+        "agents": 0,
+        "allowed_commands": 41,
+        "denied_commands": 61,
+        "hooks": 3,
+        "rules": 2,
+        "skills": 0
+      },
+      "diagnostics": [
+        "runtime_unqualified",
+        "unsupported_control",
+        "workspace_trust_required",
+        "allowed_programs_unrestricted",
+        "secret_deny_is_partial",
+        "registry_access",
+        "approval_still_required",
+        "guard_missing_fails_open"
+      ],
+      "digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "exit": 0,
+      "export": "exports/cli-pallets-click-3858-b",
+      "files_reported": 9,
+      "ok": true,
+      "run": "b",
+      "stderr_bytes": 0,
+      "stdout_lines": 1,
+      "task": "pallets-click-3858",
+      "wall_s": 4.17
+    }
+  ],
+  "exports": [
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68464,
+      "claude_md_bytes": 541,
+      "claude_md_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-demo-werkzeug-3298",
+      "read_deny_rules": 0,
+      "reported_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-text-demo",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3298",
+      "tree_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68464,
+      "claude_md_bytes": 541,
+      "claude_md_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-werkzeug-3298-a",
+      "read_deny_rules": 0,
+      "reported_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-a",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3298",
+      "tree_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68464,
+      "claude_md_bytes": 541,
+      "claude_md_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-werkzeug-3298-b",
+      "read_deny_rules": 0,
+      "reported_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-b",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3298",
+      "tree_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-werkzeug-3273-a",
+      "read_deny_rules": 0,
+      "reported_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-a",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3273",
+      "tree_sha256": "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-werkzeug-3273-b",
+      "read_deny_rules": 0,
+      "reported_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-b",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3273",
+      "tree_sha256": "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-werkzeug-3266-a",
+      "read_deny_rules": 0,
+      "reported_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-a",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3266",
+      "tree_sha256": "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-werkzeug-3266-b",
+      "read_deny_rules": 0,
+      "reported_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-b",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3266",
+      "tree_sha256": "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68376,
+      "claude_md_bytes": 486,
+      "claude_md_sha256": "4360c7d7a9a08e450535a5e54e67d0105beda3f7723f70aa2cede68d0f6904bb",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34270,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288",
+      "guard_sha256_pinned_in_settings": [
+        "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-click-3858-a",
+      "read_deny_rules": 0,
+      "reported_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "reported_equals_manifest": true,
+      "settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-a",
+      "symlinks": [],
+      "task": "pallets-click-3858",
+      "tree_sha256": "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68376,
+      "claude_md_bytes": 486,
+      "claude_md_sha256": "4360c7d7a9a08e450535a5e54e67d0105beda3f7723f70aa2cede68d0f6904bb",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34270,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288",
+      "guard_sha256_pinned_in_settings": [
+        "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/cli-pallets-click-3858-b",
+      "read_deny_rules": 0,
+      "reported_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "reported_equals_manifest": true,
+      "settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+      "sha256_size_mode_mismatches": [],
+      "source": "cli-json-b",
+      "symlinks": [],
+      "task": "pallets-click-3858",
+      "tree_sha256": "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68464,
+      "claude_md_bytes": 541,
+      "claude_md_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/portal-video-werkzeug-3298",
+      "read_deny_rules": 0,
+      "reported_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-video",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3298",
+      "tree_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68464,
+      "claude_md_bytes": 541,
+      "claude_md_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots1/portal-pallets-werkzeug-3298",
+      "read_deny_rules": 0,
+      "reported_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass1",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3298",
+      "tree_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots1/portal-pallets-werkzeug-3273",
+      "read_deny_rules": 0,
+      "reported_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass1",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3273",
+      "tree_sha256": "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots1/portal-pallets-werkzeug-3266",
+      "read_deny_rules": 0,
+      "reported_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass1",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3266",
+      "tree_sha256": "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68376,
+      "claude_md_bytes": 486,
+      "claude_md_sha256": "4360c7d7a9a08e450535a5e54e67d0105beda3f7723f70aa2cede68d0f6904bb",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34270,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288",
+      "guard_sha256_pinned_in_settings": [
+        "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots1/portal-pallets-click-3858",
+      "read_deny_rules": 0,
+      "reported_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "reported_equals_manifest": true,
+      "settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass1",
+      "symlinks": [],
+      "task": "pallets-click-3858",
+      "tree_sha256": "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68464,
+      "claude_md_bytes": 541,
+      "claude_md_sha256": "2ff2985e127a8a36d3564ee531494ef9f169e3a57ab58bfc226a3d7ef2afc91f",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots2/portal-pallets-werkzeug-3298",
+      "read_deny_rules": 0,
+      "reported_digest": "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass2",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3298",
+      "tree_sha256": "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots2/portal-pallets-werkzeug-3273",
+      "read_deny_rules": 0,
+      "reported_digest": "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass2",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3273",
+      "tree_sha256": "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 67680,
+      "claude_md_bytes": 421,
+      "claude_md_sha256": "c23fee2136ffcc8e9bb3d953f6197391eb13bb88ad18307542681d17ec73e808",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34257,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b",
+      "guard_sha256_pinned_in_settings": [
+        "7dc67999c5bba39091ea2aaacb2d77de4d0d51ef4f48e7d65f72bf591947b29b"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots2/portal-pallets-werkzeug-3266",
+      "read_deny_rules": 0,
+      "reported_digest": "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4",
+      "reported_equals_manifest": true,
+      "settings_sha256": "e45bf9e8e38ef58bf852d3e93edc2207497cc2016d39ff1db7595566c8899544",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass2",
+      "symlinks": [],
+      "task": "pallets-werkzeug-3266",
+      "tree_sha256": "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798"
+    },
+    {
+      "allow_rules": 47,
+      "ask_rules": 0,
+      "bytes_total": 68376,
+      "claude_md_bytes": 486,
+      "claude_md_sha256": "4360c7d7a9a08e450535a5e54e67d0105beda3f7723f70aa2cede68d0f6904bb",
+      "deny_rules": 104,
+      "disk_files_total": 10,
+      "extra_on_disk": [],
+      "guard_bytes": 34270,
+      "guard_pin_matches_file": true,
+      "guard_sha256": "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288",
+      "guard_sha256_pinned_in_settings": [
+        "91d1f3a5c846ce3654031806473bb1bdfa7e1c690068770f0c8460b39f4be288"
+      ],
+      "hook_events": [
+        "PostToolUse",
+        "PreToolUse",
+        "Stop"
+      ],
+      "listed_equals_disk_excluding_manifest": true,
+      "manifest_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "manifest_files": 9,
+      "missing_on_disk": [],
+      "other_entries": [],
+      "path": "exports/shots2/portal-pallets-click-3858",
+      "read_deny_rules": 0,
+      "reported_digest": "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071",
+      "reported_equals_manifest": true,
+      "settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+      "sha256_size_mode_mismatches": [],
+      "source": "portal-pass2",
+      "symlinks": [],
+      "task": "pallets-click-3858",
+      "tree_sha256": "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+    }
+  ],
+  "per_task": {
+    "pallets-click-3858": {
+      "all_exports_byte_identical": true,
+      "allow_rules": 47,
+      "bytes": 68376,
+      "claude_md_bytes": 486,
+      "cli_exports": 2,
+      "deny_rules": 104,
+      "distinct_digests": [
+        "7f1290ab77604cc0ac78c07dde9869f1463b8cee2d15652224ffcc6bbae85071"
+      ],
+      "distinct_tree_sha256": [
+        "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+      ],
+      "equals_reviewer_build": true,
+      "every_guard_pin_matches_file": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "exports_checked": 4,
+      "files": 10,
+      "guard_bytes": 34270,
+      "held_out": false,
+      "portal_digest_equals_cli_digest": true,
+      "portal_exports": 2,
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "read_deny_rules": 0,
+      "reviewer_build_tree_sha256": [
+        "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f",
+        "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+      ],
+      "same_session_portal_repeat_digests_equal": "2 of 2"
+    },
+    "pallets-werkzeug-3266": {
+      "all_exports_byte_identical": true,
+      "allow_rules": 47,
+      "bytes": 67680,
+      "claude_md_bytes": 421,
+      "cli_exports": 2,
+      "deny_rules": 104,
+      "distinct_digests": [
+        "ff716a63ee91de07d65e6c801b5595dd0cd1fc57790be2ea1cbe0ee99fb7c6e4"
+      ],
+      "distinct_tree_sha256": [
+        "9963c6fcec717c5f21bc834bb2d962dc60357f758e619f413e664ca3c0030798"
+      ],
+      "equals_reviewer_build": null,
+      "every_guard_pin_matches_file": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "exports_checked": 4,
+      "files": 10,
+      "guard_bytes": 34257,
+      "held_out": true,
+      "portal_digest_equals_cli_digest": true,
+      "portal_exports": 2,
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "read_deny_rules": 0,
+      "reviewer_build_tree_sha256": null,
+      "same_session_portal_repeat_digests_equal": "2 of 2"
+    },
+    "pallets-werkzeug-3273": {
+      "all_exports_byte_identical": true,
+      "allow_rules": 47,
+      "bytes": 67680,
+      "claude_md_bytes": 421,
+      "cli_exports": 2,
+      "deny_rules": 104,
+      "distinct_digests": [
+        "252bc89444e35d600f0ea9d193d56ec4e7059ecf6849037cf12a1980e30c34b3"
+      ],
+      "distinct_tree_sha256": [
+        "9fdb760701a048df31b0170cbc347a0e3fe5d90e0f4b214406921c2f83bd432e"
+      ],
+      "equals_reviewer_build": null,
+      "every_guard_pin_matches_file": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "exports_checked": 4,
+      "files": 10,
+      "guard_bytes": 34257,
+      "held_out": true,
+      "portal_digest_equals_cli_digest": true,
+      "portal_exports": 2,
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "read_deny_rules": 0,
+      "reviewer_build_tree_sha256": null,
+      "same_session_portal_repeat_digests_equal": "2 of 2"
+    },
+    "pallets-werkzeug-3298": {
+      "all_exports_byte_identical": true,
+      "allow_rules": 47,
+      "bytes": 68464,
+      "claude_md_bytes": 541,
+      "cli_exports": 3,
+      "deny_rules": 104,
+      "distinct_digests": [
+        "d280b1e4f003c6e881fabe22719a339feb0432ca791a470e55d08e21e4c24206"
+      ],
+      "distinct_tree_sha256": [
+        "33df4ba45156ff6c29431fe7fed90509e34ac2e5fa1a78d0c7408c289d864eda"
+      ],
+      "equals_reviewer_build": null,
+      "every_guard_pin_matches_file": true,
+      "every_manifest_matches_disk": true,
+      "every_reported_digest_equals_manifest": true,
+      "exports_checked": 6,
+      "files": 10,
+      "guard_bytes": 34257,
+      "held_out": true,
+      "portal_digest_equals_cli_digest": true,
+      "portal_exports": 3,
+      "portal_file_list_and_sizes_equal_disk": "2 of 2",
+      "portal_preview_equals_exported_claude_md": "2 of 2",
+      "read_deny_rules": 0,
+      "reviewer_build_tree_sha256": null,
+      "same_session_portal_repeat_digests_equal": "2 of 2"
+    }
+  }
+}

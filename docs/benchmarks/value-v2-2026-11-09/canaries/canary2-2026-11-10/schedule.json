@@ -1,0 +1,24 @@
+{
+  "order": [
+    [
+      "pallets-click-3858",
+      "none",
+      1
+    ],
+    [
+      "pallets-click-3858",
+      "olivium",
+      1
+    ],
+    [
+      "pallets-click-3858",
+      "generic",
+      1
+    ]
+  ],
+  "repeats": 1,
+  "seed": 20261108,
+  "tasks": [
+    "pallets-click-3858"
+  ]
+}

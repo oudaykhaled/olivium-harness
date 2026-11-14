@@ -1,0 +1,11 @@
+{
+  "arm": "generic",
+  "attempt": 1,
+  "finished_at": "2026-11-09T15:48:29Z",
+  "repeat": 1,
+  "run_id": "python-attrs-attrs-1593.generic.r1",
+  "stage": "done",
+  "started_at": "2026-11-09T15:47:12Z",
+  "status": "completed",
+  "task_id": "python-attrs-attrs-1593"
+}

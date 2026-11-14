@@ -1,0 +1,68 @@
+{
+  "claude_code_version": "2.1.311",
+  "files_read": 2,
+  "files_read_list": [
+    "CHANGES.md",
+    "src/click/_termui_impl.py"
+  ],
+  "first_gold_edit": {
+    "path": "src/click/_termui_impl.py",
+    "tool": "Bash",
+    "tool_calls_before": 4,
+    "turns_before": 3
+  },
+  "hook_blocks": 0,
+  "hook_events": {
+    "hook_response": 6,
+    "hook_started": 6
+  },
+  "init_model": "claude-sonnet-5-5",
+  "init_tools": [
+    "Bash",
+    "CronCreate",
+    "CronDelete",
+    "CronList",
+    "Edit",
+    "EnterWorktree",
+    "ExitWorktree",
+    "ListAgents",
+    "Monitor",
+    "NotebookEdit",
+    "Read",
+    "ReportFindings",
+    "ScheduleWakeup",
+    "SendMessage",
+    "Skill",
+    "Task",
+    "TaskStop",
+    "ToolSearch",
+    "Workflow",
+    "Write"
+  ],
+  "init_web_tools": [],
+  "malformed_lines": 0,
+  "permission_denials": 1,
+  "permission_denied_tools": [
+    "Bash"
+  ],
+  "permission_mode": "default",
+  "result": {
+    "duration_ms": 30165,
+    "is_error": false,
+    "num_turns": 6,
+    "stop_reason": "end_turn",
+    "subtype": "success",
+    "total_cost_usd": 0.040685700000000005
+  },
+  "tool_calls": {
+    "Bash": 3,
+    "Read": 2
+  },
+  "tool_calls_before_first_gold_edit": 4,
+  "tool_calls_total": 5,
+  "turns": 5,
+  "turns_before_first_gold_edit": 3,
+  "wasted_reads": 0,
+  "wasted_reads_list": [],
+  "web_tool_uses": 0
+}

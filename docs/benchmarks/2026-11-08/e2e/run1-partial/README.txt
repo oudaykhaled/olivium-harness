@@ -1,0 +1,1 @@
+B10 failed on a test-selector strict-mode violation (nested <details> summary); rerun from a fresh workspace follows. server.log here is the copy of the first server instance (workspace e2e-ws, first boot).

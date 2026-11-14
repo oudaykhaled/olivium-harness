@@ -1,0 +1,51 @@
+{
+  "arm_sha256": [
+    "de43f8ec744149c504c8ce3b2eec0ed9642f89bdba3183e30b04623a57b5eee5"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.040672299999999995,
+  "exit_code": 0,
+  "grade": {
+    "f2p_passed": 3,
+    "f2p_total": 6,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 1963,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [],
+    "restored_paths": [],
+    "solved": false,
+    "status": "ok",
+    "test_exit": "1",
+    "test_patch_applied": true,
+    "tests_seen": 1994
+  },
+  "harness_check": {
+    "changed": [],
+    "files_expected": 1,
+    "files_observed": 1,
+    "missing": [],
+    "ok": true,
+    "settings_match": true,
+    "settings_sha256_expected": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647",
+    "settings_sha256_in_container": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647",
+    "unexpected": []
+  },
+  "hook_events": {},
+  "host_timeout": false,
+  "image": "olivium-bench-agent-pallets-click-3769:v1",
+  "image_id": "sha256:974b3edf4d5de0ba794fe3202c48cd63cb6d84b7ab94c18f5b8544fecca44d79",
+  "init_web_tools": [],
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "meter_server_tools": [],
+  "permission_denied_tools": [],
+  "permission_mode": "bypassPermissions",
+  "permission_mode_observed": "bypassPermissions",
+  "prompt_sha256": "2c233648fc9985daa14b2c3d6e8d1b646115ea41b6f1169460b1e46904d601e1",
+  "settings_sha256": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647",
+  "web_tool_uses": 0
+}

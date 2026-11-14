@@ -1,0 +1,202 @@
+Path placeholders in docs/benchmarks
+
+Some files in this folder were written on the machine that ran the benchmarks
+and contained absolute paths from it. Those path prefixes are replaced with
+placeholders. Nothing else in these files is changed.
+
+Placeholders
+  the benchmark output folder in the home directory  ->  <bench-out>
+  the API key file                                   ->  <key-file>
+  the project checkout folder                        ->  <repo>
+  the tooling scratch folder                         ->  <scratch>
+  a temporary folder under the system tmp folder     ->  <tmp>
+  the file owner column of ls -l output              ->  <user>
+
+Recorded SHA-256 values that were updated
+
+Some files record the SHA-256 of other files in this folder. Where a recorded
+file was changed by the replacement, the record now holds the new digest.
+The value recorded when the run was written is kept here.
+
+  docs/benchmarks/value-2026-11-09/provenance.json
+    records docs/benchmarks/value-2026-11-09/results.json
+    recorded at run time: bff26558fc3ebbac981f6348dd34fd393f37a9c468b3f4361fc3d9b769c84267
+    now:                  6eee624ae27b3f4d0f9698b9790ddf218db2f2d5fad03c4341dc01bb71f4376e
+
+  docs/benchmarks/value-v2-2026-11-09/evidence/index.json
+    records docs/benchmarks/value-v2-2026-11-09/evidence/cli/cli-session-werkzeug-3298.txt
+    recorded at run time: 1040bdf5de71ff40e2e1727bc3537a1fc8288bccd49eb5d6986d97eb0e1e8ef9
+    now:                  4ea414c2665d5f6e626bf44ef9ba84f3e40b58bbc3291c4b5a4e9e60f6968c48
+
+  docs/benchmarks/value-v2-2026-11-09/evidence/index.json
+    records docs/benchmarks/value-v2-2026-11-09/evidence/proofs/portal-results.json
+    recorded at run time: 331166c8f54503a7d2fdbd50ace2d31f2bc2feca6a9f405cac81cf2c7b9b6ab5
+    now:                  2012ac2e8cb57d8af4146018918db550f3d44a24bb52b7a7af7b142ee9cfd94b
+
+  docs/benchmarks/value-v2-2026-11-09/evidence/index.json
+    records docs/benchmarks/value-v2-2026-11-09/evidence/proofs/settings-facts-werkzeug-3298.json
+    recorded at run time: fb8d078ea9dc7e89c40f28e1f71f090f787065ba54ca904f2fa3ed5dd94668db
+    now:                  4fca6f0405e92256202f0e2d3b58fae12b852ab9951fe1b18cb6cac5546e9c84
+
+  docs/benchmarks/value-v2-2026-11-09/provenance.json
+    records docs/benchmarks/value-v2-2026-11-09/results.json
+    recorded at run time: 8bf8545d1bf1a5a344c06baefad96b4db76d288bb5a71cfdf8d34452a38dfd4a
+    now:                  1b4872c12e4e04dca96707d894d913424ced538670e1538a33854da2895c0b65
+
+  docs/benchmarks/value-v2-2026-11-09/provenance.json
+    records docs/benchmarks/value-v2-2026-11-09/supplement.json
+    recorded at run time: 34a33238c53de96f1ae331449a2a03d3879dada05d7e0992df314ee0c061f0d5
+    now:                  b05f06ba59f46115a6abdadf1286903d0e71897ecb3154ea2647ef406f7ed121
+
+  docs/benchmarks/value-v2-2026-11-10-fix/provenance.json
+    records docs/benchmarks/value-v2-2026-11-10-fix/results.json
+    recorded at run time: 8ad3340dee6291a5d32072a0130622a1263d83b730dbe723a3cd86cb5c9bd0d1
+    now:                  96cf8b86ec0cb46cb9111f392783d3fb3c7a92c30554d812f54447bad9c7becf
+
+Files changed (replacements per placeholder)
+
+  2026-11-08/e2e/browser-results.json: 7 (1 <repo>, 6 <scratch>)
+  2026-11-08/e2e/cli-results.json: 56 (1 <repo>, 55 <scratch>)
+  2026-11-08/e2e/cli.log: 28 (28 <scratch>)
+  2026-11-08/e2e/e2e.log: 2 (2 <scratch>)
+  2026-11-08/e2e/repeat2/e2e.log: 2 (2 <scratch>)
+  2026-11-08/e2e/repeat2/results.json: 7 (1 <repo>, 6 <scratch>)
+  2026-11-08/e2e/repeat2/server.log: 2 (2 <scratch>)
+  2026-11-08/e2e/repeat2/stdout.log: 2 (2 <scratch>)
+  2026-11-08/e2e/repeat3/e2e.log: 2 (2 <scratch>)
+  2026-11-08/e2e/repeat3/results.json: 7 (1 <repo>, 6 <scratch>)
+  2026-11-08/e2e/repeat3/server.log: 2 (2 <scratch>)
+  2026-11-08/e2e/repeat3/stdout.log: 2 (2 <scratch>)
+  2026-11-08/e2e/results.json: 85 (6 <repo>, 79 <scratch>)
+  2026-11-08/e2e/run1-partial/e2e.log: 2 (2 <scratch>)
+  2026-11-08/e2e/run1-partial/results.json: 7 (1 <repo>, 6 <scratch>)
+  2026-11-08/e2e/run1-partial/server-first-instance.log: 2 (2 <scratch>)
+  2026-11-08/e2e/server.log: 2 (2 <scratch>)
+  2026-11-08/pipeline/commands.sh: 4 (3 <repo>, 1 <scratch>)
+  2026-11-08/pipeline/console.log: 19 (6 <repo>, 13 <scratch>)
+  2026-11-08/pipeline/pipeline.log: 19 (6 <repo>, 13 <scratch>)
+  2026-11-08/pipeline/results.json: 23 (6 <repo>, 17 <scratch>)
+  2026-11-08/portal/browser-results.json: 3 (1 <repo>, 2 <scratch>)
+  2026-11-08/portal/results.json: 12 (8 <repo>, 4 <scratch>)
+  2026-11-08/portal/run-stdout.log: 1 (1 <repo>)
+  2026-11-08/portal/run1-aborted/browser-results.json: 2 (1 <repo>, 1 <scratch>)
+  2026-11-08/portal/run1-aborted/run-stdout.log: 1 (1 <repo>)
+  2026-11-08/portal/server-restart-timing.txt: 6 (6 <scratch>)
+  2026-11-08/portal/server.log: 1 (1 <scratch>)
+  2026-11-08/supplementary/run-sh-verification/machine.txt: 1 (1 <repo>)
+  2026-11-08/supplementary/run-sh-verification/run-summary.json: 3 (1 <repo>, 2 <scratch>)
+  2026-11-08/supplementary/run-sh-verification/run.log: 20 (1 <repo>, 19 <scratch>)
+  2026-11-08/supplementary/static-checks/compile.log: 6 (3 <repo>, 3 <scratch>)
+  2026-11-08/supplementary/static-checks/coverage-run1-default-tmpdir.txt: 1 (1 <repo>)
+  2026-11-08/supplementary/static-checks/credo.log: 6 (3 <repo>, 3 <scratch>)
+  2026-11-08/supplementary/static-checks/dialyzer.log: 7 (7 <repo>)
+  2026-11-08/supplementary/static-checks/format.log: 9 (6 <repo>, 3 <scratch>)
+  2026-11-08/supplementary/static-checks/metrics.json: 2 (2 <repo>)
+  2026-11-08/supplementary/static-checks/metrics.log: 1 (1 <repo>)
+  2026-11-08/supplementary/static-checks/test-failed-rerun.log: 1 (1 <repo>)
+  2026-11-08/supplementary/static-checks/test-run1-default-tmpdir.log: 1 (1 <repo>)
+  2026-11-08/supplementary/static-checks/test-tmpdir-experiment.log: 3 (2 <repo>, 1 <tmp>)
+  2026-11-08/supplementary/static-checks/test.log: 2 (1 <repo>, 1 <scratch>)
+  2026-11-08/verification/details-check.log: 62 (62 <scratch>)
+  2026-11-08/verification/e2e-b02-fix.log: 3 (3 <scratch>)
+  2026-11-08/verification/e2e-b02-fix/e2e.log: 2 (2 <scratch>)
+  2026-11-08/verification/e2e-b02-fix/results.json: 7 (7 <scratch>)
+  2026-11-08/verification/hygiene-check-2.log: 1 (1 <user>)
+  2026-11-08/verification/hygiene-check.log: 4 (4 <user>)
+  2026-11-08/verification/leftovers.log: 1 (1 <scratch>)
+  2026-11-08/verification/numbers-check-final.log: 12 (1 <repo>, 11 <scratch>)
+  2026-11-08/verification/numbers-check.log: 12 (1 <repo>, 11 <scratch>)
+  2026-11-08/verification/post-run-process-check.log: 6 (6 <user>)
+  2026-11-08/verification/scripts-check.log: 2 (2 <user>)
+  value-2026-11-09/results.json: 1 (1 <bench-out>)
+  value-v2-2026-11-09/evidence/cli/cli-session-werkzeug-3298.txt: 16 (16 <scratch>)
+  value-v2-2026-11-09/evidence/index.json: 1 (1 <bench-out>)
+  value-v2-2026-11-09/evidence/proofs/portal-results.json: 18 (18 <scratch>)
+  value-v2-2026-11-09/evidence/proofs/settings-facts-werkzeug-3298.json: 1 (1 <scratch>)
+  value-v2-2026-11-09/provenance.json: 16 (12 <bench-out>, 4 <key-file>)
+  value-v2-2026-11-09/results.json: 2 (1 <bench-out>, 1 <repo>)
+  value-v2-2026-11-09/supplement.json: 3 (3 <bench-out>)
+  value-v2-2026-11-10-fix/provenance.json: 8 (6 <bench-out>, 2 <key-file>)
+  value-v2-2026-11-10-fix/results.json: 1 (1 <scratch>)
+
+Protocol files (2026-11-14)
+
+The published bench/value/PROTOCOL.md and bench/value/PROTOCOL-v2.md have the
+benchmark output folder replaced by <bench-out> (2 replacements in each).
+Nothing else is changed. The SHA-256 recorded for PROTOCOL-v2.md at run time,
+in bench/value/PROTOCOL-v2.sha256 and in
+docs/benchmarks/value-v2-2026-11-10-fix/provenance.json, is the digest of the
+unredacted original.
+
+  bench/value/PROTOCOL-v2.md
+    recorded at run time (original): 376b8a64d4f27708779564af85d1588cbc1a6e2063b1fc97b252e50363592719
+    published file:                  f5551a50361714d4f98bb64174e6f4b499794ee2cdb2f15bd710996474b55efc
+
+  bench/value/PROTOCOL.md
+    original:                        14f9bfa57a397b45a74b9c0251d9dd80da854a4b81d79c444d8e3610f16075df
+    published file:                  1a31ff4bfc4855794193921a58f709d03733591eee690cc9f0738547cec98efb
+
+Files not published
+
+Screenshots and video that showed local paths are not published. The JSON and
+log files in this folder still name them and are not changed.
+
+  2026-11-08/e2e/repeat2/screenshots/B01.png
+  2026-11-08/e2e/repeat2/screenshots/B02.png
+  2026-11-08/e2e/repeat2/screenshots/B08.png
+  2026-11-08/e2e/repeat2/screenshots/B12.png
+  2026-11-08/e2e/repeat2/screenshots/B14.png
+  2026-11-08/e2e/repeat3/screenshots/B01.png
+  2026-11-08/e2e/repeat3/screenshots/B02.png
+  2026-11-08/e2e/repeat3/screenshots/B08.png
+  2026-11-08/e2e/repeat3/screenshots/B12.png
+  2026-11-08/e2e/repeat3/screenshots/B14.png
+  2026-11-08/e2e/run1-partial/screenshots/B01.png
+  2026-11-08/e2e/run1-partial/screenshots/B02.png
+  2026-11-08/e2e/run1-partial/screenshots/B08.png
+  2026-11-08/e2e/run1-partial/screenshots/B12.png
+  2026-11-08/e2e/run1-partial/screenshots/B14.png
+  2026-11-08/e2e/screenshots/B01.png
+  2026-11-08/e2e/screenshots/B02.png
+  2026-11-08/e2e/screenshots/B08.png
+  2026-11-08/e2e/screenshots/B12.png
+  2026-11-08/e2e/screenshots/B14.png
+  2026-11-08/portal/run1-aborted/screenshots/01-login.png
+  2026-11-08/portal/screenshots/01-login.png
+  2026-11-08/portal/screenshots/08-privacy.png
+  2026-11-08/verification/e2e-b02-fix/screenshots/B01.png
+  2026-11-08/verification/e2e-b02-fix/screenshots/B02.png
+  value-v2-2026-11-09/evidence/screenshots/00-login.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-1-path-entered.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-2-pipeline-running.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-3-pipeline-ready.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-4-preview-and-files.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-5-generated-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-7-export-target.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-8-exported.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-click-3858-9-exported-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-1-path-entered.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-2-pipeline-running.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-3-pipeline-ready.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-4-preview-and-files.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-5-generated-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-7-export-target.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-8-exported.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3266-9-exported-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-1-path-entered.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-2-pipeline-running.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-3-pipeline-ready.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-4-preview-and-files.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-5-generated-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-7-export-target.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-8-exported.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3273-9-exported-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-1-path-entered.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-2-pipeline-running.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-3-pipeline-ready.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-4-preview-and-files.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-5-generated-full-page.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-7-export-target.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-8-exported.png
+  value-v2-2026-11-09/evidence/screenshots/pallets-werkzeug-3298-9-exported-full-page.png
+  value-v2-2026-11-09/evidence/video/portal-generate-werkzeug-3298.webm

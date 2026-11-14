@@ -1,0 +1,458 @@
+{
+ "benchmark": "value benchmark v2r: re-run of the 8 v2 tasks with the current generator",
+ "development_tasks": "These are development tasks: the generator was changed while looking at results on these same 8 tasks (including the three pallets/werkzeug tasks), so no task here is held out. The result can show a direction or a problem on tasks the generator was tuned on; it cannot show a gain on unseen repositories.",
+ "date_utc": "2026-11-14",
+ "directory_name_note": "value-v2r-2026-11-13 is the output directory name fixed in the protocol; the runs took place on 2026-11-14 UTC.",
+ "run_window_utc": {
+  "setup_generic_init": [
+   "2026-11-14T02:56:48Z",
+   "2026-11-14T02:59:30Z"
+  ],
+  "scored_runs": [
+   "2026-11-14T03:00:06Z",
+   "2026-11-14T03:54:26Z"
+  ],
+  "note": "The scored window includes the resumed attempt python-attrs-attrs-1593.generic.r2.a2 (03:53:38Z to 03:54:26Z)."
+ },
+ "model": "claude-sonnet-5-5",
+ "claude_code_version": "2.1.311",
+ "protocol": {
+  "file": "bench/value/PROTOCOL-v2r.md",
+  "sha256_history": [
+   {
+    "recorded_utc": "2026-11-14T02:16:44Z",
+    "sha256": "e7871636e6c11df7e65fe10e2cf2033d558910d74271569fe6ad32bd2f52d7de",
+    "state": "initial, before preparation, rehearsal or any paid request"
+   },
+   {
+    "recorded_utc": "2026-11-14T02:48:44Z",
+    "sha256": "f5b92f61bd59c1da6bcba4a2af75cf97d9307087f4fff8c712279652b2aa89f6",
+    "state": "after the change-log entry for implementation, preparation and the mock rehearsal; before any paid request"
+   },
+   {
+    "recorded_utc": "2026-11-14T02:56:22Z",
+    "sha256": "f5b92f61bd59c1da6bcba4a2af75cf97d9307087f4fff8c712279652b2aa89f6",
+    "state": "frozen runner copy, recorded just before the first paid command"
+   }
+  ],
+  "first_paid_request_utc": "2026-11-14T02:56:48.11Z"
+ },
+ "analysis_script": {
+  "file": "bench/value/analyze_v2r.py",
+  "sha256": "eda0a09615435bf9bce67459bb5293958509b8027c8fc34ef6bef6f7879b5803"
+ },
+ "runner": {
+  "note": "Paid commands ran from a frozen copy of bench/value: 79 files, all SHA-256 values unchanged before and after the run.",
+  "file_list_sha256": "2bfcf047fcff0daa9fb62fa7dd9480007acd79141c71521aa748eb6b7efaece4"
+ },
+ "manifest": {
+  "file": "bench/value/corpus/manifest-v2.json",
+  "sha256": "ca63f474f6c63c3597b5a157585471b708c1942f17d7e929a7cb4a9ede0b01a8",
+  "checksum_field": "c8bde114ef966b873cc0a13cb15e153474e5e96c3643f3ec9f3034e6104061d3"
+ },
+ "tasks": [
+  "pallets-click-3858",
+  "pallets-flask-6096",
+  "python-attrs-attrs-1593",
+  "expressjs-express-7366",
+  "pallets-click-3769",
+  "pallets-werkzeug-3298",
+  "pallets-werkzeug-3273",
+  "pallets-werkzeug-3266"
+ ],
+ "application_snapshot": {
+  "bin_harnessforge_sha256": "c97c5c227b9b3a7669314f1b8f126bc3c99538a89612e6e1b54daba28e15144b",
+  "config_sha256": "90480eee9e2baa5e09c8afc7847f2b8b84a39b5dfc9b29afa3fedacbfda25b6f",
+  "lib_sha256": "8eb0b4205c59d7e826c5edb82f02d8940528217e81235537f80013aa4bbce56a",
+  "mix_lock_sha256": "07b56ec946f046cba4df2aeba0db9cb461230078ed5ac3bc16111382ce02e805",
+  "priv_blueprints_sha256": "914039fbfaee0a1c6d1de1f0fa8ea571679d433d0914c5984bd33d8e18aed58b"
+ },
+ "agent_images": {
+  "expressjs-express-7366": {
+   "agent_image": "olivium-bench-agent-expressjs-express-7366:v1",
+   "agent_image_id": "sha256:2f685f77fefe8820a228f0d8828c10eb78b8154b23272dd7792e7a066ca26211"
+  },
+  "pallets-click-3769": {
+   "agent_image": "olivium-bench-agent-pallets-click-3769:v1",
+   "agent_image_id": "sha256:974b3edf4d5de0ba794fe3202c48cd63cb6d84b7ab94c18f5b8544fecca44d79"
+  },
+  "pallets-click-3858": {
+   "agent_image": "olivium-bench-agent-pallets-click-3858:v1",
+   "agent_image_id": "sha256:fbc38054278658f487f4ff0aba3f9e4fdc25dc1fe31530b9063794e4c4cb7590"
+  },
+  "pallets-flask-6096": {
+   "agent_image": "olivium-bench-agent-pallets-flask-6096:v1",
+   "agent_image_id": "sha256:4eb5837b3497e21d3bcfcf8ed5b63554dd11025b3f038cbc32b766c552d58239"
+  },
+  "pallets-werkzeug-3266": {
+   "agent_image": "olivium-bench-agent-pallets-werkzeug-3266:v1",
+   "agent_image_id": "sha256:9a94e935c31b0332193f95345632ff38703d2c6e5ab6fe45438b081059bbced2"
+  },
+  "pallets-werkzeug-3273": {
+   "agent_image": "olivium-bench-agent-pallets-werkzeug-3273:v1",
+   "agent_image_id": "sha256:692e8bedc6121b0a54e98919d817bbf11f4589dff97ff9fe4e3efa9dd150dd8e"
+  },
+  "pallets-werkzeug-3298": {
+   "agent_image": "olivium-bench-agent-pallets-werkzeug-3298:v1",
+   "agent_image_id": "sha256:30eba79ddc841377d689a4dccc27b657e57e62d429a2c37889afde169d8b626f"
+  },
+  "python-attrs-attrs-1593": {
+   "agent_image": "olivium-bench-agent-python-attrs-attrs-1593:v1",
+   "agent_image_id": "sha256:d8f5d854f5b685150301e55885007c791c7c287d6af536c1ddc98b2646dce3ec"
+  }
+ },
+ "exports": {
+  "expressjs-express-7366": {
+   "olivium": {
+    "files": 14,
+    "bytes": 94971,
+    "digest": "05d474d00a2e3d37093ed367dcfbd7fbf736187a75da2a999f4ffa4d7110783d",
+    "settings_sha256": "60718dbc4a93d650e5e61a0559350e28012f4c1284d66bfbeb61bd24b741da6c",
+    "skills": [],
+    "agents": [
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": false
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 86606,
+    "digest": "ccb82f9790a92f55ef9c6b180e94c3fbfee255cf7ea655d02bf9bbea7b211991",
+    "settings_sha256": "7d183ae7cd54f50f7a0a4776b25e2207822e80a4fbaa52751d9ffae91dc94dbc",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "pallets-click-3769": {
+   "olivium": {
+    "files": 17,
+    "bytes": 118475,
+    "digest": "2fc41e92afac8315e8a81d06bd8c1ae0dcba9e4c787530513dd86c3ede76a336",
+    "settings_sha256": "b6bce2a0bde03a767ce75e31bcbf89235181e4333948e73400736ba715a42603",
+    "skills": [
+     "olivium-area-click",
+     "olivium-area-click-2",
+     "olivium-area-click-3"
+    ],
+    "agents": [
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 96477,
+    "digest": "cc64ee753b155c4380cd6e9216e004d43d3d5144514d70554f9b260a91c2c7d0",
+    "settings_sha256": "d127916bdfd2015e1a02ffb99f3ef8bef147111a50a5e948e73c21f878009f33",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "pallets-click-3858": {
+   "olivium": {
+    "files": 16,
+    "bytes": 111382,
+    "digest": "c164bbfd39ef8a345ff18b989b30e0f06e74ab3f6b314910118d00cf1087fd86",
+    "settings_sha256": "aa6a5c0f331d541f4eb393ce9e3d45be2850adb3cb022a69c0f86916a7c3cf84",
+    "skills": [
+     "olivium-area-click",
+     "olivium-area-click-2"
+    ],
+    "agents": [
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 94202,
+    "digest": "7f1f15819fe01706163595d3b59385e6120e8f6c9e199ccdbc366b55d50121f4",
+    "settings_sha256": "b344c7aeb47cf85e21367b5d5b112554628cc25d4fcdb2df2c88b891a95215b2",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "pallets-flask-6096": {
+   "olivium": {
+    "files": 15,
+    "bytes": 101468,
+    "digest": "6cd70d90966b9df02e2fff8e7247963a2f8ef8c2bdacca8b0d37c993b8829021",
+    "settings_sha256": "2a224e216c47872cf48d9c4979970d00cf8b8668932eab26dd64c883cfd5b7a0",
+    "skills": [
+     "olivium-area-flask"
+    ],
+    "agents": [
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 89638,
+    "digest": "bdbfcb1d3baf32fb0f1bcb82450cb4ea92c8d693fa96509b7d0666bf0eccf8fa",
+    "settings_sha256": "d127916bdfd2015e1a02ffb99f3ef8bef147111a50a5e948e73c21f878009f33",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "pallets-werkzeug-3266": {
+   "olivium": {
+    "files": 18,
+    "bytes": 124958,
+    "digest": "b3592ac34e07f53441fddaa43391a65d0c1b09d7841ae4b700dfe3af7d399f04",
+    "settings_sha256": "1874ca39764b9ff83bb591d72c0d663ddc3b3c86bd2762951f4637da23797057",
+    "skills": [
+     "olivium-area-werkzeug",
+     "olivium-area-werkzeug-2",
+     "olivium-area-werkzeug-sansio"
+    ],
+    "agents": [
+     "olivium-locator",
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 99584,
+    "digest": "fa26931bf95c4b72c4b8c821a40e7e41ec84ccb2216caded67e6ee941b61c0fe",
+    "settings_sha256": "d127916bdfd2015e1a02ffb99f3ef8bef147111a50a5e948e73c21f878009f33",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "pallets-werkzeug-3273": {
+   "olivium": {
+    "files": 17,
+    "bytes": 123985,
+    "digest": "c6d623793843e7946d10475fb475938a0c628e1a320de6c1cdb44ef0c84de20f",
+    "settings_sha256": "f3f7c2e9b793e61e1ec86a98744d1bf19448827604a340a0a4fcda8d40ebecb6",
+    "skills": [
+     "olivium-area-werkzeug",
+     "olivium-area-werkzeug-2"
+    ],
+    "agents": [
+     "olivium-locator",
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 101106,
+    "digest": "05266aefbfd5e19b977bdaf0d79504d50432de1f5a69027ed8c0538cfc230e92",
+    "settings_sha256": "d127916bdfd2015e1a02ffb99f3ef8bef147111a50a5e948e73c21f878009f33",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "pallets-werkzeug-3298": {
+   "olivium": {
+    "files": 18,
+    "bytes": 143419,
+    "digest": "a8fd489af486afcb81308dec7a70f38017d0234830ce82b7760cfe2fc03f15c7",
+    "settings_sha256": "711714d4793769a4a8f2e271f3fdd12404c88800d8f7bc4575afe0578bd8aa45",
+    "skills": [
+     "olivium-area-werkzeug",
+     "olivium-area-werkzeug-2",
+     "olivium-area-werkzeug-datastructures"
+    ],
+    "agents": [
+     "olivium-locator",
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 114088,
+    "digest": "7a71f4555e7427352c2eee98b237fc89ff6643d311ad8bdafe4a373b831b3fc0",
+    "settings_sha256": "d127916bdfd2015e1a02ffb99f3ef8bef147111a50a5e948e73c21f878009f33",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  },
+  "python-attrs-attrs-1593": {
+   "olivium": {
+    "files": 16,
+    "bytes": 118565,
+    "digest": "d569511f02305da6840f1b89ba6ec16e75b537cdde01253291f3a5d5789ee7f3",
+    "settings_sha256": "e98e857e9398287b7779f0d48beb6caf894a668e174a773fab7edab2a28dc070",
+    "skills": [
+     "olivium-area-attr",
+     "olivium-area-init-compat"
+    ],
+    "agents": [
+     "olivium-test-runner"
+    ],
+    "disableBundledSkills_set": true
+   },
+   "olivium-nn": {
+    "files": 12,
+    "bytes": 100362,
+    "digest": "b7583d511c6c7228fa70d9f60d38fecdf8828ef8830b7e42af21c21d1f4febfe",
+    "settings_sha256": "d127916bdfd2015e1a02ffb99f3ef8bef147111a50a5e948e73c21f878009f33",
+    "skills": [],
+    "agents": [],
+    "disableBundledSkills_set": false
+   }
+  }
+ },
+ "arms": {
+  "none": "repository at the base commit, instruction files removed; benchmark settings, bypassPermissions",
+  "generic": "same plus a CLAUDE.md written by Claude Code /init at that commit, run again in the paid prepare and metered as setup; benchmark settings, bypassPermissions",
+  "olivium": "same plus the unmodified output of bin/harnessforge generate PATH --runtime claude_code --export DIR --json (defaults: lean context, generated skills and subagents); its exported settings byte for byte, default permission mode",
+  "olivium-nn": "as olivium, same snapshot and input, with --native none; its exported settings byte for byte (Skill and Task denied), default permission mode"
+ },
+ "design": {
+  "scheduled_runs": 96,
+  "repeats": 3,
+  "concurrency": 2,
+  "schedule_seed": 20261108,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20261108,
+  "limits_per_run": {
+   "turns": 60,
+   "minutes": 20,
+   "usd": 3
+  }
+ },
+ "runs": {
+  "scheduled": 96,
+  "completed": 96,
+  "infra_error_attempts": 1,
+  "trial_rows": 97,
+  "repeated_runs": [
+   "python-attrs-attrs-1593.generic.r2"
+  ],
+  "solved": 61
+ },
+ "repeated_run_note": "python-attrs-attrs-1593.generic.r2 exited 137 after 67 s with empty stderr while the agent's own `uv run ruff check ...; pytest -n auto` command was running, under a 1,500 MB memory and swap limit. The runner scores a nonzero exit without a result as infra_error and the protocol allows repeating such runs; attempt 2 completed and solved. The cause of the kill is not established and may have been the agent's own command. Scored as a failure, generic would be 12/24 and no primary median would change.",
+ "caps": {
+  "cap_usd": 15,
+  "run_cap_usd": 3,
+  "total_reserve_usd": 0.25,
+  "max_infra_errors": 9
+ },
+ "checks": {
+  "meter_rows": 587,
+  "meter_modes": {
+   "live": 587
+  },
+  "meter_http": {
+   "200": 587
+  },
+  "meter_models": {
+   "claude-sonnet-5-5": 587
+  },
+  "largest_cumulative_usd": 5.5070537,
+  "largest_run_usd": 0.1002735,
+  "largest_request_usd": 0.0436315,
+  "runs_on_another_version": 0,
+  "runs_on_another_model": 0,
+  "web_tool_uses": 0,
+  "harness_check_failures": 0,
+  "max_concurrent_sessions": 2,
+  "max_turns": 10,
+  "longest_run_seconds": 103,
+  "schedule_written_utc": "2026-11-14T03:00:04Z",
+  "mock_rehearsal_meter_rows": 364
+ },
+ "commands": [
+  "python3 -B run.py prepare --protocol 2 --paid --cap-usd 15 --run-cap-usd 3 --total-reserve-usd 0.25 --key-file <key-file> --arms none,generic,olivium,olivium-nn --out <bench-out>/value-v2r-2026-11-13",
+  "python3 -B run.py run --protocol 2 --paid --cap-usd 15 --run-cap-usd 3 --total-reserve-usd 0.25 --max-infra-errors 9 --key-file <key-file> --arms none,generic,olivium,olivium-nn --repeats 3 --out <bench-out>/value-v2r-2026-11-13",
+  "(the same run command again: the runner's resume after one infra_error)",
+  "python3 -B run.py status --protocol 2 --out <bench-out>/value-v2r-2026-11-13 --arms none,generic,olivium,olivium-nn --repeats 3",
+  "python3 -B analyze_v2r.py --in <bench-out>/value-v2r-2026-11-13 --out DIR"
+ ],
+ "command_notes": "Run from the frozen runner copy. The paid commands ran under a local lock that serializes Docker-heavy jobs and under caffeinate -ims (macOS sleep prevention).",
+ "command_results": [
+  "prepare: exit 0; generic ok on 8 tasks; meter $0.499052, 35 requests",
+  "run, first invocation: exit 1, 1 pending (python-attrs-attrs-1593.generic.r2, infra_error, exit 137)",
+  "run, resume: exit 0, 0 pending",
+  "status: completed 96, infra_error 1, pending 0, recorded_rows 97, solved 61; meter $5.507054, 587 requests",
+  "analyze_v2r.py: LIVE: 97 rows (96 scored + 1 infra_error); exit 0"
+ ],
+ "placeholders": {
+  "<bench-out>": "the benchmark output folder in the home directory",
+  "<key-file>": "the API key file"
+ },
+ "spend_usd": {
+  "setup_generic_init": 0.4990521,
+  "scored_runs": 4.9554781,
+  "infra_error_attempt": 0.0525235,
+  "this_run_total": 5.5070537,
+  "programme_before": 27.420065,
+  "learn_validation_same_day": 0.069968,
+  "programme_total": 32.9970867,
+  "approved_cap": 60
+ },
+ "independent_check": {
+  "method": "Every figure recomputed from the raw rows (meter requests, trial and attempt rows, schedule, each trial's grade, details, state, meter rows and transcript) with scripts that import no benchmark code.",
+  "result": "Every headline number matched: meter, setup, per-arm figures, all nine primary-comparison values in manifest task order, per-task solved counts, native coverage, skill use.",
+  "corrections_to_the_run_summary": [
+   {
+    "item": "spend of the 96 scored runs",
+    "run_summary": "$4.955318",
+    "corrected": "$4.955478"
+   },
+   {
+    "item": "mean cost per run, pallets-click-3858 generic",
+    "run_summary": "$0.085",
+    "corrected": "$0.0845 ($0.084 at 3 decimals)"
+   },
+   {
+    "item": "mean cost per run, expressjs-express-7366 none",
+    "run_summary": "$0.026",
+    "corrected": "$0.0255 ($0.025 at 3 decimals)"
+   },
+   {
+    "item": "mean cost per run, pallets-werkzeug-3266 none",
+    "run_summary": "$0.067",
+    "corrected": "$0.0665 ($0.066 at 3 decimals)"
+   },
+   {
+    "item": "paid run window",
+    "run_summary": "03:00Z to 03:53Z",
+    "corrected": "03:00Z to 03:54Z, including the resumed attempt"
+   },
+   {
+    "item": "olivium median tokens per run",
+    "run_summary": "65,976",
+    "corrected": "65,976.5"
+   },
+   {
+    "item": "repeated run",
+    "run_summary": "an infrastructure kill",
+    "corrected": "cause not established"
+   },
+   {
+    "item": "bundled skills on the Express task and in olivium-nn",
+    "run_summary": "listed although the export disables bundled skills",
+    "corrected": "these exports do not set disableBundledSkills; only the 7 exports with generated skills set it, and those still listed doctor and plugin-authoring"
+   }
+  ],
+  "interval_order_sensitivity": "Intervals are computed over tasks in manifest order. Under 42 other task orders with the same seed some ends move by one discrete step; no conclusion about zero changes."
+ },
+ "excluded_from_this_directory": [
+  "third-party source",
+  "issue text",
+  "test patches",
+  "agent patches",
+  "transcripts",
+  "test and lint logs",
+  "generated arm files",
+  "per-trial rows and the meter request log"
+ ],
+ "file_sha256": {
+  "results.json": "7d560ef1dcdd388527a9ca6d0f1534cea28026fb45d374c26eb734be06fc80ac",
+  "report.md": "bc43f4bfe2166f2eea10eb304efae6d740e458ada091fa57fea2b1a82cf63e12"
+ }
+}

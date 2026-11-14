@@ -1,0 +1,60 @@
+{
+  "arm_sha256": [
+    "3dc9aa9f09b7f6735d0564308ea8eeb9be1efc3af8565508d1cc67cfbbbcf83f"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.14533429999999997,
+  "exit_code": 0,
+  "exported_settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+  "grade": {
+    "f2p_passed": 1,
+    "f2p_total": 1,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 2059,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [
+      "tests/typing/typing_path.py"
+    ],
+    "restored_paths": [],
+    "solved": true,
+    "status": "ok",
+    "test_exit": "0",
+    "test_patch_applied": true,
+    "tests_seen": 2085
+  },
+  "harness_check": {
+    "changed": [],
+    "files_expected": 10,
+    "files_observed": 10,
+    "missing": [],
+    "ok": true,
+    "settings_match": true,
+    "settings_sha256_expected": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+    "settings_sha256_in_container": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+    "unexpected": []
+  },
+  "hook_events": {
+    "hook_response": 18,
+    "hook_started": 18
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-pallets-click-3858:v1",
+  "image_id": "sha256:fbc38054278658f487f4ff0aba3f9e4fdc25dc1fe31530b9063794e4c4cb7590",
+  "init_web_tools": [],
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "meter_server_tools": [],
+  "permission_denied_tools": [
+    "Bash"
+  ],
+  "permission_mode": "default",
+  "permission_mode_observed": "default",
+  "prompt_sha256": "3efbc511cd592e05c1bfe8b751052ad0409eb41aea83b5b8018c38d39cf1cfee",
+  "settings_equal_exported": true,
+  "settings_sha256": "39d529a1cc34856592539ee6f663b11277f958f362ed1f13d374d288b291bf8b",
+  "web_tool_uses": 0
+}

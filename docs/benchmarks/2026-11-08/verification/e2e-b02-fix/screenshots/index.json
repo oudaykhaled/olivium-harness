@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-11-08T14:15:44.417Z",
+  "default_viewport": "1280x800",
+  "screenshots": {
+    "B01.png": {
+      "caption": "Login page before anything is typed: empty \"Workspace access code\" field and Unlock workspace button (redirected from /).",
+      "viewport": "1280x800",
+      "bytes": 74242
+    },
+    "B02.png": {
+      "caption": "Fresh browser context right after submitting a dummy access code: \"The access code is incorrect.\" alert visible, still on /login (the real code has not been typed).",
+      "viewport": "1280x800",
+      "bytes": 76345
+    },
+    "B03.png": {
+      "caption": "Load the synthetic demo and assert the expected sources and claim cards appear (incl. the hostile claim) — pass",
+      "viewport": "1280x800",
+      "bytes": 95777
+    },
+    "B04.png": {
+      "caption": "Reject the hostile claim and approve the two ordinary claims; assert the card states change — pass",
+      "viewport": "1280x800",
+      "bytes": 91895
+    },
+    "B05.png": {
+      "caption": "Build a package named e2e-claude for the Claude Code runtime and assert an artifact row with a digest appears — pass",
+      "viewport": "1280x800",
+      "bytes": 107745
+    },
+    "B06.png": {
+      "caption": "Build again with identical inputs and assert the digest shown in the DOM is identical (determinism) — pass",
+      "viewport": "1280x800",
+      "bytes": 107777
+    },
+    "B07.png": {
+      "caption": "Open the artifact detail page: file list has the guidance file, settings, an agents entry, a skills entry; verification flags shown — pass",
+      "viewport": "1280x800",
+      "bytes": 56925
+    },
+    "B08.png": {
+      "caption": "Export the package to a fresh directory and verify guidance content and the manifest on disk — pass",
+      "viewport": "1280x800",
+      "bytes": 128577
+    },
+    "B09.png": {
+      "caption": "Run a static_integrity evaluation; assert it reaches passed and the UI states runtime qualification false — pass",
+      "viewport": "1280x800",
+      "bytes": 93005
+    },
+    "B10.png": {
+      "caption": "Run a task evaluation and assert it is reported blocked (no isolated runtime), not faked — pass",
+      "viewport": "1280x800",
+      "bytes": 80161
+    },
+    "B11.png": {
+      "caption": "Attempt a release approval with the static_integrity evaluation and assert it is refused (#error) — pass",
+      "viewport": "1280x800",
+      "bytes": 96519
+    },
+    "B12.png": {
+      "caption": "Create a workspace backup into a fresh directory via the Privacy tab and verify the directory on disk — pass",
+      "viewport": "1280x800",
+      "bytes": 104707
+    },
+    "B13.png": {
+      "caption": "Evidence tab at a 390x844 phone viewport after the decisions: workspace shell renders, no horizontal overflow.",
+      "viewport": "390x844",
+      "bytes": 56958
+    },
+    "B14.png": {
+      "caption": "Lock the workspace (logout) and assert a protected page redirects to the login form — pass",
+      "viewport": "1280x800",
+      "bytes": 74242
+    },
+    "B15.png": {
+      "caption": "Chat tab: ask one question in evidence mode; an answer with citations or an explicit unavailable message renders, no page errors — pass",
+      "viewport": "1280x800",
+      "bytes": 121130
+    }
+  }
+}

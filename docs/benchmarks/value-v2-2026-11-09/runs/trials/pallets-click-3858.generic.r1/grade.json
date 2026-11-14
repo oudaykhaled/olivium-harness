@@ -1,0 +1,21 @@
+{
+  "f2p_passed": 1,
+  "f2p_total": 1,
+  "lint_exit": "0",
+  "lint_ok": true,
+  "p2p_missing": 0,
+  "p2p_regressions": 0,
+  "p2p_total": 2059,
+  "patch_applied": true,
+  "protected": true,
+  "removed_paths": [
+    "tests/typing/typing_path.py",
+    "tests/typing/typing_path.py"
+  ],
+  "restored_paths": [],
+  "solved": true,
+  "status": "ok",
+  "test_exit": "0",
+  "test_patch_applied": true,
+  "tests_seen": 2085
+}

@@ -1,0 +1,38 @@
+{
+  "arm_sha256": [
+    "088166a394d4a33bac3b05acc35eec913f90e1b5b3dc4c34a1c63203a29d57e9"
+  ],
+  "classified_status": "completed",
+  "claude_code_total_cost_usd": 0.08541610000000001,
+  "exit_code": 0,
+  "grade": {
+    "f2p_passed": 1,
+    "f2p_total": 1,
+    "lint_exit": "0",
+    "lint_ok": true,
+    "p2p_missing": 0,
+    "p2p_regressions": 0,
+    "p2p_total": 2059,
+    "patch_applied": true,
+    "protected": true,
+    "removed_paths": [
+      "tests/typing/typing_path.py"
+    ],
+    "restored_paths": [
+      "tests/typing/typing_prompt.py"
+    ],
+    "solved": true,
+    "status": "ok",
+    "test_exit": "0",
+    "test_patch_applied": true,
+    "tests_seen": 2085
+  },
+  "host_timeout": false,
+  "image": "olivium-bench-agent-pallets-click-3858:v1",
+  "image_id": "sha256:98972e8d9f81035dbb80f9195f72f5ca106d178b966095d4bddd927541c4a359",
+  "limit_seconds": 1200,
+  "limit_turns": 60,
+  "permission_mode": "bypassPermissions",
+  "prompt_sha256": "3efbc511cd592e05c1bfe8b751052ad0409eb41aea83b5b8018c38d39cf1cfee",
+  "settings_sha256": "ab152dfa83f45a11b6352ba9738ee5ad053ab9caac2ec7e29500c22df6f59647"
+}

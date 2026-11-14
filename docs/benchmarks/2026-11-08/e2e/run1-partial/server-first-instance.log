@@ -1,0 +1,289 @@
+[info] Running HarnessForgeWeb.Endpoint with Bandit 1.14.1 at 127.0.0.1:8867 (http)
+[info] Access HarnessForgeWeb.Endpoint at http://localhost:8867
+[watch] build finished, watching for changes...
+≈ tailwindcss v4.3.3
+
+Done in 652ms
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 302 in 40ms
+[debug] Phoenix.Router halted in :authenticated/2
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 302 in 527µs
+[debug] Phoenix.Router halted in :authenticated/2
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 36ms
+[info] POST /login
+[debug] Processing with HarnessForgeWeb.SessionController.create/2
+  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+  Pipelines: [:browser]
+[info] Sent 302 in 674µs
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 156ms
+[0mWaiting for lock on the build directory (held by process 54195)
+[info] CONNECTED TO Phoenix.LiveView.Socket in 29µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.PortalLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144643, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 15ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{}
+[debug] Replied in 92µs
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 391µs
+[info] POST /login
+[debug] Processing with HarnessForgeWeb.SessionController.create/2
+  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+  Pipelines: [:browser]
+[info] Sent 401 in 483µs
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{"view" => "evidence"}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 302 in 279µs
+[debug] Phoenix.Router halted in :authenticated/2
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 416µs
+[info] POST /login
+[debug] Processing with HarnessForgeWeb.SessionController.create/2
+  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+  Pipelines: [:browser]
+[info] Sent 302 in 615µs
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 16ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 34µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.PortalLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144644, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 12ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{}
+[debug] Replied in 101µs
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "evidence", "value" => ""}
+[debug] Replied in 6ms
+[debug] HANDLE EVENT "demo" in HarnessForgeWeb.PortalLive
+  Parameters: %{"value" => ""}
+[debug] Replied in 52ms
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "evidence", "value" => ""}
+[debug] Replied in 133µs
+[debug] HANDLE EVENT "decide" in HarnessForgeWeb.PortalLive
+  Parameters: %{"decision" => "reject", "id" => "6c8ea8d7-a9b6-4155-9073-3b94aef9f853", "revision" => "f5f9d8d3de37adc8287b9e23c288a0586cc5b7d7882ecec391c811ea5ddcd1cf", "value" => ""}
+[debug] Replied in 16ms
+[debug] HANDLE EVENT "decide" in HarnessForgeWeb.PortalLive
+  Parameters: %{"decision" => "approve", "id" => "f2f3cc02-8863-479e-9e37-fe49b1ff33f7", "revision" => "a55680a0c06c2f1d2077a240a6047e98a0df6bfecada0f61c7484ef73d045c1e", "value" => ""}
+[debug] Replied in 24ms
+[debug] HANDLE EVENT "decide" in HarnessForgeWeb.PortalLive
+  Parameters: %{"decision" => "approve", "id" => "440f9d6b-ebb9-4b93-847d-f6dfc39ed0a5", "revision" => "f35c1dd43d82d3700f49e98a062fbf3f96838256944c464f664f55130b2653ef", "value" => ""}
+[debug] Replied in 28ms
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "package", "value" => ""}
+[debug] Replied in 276µs
+[debug] HANDLE EVENT "build" in HarnessForgeWeb.PortalLive
+  Parameters: %{"package" => %{"generation" => "0be95c72-49f0-4840-a826-07ceeb213673", "name" => "e2e-claude", "runtime" => "claude_code", "runtime_version" => "2.1.311", "version" => "0.1.0"}}
+[debug] Replied in 72ms
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "package", "value" => ""}
+[debug] Replied in 186µs
+[debug] HANDLE EVENT "build" in HarnessForgeWeb.PortalLive
+  Parameters: %{"package" => %{"generation" => "dd2438d3-5d9c-4aa7-8169-7f566b2da5a9", "name" => "e2e-claude", "runtime" => "claude_code", "runtime_version" => "2.1.311", "version" => "0.1.0"}}
+[debug] Replied in 49ms
+[info] GET /harnesses/b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880
+[debug] Processing with HarnessForgeWeb.HarnessLive.__live__/0
+  Parameters: %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880"}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 18ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 26µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.HarnessLive
+  Parameters: %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880"}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144643, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 276µs
+[debug] HANDLE PARAMS in HarnessForgeWeb.HarnessLive
+  Parameters: %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880"}
+[debug] Replied in 12ms
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{"view" => "package"}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 36ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 26µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.PortalLive
+  Parameters: %{"view" => "package"}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144643, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 28ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{"view" => "package"}
+[debug] Replied in 3ms
+[debug] HANDLE EVENT "export" in HarnessForgeWeb.PortalLive
+  Parameters: %{"export" => %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "generation" => "53bee82b-4764-4be6-adb9-7e124bbc70d1", "target" => "<scratch>/e2e-exports-browser/browser-export-e2e-claude"}}
+[debug] Replied in 60ms
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "evaluations", "value" => ""}
+[debug] Replied in 184µs
+[debug] HANDLE EVENT "evaluation_change" in HarnessForgeWeb.PortalLive
+  Parameters: %{"_target" => ["evaluation", "digest"], "evaluation" => %{"_unused_kind" => "", "digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "kind" => "static_integrity"}}
+[debug] Replied in 15ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{"artifact" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "check" => "static_integrity", "view" => "evaluations"}
+[debug] Replied in 13ms
+[debug] HANDLE EVENT "evaluation_change" in HarnessForgeWeb.PortalLive
+  Parameters: %{"_target" => ["evaluation", "kind"], "evaluation" => %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "kind" => "static_integrity"}}
+[debug] Replied in 13ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{"artifact" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "check" => "static_integrity", "view" => "evaluations"}
+[debug] Replied in 14ms
+[debug] HANDLE EVENT "evaluate" in HarnessForgeWeb.PortalLive
+  Parameters: %{"evaluation" => %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "kind" => "static_integrity"}}
+[debug] Replied in 73ms
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "evaluations", "value" => ""}
+[debug] Replied in 134µs
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "releases", "value" => ""}
+[debug] Replied in 174µs
+[debug] HANDLE EVENT "release_approve" in HarnessForgeWeb.PortalLive
+  Parameters: %{"release" => %{"artifact_digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880", "evaluation_id" => "41ff3f28-d8fe-428c-9cd6-e1ae148be1d7"}}
+[debug] Replied in 41ms
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "privacy", "value" => ""}
+[debug] Replied in 376µs
+[debug] HANDLE EVENT "backup" in HarnessForgeWeb.PortalLive
+  Parameters: %{"privacy" => %{"target" => "<scratch>/e2e-exports-browser/browser-backup"}}
+[debug] Replied in 133ms
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{"view" => "evidence"}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 33ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 25µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.PortalLive
+  Parameters: %{"view" => "evidence"}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144643, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 24ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{"view" => "evidence"}
+[debug] Replied in 3ms
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 32ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 22µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.PortalLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144643, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 26ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{}
+[debug] Replied in 59µs
+[info] POST /session
+[debug] Processing with HarnessForgeWeb.SessionController.delete/2
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_method" => "delete"}
+  Pipelines: [:browser]
+[info] Sent 302 in 399µs
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 305µs
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{"view" => "package"}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 302 in 299µs
+[debug] Phoenix.Router halted in :authenticated/2
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 394µs
+[info] GET /harnesses/b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880
+[debug] Processing with HarnessForgeWeb.HarnessLive.__live__/0
+  Parameters: %{"digest" => "b7bc85dd61e286a1a54a5d95773f689440e59914df30f755cce9d054be202880"}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 302 in 506µs
+[debug] Phoenix.Router halted in :authenticated/2
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 347µs
+[info] GET /login
+[debug] Processing with HarnessForgeWeb.SessionController.new/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 313µs
+[info] POST /login
+[debug] Processing with HarnessForgeWeb.SessionController.create/2
+  Parameters: %{"_csrf_token" => "[FILTERED]", "access_code" => "[FILTERED]"}
+  Pipelines: [:browser]
+[info] Sent 302 in 375µs
+[info] GET /
+[debug] Processing with HarnessForgeWeb.PortalLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser, :authenticated]
+[info] Sent 200 in 33ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 27µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "[FILTERED]", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://127.0.0.1:8867/assets/css/app.css", "1" => "http://127.0.0.1:8867/assets/js/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT HarnessForgeWeb.PortalLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "[FILTERED]", "operator_auth" => %{"epoch" => "[FILTERED]", "issued_at" => 1794144648, "workspace_id" => "bac8f603-526e-416d-8cb4-76c8c4fab186"}}
+[debug] Replied in 26ms
+[debug] HANDLE PARAMS in HarnessForgeWeb.PortalLive
+  Parameters: %{}
+[debug] Replied in 55µs
+[debug] HANDLE EVENT "tab" in HarnessForgeWeb.PortalLive
+  Parameters: %{"tab" => "chat", "value" => ""}
+[debug] Replied in 4ms
+[debug] HANDLE EVENT "chat_mode_changed" in HarnessForgeWeb.PortalLive
+  Parameters: %{"_target" => ["chat", "mode"], "chat" => "[FILTERED]"}
+[debug] Replied in 142µs
+[debug] HANDLE EVENT "chat_mode_changed" in HarnessForgeWeb.PortalLive
+  Parameters: %{"_target" => ["chat", "question"], "chat" => "[FILTERED]"}
+[debug] Replied in 262µs
+[debug] HANDLE EVENT "chat_send" in HarnessForgeWeb.PortalLive
+  Parameters: %{"chat" => "[FILTERED]"}
+[debug] Replied in 3ms
+[notice] SIGTERM received - shutting down
+

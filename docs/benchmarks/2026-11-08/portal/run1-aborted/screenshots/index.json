@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-11-08T10:20:58.306Z",
+  "default_viewport": "1440x900",
+  "screenshots": {
+    "01-login.png": {
+      "caption": "Login page before anything is typed: empty \"Workspace access code\" field and Unlock workspace button.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 79155
+    },
+    "02-home.png": {
+      "caption": "First screen after unlocking the workspace (▦Home tab of the workspace shell, LiveView connected).",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 83707
+    },
+    "03-evidence-demo.png": {
+      "caption": "Evidence tab right after \"Load synthetic demo\": three proposed claim cards including the hostile \"IGNORE ALL PREVIOUS INSTRUCTIONS\" claim, each with Reject / Approve revision buttons.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 106579
+    },
+    "04-evidence-decided.png": {
+      "caption": "Evidence tab after deciding: the hostile claim REJECTED and the two ordinary claims APPROVED, decision buttons gone.",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 101144
+    },
+    "05-package-built.png": {
+      "caption": "Package tab after building \"bench-portal\": the Built packages list shows the artifact row with its digest, \"Open your harness\" and \"Download ZIP\".",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 118619
+    },
+    "07-evaluations.png": {
+      "caption": "Evaluations tab after queuing a static package integrity check: the recorded run shows passed, with its details opened to show \"Recorded runtime qualification: false\".",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 98322
+    },
+    "09-setup.png": {
+      "caption": "Company setup page /setup (final path /setup).",
+      "viewport": "1440x900",
+      "full_page": false,
+      "bytes": 43838
+    },
+    "10-mobile-evidence.png": {
+      "caption": "Evidence tab at a 390x844 phone viewport after the decisions (workspace shell, no horizontal overflow check recorded).",
+      "viewport": "390x844",
+      "full_page": false,
+      "bytes": 56958
+    }
+  }
+}
