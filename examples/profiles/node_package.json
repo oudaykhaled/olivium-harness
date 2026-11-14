@@ -1,0 +1,48 @@
+{
+  "name": "acme-dashboard",
+  "languages": ["typescript"],
+  "frameworks": ["react", "vite"],
+  "package_managers": ["pnpm"],
+  "commands": {
+    "install": "pnpm install --frozen-lockfile",
+    "build": "pnpm run build",
+    "test": "pnpm test",
+    "test_single": "pnpm vitest run",
+    "lint": "pnpm run lint",
+    "format": "pnpm prettier --write",
+    "typecheck": "pnpm tsc --noEmit",
+    "run": "pnpm run dev"
+  },
+  "layout": [
+    {"path": "src", "purpose": "application source"},
+    {"path": "src/components", "purpose": "React components"},
+    {"path": "e2e", "purpose": "browser tests"}
+  ],
+  "conventions": [
+    "Components are named exports in PascalCase files"
+  ],
+  "ci": ["github-actions"],
+  "tools": [
+    {"role": "test", "command": "pnpm test", "probe": ["vitest"], "extensions": [".js", ".jsx", ".ts", ".tsx"], "source": "package_script"},
+    {"role": "lint", "command": "pnpm run lint", "probe": ["eslint"], "extensions": [".cjs", ".js", ".jsx", ".mjs", ".ts", ".tsx"], "source": "package_script"},
+    {"role": "typecheck", "command": "pnpm tsc --noEmit", "probe": ["tsc"], "extensions": [".ts", ".tsx"], "source": "runner_prefix"},
+    {"role": "format", "command": "pnpm prettier --write", "probe": ["prettier"], "extensions": [".css", ".js", ".json", ".jsx", ".md", ".mjs", ".ts", ".tsx"], "source": "runner_prefix"}
+  ],
+  "test_pairs": [
+    {"source": "src/components/Button.tsx", "test": "src/components/Button.test.tsx", "support": 4, "kind": "named_after"}
+  ],
+  "cochange": [],
+  "paths_dropped_charset": 1,
+  "practices": {"deprecation_sites": 0, "deprecation_files": 0, "removal_phrases": 0, "policy_sentences": 0, "warnings_as_errors": false},
+  "existing_harness": {"files": []},
+  "rule_candidates": [
+    {
+      "text": "Run pnpm typecheck before finishing a change to src/",
+      "confidence": 74,
+      "bucket": "auto",
+      "citations": [
+        {"detector": "stack", "signal": "commands.typecheck", "path": ".github/workflows/ci.yml", "line": 31}
+      ]
+    }
+  ]
+}

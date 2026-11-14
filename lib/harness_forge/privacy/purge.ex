@@ -221,7 +221,8 @@ defmodule HarnessForge.Privacy.Purge do
     artifact
     |> get_in(["spec", "spec", "rules"])
     |> Enum.any?(fn rule ->
-      rule["id"] in claims or Enum.any?(rule["evidence"], &(&1["revision_id"] in revisions))
+      rule["id"] in claims or
+        Enum.any?(rule["evidence"] || [], &(&1["revision_id"] in revisions))
     end)
   end
 

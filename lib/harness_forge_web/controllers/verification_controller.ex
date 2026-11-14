@@ -101,8 +101,14 @@ defmodule HarnessForgeWeb.VerificationController do
     ]
   }
 
-  def index(conn, _params),
-    do: render(conn, :index, report: @report, page_title: "Checks and evidence")
+  def index(conn, _params) do
+    recordings = Enum.map(recordings(), &Map.put(&1, "available", present?(&1)))
+
+    render(conn, :index,
+      report: Map.put(@report, "recordings", recordings),
+      page_title: "Checks and evidence"
+    )
+  end
 
   def report(conn, _params) do
     conn
@@ -115,9 +121,8 @@ defmodule HarnessForgeWeb.VerificationController do
   end
 
   def media(conn, %{"id" => id}) do
-    with %{} = entry <- Enum.find(@recordings, &(&1["id"] == id)),
-         path = Application.app_dir(:harness_forge, "priv/showcase/#{entry["id"]}.webm"),
-         {:ok, bytes} <- File.read(path),
+    with %{} = entry <- Enum.find(recordings(), &(&1["id"] == id)),
+         {:ok, bytes} <- File.read(media_path(entry)),
          true <- byte_size(bytes) == entry["bytes"] and Contracts.sha256(bytes) == entry["sha256"] do
       conn
       |> put_resp_content_type("video/webm")
@@ -127,5 +132,23 @@ defmodule HarnessForgeWeb.VerificationController do
     else
       _ -> send_resp(conn, 404, "Recording unavailable")
     end
+  end
+
+  # The .webm files are distributed separately, so a public checkout has none.
+  # File names come only from manifest ids, never from the request path.
+  defp recordings, do: Application.get_env(:harness_forge, :verification_recordings, @recordings)
+
+  defp media_path(entry) do
+    dir =
+      Application.get_env(:harness_forge, :verification_media_dir) ||
+        Application.app_dir(:harness_forge, "priv/showcase")
+
+    Path.join(dir, entry["id"] <> ".webm")
+  end
+
+  # Size only: hashing every recording on each page view would read about 100 MB.
+  # Serving still checks the digest.
+  defp present?(%{"bytes" => bytes} = entry) do
+    match?({:ok, %File.Stat{type: :regular, size: ^bytes}}, File.stat(media_path(entry)))
   end
 end

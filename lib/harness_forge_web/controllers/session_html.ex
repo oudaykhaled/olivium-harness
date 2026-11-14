@@ -5,8 +5,12 @@ defmodule HarnessForgeWeb.SessionHTML do
     ~H"""
     <main class="login-shell">
       <div class="login-story">
-        <a class="brand" href="/login" aria-label="HarnessForge login"><span class="brand-mark">H</span>
-        HarnessForge</a>
+        <a class="brand" href={~p"/login"} aria-label="Olivium Harness login"><img
+          src={~p"/images/olivium-harness.png"}
+          alt=""
+          width="35"
+          height="35"
+        /><span class="brand-text">OLIVIUM<strong>HARNESS</strong></span></a>
         <div>
           <p class="eyebrow">THE WORKSPACE FOR AGENT CONTEXT</p>
           <h1>Good agents start<br />with clear evidence.</h1>
@@ -17,7 +21,7 @@ defmodule HarnessForgeWeb.SessionHTML do
       <section class="login-panel" aria-labelledby="login-title">
         <div class="login-card">
           <p class="eyebrow">WELCOME TO YOUR WORKSPACE</p>
-          <h2 id="login-title">Unlock HarnessForge</h2>
+          <h2 id="login-title">Unlock Olivium Harness</h2>
           <p>Use the access code saved on this computer. Your code is never included in a URL.</p>
           <.form for={%{}} action={~p"/login"} id="login-form" class="stack">
             <label for="access-code">Workspace access code</label>
@@ -40,7 +44,7 @@ defmodule HarnessForgeWeb.SessionHTML do
             <code>{@access_path}</code>
           </div>
           <p class="fine-print">
-            Only this workspace is unlocked. Restarting HarnessForge ends active sessions.
+            Only this workspace is unlocked. Restarting Olivium Harness ends active sessions.
           </p>
         </div>
       </section>

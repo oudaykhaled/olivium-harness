@@ -1,0 +1,119 @@
+{
+  "id": "python",
+  "version": "4",
+  "toolchain": {
+    "commands": [
+      "python",
+      "python3"
+    ],
+    "package_managers": {
+      "pdm": [
+        "pdm run"
+      ],
+      "pipenv": [
+        "pipenv run"
+      ],
+      "poetry": [
+        "poetry run"
+      ],
+      "uv": [
+        "uv run"
+      ]
+    },
+    "runners": [
+      "hatch run",
+      "pdm run",
+      "pipenv run",
+      "poetry run",
+      "uv run"
+    ],
+    "tools": [
+      "black",
+      "coverage",
+      "flake8",
+      "isort",
+      "mypy",
+      "nox",
+      "pylint",
+      "pyright",
+      "pytest",
+      "ruff",
+      "tox"
+    ]
+  },
+  "guidance_defaults": {
+    "test_commands": [
+      "hatch run pytest",
+      "pdm run pytest",
+      "pipenv run pytest",
+      "poetry run pytest",
+      "py.test",
+      "pytest",
+      "python -m pytest",
+      "python3 -m pytest",
+      "uv run pytest",
+      "uv run python -m pytest"
+    ],
+    "single_test_commands": [
+      "hatch run pytest -k",
+      "pdm run pytest -k",
+      "pipenv run pytest -k",
+      "poetry run pytest -k",
+      "py.test -k",
+      "pytest -k",
+      "python -m pytest -k",
+      "python3 -m pytest -k",
+      "uv run pytest -k",
+      "uv run python -m pytest -k"
+    ],
+    "test_locations": [
+      "test|*_test.py",
+      "test|test_*.py",
+      "tests|*_test.py",
+      "tests|test_*.py"
+    ]
+  },
+  "practices": {
+    "thresholds": {
+      "deprecation_sites": 3,
+      "policy_sentences": 1
+    },
+    "rules": {
+      "deprecation": "When removing or changing public API, keep the old behaviour working: warn the way existing deprecations do, name the release that removes it, and test the warning.",
+      "warnings_as_errors": "Tests treat warnings as errors: expect new warnings with `pytest.warns`."
+    }
+  },
+  "agent": {
+    "name": "olivium-implementer",
+    "description": "Implements one scoped change in this Python project and verifies it with the project's own checks.",
+    "requires": [
+      "commands.test"
+    ],
+    "instructions": [
+      "Make the requested change with the smallest diff that works, in the style of the surrounding code.",
+      "",
+      "- Read the code you will change and its tests first.",
+      "- Add or update a test when behaviour changes.",
+      "- Run tools through the project's environment, as the commands below do, not a global interpreter.",
+      "- For one test: `{{commands.test_single}}` with a test name",
+      "- Types: `{{commands.typecheck}}`",
+      "- Before finishing: `{{commands.test}}`",
+      "- Lint: `{{commands.lint}}`",
+      "- Report what changed and the exact check results."
+    ]
+  },
+  "skill": {
+    "name": "olivium-run-checks",
+    "description": "Run this Python project's lint, type and test checks after a change and report the results.",
+    "requires": [
+      "commands.test"
+    ],
+    "instructions": [
+      "Run these in order. Stop at the first failure, fix it, and rerun.",
+      "",
+      "- Lint: `{{commands.lint}}`",
+      "- Types: `{{commands.typecheck}}`",
+      "- Tests: `{{commands.test}}`"
+    ]
+  }
+}

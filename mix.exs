@@ -7,7 +7,7 @@ defmodule HarnessForge.MixProject do
       version: "0.1.0",
       elixir: "~> 1.17",
       elixirc_paths: elixirc_paths(Mix.env()),
-      test_ignore_filters: [~r{test/native_agents/}],
+      test_ignore_filters: [~r{test/native_agents/}, ~r{test/fixtures/.*\.exs$}],
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),

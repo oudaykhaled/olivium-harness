@@ -15,6 +15,11 @@ defmodule HarnessForgeWeb.CompanyAnalysisTest do
   alias HarnessForge.Models.Configuration
   alias HarnessForgeWeb.Plugs.OperatorSession
 
+  # Analysis admits a report through 822 SQL statements and took 113-223 ms when
+  # measured, so ExUnit's 100 ms render_async default is shorter than correct work.
+  # This bound still fails a request that hangs.
+  @analysis_async_timeout 5_000
+
   setup %{conn: conn} do
     previous_root = Application.fetch_env!(:harness_forge, :workspace_root)
     previous_id = Workspaces.current_id()
@@ -423,7 +428,7 @@ defmodule HarnessForgeWeb.CompanyAnalysisTest do
       refute_receive {:generation_started, _}, 50
       view |> element("#nav-evidence") |> render_click()
       send(worker, :finish_analysis)
-      render_async(view)
+      render_async(view, @analysis_async_timeout)
       view |> element("#nav-company") |> render_click()
       assert component(view).analysis_selected == nil
       assert component(view).analysis_pending == nil
@@ -609,7 +614,7 @@ defmodule HarnessForgeWeb.CompanyAnalysisTest do
 
   defp submit(view) do
     view |> form("#company-analysis-form") |> render_submit()
-    render_async(view)
+    render_async(view, @analysis_async_timeout)
   end
 
   defp event(view, name, attrs),

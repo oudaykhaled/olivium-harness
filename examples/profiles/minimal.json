@@ -1,0 +1,26 @@
+{
+  "name": "plain-directory",
+  "languages": [],
+  "frameworks": [],
+  "package_managers": [],
+  "commands": {
+    "install": null,
+    "build": null,
+    "test": null,
+    "test_single": null,
+    "lint": null,
+    "format": null,
+    "typecheck": null,
+    "run": null
+  },
+  "layout": [],
+  "conventions": [],
+  "ci": [],
+  "tools": [],
+  "test_pairs": [],
+  "cochange": [],
+  "paths_dropped_charset": 0,
+  "practices": {"deprecation_sites": 0, "deprecation_files": 0, "removal_phrases": 0, "policy_sentences": 0, "warnings_as_errors": false},
+  "existing_harness": {"files": []},
+  "rule_candidates": []
+}

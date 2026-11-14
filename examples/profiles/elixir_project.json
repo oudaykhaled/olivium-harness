@@ -1,0 +1,60 @@
+{
+  "name": "acme_ledger",
+  "languages": ["elixir"],
+  "frameworks": ["phoenix", "ecto"],
+  "package_managers": ["hex"],
+  "commands": {
+    "install": "mix deps.get",
+    "build": "mix compile --warnings-as-errors",
+    "test": "mix test",
+    "test_single": "mix test",
+    "lint": "mix credo --strict",
+    "format": "mix format",
+    "typecheck": "mix dialyzer",
+    "run": "mix phx.server"
+  },
+  "layout": [
+    {"path": "lib/acme_ledger", "purpose": "domain contexts"},
+    {"path": "lib/acme_ledger_web", "purpose": "Phoenix web layer"},
+    {"path": "priv/repo/migrations", "purpose": "database migrations"},
+    {"path": "test", "purpose": "ExUnit tests"}
+  ],
+  "conventions": [
+    "Contexts expose the public API; web modules never call Repo directly"
+  ],
+  "ci": ["github-actions"],
+  "tools": [
+    {"role": "test", "command": "mix test", "probe": ["mix"], "extensions": [".exs"], "source": "manifest_tool"},
+    {"role": "lint", "command": "mix credo --strict", "probe": ["mix"], "extensions": [".ex", ".exs"], "source": "manifest_tool"},
+    {"role": "typecheck", "command": "mix dialyzer", "probe": ["mix"], "extensions": [], "source": "manifest_tool"},
+    {"role": "format", "command": "mix format", "probe": ["mix"], "extensions": [".ex", ".exs", ".heex"], "source": "manifest_tool"}
+  ],
+  "test_pairs": [
+    {"source": "lib/acme_ledger/billing.ex", "test": "test/acme_ledger/billing_test.exs", "support": 7, "kind": "named_after"}
+  ],
+  "cochange": [
+    {"path": "lib/acme_ledger/billing.ex", "partner": "lib/acme_ledger/invoices.ex", "support": 6, "percent": 50},
+    {"path": "lib/acme_ledger/invoices.ex", "partner": "lib/acme_ledger/billing.ex", "support": 6, "percent": 75}
+  ],
+  "paths_dropped_charset": 0,
+  "practices": {"deprecation_sites": 0, "deprecation_files": 0, "removal_phrases": 0, "policy_sentences": 0, "warnings_as_errors": false},
+  "existing_harness": {"files": ["CLAUDE.md", ".claude/settings.json"]},
+  "rule_candidates": [
+    {
+      "text": "Add a migration instead of editing an applied migration in priv/repo/migrations",
+      "confidence": 90,
+      "bucket": "auto",
+      "citations": [
+        {"detector": "instructions", "signal": "instructions.rule_candidates", "path": "CLAUDE.md", "line": 22}
+      ]
+    },
+    {
+      "text": "lib/acme_ledger/billing.ex changes most often with test/acme_ledger/billing_test.exs",
+      "confidence": 30,
+      "bucket": "observed",
+      "citations": [
+        {"detector": "git.history", "signal": "cochange.clusters", "path": "lib/acme_ledger/billing.ex", "line": null}
+      ]
+    }
+  ]
+}

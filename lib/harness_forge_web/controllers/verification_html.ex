@@ -1,6 +1,26 @@
 defmodule HarnessForgeWeb.VerificationHTML do
   use HarnessForgeWeb, :html
 
+  attr :video, :map, required: true
+
+  defp recording(assigns) do
+    ~H"""
+    <video
+      :if={@video["available"]}
+      controls
+      preload="none"
+      style="width:100%;max-height:34rem;background:#111;"
+      aria-label={@video["title"]}
+    >
+      <source src={"/verification/media/#{@video["id"]}"} type="video/webm" />
+      <a href={"/verification/media/#{@video["id"]}"}>Open recording</a>
+    </video>
+    <p :if={!@video["available"]} id={"verification-unavailable-" <> @video["id"]}>
+      Recording unavailable in this installation. Recordings are distributed separately.
+    </p>
+    """
+  end
+
   def index(assigns) do
     ~H"""
     <main
@@ -25,15 +45,7 @@ defmodule HarnessForgeWeb.VerificationHTML do
         >
           <h2>{video["title"]}</h2>
           <p>{video["result"]} · {video["duration"]}</p>
-          <video
-            controls
-            preload="none"
-            style="width:100%;max-height:34rem;background:#111;"
-            aria-label={video["title"]}
-          >
-            <source src={"/verification/media/#{video["id"]}"} type="video/webm" />
-            <a href={"/verification/media/#{video["id"]}"}>Open recording</a>
-          </video>
+          <.recording video={video} />
           <p>{video["recorded_release"]}</p>
         </article>
         <details class="panel" id="verification-more-runs">
@@ -46,15 +58,7 @@ defmodule HarnessForgeWeb.VerificationHTML do
           >
             <h2>{video["title"]}</h2>
             <p>{video["result"]} · {video["duration"]}</p>
-            <video
-              controls
-              preload="none"
-              style="width:100%;max-height:34rem;background:#111;"
-              aria-label={video["title"]}
-            >
-              <source src={"/verification/media/#{video["id"]}"} type="video/webm" />
-              <a href={"/verification/media/#{video["id"]}"}>Open recording</a>
-            </video>
+            <.recording video={video} />
             <p>{video["recorded_release"]}</p>
           </article>
         </details>

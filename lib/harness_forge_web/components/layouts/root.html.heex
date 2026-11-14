@@ -4,13 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <meta name="color-scheme" content="light" />
-    <.live_title default="HarnessForge" suffix=" · HarnessForge" phx-no-format>{assigns[:page_title]}</.live_title>
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#060808" />
+    <.live_title default="Olivium Harness" suffix=" · Olivium Harness" phx-no-format>{assigns[:page_title]}</.live_title>
+    <link rel="icon" href={~p"/favicon.ico"} sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href={~p"/favicon-32.png"} />
+    <link rel="apple-touch-icon" href={~p"/apple-touch-icon.png"} />
     <link phx-track-static rel="stylesheet" href={~p"/assets/css/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/js/app.js"}>
     </script>
   </head>
-  <body data-theme="light">
+  <body data-theme="dark">
     {@inner_content}
   </body>
 </html>

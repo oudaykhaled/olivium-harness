@@ -4,6 +4,7 @@ defmodule HarnessForge.Models.Anthropic do
   alias HarnessForge.Models.{HTTP, Profile}
 
   @api_version "2026-10-21"
+  @thinking_blocks ["thinking", "redacted_thinking"]
 
   @impl true
   def generate(config, request, credential, opts) do
@@ -43,9 +44,14 @@ defmodule HarnessForge.Models.Anthropic do
     end
   end
 
+  # Models with adaptive thinking return thinking blocks before the answer. They
+  # are not part of the answer. Any other unexpected block stays invalid.
   defp output_text(blocks) when is_list(blocks) and length(blocks) in 1..16 do
-    if Enum.all?(blocks, &match?(%{"type" => "text", "text" => text} when is_binary(text), &1)) do
-      {:ok, Enum.map_join(blocks, "", & &1["text"])}
+    answer = Enum.reject(blocks, &match?(%{"type" => type} when type in @thinking_blocks, &1))
+
+    if answer != [] and
+         Enum.all?(answer, &match?(%{"type" => "text", "text" => text} when is_binary(text), &1)) do
+      {:ok, Enum.map_join(answer, "", & &1["text"])}
     else
       {:error, :invalid_provider_response}
     end

@@ -42,6 +42,7 @@ defmodule HarnessForgeWeb.Router do
 
     live_session :operator, on_mount: [{HarnessForgeWeb.Plugs.OperatorSession, :operator}] do
       live "/", PortalLive, :index
+      live "/generate", GenerateLive, :index
       live "/setup", SetupLive, :index
       live "/setup/:id/:step", SetupLive, :show
       live "/company/corpus", CorpusReviewLive, :index

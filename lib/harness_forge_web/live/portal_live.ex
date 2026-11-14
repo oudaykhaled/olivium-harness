@@ -2718,8 +2718,12 @@ defmodule HarnessForgeWeb.PortalLive do
     ~H"""
     <div class="workspace-shell">
       <aside class="sidebar" aria-label="Workspace navigation">
-        <a class="brand" href={~p"/"} aria-label="HarnessForge workspace"><span class="brand-mark">H</span>
-        HarnessForge</a>
+        <a class="brand" href={~p"/"} aria-label="Olivium Harness workspace"><img
+          src={~p"/images/olivium-harness.png"}
+          alt=""
+          width="35"
+          height="35"
+        /><span class="brand-text">OLIVIUM<strong>HARNESS</strong></span></a>
         <div class="workspace-switch">
           <span class="workspace-avatar">W</span><div>
             <strong>Local workspace</strong><small>Personal · Open source</small>
@@ -2727,6 +2731,9 @@ defmodule HarnessForgeWeb.PortalLive do
         </div>
         <p class="nav-heading">BUILD YOUR HARNESS</p>
         <nav aria-label="Company harness journey">
+          <a id="nav-generate" href="/generate" class="nav-item">
+            <span class="nav-dot" aria-hidden="true">⚡</span><span>Generate from repo</span>
+          </a>
           <button
             :for={tab <- ~w(company connections evidence package evaluations)}
             id={"nav-#{tab}"}
@@ -3364,7 +3371,7 @@ defmodule HarnessForgeWeb.PortalLive do
                   required
                 />
                 <p class="field-help">
-                  Choose an already installed local model. HarnessForge does not download models or use a cloud fallback.
+                  Choose an already installed local model. Olivium Harness does not download models or use a cloud fallback.
                 </p>
               </div>
               <label for="model-name">Model name</label><input
@@ -4057,8 +4064,14 @@ defmodule HarnessForgeWeb.PortalLive do
             <pre :if={@privacy_result} id="privacy-result">{Jason.encode!(@privacy_result, pretty: true)}</pre>
           </section>
           <footer class="workspace-footer">
-            <span><span class="footer-mark">H</span>
-            HarnessForge <span class="muted">/</span>
+            <span><img
+              class="footer-mark"
+              src={~p"/images/olivium-harness.png"}
+              alt=""
+              width="27"
+              height="27"
+            /><span class="brand-text">OLIVIUM<strong>HARNESS</strong></span>
+            <span class="muted">/</span>
             Context you can account for.</span><span>Open source · v0.1.0</span>
           </footer>
         </main>

@@ -17,6 +17,9 @@ defmodule HarnessForge.ArtifactsTest do
     %{root: root, artifact: artifact, opts: [root: root]}
   end
 
+  # The check is concurrency safety, not speed: under a loaded host (load above 8) the 8
+  # publishes took longer than the former 10 s stream timeout.
+  @tag timeout: 120_000
   test "publish is repeatable, verified and safe under concurrent writers", %{
     artifact: artifact,
     opts: opts,
@@ -26,7 +29,7 @@ defmodule HarnessForge.ArtifactsTest do
       1..8
       |> Task.async_stream(fn _ -> Artifacts.publish(artifact, opts) end,
         max_concurrency: 8,
-        timeout: 10_000
+        timeout: 60_000
       )
       |> Enum.to_list()
 

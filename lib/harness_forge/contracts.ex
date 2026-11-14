@@ -2,20 +2,31 @@ defmodule HarnessForge.Contracts do
   @moduledoc """
   Frozen v1alpha1 interchange contracts and deterministic JSON hashing.
 
+  `harnessforge.dev/v1alpha2` specs are validated against their own schema and
+  semantic rules (`HarnessForge.Contracts.HarnessV2`). Every other value keeps
+  the v1alpha1 path unchanged so stored artifacts continue to verify.
+
   String keys are required. Canonical JSON accepts integers, but never floats,
   and sorts object keys by their UTF-8 bytes. No Unicode normalization occurs.
   This is the HarnessForge canonical format, not RFC 8785.
   """
-  alias HarnessForge.Contracts.Error
+  alias HarnessForge.Contracts.{Error, HarnessV2}
 
   @schema_path Path.expand("../../priv/schemas/harness-v1alpha1.json", __DIR__)
   @external_resource @schema_path
   @schema @schema_path |> File.read!() |> Jason.decode!()
+  @v2_schema_path Path.expand("../../priv/schemas/harness-v1alpha2.json", __DIR__)
+  @external_resource @v2_schema_path
+  @v2_schema @v2_schema_path |> File.read!() |> Jason.decode!()
+  @v2_api_version HarnessV2.api_version()
   @max_bytes 2_000_000
   @max_depth 16
 
   @spec schema() :: map()
   def schema, do: @schema
+
+  @spec schema_v2() :: map()
+  def schema_v2, do: @v2_schema
 
   @doc "Decode bounded JSON, rejecting duplicate object keys before converting to maps."
   @spec decode_harness(binary()) :: {:ok, map()} | {:error, Error.t()}
@@ -41,6 +52,17 @@ defmodule HarnessForge.Contracts do
   def decode_json(_), do: invalid(["$: JSON input exceeds 2000000 bytes"])
 
   @spec validate_harness(term()) :: {:ok, map()} | {:error, Error.t()}
+  def validate_harness(%{"apiVersion" => @v2_api_version} = value) do
+    with :ok <- validate_json_bounds(value),
+         [] <- check(value, @v2_schema, "$", @v2_schema),
+         [] <- HarnessV2.semantic_errors(value) do
+      {:ok, value}
+    else
+      {:error, %Error{} = error} -> {:error, error}
+      errors when is_list(errors) -> invalid(errors)
+    end
+  end
+
   def validate_harness(value) do
     with :ok <- validate_json_bounds(value),
          [] <- check(value, @schema, "$", @schema),
@@ -51,6 +73,31 @@ defmodule HarnessForge.Contracts do
       errors when is_list(errors) -> invalid(errors)
     end
   end
+
+  @doc """
+  Validate a bounded JSON document against one of our frozen schemas, reporting
+  failures under `code`. Applies the same bounds and keyword subset as harness
+  validation; callers add their own semantic checks.
+  """
+  @spec validate_document(term(), map(), String.t()) :: {:ok, term()} | {:error, Error.t()}
+  def validate_document(value, schema, code) when is_map(schema) and is_binary(code) do
+    with :ok <- validate_json_bounds(value),
+         [] <- check(value, schema, "$", schema) do
+      {:ok, value}
+    else
+      {:error, %Error{} = error} -> {:error, %{error | code: code}}
+      errors when is_list(errors) -> invalid(errors, code)
+    end
+  end
+
+  @doc "True for a contained relative path: not absolute, not home-relative, no `..` segment."
+  @spec relative_path?(term()) :: boolean()
+  def relative_path?(path) when is_binary(path) do
+    path != "" and Path.type(path) == :relative and not String.starts_with?(path, "~") and
+      not String.contains?(path, ["\\", <<0>>]) and ".." not in String.split(path, "/")
+  end
+
+  def relative_path?(_), do: false
 
   @spec canonical_json(term()) :: binary()
   def canonical_json(value), do: value |> encode() |> IO.iodata_to_binary()
@@ -326,6 +373,15 @@ defmodule HarnessForge.Contracts do
        %Error{
          code: "invalid_harness",
          message: "Harness specification failed validation",
+         details: Enum.take(Enum.sort(details), 100)
+       }}
+
+  defp invalid(details, code),
+    do:
+      {:error,
+       %Error{
+         code: code,
+         message: "Document failed contract validation",
          details: Enum.take(Enum.sort(details), 100)
        }}
 end

@@ -194,16 +194,18 @@ defmodule HarnessForge.Models do
                  "prompt" => prompt,
                  "source_ids" => [source_id],
                  "data_categories" => ["source_body"],
-                 "max_output_tokens" => Keyword.get(opts, :max_output_tokens, 2048)
+                 "max_output_tokens" =>
+                   Keyword.get(opts, :max_output_tokens, Proposal.default_output_tokens())
                },
-               Keyword.take(opts, [:timeout])
+               opts |> Keyword.take([:timeout]) |> Keyword.put_new(:timeout, 60_000)
              ),
-           {:ok, claims} <- Proposal.validate(response["text"], source),
-           {:ok, created} <- Proposal.persist(claims, source) do
+           {:ok, validated} <- Proposal.validate(response["text"], source),
+           {:ok, created} <- Proposal.persist(validated, source) do
         {:ok,
          response
          |> Map.delete("text")
          |> Map.put("claims", created)
+         |> Map.put("rejected_claims", validated["rejected_count"])
          |> Map.put("status", "proposed")}
       end
     else
@@ -229,7 +231,8 @@ defmodule HarnessForge.Models do
         String.valid?(request["prompt"]) and
         Configuration.strings?(request["source_ids"]) and
         Configuration.strings?(request["data_categories"]) and
-        is_integer(request["max_output_tokens"]) and request["max_output_tokens"] in 1..4096 and
+        is_integer(request["max_output_tokens"]) and
+        request["max_output_tokens"] in 1..output_token_limit(request) and
         Keyword.keys(opts) -- [:timeout] == [] and is_integer(Keyword.get(opts, :timeout, 30_000)) and
         Keyword.get(opts, :timeout, 30_000) in 1..60_000
 
@@ -237,6 +240,13 @@ defmodule HarnessForge.Models do
   end
 
   defp validate_request(_, _), do: {:error, :invalid_model_request}
+
+  # Proposals alone need room for adaptive thinking; other purposes keep 4096.
+  defp output_token_limit(request) do
+    if Map.get(request, "purpose", "proposal") == "proposal",
+      do: Proposal.max_output_tokens(),
+      else: 4096
+  end
 
   defp valid_purpose?(request) do
     case Map.get(request, "purpose", "proposal") do

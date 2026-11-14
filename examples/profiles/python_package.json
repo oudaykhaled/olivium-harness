@@ -1,0 +1,59 @@
+{
+  "name": "acme-widgets",
+  "languages": ["python"],
+  "frameworks": ["fastapi"],
+  "package_managers": ["uv"],
+  "commands": {
+    "install": "uv sync",
+    "build": "uv build",
+    "test": "uv run pytest",
+    "test_single": "uv run pytest -k",
+    "lint": "uv run ruff check .",
+    "format": "uv run ruff format",
+    "typecheck": "uv run mypy src",
+    "run": null
+  },
+  "layout": [
+    {"path": "src/acme_widgets", "purpose": "package source"},
+    {"path": "tests", "purpose": "pytest suite"}
+  ],
+  "conventions": [
+    "Commit subjects follow Conventional Commits",
+    "Tests live next to the package under tests/"
+  ],
+  "ci": ["github-actions"],
+  "tools": [
+    {"role": "test", "command": "uv run pytest", "probe": ["pytest"], "extensions": [".py"], "source": "runner_prefix"},
+    {"role": "lint", "command": "uv run ruff check .", "probe": ["ruff"], "extensions": [".py", ".pyi"], "source": "runner_prefix"},
+    {"role": "typecheck", "command": "uv run mypy src", "probe": ["mypy"], "extensions": [".py", ".pyi"], "source": "runner_prefix"},
+    {"role": "format", "command": "uv run ruff format", "probe": ["ruff"], "extensions": [".py", ".pyi"], "source": "runner_prefix"}
+  ],
+  "test_pairs": [
+    {"source": "src/acme_widgets/api.py", "test": "tests/test_api.py", "support": 6, "kind": "named_after"},
+    {"source": "src/acme_widgets/models.py", "test": "tests/test_models.py", "support": 3, "kind": "cochange"}
+  ],
+  "cochange": [
+    {"path": "src/acme_widgets/api.py", "partner": "src/acme_widgets/models.py", "support": 5, "percent": 62}
+  ],
+  "paths_dropped_charset": 0,
+  "practices": {"deprecation_sites": 0, "deprecation_files": 0, "removal_phrases": 0, "policy_sentences": 0, "warnings_as_errors": false},
+  "existing_harness": {"files": ["AGENTS.md"]},
+  "rule_candidates": [
+    {
+      "text": "Add a test under tests/ with every behaviour change",
+      "confidence": 82,
+      "bucket": "auto",
+      "citations": [
+        {"detector": "instructions", "signal": "instructions.rule_candidates", "path": "CONTRIBUTING.md", "line": 14}
+      ]
+    },
+    {
+      "text": "Keep public API changes in src/acme_widgets/api.py reviewed by a second person",
+      "confidence": 45,
+      "bucket": "suggested",
+      "citations": [
+        {"detector": "git.history", "signal": "hotspots.fixes", "path": "src/acme_widgets/api.py", "line": null}
+      ]
+    }
+  ]
+}

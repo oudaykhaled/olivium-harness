@@ -2,6 +2,7 @@ defmodule HarnessForge.Harnesses do
   @moduledoc "The trusted bridge from current approved evidence to immutable native previews."
   import Ecto.Query
   alias HarnessForge.{Artifacts, Audit, Company, Compiler, Evidence, Goals, Repo, Workspaces}
+  alias HarnessForge.Contracts.HarnessV2
   alias HarnessForge.Evidence.Store
   alias HarnessForge.Harnesses.{ArtifactBinding, Templates}
 
@@ -224,9 +225,9 @@ defmodule HarnessForge.Harnesses do
   def eligible(artifact) do
     with {:ok, current} <- Evidence.approved_claims() do
       available = Map.new(current, &{&1["id"], &1})
-      rules = get_in(artifact, ["spec", "spec", "rules"]) || []
+      rules = HarnessV2.approved_claim_rules(artifact["spec"])
 
-      if rules != [] and
+      if (rules != [] or HarnessV2.solo_generated?(artifact["spec"])) and
            Enum.all?(
              rules,
              fn rule ->

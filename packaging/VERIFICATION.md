@@ -39,5 +39,5 @@ workspace-secret/database exclusion passed. The rebuilt binary also completed
 actual Chrome all-five form checks and a public GitHub import of 30 issue/PR
 snapshots plus one review-page continuation, preserving its cursor and incomplete
 status. Authenticated private-service qualification remains externally blocked
-as recorded in docs/verification.md. This source record and an archive companion
+as recorded in docs/archive/verification.md. This source record and an archive companion
 report contain post-build observations; packaged docs are the build-time snapshot.

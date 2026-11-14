@@ -1,0 +1,2055 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://harnessforge.dev/schemas/harness-v1alpha2.json",
+  "title": "HarnessForge Harness v1alpha2",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "apiVersion": {
+      "const": "harnessforge.dev/v1alpha2",
+      "type": "string"
+    },
+    "kind": {
+      "const": "Harness",
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$(?!\\n)"
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ]
+    },
+    "spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "runtime": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+            }
+          },
+          "required": [
+            "name",
+            "version"
+          ]
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "repositories": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "minItems": 0,
+              "maxItems": 100,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "repositories"
+          ]
+        },
+        "project": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+            },
+            "languages": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+              },
+              "minItems": 0,
+              "maxItems": 64,
+              "uniqueItems": true
+            },
+            "frameworks": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+              },
+              "minItems": 0,
+              "maxItems": 64,
+              "uniqueItems": true
+            },
+            "package_managers": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+              },
+              "minItems": 0,
+              "maxItems": 64,
+              "uniqueItems": true
+            },
+            "commands": {
+              "$ref": "#/$defs/commands"
+            },
+            "layout": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/layout_entry"
+              },
+              "minItems": 0,
+              "maxItems": 128
+            },
+            "conventions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 512,
+                "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+              },
+              "minItems": 0,
+              "maxItems": 128
+            },
+            "ci": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+              },
+              "minItems": 0,
+              "maxItems": 64,
+              "uniqueItems": true
+            },
+            "tools": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/tool"
+              },
+              "minItems": 0,
+              "maxItems": 5
+            },
+            "test_pairs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/test_pair"
+              },
+              "minItems": 0,
+              "maxItems": 200
+            },
+            "cochange": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/cochange_row"
+              },
+              "minItems": 0,
+              "maxItems": 200
+            },
+            "practices": {
+              "$ref": "#/$defs/practices"
+            }
+          },
+          "required": [
+            "name",
+            "languages",
+            "frameworks",
+            "package_managers",
+            "commands",
+            "layout",
+            "conventions",
+            "ci"
+          ]
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "profile": {
+              "type": "string",
+              "enum": [
+                "lean",
+                "standard",
+                "lean-ai",
+                "lean-x"
+              ]
+            },
+            "include_git_instructions": {
+              "type": "boolean"
+            },
+            "deny_tools": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "CronCreate",
+                  "CronDelete",
+                  "CronList",
+                  "EnterWorktree",
+                  "ExitWorktree",
+                  "ListAgents",
+                  "Monitor",
+                  "NotebookEdit",
+                  "ReportFindings",
+                  "ScheduleWakeup",
+                  "SendMessage",
+                  "Skill",
+                  "Task",
+                  "TaskStop",
+                  "Workflow"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 15,
+              "uniqueItems": true
+            },
+            "auto_memory": {
+              "type": "boolean"
+            },
+            "measured_on": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+            },
+            "est_tokens_saved_per_request": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "disable_bundled_skills": {
+              "type": "boolean"
+            },
+            "disable_builtin_agents": {
+              "type": "boolean"
+            },
+            "kept_tools": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Skill",
+                  "Task"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 2,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "profile",
+            "include_git_instructions",
+            "deny_tools",
+            "auto_memory",
+            "measured_on",
+            "est_tokens_saved_per_request"
+          ]
+        },
+        "guidance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidance_section"
+          },
+          "minItems": 0,
+          "maxItems": 8
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          },
+          "minItems": 0,
+          "maxItems": 500
+        },
+        "goals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/goal"
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "policies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/policy"
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "agents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/agent"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/skill"
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "hooks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hook"
+          },
+          "minItems": 0,
+          "maxItems": 16
+        },
+        "permissions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "commands": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/command_permission"
+              },
+              "minItems": 0,
+              "maxItems": 256
+            },
+            "paths": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/path_permission"
+              },
+              "minItems": 0,
+              "maxItems": 256
+            }
+          },
+          "required": [
+            "commands",
+            "paths"
+          ]
+        },
+        "execution": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "max_turns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000
+            },
+            "timeout_seconds": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 86400
+            }
+          },
+          "required": [
+            "max_turns",
+            "timeout_seconds"
+          ]
+        },
+        "evaluation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "suite": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+            }
+          },
+          "required": [
+            "suite"
+          ]
+        },
+        "generation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "solo",
+                "team"
+              ]
+            },
+            "profile_digest": {
+              "$ref": "#/$defs/digest"
+            },
+            "overlay_digest": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/digest"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "blueprint_version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+            }
+          },
+          "required": [
+            "mode",
+            "profile_digest",
+            "overlay_digest",
+            "blueprint_version"
+          ]
+        },
+        "learning": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "The learned bundle behind a lean-ai export: identity, learner status and cost, kept and dropped counts.",
+          "properties": {
+            "bundle_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$(?!\\n)"
+            },
+            "file_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$(?!\\n)"
+            },
+            "repository": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "pattern": "^[A-Za-z0-9._-]+$(?!\\n)"
+            },
+            "base_commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$(?!\\n)"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "ok",
+                "mock",
+                "failed",
+                "unavailable"
+              ]
+            },
+            "status_reason": {
+              "type": "string",
+              "enum": [
+                "none",
+                "cloud_not_allowed",
+                "no_key_file",
+                "no_docker",
+                "image_missing",
+                "meter_unavailable",
+                "cap_reached",
+                "turn_cap",
+                "timeout",
+                "invalid_output",
+                "model_error"
+              ]
+            },
+            "model": {
+              "type": "string",
+              "enum": [
+                "claude-haiku-5-5",
+                "claude-sonnet-5-5",
+                "mock",
+                "none"
+              ]
+            },
+            "requests": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "tokens_total": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "cost_nanousd": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "verification": {
+              "type": "string",
+              "enum": [
+                "ok",
+                "unavailable"
+              ]
+            },
+            "kept": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "concepts": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "pitfalls": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "commands": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "rewrites": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "concepts",
+                "pitfalls",
+                "commands",
+                "rewrites"
+              ]
+            },
+            "dropped": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "dropped_at_render": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "claude_md_lines": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "replacing": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "left_out_no_static_line": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "left_out_withheld": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "replacing",
+                "left_out_no_static_line",
+                "left_out_withheld"
+              ]
+            }
+          },
+          "required": [
+            "bundle_sha256",
+            "file_sha256",
+            "repository",
+            "base_commit",
+            "status",
+            "status_reason",
+            "model",
+            "requests",
+            "tokens_total",
+            "cost_nanousd",
+            "verification",
+            "kept",
+            "dropped",
+            "dropped_at_render"
+          ]
+        },
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "The prompt-time locator: the replay gate numbers, the frozen constants and the index rows (TSV lines, checked by the adapter).",
+          "properties": {
+            "rendered": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "passed",
+                "failed"
+              ]
+            },
+            "replay_n": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "top3_hits": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "wrong": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "max_card_bytes": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 32,
+              "pattern": "^[a-z0-9/._-]+$(?!\\n)"
+            },
+            "constants": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path_weight": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "symbol_weight": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "symbol_max_locations": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "stem_weight": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "history_scale": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "term_top_k": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "learned_scale": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "min_score": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "min_margin": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "min_margin_percent": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "card_bytes": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                }
+              },
+              "required": [
+                "path_weight",
+                "symbol_weight",
+                "symbol_max_locations",
+                "stem_weight",
+                "history_scale",
+                "term_top_k",
+                "learned_scale",
+                "min_score",
+                "min_margin",
+                "min_margin_percent",
+                "card_bytes"
+              ]
+            },
+            "stem_stopwords": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[a-z0-9_]+$(?!\\n)"
+              },
+              "maxItems": 64,
+              "uniqueItems": true
+            },
+            "learned_terms": {
+              "type": "boolean"
+            },
+            "test_command": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200,
+                        "pattern": "^[A-Za-z0-9_./:=+@,%-]+$(?!\\n)"
+                      },
+                      {
+                        "const": "{file}"
+                      }
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 16
+                }
+              ]
+            },
+            "pitfalls": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^p[0-9]{2}$(?!\\n)"
+                  },
+                  "paths": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/plain_path"
+                    },
+                    "minItems": 1,
+                    "maxItems": 4
+                  },
+                  "triggers": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 40,
+                      "pattern": "^[a-z0-9_ ]+$(?!\\n)"
+                    },
+                    "minItems": 1,
+                    "maxItems": 6
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 20,
+                    "maxLength": 200,
+                    "pattern": "^[\\x20-\\x7e]+$(?!\\n)"
+                  }
+                },
+                "required": [
+                  "id",
+                  "paths",
+                  "triggers",
+                  "text"
+                ]
+              }
+            },
+            "index": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "symbols": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 600
+                  },
+                  "maxItems": 10000
+                },
+                "terms": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 600
+                  },
+                  "maxItems": 14000
+                },
+                "tests": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 600
+                  },
+                  "maxItems": 2000
+                }
+              },
+              "required": [
+                "symbols",
+                "terms",
+                "tests"
+              ]
+            }
+          },
+          "required": [
+            "rendered",
+            "status",
+            "replay_n",
+            "top3_hits",
+            "wrong",
+            "max_card_bytes",
+            "version",
+            "constants",
+            "stem_stopwords",
+            "learned_terms",
+            "test_command",
+            "pitfalls",
+            "index"
+          ]
+        },
+        "rewrites": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Verified command rewrites for the PreToolUse Bash hook.",
+          "properties": {
+            "timeout_seconds": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 60
+            },
+            "items": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^rw[0-9]{2}$(?!\\n)"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "missing_tool",
+                      "wrong_runner",
+                      "quiet_flags"
+                    ]
+                  },
+                  "match": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200,
+                      "pattern": "^[A-Za-z0-9_./:=+@,%-]+$(?!\\n)"
+                    },
+                    "minItems": 1,
+                    "maxItems": 6
+                  },
+                  "replace": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 200,
+                          "pattern": "^[A-Za-z0-9_./:=+@,%-]+$(?!\\n)"
+                        },
+                        "minItems": 1,
+                        "maxItems": 10
+                      }
+                    ]
+                  },
+                  "tool": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}$(?!\\n)"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "kind",
+                  "match",
+                  "replace",
+                  "tool"
+                ]
+              }
+            }
+          },
+          "required": [
+            "timeout_seconds",
+            "items"
+          ]
+        },
+        "learned": {
+          "type": "object",
+          "description": "The learned bundle (olivium.learned/v1), checked by the reader and exported byte for byte as .olivium/learned.json."
+        },
+        "native": {
+          "description": "Claude Code skills and subagents generated from repository history: provenance, what was left out and why, the test runner's allowed commands, and the measured cost.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "select": {
+              "type": "string",
+              "enum": [
+                "all",
+                "skills",
+                "agents",
+                "none"
+              ]
+            },
+            "measured_on": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 9,
+                    "maxLength": 64,
+                    "pattern": "^olivium-[a-z0-9]+(-[a-z0-9]+)*$(?!\\n)"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "skill",
+                      "agent"
+                    ]
+                  },
+                  "template": {
+                    "type": "string",
+                    "enum": [
+                      "area",
+                      "locator",
+                      "test_runner"
+                    ]
+                  },
+                  "origin": {
+                    "type": "string",
+                    "enum": [
+                      "history",
+                      "learned"
+                    ]
+                  },
+                  "path": {
+                    "type": "string",
+                    "pattern": "^\\.claude/(skills/olivium-[a-z0-9-]+/SKILL|agents/olivium-[a-z0-9-]+)\\.md$(?!\\n)"
+                  },
+                  "description_bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  },
+                  "body_bytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  },
+                  "max_turns": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 100
+                  },
+                  "evidence": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "signals": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,63}$(?!\\n)"
+                        },
+                        "minItems": 0,
+                        "maxItems": 16,
+                        "uniqueItems": true
+                      },
+                      "commits": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$(?!\\n)"
+                        },
+                        "minItems": 0,
+                        "maxItems": 10
+                      },
+                      "fix_commits": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$(?!\\n)"
+                        },
+                        "minItems": 0,
+                        "maxItems": 10
+                      },
+                      "files": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/$defs/plain_path"
+                        },
+                        "minItems": 0,
+                        "maxItems": 64
+                      },
+                      "learned_id": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^[a-z][0-9]{2}$(?!\\n)"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "signals",
+                      "commits",
+                      "fix_commits",
+                      "files",
+                      "learned_id"
+                    ]
+                  },
+                  "evidence_commits": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  }
+                },
+                "required": [
+                  "name",
+                  "kind",
+                  "template",
+                  "origin",
+                  "path",
+                  "description_bytes",
+                  "body_bytes",
+                  "evidence",
+                  "evidence_commits"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 5
+            },
+            "dropped": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 9,
+                    "maxLength": 64,
+                    "pattern": "^olivium-[a-z0-9]+(-[a-z0-9]+)*$(?!\\n)"
+                  },
+                  "template": {
+                    "type": "string",
+                    "enum": [
+                      "area",
+                      "locator",
+                      "test_runner",
+                      "unknown"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "enum": [
+                      "gate_failed",
+                      "history_unavailable",
+                      "name_taken",
+                      "not_selected",
+                      "over_limit",
+                      "runner_command_unsuitable",
+                      "schema_invalid",
+                      "text_unsafe"
+                    ]
+                  }
+                },
+                "required": [
+                  "reason"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "test_runner_commands": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/command"
+              },
+              "minItems": 0,
+              "maxItems": 8,
+              "uniqueItems": true
+            },
+            "listing_bytes": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "cost": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "est_tokens_per_request": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "est_tokens_per_request_low": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "fixed_tokens": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "listing_tokens": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "builtin_agents_denied_tokens": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "config": {
+                  "type": "string",
+                  "enum": [
+                    "skills",
+                    "agents",
+                    "skills_agents",
+                    "none"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512,
+                  "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+                }
+              },
+              "required": [
+                "est_tokens_per_request",
+                "est_tokens_per_request_low",
+                "fixed_tokens",
+                "listing_tokens",
+                "config",
+                "basis"
+              ]
+            },
+            "history_head": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$(?!\\n)"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "select",
+            "measured_on",
+            "items",
+            "dropped",
+            "test_runner_commands",
+            "listing_bytes",
+            "cost"
+          ]
+        }
+      },
+      "required": [
+        "runtime",
+        "scope",
+        "project",
+        "guidance",
+        "rules",
+        "goals",
+        "policies",
+        "agents",
+        "skills",
+        "hooks",
+        "permissions",
+        "execution",
+        "evaluation",
+        "generation"
+      ]
+    }
+  },
+  "required": [
+    "apiVersion",
+    "kind",
+    "metadata",
+    "spec"
+  ],
+  "$defs": {
+    "uuid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$(?!\\n)"
+    },
+    "digest": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[0-9a-f]{64}$(?!\\n)"
+    },
+    "command": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^[A-Za-z0-9_./][A-Za-z0-9_./:=@+,-]*( [A-Za-z0-9_./:=@+,-]+)*$(?!\\n)"
+    },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[^\\x00-\\x1f\\x7f\\\\]+$(?!\\n)"
+    },
+    "commands": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "install": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "build": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "test": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "test_single": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lint": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "format": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "typecheck": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "run": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "install",
+        "build",
+        "test",
+        "test_single",
+        "lint",
+        "format",
+        "typecheck",
+        "run"
+      ]
+    },
+    "layout_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+        }
+      },
+      "required": [
+        "path",
+        "purpose"
+      ]
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "revision_id": {
+          "$ref": "#/$defs/uuid"
+        },
+        "start_byte": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2000000
+        },
+        "end_byte": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2000000
+        },
+        "snippet_hash": {
+          "$ref": "#/$defs/digest"
+        }
+      },
+      "required": [
+        "revision_id",
+        "start_byte",
+        "end_byte",
+        "snippet_hash"
+      ]
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Per-origin requirements are enforced semantically. approved_claim: revision_hash, evidence and goal_id, with evidence or a goal, and no fingerprint/source. derived and overlay: fingerprint and source, and no revision_hash/evidence/goal_id.",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/uuid"
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "approved_claim",
+            "derived",
+            "overlay"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "revision_hash": {
+          "$ref": "#/$defs/digest"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/citation"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "goal_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fingerprint": {
+          "$ref": "#/$defs/digest"
+        },
+        "source": {
+          "$ref": "#/$defs/rule_source"
+        }
+      },
+      "required": [
+        "id",
+        "origin",
+        "statement"
+      ]
+    },
+    "rule_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "detector": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "signal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/relative_path"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "line": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "detector",
+        "signal"
+      ]
+    },
+    "goal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/uuid"
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "minItems": 1,
+          "maxItems": 32
+        }
+      },
+      "required": [
+        "id",
+        "owner",
+        "statement",
+        "acceptance"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "capability": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "required",
+        "capability",
+        "value"
+      ]
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "instructions": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16384
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Read",
+              "Grep",
+              "Glob",
+              "Bash"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 4,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "instructions"
+      ]
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "instructions": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16384
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "instructions"
+      ]
+    },
+    "guidance_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "project-map",
+            "commands",
+            "conventions",
+            "do-dont",
+            "architecture",
+            "review-checklist",
+            "rules",
+            "notes"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 2048,
+            "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]*$(?!\\n)"
+          },
+          "minItems": 0,
+          "maxItems": 512
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "lines"
+      ]
+    },
+    "hook": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/hook_command"
+        },
+        {
+          "$ref": "#/$defs/hook_builtin"
+        }
+      ]
+    },
+    "command_permission": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "command": {
+          "$ref": "#/$defs/command"
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "allow",
+            "ask",
+            "deny"
+          ]
+        },
+        "exact": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "command",
+        "action"
+      ]
+    },
+    "path_permission": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "pattern": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "pattern": "^[A-Za-z0-9_.*@+-][A-Za-z0-9_.*/@+-]*$(?!\\n)"
+        },
+        "access": {
+          "type": "string",
+          "enum": [
+            "read",
+            "edit"
+          ]
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "allow",
+            "ask",
+            "deny"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "pattern",
+        "access",
+        "action"
+      ]
+    },
+    "plain_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^(?![/-])(?!.*\\.\\.)(?!.*//)[A-Za-z0-9_./-]{1,200}$(?!\\n)"
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": [
+            "test",
+            "lint",
+            "typecheck",
+            "format",
+            "interpreter"
+          ]
+        },
+        "command": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "probe": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}$(?!\\n)"
+          },
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 9,
+            "pattern": "^\\.[a-z0-9]{1,8}$(?!\\n)"
+          },
+          "minItems": 0,
+          "maxItems": 8,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "runner_prefix",
+            "package_script",
+            "manifest_tool",
+            "requires_python"
+          ]
+        }
+      },
+      "required": [
+        "role",
+        "command",
+        "probe",
+        "extensions",
+        "source"
+      ]
+    },
+    "test_pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "test": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "support": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 1000000
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "cochange",
+            "named_after"
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "test",
+        "support",
+        "kind"
+      ]
+    },
+    "cochange_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "partner": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "support": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 1000000
+        },
+        "percent": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "path",
+        "partner",
+        "support",
+        "percent"
+      ]
+    },
+    "practices": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Counts from the bounded practices read (item 7): deprecation warnings emitted by the project's own source, the files they are in, 'will be removed' phrases, deprecation-policy sentences in maintainer documents, and whether the pytest configuration turns warnings into errors. No repository text.",
+      "properties": {
+        "deprecation_sites": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "deprecation_files": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "removal_phrases": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "policy_sentences": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "warnings_as_errors": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "deprecation_sites",
+        "deprecation_files",
+        "removal_phrases",
+        "policy_sentences",
+        "warnings_as_errors"
+      ]
+    },
+    "hook_command": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+        },
+        "event": {
+          "type": "string",
+          "enum": [
+            "after_edit",
+            "before_stop"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "format",
+            "lint",
+            "test"
+          ]
+        },
+        "command": {
+          "$ref": "#/$defs/command"
+        },
+        "file_argument": {
+          "type": "boolean"
+        },
+        "selector": {
+          "type": "string",
+          "enum": [
+            "changed_files",
+            "related_tests"
+          ]
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 600
+        }
+      },
+      "required": [
+        "id",
+        "event",
+        "command",
+        "timeout_seconds",
+        "file_argument"
+      ]
+    },
+    "hook_builtin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9_-]*$(?!\\n)"
+        },
+        "event": {
+          "type": "string",
+          "enum": [
+            "session_start",
+            "prompt_submit"
+          ]
+        },
+        "builtin": {
+          "type": "string",
+          "enum": [
+            "env_check",
+            "locator"
+          ]
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 600
+        }
+      },
+      "required": [
+        "id",
+        "event",
+        "builtin",
+        "timeout_seconds"
+      ]
+    }
+  }
+}

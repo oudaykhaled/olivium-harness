@@ -1,0 +1,116 @@
+{
+  "id": "node",
+  "version": "4",
+  "toolchain": {
+    "commands": [
+      "node"
+    ],
+    "package_managers": {
+      "bun": [
+        "bun run",
+        "bun test",
+        "bunx"
+      ],
+      "npm": [
+        "npm exec",
+        "npm run",
+        "npm test",
+        "npx"
+      ],
+      "pnpm": [
+        "pnpm exec",
+        "pnpm run",
+        "pnpm test"
+      ],
+      "yarn": [
+        "yarn exec",
+        "yarn run",
+        "yarn test"
+      ]
+    },
+    "runners": [],
+    "tools": []
+  },
+  "guidance_defaults": {
+    "test_commands": [
+      "bun test",
+      "jest",
+      "mocha",
+      "node --test",
+      "npm run test",
+      "npm test",
+      "npx jest",
+      "npx mocha",
+      "npx vitest",
+      "npx vitest run",
+      "pnpm run test",
+      "pnpm test",
+      "vitest",
+      "vitest run",
+      "yarn run test",
+      "yarn test"
+    ],
+    "single_test_commands": [
+      "jest",
+      "mocha",
+      "node --test",
+      "npx jest",
+      "npx mocha",
+      "npx vitest",
+      "npx vitest run",
+      "pnpm vitest run",
+      "vitest",
+      "vitest run"
+    ],
+    "test_locations": [
+      "__tests__|*.spec.js",
+      "__tests__|*.test.js",
+      "test|*.spec.js",
+      "test|*.test.js",
+      "tests|*.spec.js",
+      "tests|*.test.js"
+    ]
+  },
+  "practices": {
+    "thresholds": {
+      "deprecation_sites": 3,
+      "policy_sentences": 1
+    },
+    "rules": {
+      "deprecation": "When removing or changing public API, keep the old behaviour working: warn the way existing deprecations do, name the release that removes it, and test the warning."
+    }
+  },
+  "agent": {
+    "name": "olivium-implementer",
+    "description": "Implements one scoped change in this JavaScript or TypeScript project and verifies it with the project's own checks.",
+    "requires": [
+      "commands.test"
+    ],
+    "instructions": [
+      "Make the requested change with the smallest diff that works, in the style of the surrounding code.",
+      "",
+      "- Read the code you will change and its tests first.",
+      "- Add or update a test when behaviour changes.",
+      "- Use only this project's package manager; never add a second lockfile.",
+      "- For one test: `{{commands.test_single}}` with the file path",
+      "- Types: `{{commands.typecheck}}`",
+      "- Before finishing: `{{commands.test}}`",
+      "- Lint: `{{commands.lint}}`",
+      "- Report what changed and the exact check results."
+    ]
+  },
+  "skill": {
+    "name": "olivium-run-checks",
+    "description": "Run this project's type, lint and test checks after a change and report the results.",
+    "requires": [
+      "commands.test"
+    ],
+    "instructions": [
+      "Run these in order. Stop at the first failure, fix it, and rerun.",
+      "",
+      "- Types: `{{commands.typecheck}}`",
+      "- Lint: `{{commands.lint}}`",
+      "- Tests: `{{commands.test}}`"
+    ]
+  }
+}

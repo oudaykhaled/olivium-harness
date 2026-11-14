@@ -1,0 +1,696 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://harnessforge.dev/schemas/repo-profile-v1.json",
+  "title": "Olivium RepoProfile v1",
+  "description": "Model-free facts about a repository. Commands are detected, never executed to verify them.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+      },
+      "minItems": 0,
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "frameworks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+      },
+      "minItems": 0,
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "package_managers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+      },
+      "minItems": 0,
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "commands": {
+      "$ref": "#/$defs/commands"
+    },
+    "layout": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/layout_entry"
+      },
+      "minItems": 0,
+      "maxItems": 128
+    },
+    "conventions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512,
+        "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+      },
+      "minItems": 0,
+      "maxItems": 128
+    },
+    "ci": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+      },
+      "minItems": 0,
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "existing_harness": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "minItems": 0,
+          "maxItems": 32,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "files"
+      ]
+    },
+    "rule_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rule_candidate"
+      },
+      "minItems": 0,
+      "maxItems": 200
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tool"
+      },
+      "minItems": 0,
+      "maxItems": 5
+    },
+    "test_pairs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/test_pair"
+      },
+      "minItems": 0,
+      "maxItems": 200
+    },
+    "cochange": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cochange_row"
+      },
+      "minItems": 0,
+      "maxItems": 200
+    },
+    "paths_dropped_charset": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "practices": {
+      "$ref": "#/$defs/practices"
+    },
+    "native_evidence": {
+      "description": "History behind generated Claude Code skills and subagents: clusters of source files that change together (paths, SHAs and counts only). Present only when the history signals are auto, so a shallow history has none.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "head": {
+          "$ref": "#/$defs/sha"
+        },
+        "history_state": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "truncated"
+          ]
+        },
+        "source_files": {
+          "$ref": "#/$defs/count"
+        },
+        "clusters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/native_cluster"
+          },
+          "minItems": 0,
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "head",
+        "history_state",
+        "source_files",
+        "clusters"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "languages",
+    "frameworks",
+    "package_managers",
+    "commands",
+    "layout",
+    "conventions",
+    "ci",
+    "existing_harness",
+    "rule_candidates"
+  ],
+  "$defs": {
+    "command": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^[A-Za-z0-9_./][A-Za-z0-9_./:=@+,-]*( [A-Za-z0-9_./:=@+,-]+)*$(?!\\n)"
+    },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[^\\x00-\\x1f\\x7f\\\\]+$(?!\\n)"
+    },
+    "commands": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "install": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "build": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "test": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "test_single": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lint": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "format": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "typecheck": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "run": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "install",
+        "build",
+        "test",
+        "test_single",
+        "lint",
+        "format",
+        "typecheck",
+        "run"
+      ]
+    },
+    "layout_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+        }
+      },
+      "required": [
+        "path",
+        "purpose"
+      ]
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "detector": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "signal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/relative_path"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "line": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "detector",
+        "signal"
+      ]
+    },
+    "rule_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024,
+          "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "bucket": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "suggested",
+            "observed"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/citation"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "text",
+        "confidence",
+        "bucket",
+        "citations"
+      ]
+    },
+    "plain_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^(?![/-])(?!.*\\.\\.)(?!.*//)[A-Za-z0-9_./-]{1,200}$(?!\\n)"
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": [
+            "test",
+            "lint",
+            "typecheck",
+            "format",
+            "interpreter"
+          ]
+        },
+        "command": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "probe": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}$(?!\\n)"
+          },
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 9,
+            "pattern": "^\\.[a-z0-9]{1,8}$(?!\\n)"
+          },
+          "minItems": 0,
+          "maxItems": 8,
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "runner_prefix",
+            "package_script",
+            "manifest_tool",
+            "requires_python"
+          ]
+        }
+      },
+      "required": [
+        "role",
+        "command",
+        "probe",
+        "extensions",
+        "source"
+      ]
+    },
+    "test_pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "test": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "support": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 1000000
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "cochange",
+            "named_after"
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "test",
+        "support",
+        "kind"
+      ]
+    },
+    "cochange_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "partner": {
+          "$ref": "#/$defs/plain_path"
+        },
+        "support": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 1000000
+        },
+        "percent": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "path",
+        "partner",
+        "support",
+        "percent"
+      ]
+    },
+    "practices": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Counts from the bounded practices read (item 7): deprecation warnings emitted by the project's own source, the files they are in, 'will be removed' phrases, deprecation-policy sentences in maintainer documents, and whether the pytest configuration turns warnings into errors. No repository text.",
+      "properties": {
+        "deprecation_sites": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "deprecation_files": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "removal_phrases": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "policy_sentences": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "warnings_as_errors": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "deprecation_sites",
+        "deprecation_files",
+        "removal_phrases",
+        "policy_sentences",
+        "warnings_as_errors"
+      ]
+    },
+    "sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$(?!\\n)"
+    },
+    "native_cluster": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/plain_path"
+          },
+          "minItems": 2,
+          "maxItems": 6,
+          "uniqueItems": true
+        },
+        "support": {
+          "$ref": "#/$defs/count"
+        },
+        "commits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sha"
+          },
+          "minItems": 0,
+          "maxItems": 5
+        },
+        "fix_commits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sha"
+          },
+          "minItems": 0,
+          "maxItems": 5
+        },
+        "tests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "$ref": "#/$defs/plain_path"
+              },
+              "support": {
+                "$ref": "#/$defs/count"
+              }
+            },
+            "required": [
+              "path",
+              "support"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 4
+        },
+        "fixes": {
+          "description": "Past fixes touching the cluster, newest first: the SHA and up to 3 paths it changed (cluster files, then tests).",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "sha": {
+                "$ref": "#/$defs/sha"
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/plain_path"
+                },
+                "minItems": 0,
+                "maxItems": 3
+              }
+            },
+            "required": [
+              "sha",
+              "files"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 5
+        },
+        "risk": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "$ref": "#/$defs/plain_path"
+              },
+              "reverts": {
+                "$ref": "#/$defs/count"
+              },
+              "followups": {
+                "$ref": "#/$defs/count"
+              },
+              "fixes": {
+                "$ref": "#/$defs/count"
+              }
+            },
+            "required": [
+              "path",
+              "reverts",
+              "followups"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 4
+        }
+      },
+      "required": [
+        "files",
+        "support",
+        "commits",
+        "fix_commits",
+        "tests",
+        "risk"
+      ]
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    }
+  }
+}

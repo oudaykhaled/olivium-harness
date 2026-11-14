@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://harnessforge.dev/schemas/learned-v1.json",
+  "title": "olivium.learned/v1",
+  "description": "A learned bundle: what the AI learner proposed about one repository at one base commit, after schema, path, evidence and Docker verification checks. Canonical JSON (HarnessForge.Contracts.canonical_json) plus a newline; sha256 is the digest of the document without the sha256 key. Only HarnessForge.Learning.Bundle.validate/1 is normative: it adds the semantic rules this schema cannot state (no control characters in any string, ids sorted and unique, pitfall text rules, status consistency, the digest). skills and agents are optional (bundles written by learner prompt v1 have neither) and are data only: a slug, paths, symbol names, ids of kept concepts, pitfalls and verified commands, and evidence hashes; HarnessForge.Generation.Native renders their text from fixed templates. Timing and size measurements (verify.ms, verify.output_bytes, bytes_before, bytes_after, learner.wall_ms) are recorded in buckets so a re-run gives the same bytes; exact values are in the run report next to the bundle.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "repository", "input", "learner", "verification", "concepts", "pitfalls", "commands", "rewrites", "dropped", "sha256"],
+  "properties": {
+    "schema": {"const": "olivium.learned/v1"},
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "base_commit", "base_commit_time", "history_commits_used", "history_first_commit_time"],
+      "properties": {
+        "name": {"type": "string", "pattern": "^[A-Za-z0-9._-]{1,100}$"},
+        "base_commit": {"$ref": "#/$defs/hex40"},
+        "base_commit_time": {"type": "integer", "minimum": 0},
+        "history_commits_used": {"type": "integer", "minimum": 0, "maximum": 400},
+        "history_first_commit_time": {"type": "integer", "minimum": 0}
+      }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["extract_version", "sha256", "bytes"],
+      "properties": {
+        "extract_version": {"const": "history-extract/v1"},
+        "sha256": {"$ref": "#/$defs/hex64"},
+        "bytes": {"type": "integer", "minimum": 0, "maximum": 409600}
+      }
+    },
+    "learner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "status_reason", "engine", "engine_version", "model", "prompt_id", "prompt_sha256", "max_turns", "cap_nanousd", "requests", "tokens", "cost_nanousd", "wall_ms"],
+      "properties": {
+        "status": {"enum": ["ok", "mock", "failed", "unavailable"]},
+        "status_reason": {"enum": ["none", "cloud_not_allowed", "no_key_file", "no_docker", "image_missing", "meter_unavailable", "cap_reached", "turn_cap", "timeout", "invalid_output", "model_error"]},
+        "engine": {"enum": ["claude-code", "none"]},
+        "engine_version": {"type": "string", "pattern": "^[0-9A-Za-z.+-]{0,40}$"},
+        "model": {"enum": ["claude-haiku-5-5", "claude-sonnet-5-5", "mock", "none"]},
+        "prompt_id": {"enum": ["learner-prompt/v1", "learner-prompt/v2"]},
+        "prompt_sha256": {"$ref": "#/$defs/hex64"},
+        "max_turns": {"type": "integer", "minimum": 0, "maximum": 100},
+        "cap_nanousd": {"type": "integer", "minimum": 0},
+        "requests": {"type": "integer", "minimum": 0},
+        "tokens": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["input", "output", "cache_read", "cache_write"],
+          "properties": {
+            "input": {"type": "integer", "minimum": 0},
+            "output": {"type": "integer", "minimum": 0},
+            "cache_read": {"type": "integer", "minimum": 0},
+            "cache_write": {"type": "integer", "minimum": 0}
+          }
+        },
+        "cost_nanousd": {"type": "integer", "minimum": 0},
+        "wall_ms": {"type": "integer", "minimum": 0}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "status_reason", "image", "image_id", "network", "timeout_ms"],
+      "properties": {
+        "status": {"enum": ["ok", "unavailable"]},
+        "status_reason": {"enum": ["none", "no_docker", "image_missing"]},
+        "image": {"type": "string", "maxLength": 200, "pattern": "^[A-Za-z0-9._/:@-]{0,200}$"},
+        "image_id": {"type": "string", "pattern": "^(sha256:[0-9a-f]{64})?$"},
+        "network": {"const": "none"},
+        "timeout_ms": {"type": "integer", "minimum": 0}
+      }
+    },
+    "concepts": {"type": "array", "maxItems": 60, "items": {"$ref": "#/$defs/concept"}},
+    "pitfalls": {"type": "array", "maxItems": 12, "items": {"$ref": "#/$defs/pitfall"}},
+    "commands": {"type": "array", "maxItems": 8, "items": {"$ref": "#/$defs/command"}},
+    "rewrites": {"type": "array", "maxItems": 12, "items": {"$ref": "#/$defs/rewrite"}},
+    "skills": {"type": "array", "maxItems": 3, "items": {"$ref": "#/$defs/skill"}},
+    "agents": {"type": "array", "maxItems": 2, "items": {"$ref": "#/$defs/agent"}},
+    "dropped": {
+      "type": "array",
+      "maxItems": 300,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "id", "reason"],
+        "properties": {
+          "kind": {"enum": ["concept", "pitfall", "command", "rewrite", "skill", "agent"]},
+          "id": {"type": "string", "minLength": 1, "maxLength": 40, "pattern": "^[A-Za-z0-9_.-]{1,40}$"},
+          "reason": {"enum": ["schema_invalid", "over_limit", "text_unsafe", "duplicate", "path_missing_at_base", "evidence_missing", "evidence_after_base", "evidence_mismatch", "unsafe_argv", "network_required", "verify_failed", "verify_timeout", "tool_missing", "output_not_smaller", "not_verified", "pattern_too_common", "example_copy"]}
+        }
+      }
+    },
+    "sha256": {"$ref": "#/$defs/hex64"}
+  },
+  "$defs": {
+    "hex40": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "hex64": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "path": {"type": "string", "pattern": "^[A-Za-z0-9_./-]{1,200}$"},
+    "term": {"type": "string", "pattern": "^[a-z0-9][a-z0-9 _.-]{1,39}$"},
+    "word": {"type": "string", "pattern": "^[A-Za-z0-9_./:=+@,%-]{1,200}$"},
+    "evidence": {"type": "array", "minItems": 2, "maxItems": 5, "uniqueItems": true, "items": {"$ref": "#/$defs/hex40"}},
+    "concept": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "terms", "paths", "symbols", "tests", "evidence", "support"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^c[0-9]{2}$"},
+        "terms": {"type": "array", "minItems": 1, "maxItems": 8, "uniqueItems": true, "items": {"$ref": "#/$defs/term"}},
+        "paths": {"type": "array", "minItems": 1, "maxItems": 4, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "symbols": {"type": "array", "maxItems": 6, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_.]{0,79}$"}},
+        "tests": {"type": "array", "maxItems": 3, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "evidence": {"$ref": "#/$defs/evidence"},
+        "support": {"type": "integer", "minimum": 0}
+      }
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "concept", "slug", "paths", "tests", "symbols", "pitfalls", "evidence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^s[0-9]{2}$"},
+        "kind": {"const": "area"},
+        "concept": {"type": "string", "pattern": "^c[0-9]{2}$"},
+        "slug": {"type": "string", "minLength": 1, "maxLength": 24, "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+        "paths": {"type": "array", "minItems": 2, "maxItems": 6, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "tests": {"type": "array", "maxItems": 4, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "symbols": {"type": "array", "maxItems": 6, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_.]{0,79}$"}},
+        "pitfalls": {"type": "array", "maxItems": 2, "uniqueItems": true, "items": {"type": "string", "pattern": "^p[0-9]{2}$"}},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      }
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "paths", "commands", "evidence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^a[0-9]{2}$"},
+        "kind": {"enum": ["locator", "test_runner"]},
+        "paths": {"type": "array", "minItems": 1, "maxItems": 8, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "commands": {"type": "array", "maxItems": 4, "uniqueItems": true, "items": {"type": "string", "pattern": "^cmd-[a-z0-9-]{1,30}$"}},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      }
+    },
+    "pitfall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "scope", "concept", "kind", "text", "trigger_terms", "evidence", "check", "status"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^p[0-9]{2}$"},
+        "scope": {"enum": ["global", "concept"]},
+        "concept": {"anyOf": [{"type": "null"}, {"type": "string", "pattern": "^c[0-9]{2}$"}]},
+        "kind": {"enum": ["deprecation", "warnings", "changelog", "test_location", "api_compat", "typing", "docs", "other"]},
+        "text": {"type": "string", "minLength": 20, "maxLength": 200, "pattern": "^[ -~]{20,200}$"},
+        "trigger_terms": {"type": "array", "maxItems": 6, "uniqueItems": true, "items": {"$ref": "#/$defs/term"}},
+        "evidence": {"$ref": "#/$defs/evidence"},
+        "check": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "pattern", "min_commits"],
+          "properties": {
+            "type": {"const": "diff_regex"},
+            "pattern": {"type": "string", "minLength": 1, "maxLength": 80},
+            "min_commits": {"type": "integer", "minimum": 2, "maximum": 5}
+          }
+        },
+        "status": {"const": "verified"}
+      }
+    },
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "source", "role", "argv", "verify"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^cmd-[a-z0-9-]{1,30}$"},
+        "source": {"enum": ["deterministic", "learned"]},
+        "role": {"enum": ["test", "test_file", "lint", "format", "typecheck"]},
+        "argv": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"anyOf": [{"const": "{file}"}, {"$ref": "#/$defs/word"}]}},
+        "verify": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "exit", "ms", "output_bytes", "sample_arg"],
+          "properties": {
+            "status": {"const": "verified"},
+            "exit": {"type": "integer", "minimum": 0, "maximum": 255},
+            "ms": {"type": "integer", "minimum": 0},
+            "output_bytes": {"type": "integer", "minimum": 0},
+            "sample_arg": {"type": "string", "pattern": "^([A-Za-z0-9_./-]{1,200})?$"}
+          }
+        }
+      }
+    },
+    "rewrite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "source", "kind", "match", "replace", "verify"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^rw[0-9]{2}$"},
+        "source": {"enum": ["deterministic", "learned"]},
+        "kind": {"enum": ["missing_tool", "wrong_runner", "quiet_flags"]},
+        "match": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["argv_prefix"],
+          "properties": {"argv_prefix": {"type": "array", "minItems": 1, "maxItems": 6, "items": {"$ref": "#/$defs/word"}}}
+        },
+        "replace": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["argv_prefix"],
+              "properties": {"argv_prefix": {"type": "array", "minItems": 1, "maxItems": 10, "items": {"$ref": "#/$defs/word"}}}
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["message_id", "tool"],
+              "properties": {
+                "message_id": {"const": "tool_missing"},
+                "tool": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}$"}
+              }
+            }
+          ]
+        },
+        "verify": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["wrong_exit", "wrong_signature", "right_exit", "ms", "bytes_before", "bytes_after"],
+          "properties": {
+            "wrong_exit": {"type": "integer", "minimum": 0, "maximum": 255},
+            "wrong_signature": {"enum": ["exit_127", "module_not_found", "spawn_failed", "none"]},
+            "right_exit": {"type": "integer", "minimum": 0, "maximum": 255},
+            "ms": {"type": "integer", "minimum": 0},
+            "bytes_before": {"type": "integer", "minimum": 0},
+            "bytes_after": {"type": "integer", "minimum": 0}
+          }
+        }
+      }
+    }
+  }
+}

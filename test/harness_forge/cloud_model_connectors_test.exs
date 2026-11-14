@@ -165,7 +165,7 @@ defmodule HarnessForge.CloudModelConnectorsTest do
       assert Plug.Conn.get_req_header(conn, "authorization") == []
       body = body(conn)
       assert body["stream"] == false and body["system"] == Proposal.system()
-      assert body["max_tokens"] == 2048
+      assert body["max_tokens"] == Proposal.default_output_tokens()
       refute Map.has_key?(body, "tools")
       refute Map.has_key?(body, "temperature")
       schema = body["output_config"]["format"]["schema"]
@@ -344,6 +344,28 @@ defmodule HarnessForge.CloudModelConnectorsTest do
     end
 
     assert {:ok, []} = Evidence.list_claims()
+  end
+
+  test "Anthropic ignores thinking blocks that precede the answer", %{source: source} do
+    configure("anthropic", source)
+    text = output(source)
+
+    for {blocks, index} <-
+          Enum.with_index([
+            [
+              %{"type" => "thinking", "thinking" => "hidden"},
+              %{"type" => "text", "text" => text}
+            ],
+            [%{"type" => "redacted_thinking", "data" => "x"}, %{"type" => "text", "text" => text}]
+          ]) do
+      value = Map.put(response("anthropic", text), "content", blocks)
+      Req.Test.expect(__MODULE__, &Req.Test.json(&1, value))
+
+      assert {:ok, %{"claims" => [%{"status" => "proposed"}]}} =
+               Models.propose(source["id"], run_id: "anthropic-thinking-#{index}")
+    end
+
+    assert {:ok, []} = Evidence.approved_claims()
   end
 
   test "Anthropic rejects truncated, refused and nontext content even with a successful HTTP status",

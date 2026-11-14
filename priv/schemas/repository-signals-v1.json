@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://harnessforge.dev/schemas/repository-signals-v1.json",
+  "title": "Olivium repository signals v1",
+  "description": "A pure function of repository state: no wall-clock time, absolute paths, author names or emails. Buckets: auto >= 70, suggested 40 to 69, observed < 40.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "repository-signals-v1",
+      "type": "string"
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+        },
+        "head": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 40,
+              "maxLength": 64,
+              "pattern": "^[0-9a-f]{7,64}$(?!\\n)"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "git": {
+          "type": "string",
+          "enum": [
+            "available",
+            "git_unavailable"
+          ]
+        },
+        "git_reason": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "identity",
+        "head",
+        "git",
+        "git_reason"
+      ]
+    },
+    "detectors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/detector"
+      },
+      "minItems": 0,
+      "maxItems": 32
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/signal"
+      },
+      "minItems": 0,
+      "maxItems": 2000
+    },
+    "aggregates": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "repository",
+    "detectors",
+    "signals",
+    "aggregates"
+  ],
+  "$defs": {
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[^\\x00-\\x1f\\x7f\\\\]+$(?!\\n)"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "file",
+            "commit",
+            "ref",
+            "source"
+          ]
+        },
+        "path": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000000
+        },
+        "commits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 7,
+            "maxLength": 64,
+            "pattern": "^[0-9a-f]{7,64}$(?!\\n)"
+          },
+          "minItems": 0,
+          "maxItems": 10,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind"
+      ]
+    },
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "value": {
+          "description": "Any canonical JSON value; floats are rejected by the contract bounds."
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "bucket": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "suggested",
+            "observed"
+          ]
+        },
+        "detector": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        }
+      },
+      "required": [
+        "key",
+        "value",
+        "confidence",
+        "bucket",
+        "detector",
+        "evidence"
+      ]
+    },
+    "detector": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_.-]*$(?!\\n)"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32,
+          "pattern": "^[^\\x00-\\x08\\x0a-\\x1f\\x7f]+$(?!\\n)"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "truncated": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "complete",
+        "truncated"
+      ]
+    }
+  }
+}

@@ -84,7 +84,9 @@ defmodule HarnessForge.GraderDiagnosticsDockerTest do
       fixture = TaskSuite.fixture(@suite, @task)
       script = formatter_script(@suite, "missing_fixture", "/protected/missing.log")
 
-      assert %{exit_status: 41, output: output} = grade(@suite, @task, fixture["candidate"], script)
+      assert %{exit_status: 41, output: output} =
+               grade(@suite, @task, fixture["candidate"], script)
+
       assert output =~ "[grader_failure stage=missing_fixture exit=41]"
       assert output =~ "[grader_log_unavailable]"
       assert String.ends_with?(output, "[grader_log_end]\n")
@@ -174,18 +176,51 @@ defmodule HarnessForge.GraderDiagnosticsDockerTest do
     assert {:ok, result} =
              Command.docker(
                [
-                 "run", "--rm", "--name", name,
-                 "--network", "none", "--user", "65534:65534", "--read-only",
-                 "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
-                 "--pids-limit", "128", "--memory", "1g", "--memory-swap", "1g",
-                 "--cpus", "1", "--tmpfs", "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
-                 "--env", "HOME=/tmp", "--env", "GOCACHE=/tmp/cache",
-                 "--env", "GOPROXY=off", "--env", "GOSUMDB=off",
-                 "--env", "GOTOOLCHAIN=local", "--env", "GOFLAGS=-p=1",
-                 "--env", "HARNESSFORGE_TASK=#{task}",
-                 "--mount", "type=bind,source=#{root}/candidate,target=/candidate,readonly",
-                 "--mount", "type=bind,source=#{root}/protected,target=/protected,readonly",
-                 "--entrypoint", "/bin/sh", Coding.grader_image(), "-ec",
+                 "run",
+                 "--rm",
+                 "--name",
+                 name,
+                 "--network",
+                 "none",
+                 "--user",
+                 "65534:65534",
+                 "--read-only",
+                 "--cap-drop",
+                 "ALL",
+                 "--security-opt",
+                 "no-new-privileges",
+                 "--pids-limit",
+                 "128",
+                 "--memory",
+                 "1g",
+                 "--memory-swap",
+                 "1g",
+                 "--cpus",
+                 "1",
+                 "--tmpfs",
+                 "/tmp:rw,exec,nosuid,nodev,size=512m,mode=1777",
+                 "--env",
+                 "HOME=/tmp",
+                 "--env",
+                 "GOCACHE=/tmp/cache",
+                 "--env",
+                 "GOPROXY=off",
+                 "--env",
+                 "GOSUMDB=off",
+                 "--env",
+                 "GOTOOLCHAIN=local",
+                 "--env",
+                 "GOFLAGS=-p=1",
+                 "--env",
+                 "HARNESSFORGE_TASK=#{task}",
+                 "--mount",
+                 "type=bind,source=#{root}/candidate,target=/candidate,readonly",
+                 "--mount",
+                 "type=bind,source=#{root}/protected,target=/protected,readonly",
+                 "--entrypoint",
+                 "/bin/sh",
+                 Coding.grader_image(),
+                 "-ec",
                  script || TaskSuite.grader_script(suite)
                ],
                90_000,

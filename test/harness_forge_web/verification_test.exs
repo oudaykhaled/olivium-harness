@@ -1,6 +1,27 @@
 defmodule HarnessForgeWeb.VerificationTest do
   use HarnessForgeWeb.ConnCase, async: false
+  alias HarnessForge.Contracts
   alias HarnessForgeWeb.Plugs.OperatorSession
+
+  @manifest Path.expand("../../priv/showcase/recordings.json", __DIR__)
+            |> File.read!()
+            |> Jason.decode!()
+
+  setup do
+    # Always a private directory, so results do not depend on whether this
+    # machine happens to have the separately distributed recordings.
+    media = Path.join(System.tmp_dir!(), "verification-media-#{Ecto.UUID.generate()}")
+    File.mkdir_p!(media)
+    Application.put_env(:harness_forge, :verification_media_dir, media)
+
+    on_exit(fn ->
+      Application.delete_env(:harness_forge, :verification_media_dir)
+      Application.delete_env(:harness_forge, :verification_recordings)
+      File.rm_rf!(media)
+    end)
+
+    {:ok, media: media}
+  end
 
   test "evidence page and report require the normal workspace session", %{conn: conn} do
     conn = %{conn | host: "localhost", port: 4002}
@@ -16,11 +37,7 @@ defmodule HarnessForgeWeb.VerificationTest do
   test "recorded results distinguish browser proof, missing images and unproved task benefit", %{
     conn: conn
   } do
-    conn =
-      conn
-      |> Map.merge(%{host: "localhost", port: 4002})
-      |> init_test_session(%{"operator_auth" => OperatorSession.new_auth()})
-
+    conn = operator(conn)
     page = get(conn, "/verification")
     body = html_response(page, 200)
     assert body =~ "WEB20 / WEB21 / WEB22 / WEB23 / WEB25"
@@ -28,7 +45,6 @@ defmodule HarnessForgeWeb.VerificationTest do
     assert body =~ "Benefit not proven"
     assert body =~ "Task failed"
     assert body =~ "Qwen2.5:7b-instruct-q4_K_M"
-    assert body =~ "<video"
     refute body =~ "<img"
     assert get_resp_header(page, "cache-control") == ["no-store"]
     report = get(conn, "/verification/report")
@@ -68,7 +84,39 @@ defmodule HarnessForgeWeb.VerificationTest do
     assert data["github_live"]["records"] == 21
     assert data["github_live"]["unchanged_resync"]
     assert body =~ "verification-more-runs"
+    assert body =~ "Clamp passed · ReverseWords failed"
+    assert body =~ "Invalid Go rejected · task failed"
+    refute Map.has_key?(data, "operator_auth")
+    refute Map.has_key?(data, "workspace_id")
+
+    assert get_resp_header(report, "content-disposition") ==
+             [~s(attachment; filename="harnessforge-web-evidence.json")]
+  end
+
+  test "a checkout without the recordings shows them as unavailable, offers no player and serves nothing",
+       %{conn: conn} do
+    conn = operator(conn)
+    body = html_response(get(conn, "/verification"), 200)
     tree = LazyHTML.from_document(body)
+
+    refute body =~ "<video"
+
+    for %{"id" => id} <- @manifest do
+      assert LazyHTML.query(tree, "#verification-unavailable-#{id}") |> Enum.count() == 1
+      assert response(get(conn, "/verification/media/#{id}"), 404) == "Recording unavailable"
+    end
+  end
+
+  test "present recordings get a player and are served after their digest is checked", %{
+    conn: conn,
+    media: media
+  } do
+    conn = operator(conn)
+    recordings = install_synthetic(media)
+    body = html_response(get(conn, "/verification"), 200)
+    tree = LazyHTML.from_document(body)
+
+    assert body =~ "<video"
 
     assert LazyHTML.query(tree, "#verification-featured-company-generation source")
            |> LazyHTML.attribute("src") == ["/verification/media/company-generation"]
@@ -82,23 +130,72 @@ defmodule HarnessForgeWeb.VerificationTest do
       assert LazyHTML.query(tree, "#verification-featured-#{id}") |> Enum.empty?()
     end
 
-    assert body =~ "Clamp passed · ReverseWords failed"
-    assert body =~ "Invalid Go rejected · task failed"
-    refute Map.has_key?(data, "operator_auth")
-    refute Map.has_key?(data, "workspace_id")
-
-    assert get_resp_header(report, "content-disposition") ==
-             [~s(attachment; filename="harnessforge-web-evidence.json")]
-
-    for video <- data["recordings"] do
-      response = get(conn, "/verification/media/#{video["id"]}")
+    for %{"id" => id} = video <- recordings do
+      assert LazyHTML.query(tree, "#verification-unavailable-#{id}") |> Enum.empty?()
+      response = get(conn, "/verification/media/#{id}")
       assert response.status == 200
+      assert response.resp_body == File.read!(Path.join(media, id <> ".webm"))
       assert byte_size(response.resp_body) == video["bytes"]
-      assert HarnessForge.Contracts.sha256(response.resp_body) == video["sha256"]
+      assert Contracts.sha256(response.resp_body) == video["sha256"]
       assert get_resp_header(response, "cache-control") == ["no-store"]
       assert get_resp_header(response, "content-type") == ["video/webm; charset=utf-8"]
+      assert get_resp_header(response, "x-content-type-options") == ["nosniff"]
     end
 
     assert response(get(conn, "/verification/media/unknown"), 404) == "Recording unavailable"
+  end
+
+  test "a tampered, resized or missing recording is refused and only a matching size gets a player",
+       %{conn: conn, media: media} do
+    conn = operator(conn)
+    [tampered, resized, missing | _] = install_synthetic(media)
+
+    path = &Path.join(media, &1["id"] <> ".webm")
+    # Same length, different bytes: only the digest can catch this.
+    File.write!(path.(tampered), String.duplicate("x", tampered["bytes"]))
+    File.write!(path.(resized), "short")
+    File.rm!(path.(missing))
+
+    tree = conn |> get("/verification") |> html_response(200) |> LazyHTML.from_document()
+
+    assert LazyHTML.query(tree, "#verification-unavailable-#{tampered["id"]}") |> Enum.empty?()
+
+    for video <- [resized, missing] do
+      assert LazyHTML.query(tree, "#verification-unavailable-#{video["id"]}") |> Enum.count() == 1
+    end
+
+    for video <- [tampered, resized, missing] do
+      assert response(get(conn, "/verification/media/#{video["id"]}"), 404) ==
+               "Recording unavailable"
+    end
+  end
+
+  test "the request path cannot name a file outside the manifest", %{conn: conn, media: media} do
+    conn = operator(conn)
+    install_synthetic(media)
+    File.write!(Path.join(media, "unlisted.webm"), "not in the manifest")
+
+    for id <- ["unlisted", "..%2Funlisted", "..%2F..%2Fmix"] do
+      assert response(get(conn, "/verification/media/#{id}"), 404) == "Recording unavailable"
+    end
+  end
+
+  defp operator(conn) do
+    conn
+    |> Map.merge(%{host: "localhost", port: 4002})
+    |> init_test_session(%{"operator_auth" => OperatorSession.new_auth()})
+  end
+
+  # Synthetic bytes under the published ids, with a manifest that matches them.
+  defp install_synthetic(media) do
+    recordings =
+      Enum.map(@manifest, fn entry ->
+        bytes = "synthetic recording for " <> entry["id"]
+        File.write!(Path.join(media, entry["id"] <> ".webm"), bytes)
+        %{entry | "bytes" => byte_size(bytes), "sha256" => Contracts.sha256(bytes)}
+      end)
+
+    Application.put_env(:harness_forge, :verification_recordings, recordings)
+    recordings
   end
 end

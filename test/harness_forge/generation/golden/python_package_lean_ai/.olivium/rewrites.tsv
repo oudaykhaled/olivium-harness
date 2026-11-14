@@ -1,0 +1,3 @@
+rw01	missing_tool	uv run mypy	tool_missing mypy
+rw02	wrong_runner	pytest	uv run pytest
+rw03	quiet_flags	uv run pytest	uv run pytest -q

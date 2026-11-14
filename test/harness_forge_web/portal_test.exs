@@ -11,7 +11,7 @@ defmodule HarnessForgeWeb.PortalTest do
   test "login shows the credential file location without exposing its contents", %{conn: conn} do
     conn = get(conn, "/login")
     html = html_response(conn, 200)
-    assert html =~ "Unlock HarnessForge"
+    assert html =~ "Unlock Olivium Harness"
     assert html =~ "access-token"
     assert html =~ ~s(name="_csrf_token")
     refute html =~ Workspaces.access_token()
