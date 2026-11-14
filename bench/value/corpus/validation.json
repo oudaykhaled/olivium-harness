@@ -1,0 +1,605 @@
+{
+  "selected": [
+    "pallets-click-3858",
+    "pallets-flask-6096",
+    "python-attrs-attrs-1593",
+    "expressjs-express-7366",
+    "pallets-click-3769"
+  ],
+  "not_reached": [
+    "pallets-click-3653",
+    "pallets-click-3739"
+  ],
+  "evidence": {
+    "pallets-click-3858": {
+      "image": "olivium-bench-deps-pallets-click-3858:v1",
+      "image_id": "sha256:c07e33e8675e32b3109caa6f2c750efb2c6ebb0ec32eef97205d9005931860a2",
+      "build_seconds": 65.7,
+      "isolation": {
+        "head": "7944461a80b780d060899c8835acab3c273a04a6",
+        "refs": "refs/heads/main",
+        "remotes": "",
+        "tags": "",
+        "reflog_entries": 0,
+        "fix_sha_absent": true,
+        "pr_commits_absent": 2,
+        "released_copy": "none"
+      },
+      "runs": [
+        {
+          "side": "base",
+          "run": 1,
+          "wall_seconds": 41.83,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 2059,
+          "failed": 1,
+          "skipped": 25,
+          "total": 2085
+        },
+        {
+          "side": "base",
+          "run": 2,
+          "wall_seconds": 41.9,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 2059,
+          "failed": 1,
+          "skipped": 25,
+          "total": 2085
+        },
+        {
+          "side": "base",
+          "run": 3,
+          "wall_seconds": 48.97,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 2059,
+          "failed": 1,
+          "skipped": 25,
+          "total": 2085
+        },
+        {
+          "side": "fix",
+          "run": 1,
+          "wall_seconds": 48.34,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 2060,
+          "failed": 0,
+          "skipped": 25,
+          "total": 2085
+        },
+        {
+          "side": "fix",
+          "run": 2,
+          "wall_seconds": 67.26,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 2060,
+          "failed": 0,
+          "skipped": 25,
+          "total": 2085
+        },
+        {
+          "side": "fix",
+          "run": 3,
+          "wall_seconds": 67.21,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 2060,
+          "failed": 0,
+          "skipped": 25,
+          "total": 2085
+        }
+      ],
+      "f2p_count": 1,
+      "p2p_count": 2059,
+      "flaky": [],
+      "both_failing_count": 0,
+      "both_failing": [],
+      "fix_regressions": [],
+      "lint": {
+        "status": "ok",
+        "tool": "ruff",
+        "source": "pyproject.toml [tool.ruff]",
+        "wall_seconds": 2.13
+      },
+      "test_wall_seconds": {
+        "base": [
+          41.83,
+          41.9,
+          48.97
+        ],
+        "fix": [
+          48.34,
+          67.26,
+          67.21
+        ]
+      },
+      "recipe": {
+        "kind": "uv",
+        "groups": [
+          "tests",
+          "dev"
+        ],
+        "apt": [
+          "less"
+        ]
+      },
+      "base_derivation": "first_parent",
+      "issue_prose_words": 93,
+      "non_test_lines": 45
+    },
+    "pallets-flask-6096": {
+      "image": "olivium-bench-deps-pallets-flask-6096:v1",
+      "image_id": "sha256:0dc7a2ce831cfee2f6c1287827135e0408640abdf8cbdd1f3f0ac8cc1a42df37",
+      "build_seconds": 17.7,
+      "isolation": {
+        "head": "514fc6b3e8402e4c646d5284e97a4f0ab50a7c4b",
+        "refs": "refs/heads/main",
+        "remotes": "",
+        "tags": "",
+        "reflog_entries": 0,
+        "fix_sha_absent": true,
+        "pr_commits_absent": 3,
+        "released_copy": "none"
+      },
+      "runs": [
+        {
+          "side": "base",
+          "run": 1,
+          "wall_seconds": 9.76,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 491,
+          "failed": 2,
+          "skipped": 0,
+          "total": 493
+        },
+        {
+          "side": "base",
+          "run": 2,
+          "wall_seconds": 9.77,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 491,
+          "failed": 2,
+          "skipped": 0,
+          "total": 493
+        },
+        {
+          "side": "base",
+          "run": 3,
+          "wall_seconds": 13.11,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 491,
+          "failed": 2,
+          "skipped": 0,
+          "total": 493
+        },
+        {
+          "side": "fix",
+          "run": 1,
+          "wall_seconds": 12.98,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 493,
+          "failed": 0,
+          "skipped": 0,
+          "total": 493
+        },
+        {
+          "side": "fix",
+          "run": 2,
+          "wall_seconds": 14.09,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 493,
+          "failed": 0,
+          "skipped": 0,
+          "total": 493
+        },
+        {
+          "side": "fix",
+          "run": 3,
+          "wall_seconds": 14.13,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 493,
+          "failed": 0,
+          "skipped": 0,
+          "total": 493
+        }
+      ],
+      "f2p_count": 2,
+      "p2p_count": 491,
+      "flaky": [],
+      "both_failing_count": 0,
+      "both_failing": [],
+      "fix_regressions": [],
+      "lint": {
+        "status": "ok",
+        "tool": "ruff",
+        "source": "pyproject.toml [tool.ruff]",
+        "wall_seconds": 0.81
+      },
+      "test_wall_seconds": {
+        "base": [
+          9.76,
+          9.77,
+          13.11
+        ],
+        "fix": [
+          12.98,
+          14.09,
+          14.13
+        ]
+      },
+      "recipe": {
+        "kind": "uv",
+        "groups": [
+          "tests",
+          "dev"
+        ]
+      },
+      "base_derivation": "first_parent",
+      "issue_prose_words": 55,
+      "non_test_lines": 13
+    },
+    "python-attrs-attrs-1593": {
+      "image": "olivium-bench-deps-python-attrs-attrs-1593:v1",
+      "image_id": "sha256:12a7034b613f42268a53279bafa050a1462d4e4934b3049db72ab71766e82d9a",
+      "build_seconds": 26.9,
+      "isolation": {
+        "head": "6851ab593cd25f3c14393e9355d57d22bec2a074",
+        "refs": "refs/heads/main",
+        "remotes": "",
+        "tags": "",
+        "reflog_entries": 0,
+        "fix_sha_absent": true,
+        "pr_commits_absent": 4,
+        "released_copy": "none"
+      },
+      "runs": [
+        {
+          "side": "base",
+          "run": 1,
+          "wall_seconds": 37.68,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1384,
+          "failed": 1,
+          "skipped": 11,
+          "total": 1396
+        },
+        {
+          "side": "base",
+          "run": 2,
+          "wall_seconds": 38.9,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1384,
+          "failed": 1,
+          "skipped": 11,
+          "total": 1396
+        },
+        {
+          "side": "base",
+          "run": 3,
+          "wall_seconds": 32.37,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1384,
+          "failed": 1,
+          "skipped": 11,
+          "total": 1396
+        },
+        {
+          "side": "fix",
+          "run": 1,
+          "wall_seconds": 32.2,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1385,
+          "failed": 0,
+          "skipped": 11,
+          "total": 1396
+        },
+        {
+          "side": "fix",
+          "run": 2,
+          "wall_seconds": 33.01,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1385,
+          "failed": 0,
+          "skipped": 11,
+          "total": 1396
+        },
+        {
+          "side": "fix",
+          "run": 3,
+          "wall_seconds": 34.97,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1385,
+          "failed": 0,
+          "skipped": 11,
+          "total": 1396
+        }
+      ],
+      "f2p_count": 1,
+      "p2p_count": 1384,
+      "flaky": [],
+      "both_failing_count": 0,
+      "both_failing": [],
+      "fix_regressions": [],
+      "lint": {
+        "status": "ok",
+        "tool": "ruff",
+        "source": "pyproject.toml [tool.ruff]",
+        "wall_seconds": 0.56
+      },
+      "test_wall_seconds": {
+        "base": [
+          37.68,
+          38.9,
+          32.37
+        ],
+        "fix": [
+          32.2,
+          33.01,
+          34.97
+        ]
+      },
+      "recipe": {
+        "kind": "uv",
+        "groups": [
+          "tests",
+          "dev"
+        ],
+        "build_env": {
+          "SETUPTOOLS_SCM_PRETEND_VERSION": "0.0.0"
+        }
+      },
+      "base_derivation": "squash_parent",
+      "issue_prose_words": 88,
+      "non_test_lines": 2
+    },
+    "expressjs-express-7366": {
+      "image": "olivium-bench-deps-expressjs-express-7366:v1",
+      "image_id": "sha256:1c4336b708e516bcb7d89c2eb183a4ee626ddd315fb41ac43819c181d9a32b3f",
+      "build_seconds": 2.3,
+      "isolation": {
+        "head": "ba006766fb964571723138708eacaba0f55759cd",
+        "refs": "refs/heads/main",
+        "remotes": "",
+        "tags": "",
+        "reflog_entries": 0,
+        "fix_sha_absent": true,
+        "pr_commits_absent": 3,
+        "released_copy": "none"
+      },
+      "runs": [
+        {
+          "side": "base",
+          "run": 1,
+          "wall_seconds": 11.69,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1251,
+          "failed": 1,
+          "skipped": 0,
+          "total": 1252
+        },
+        {
+          "side": "base",
+          "run": 2,
+          "wall_seconds": 11.88,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1251,
+          "failed": 1,
+          "skipped": 0,
+          "total": 1252
+        },
+        {
+          "side": "base",
+          "run": 3,
+          "wall_seconds": 9.04,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1251,
+          "failed": 1,
+          "skipped": 0,
+          "total": 1252
+        },
+        {
+          "side": "fix",
+          "run": 1,
+          "wall_seconds": 8.97,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1252,
+          "failed": 0,
+          "skipped": 0,
+          "total": 1252
+        },
+        {
+          "side": "fix",
+          "run": 2,
+          "wall_seconds": 10.88,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1252,
+          "failed": 0,
+          "skipped": 0,
+          "total": 1252
+        },
+        {
+          "side": "fix",
+          "run": 3,
+          "wall_seconds": 11.09,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1252,
+          "failed": 0,
+          "skipped": 0,
+          "total": 1252
+        }
+      ],
+      "f2p_count": 1,
+      "p2p_count": 1251,
+      "flaky": [],
+      "both_failing_count": 0,
+      "both_failing": [],
+      "fix_regressions": [],
+      "lint": {
+        "status": "ok",
+        "tool": "node_modules/.bin/eslint",
+        "source": "package.json scripts.lint",
+        "wall_seconds": 6.23
+      },
+      "test_wall_seconds": {
+        "base": [
+          11.69,
+          11.88,
+          9.04
+        ],
+        "fix": [
+          8.97,
+          10.88,
+          11.09
+        ]
+      },
+      "recipe": {
+        "kind": "npm"
+      },
+      "base_derivation": "squash_parent",
+      "issue_prose_words": 117,
+      "non_test_lines": 14
+    },
+    "pallets-click-3769": {
+      "image": "olivium-bench-deps-pallets-click-3769:v1",
+      "image_id": "sha256:6b074a66cecdb8db44e438b77bc973cd4f791876a6102648c3ee7248537267a7",
+      "build_seconds": 26.6,
+      "isolation": {
+        "head": "8b44edfff7d9a6c895fa804148c16b3a0bc9efb5",
+        "refs": "refs/heads/main",
+        "remotes": "",
+        "tags": "",
+        "reflog_entries": 0,
+        "fix_sha_absent": true,
+        "pr_commits_absent": 2,
+        "released_copy": "none"
+      },
+      "runs": [
+        {
+          "side": "base",
+          "run": 1,
+          "wall_seconds": 19.36,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1963,
+          "failed": 6,
+          "skipped": 25,
+          "total": 1994
+        },
+        {
+          "side": "base",
+          "run": 2,
+          "wall_seconds": 19.5,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1963,
+          "failed": 6,
+          "skipped": 25,
+          "total": 1994
+        },
+        {
+          "side": "base",
+          "run": 3,
+          "wall_seconds": 19.01,
+          "timed_out": false,
+          "exit_code": 1,
+          "passed": 1963,
+          "failed": 6,
+          "skipped": 25,
+          "total": 1994
+        },
+        {
+          "side": "fix",
+          "run": 1,
+          "wall_seconds": 18.78,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1969,
+          "failed": 0,
+          "skipped": 25,
+          "total": 1994
+        },
+        {
+          "side": "fix",
+          "run": 2,
+          "wall_seconds": 22.96,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1969,
+          "failed": 0,
+          "skipped": 25,
+          "total": 1994
+        },
+        {
+          "side": "fix",
+          "run": 3,
+          "wall_seconds": 22.8,
+          "timed_out": false,
+          "exit_code": 0,
+          "passed": 1969,
+          "failed": 0,
+          "skipped": 25,
+          "total": 1994
+        }
+      ],
+      "f2p_count": 6,
+      "p2p_count": 1963,
+      "flaky": [],
+      "both_failing_count": 0,
+      "both_failing": [],
+      "fix_regressions": [],
+      "lint": {
+        "status": "ok",
+        "tool": "ruff",
+        "source": "pyproject.toml [tool.ruff]",
+        "wall_seconds": 1.07
+      },
+      "test_wall_seconds": {
+        "base": [
+          19.36,
+          19.5,
+          19.01
+        ],
+        "fix": [
+          18.78,
+          22.96,
+          22.8
+        ]
+      },
+      "recipe": {
+        "kind": "uv",
+        "groups": [
+          "tests",
+          "dev"
+        ],
+        "apt": [
+          "less"
+        ]
+      },
+      "base_derivation": "first_parent",
+      "issue_prose_words": 66,
+      "non_test_lines": 12
+    }
+  }
+}

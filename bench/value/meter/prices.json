@@ -1,0 +1,36 @@
+{
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "source_retrieved_at": "2026-11-08",
+  "source_sha256": "5864b14c0eb020db52f96b3f42787810ad65d3f28823e317c03b7e9ca345aa49",
+  "source_note": "Plain HTTP GET of the .md form of the page. Sonnet 5.5 cache hits are 0.05x base input ($0.10/MTok) on that page, footnote 2; the claude-api skill's cached note of $0.20 is stale and was not used.",
+  "models": {
+    "claude-sonnet-5-5": {
+      "unverified": false,
+      "input": 2,
+      "output": 10,
+      "cache_write_5m": 2.5,
+      "cache_write_1h": 4,
+      "cache_read": 0.1
+    },
+    "claude-haiku-5-5": {
+      "unverified": false,
+      "input": 0.1,
+      "output": 0.5,
+      "cache_write_5m": 0.125,
+      "cache_write_1h": 0.2,
+      "cache_read": 0.01,
+      "over_prompt_tokens": {
+        "threshold": 100000,
+        "input": 0.5,
+        "output": 2.5,
+        "cache_write_5m": 0.625,
+        "cache_write_1h": 1,
+        "cache_read": 0.05
+      }
+    }
+  },
+  "aliases": {},
+  "small_model_note": "claude-haiku-5-5 is the id Claude Code 2.1.311 sends for the haiku model class, observed through the meter (a Task subagent with model=haiku). Other ids are refused by the meter (fail closed)."
+}

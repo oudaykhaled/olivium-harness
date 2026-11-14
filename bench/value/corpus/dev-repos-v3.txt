@@ -1,0 +1,23 @@
+# Repositories used to develop or test the Olivium Harness generator before benchmark v3
+# (PROTOCOL-v3.md, rule R4). One owner/name per line. Written before the v3 walk started;
+# it may not change after that. Owners pallets, pallets-eco, python-attrs and expressjs are
+# excluded by the protocol whatever this list says.
+#
+# The 8 v2 tasks, development data since the final plan (owner decision 7):
+pallets/click
+pallets/flask
+pallets/werkzeug
+python-attrs/attrs
+expressjs/express
+#
+# Lane G development repositories (stage 2, practice rules and exports):
+axios/axios
+encode/uvicorn
+httpie/cli
+hynek/structlog
+marshmallow-code/marshmallow
+mochajs/mocha
+python-jsonschema/jsonschema
+simonw/sqlite-utils
+sindresorhus/ky
+urllib3/urllib3
